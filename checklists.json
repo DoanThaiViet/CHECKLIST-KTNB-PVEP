@@ -1,0 +1,2045 @@
+{
+  "KH_CPHĐ": {
+    "headers": [
+      "STT",
+      "Hạng mục",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Hạng mục": "Xây dựng KHNV và CPHĐ hàng năm của PVEP",
+        "Mục tiêu/Nội dung công việc": "Thực hiện đúng thời hạn, biểu mẫu",
+        "Sai sót/rủi ro tiềm tàng": "Trình chậm hạn\r\nNội dung không đầy đủ, không đúng biểu mẫu",
+        "Tham chiếu Điều/khoản": "Điều 12.3 (b) QĐ 1761;\r\nPhụ lục 01 Biểu mẫu 1B",
+        "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV về xây dựng KHNV&CPHĐ năm 2025, 2026",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ trình",
+        "Tiêu chí đánh giá": "Trình đúng thời hạn, nội dung và các biểu mẫu",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 2,
+        "Hạng mục": "Xây dựng KHNV và CPHĐ hàng năm của PVEP",
+        "Mục tiêu/Nội dung công việc": "Đề xuất KHNV&CPHĐ phù hợp với định mức G&A, có căn cứ, phù hợp với chủ trương, định hướng của PVEP, chỉ đạo của LĐTCT.",
+        "Sai sót/rủi ro tiềm tàng": "Chi phí đề xuất thiếu căn cứ/vượt định mức;\r\nChưa được PTGĐ phụ trách chấp thuận;\r\nSai sót số liệu",
+        "Tham chiếu Điều/khoản": "Phụ lục 01 Biểu mẫu 1B;\r\nPhụ lục 09 Biểu mẫu 9E",
+        "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV về xây dựng KHNV&CPHĐ năm 2025, 2026 và hồ sơ, báo cáo chi tiết",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ trình",
+        "Tiêu chí đánh giá": "Số liệu đề xuất có cơ sở; đầy đủ theo biểu mẫu.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 3,
+        "Hạng mục": "Điều chỉnh KHNV&CPHĐ",
+        "Mục tiêu/Nội dung công việc": "Thẩm quyền phê duyệt điều chỉnh chi phí quản lý phát sinh trong phạm vi theo đúng thẩm quyền Quy định",
+        "Sai sót/rủi ro tiềm tàng": "TGĐ điều chỉnh vượt thẩm quyền (>10% hạng mục hoặc >5% tổng CP hoặc >50% dự phòng) mà không trình HĐTV;\r\nKhông có văn bản phê duyệt điều chỉnh;\r\nĐiều chỉnh không có căn cứ",
+        "Tham chiếu Điều/khoản": "Điều 13.3 QĐ 1761;\r\nPL05 Phân cấp thẩm quyền",
+        "Hồ sơ/Bằng chứng cần thu thập": "Văn bản phê duyệt điều chỉnh của TGĐ;\r\nBảng so sánh KH gốc - điều chỉnh;\r\nBiên bản/tờ trình đề xuất điều chỉnh;\r\nKiểm tra giới hạn % theo PL05",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ;\r\nĐối chiếu giới hạn thẩm quyền (PL05);\r\nXác nhận văn bản phê duyệt;\r\nKiểm tra căn cứ điều chỉnh",
+        "Tiêu chí đánh giá": "Điều chỉnh trong giới hạn: ≤10% hạng mục; ≤5% tổng CP; ≤50% dự phòng;\r\nCó văn bản phê duyệt TGĐ;\r\nCăn cứ hợp lý",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 4,
+        "Hạng mục": "Điều chỉnh KHNV&CPHĐ",
+        "Mục tiêu/Nội dung công việc": "Việc theo dõi thực hiện ngân sách; theo dõi việc sử dụng/cân đối từ hạng mục ngân sách dự phòng được Ban đầu mối tổng hợp đầy đủ, để báo cáo TGĐ, HĐTV phê duyệt điều chỉnh theo đúng thẩm quyền",
+        "Sai sót/rủi ro tiềm tàng": "Không cân đối được trong dự phòng;\r\nBáo cáo TGĐ không đầy đủ;\r\nKhông tổng hợp vào BC Quý gần nhất;\r\nĐề xuất điều chỉnh không đúng thẩm quyền",
+        "Tham chiếu Điều/khoản": "Điều 14.3, 14.4 QĐ 1761;\r\nPL08 Bước 3;\r\nPL05 ",
+        "Hồ sơ/Bằng chứng cần thu thập": "Bảng cân đối điều chỉnh/dự phòng;\r\nVăn bản báo cáo TGĐ;\r\nBC Quý có tổng hợp điều chỉnh;\r\nHồ sơ phê duyệt điều chỉnh",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ;\r\nĐối chiếu số dư dự phòng;\r\nKiểm tra BC Quý;\r\nXác nhận chữ ký TGĐ",
+        "Tiêu chí đánh giá": "Cân đối trong dự phòng hoặc trình đúng cấp;\r\nBC TGĐ đầy đủ;\r\nĐiều chỉnh được tổng hợp vào BC Quý gần nhất",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 5,
+        "Hạng mục": "Giám sát, báo cáo thực hiện KHNV&CPHĐ",
+        "Mục tiêu/Nội dung công việc": "Báo cáo HĐTV tình hình thực hiện KHNV&CPHĐ hàng Quý và cập nhật điều chỉnh (nếu có) được thực hiện đúng thời hạn, báo cáo đầy đủ các nhiệm vụ và chi phí hoạt động chi tiết theo đúng QĐ được HĐTV giao; phản ánh đúng tiến độ, khối lượng và chi phí thực hiện và kịp thời báo cáo HĐTV điều chỉnh, bổ sung các phát sinh.",
+        "Sai sót/rủi ro tiềm tàng": "Báo cáo gửi HĐTV quá hạn (>10 ngày LV trước cuối Quý);\r\nNội dung báo cáo không đầy đủ;\r\nKhông cập nhật điều chỉnh.",
+        "Tham chiếu Điều/khoản": "Điều 19.6, 25.3 QĐ 1761;\r\nPL09 Biểu mẫu 9E",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tờ trình HĐTV về Báo cáo KHNV&CPHĐ hàng quý và các tài liệu, bảng biểu chi tiết.",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ;\r\nĐánh giá nội dung;\r\nĐối chiếu thời hạn",
+        "Tiêu chí đánh giá": "Gửi trong 10 ngày LV trước cuối Quý;\r\nNội dung đầy đủ: TH, điều chỉnh, KH kỳ sau",
+        "PIC": "Nguyễn Thị Hải Yến"
+      }
+    ]
+  },
+  "KH_KeHoach": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": "B1",
+        "Bước kiểm tra": "B1. Ban chủ trì  gửi yêu cầu lập KH (giai đoạn 1: Lập KH)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì gửi yêu cầu lập KH cho các đơn vị: tính kịp thời, đối tượng nhận, nội dung yêu cầu, biểu mẫu kèm theo.",
+        "Sai sót/rủi ro tiềm tàng": "- Gửi yêu cầu trễ tiến độ → dồn ép thời gian lập KH;\r\n- Sót đối tượng nhận yêu cầu;\r\n- Yêu cầu thiếu nội dung/biểu mẫu hướng dẫn;\r\n- Không nêu rõ căn cứ định mức CPQL.",
+        "Tham chiếu Điều/khoản": "QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 14, PL 6) - thời điểm khởi động lập KH; QĐ Petrovietnam về xây dựng KH SXKD.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản yêu cầu lập KH (số, ngày);\r\n- Danh sách đơn vị nhận;\r\n- Biểu mẫu kèm theo;\r\n- Sổ công văn đi.",
+        "Phương pháp kiểm tra": "Inquiry & Inspection; đối chiếu lịch chuẩn.",
+        "Tiêu chí đánh giá": "Gửi đúng thời điểm theo QĐ; 100% đối tượng trong danh sách nhận được; có biểu mẫu kèm theo; nêu rõ căn cứ định mức CPQL.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B2",
+        "Bước kiểm tra": "B2. Người đại diện/TĐD/Ban CN đề xuất KH công việc/ngân sách dự án",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra đề xuất KH công việc và ngân sách dự án của các đơn vị: tính đầy đủ, kịp thời, sử dụng biểu mẫu lấy ý kiến.",
+        "Sai sót/rủi ro tiềm tàng": "- Đề xuất nộp muộn;\r\n- Số liệu thiếu căn cứ/không bám định mức CPQL;\r\n- Không đầy đủ chữ ký thẩm quyền đơn vị;\r\n- Bỏ sót hạng mục/dự án trọng yếu.",
+        "Tham chiếu Điều/khoản": "QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 15-17, PL 6); Quy định về định mức CP quản lý hiện hành; Điều lệ PVEP.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình/Văn bản đề xuất của đơn vị;\r\n- Biểu mẫu lấy ý kiến đã điền;\r\n- Thuyết minh cơ sở đề xuất;\r\n- Quyết định ủy quyền của đơn vị (nếu có).",
+        "Phương pháp kiểm tra": "Sampling 30-50% đơn vị; Walk-through 2 đơn vị; đối chiếu định mức.",
+        "Tiêu chí đánh giá": "Nộp đúng hạn theo yêu cầu B1; đủ biểu mẫu, đủ chữ ký thẩm quyền; số liệu có thuyết minh; chênh lệch định mức CPQL >10% phải có giải trình.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B3",
+        "Bước kiểm tra": "B3. Ban chủ trì rà soát tổng hợp KHSXKD của PVEP (Control point 1)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát, tổng hợp KHSXKD của PVEP: tính chính xác số học, cơ sở điều chỉnh đề xuất đơn vị, phản hồi đơn vị về điều chỉnh.",
+        "Sai sót/rủi ro tiềm tàng": "- Tổng hợp sai số học/sai phân loại CP;\r\n- Điều chỉnh đề xuất đơn vị không có cơ sở;\r\n- Không thông báo lại đơn vị về điều chỉnh;\r\n- Không đối chiếu với KH SXKD 5 năm đã duyệt.",
+        "Tham chiếu Điều/khoản": "QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 14, PL 6); KH SXKD 5 năm đã phê duyệt; Định mức CPQL.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Bản tổng hợp KHSXKD PVEP;\r\n- Bảng đối chiếu trước-sau khi tổng hợp;\r\n- File ghi nhận điều chỉnh kèm lý do;\r\n- Email/văn bản phản hồi đơn vị.",
+        "Phương pháp kiểm tra": "Re-calculation độc lập; Walk-through 5 mẫu đơn vị; Inquiry chuyên viên tổng hợp.",
+        "Tiêu chí đánh giá": "Tổng hợp số học chính xác (±0%); 100% điều chỉnh có giải trình & thông báo đơn vị; chênh lệch với KH 5 năm ≤5% hoặc có giải trình.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B4",
+        "Bước kiểm tra": "B4. TGĐ xem xét thông qua và trình HĐTV (Control point 2)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét bản tổng hợp KHSXKD và quyết định trình HĐTV, ý kiến điều chỉnh trước khi trình.",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua hình thức, không có biên bản/bút phê thực chất;\r\n- Trình HĐTV mà chưa đủ hồ sơ;\r\n- Không tham vấn các ban chức năng liên quan.",
+        "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 6)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ;\r\n- Bút phê/Biên bản xem xét của TGĐ;\r\n- Hồ sơ trình HĐTV (đủ phụ lục);\r\n- Văn bản tham vấn các ban (nếu có).",
+        "Phương pháp kiểm tra": "Inspection hồ sơ; Inquiry; đối chiếu Quy chế làm việc.",
+        "Tiêu chí đánh giá": "Có biên bản/bút phê thực chất (có ý kiến điều chỉnh hoặc xác nhận đầy đủ); hồ sơ trình HĐTV đầy đủ phụ lục theo QĐ.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B5",
+        "Bước kiểm tra": "B5. HĐTV xem xét thông qua và trình PVN",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc HĐTV xem xét KHSXKD và quyết định trình PVN: quy trình họp HĐTV, nội dung Nghị quyết, hồ sơ trình PVN.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTV họp không đủ thành viên;\r\n- Nghị quyết không nêu rõ chỉ đạo cụ thể;\r\n- Hồ sơ trình PVN thiếu phụ lục;\r\n- HĐTV thông qua mà không yêu cầu Ban KSNB ý kiến trước.",
+        "Tham chiếu Điều/khoản": "Luật Doanh nghiệp 2020 Đ.96-98; Điều lệ PVEP - thẩm quyền HĐTV; Quy chế làm việc HĐTV PVEP; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 12, PL 6)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Giấy mời họp + biên bản họp HĐTV;\r\n- Nghị quyết HĐTV;\r\n- Phiếu biểu quyết của thành viên;\r\n- Tờ trình HĐTV lên PVN;\r\n- Phụ lục đính kèm.",
+        "Phương pháp kiểm tra": "Inspection biên bản, NQ; Walk-through quy trình họp.",
+        "Tiêu chí đánh giá": "Họp đủ ≥2/3 thành viên; NQ có nội dung thực chất; có đầy đủ phiếu biểu quyết; tờ trình PVN có đủ phụ lục theo yêu cầu PVN.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B6",
+        "Bước kiểm tra": "B6. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 3)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát KHSXKD theo chỉ đạo HĐTV: thời điểm phát hành phiếu ý kiến BM.KSNB, nội dung thực chất của phiếu, độ độc lập.",
+        "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành SAU khi HĐTV đã ban hành NQ → mất tính kiểm soát;\r\n- Phiếu ý kiến mang tính thủ tục, không nêu phát hiện;\r\n- Không có cơ chế Ban KSNB tiếp cận hồ sơ đầy đủ;\r\n- Phiếu ý kiến không được lưu hồ sơ tại Ban KSNB.",
+        "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Phiếu ý kiến BM.KSNB (B6);\r\n- Văn bản chỉ đạo của HĐTV cho Ban KSNB;\r\n- Bút lục hồ sơ Ban KSNB tiếp nhận;\r\n- Sổ theo dõi phiếu ý kiến của Ban KSNB.",
+        "Phương pháp kiểm tra": "Inspection phiếu ý kiến; Confirmation độc lập với BM.KSNB; đối chiếu thời điểm phát hành.",
+        "Tiêu chí đánh giá": "Phiếu ý kiến phát hành TRƯỚC NQ HĐTV; có nội dung thực chất (nêu cụ thể phát hiện hoặc xác nhận); có đầy đủ chữ ký BM.KSNB; được lưu vào hồ sơ Ban KSNB.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B7",
+        "Bước kiểm tra": "B7. PVN phê duyệt KHSXKD của PVEP",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc PVN phê duyệt KHSXKD PVEP: có QĐ chính thức, thời điểm phê duyệt, các chỉ đạo điều chỉnh kèm theo (nếu có).",
+        "Sai sót/rủi ro tiềm tàng": "- PVN phê duyệt muộn → PVEP triển khai khi chưa có QĐ chính thức;\r\n- QĐ phê duyệt có điều chỉnh nhưng không được PVEP cập nhật;\r\n- Không có cơ chế theo dõi việc thực hiện chỉ đạo của PVN.",
+        "Tham chiếu Điều/khoản": "QĐ Petrovietnam về phê duyệt KH SXKD công ty con; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 12, PL 6)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- QĐ phê duyệt KHSXKD của PVN;\r\n- Văn bản chỉ đạo kèm theo (nếu có);\r\n- Bảng đối chiếu KH được duyệt vs đề xuất;\r\n- Sổ theo dõi chỉ đạo PVN.",
+        "Phương pháp kiểm tra": "Inspection QĐ; Re-calculation đối chiếu số liệu; Inquiry về việc cập nhật.",
+        "Tiêu chí đánh giá": "Có QĐ phê duyệt CHÍNH THỨC trước thời điểm thực hiện KH; nếu có điều chỉnh → đã được PVEP cập nhật & phổ biến; có sổ theo dõi chỉ đạo PVN.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B8",
+        "Bước kiểm tra": "B8. Ban chủ trì rà soát đề xuất giao KHSXKD, KHNV & CPHĐ (Control point 4)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát đề xuất giao KHSXKD/KHNV/CPHĐ cho từng đơn vị: cơ sở phân bổ, đối chiếu định mức CPQL, biểu mẫu KHSXKD/CPQL.",
+        "Sai sót/rủi ro tiềm tàng": "- Đề xuất giao KH không bám sát KH đã được PVN duyệt;\r\n- Phân bổ CPQL/CPHĐ không công bằng, thiếu cơ sở;\r\n- Bỏ qua đối chiếu định mức CPQL → dư địa lạm chi;\r\n- Sử dụng sai biểu mẫu.",
+        "Tham chiếu Điều/khoản": "QĐ phê duyệt KH của PVN (Bước 7); QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 14, PL 7); Quy định về định mức CPQL.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Bản đề xuất giao KHSXKD, KHNV, CPHĐ cho từng đơn vị;\r\n- Bảng phân bổ chi tiết;\r\n- Thuyết minh cơ sở phân bổ;\r\n- Biểu mẫu KHSXKD/CP Quản lý.",
+        "Phương pháp kiểm tra": "Re-calculation phân bổ; Walk-through 3-5 đơn vị; Inspection thuyết minh.",
+        "Tiêu chí đánh giá": "Tổng KH giao = Tổng KH PVN duyệt (±0%); Phân bổ CPQL theo định mức; có thuyết minh cho từng đơn vị; sử dụng đúng biểu mẫu.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B9",
+        "Bước kiểm tra": "B9. TGĐ xem xét thông qua và trình HĐTV (Control point 5)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét đề xuất giao KH và trình HĐTV: ý kiến điều chỉnh trước khi trình.",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua mà không kiểm tra cơ sở phân bổ;\r\n- Trình HĐTV mà chưa hoàn thiện hồ sơ;\r\n- Bỏ qua tham vấn các ban chức năng.",
+        "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 7)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ;\r\n- Bút phê/Biên bản xem xét;\r\n- Hồ sơ trình HĐTV;\r\n- Văn bản tham vấn các ban.",
+        "Phương pháp kiểm tra": "Inspection; Inquiry với cán bộ trợ giúp TGĐ.",
+        "Tiêu chí đánh giá": "Có biên bản/bút phê thực chất; hồ sơ trình HĐTV đầy đủ; có tham vấn các ban liên quan.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B10",
+        "Bước kiểm tra": "B10. HĐTV phê duyệt và giao kế hoạch",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra QĐ giao KH của HĐTV cho từng đơn vị: tính hợp lệ, thời điểm giao, số liệu khớp với đề xuất B8.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTV giao KH muộn (sau ngày 31/01 hoặc theo QĐ) → đơn vị triển khai không có KH;\r\n- Sai lệch số liệu giữa QĐ giao và đề xuất B8;\r\n- Phụ lục thiếu/sai biểu mẫu.",
+        "Tham chiếu Điều/khoản": "Luật Doanh nghiệp 2020 Đ.96-98; Điều lệ PVEP - thẩm quyền HĐTV; Quy chế làm việc HĐTV PVEP;\r\nQĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 12, PL7).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Nghị quyết/QĐ giao KH của HĐTV;\r\n- Biên bản họp HĐTV;\r\n- Văn bản giao KH gửi đơn vị (kèm phụ lục số liệu);\r\n- Bảng đối chiếu QĐ giao vs đề xuất B8.",
+        "Phương pháp kiểm tra": "Inspection QĐ; Re-calculation đối chiếu tổng cộng.",
+        "Tiêu chí đánh giá": "QĐ giao ban hành TRƯỚC ngày 31/01 năm KH (hoặc theo QĐ); số liệu khớp với B8 (chênh lệch phải có giải trình); có đầy đủ phụ lục.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B11",
+        "Bước kiểm tra": "B11. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 6)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát đề xuất giao KH theo chỉ đạo HĐTV: phiếu ý kiến BM.KSNB, đối chiếu Quy trình KTGS hiện hành.",
+        "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành SAU NQ HĐTV;\r\n- Phiếu ý kiến không trích dẫn Quy trình KTGS;\r\n- Không có rà soát độc lập về cơ sở phân bổ.",
+        "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Phiếu ý kiến BM.KSNB (B11);\r\n- Văn bản chỉ đạo HĐTV cho Ban KSNB;\r\n- Đối chiếu Quy trình KTGS hiện hành;\r\n- Sổ theo dõi phiếu ý kiến.",
+        "Phương pháp kiểm tra": "Inspection; Confirmation với BM.KSNB; đối chiếu thời điểm.",
+        "Tiêu chí đánh giá": "Phiếu ý kiến TRƯỚC NQ HĐTV; có nội dung thực chất; trích dẫn Quy trình KTGS; lưu hồ sơ tại Ban KSNB.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B12",
+        "Bước kiểm tra": "B12. Quản lý giám sát thực hiện KH - Tổng hợp báo cáo (Control point 7)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì  giám sát thực hiện KH và tổng hợp báo cáo: tần suất báo cáo, chất lượng tổng hợp, cảnh báo sớm sai lệch.",
+        "Sai sót/rủi ro tiềm tàng": "- Báo cáo giám sát chậm;\r\n- Số liệu tổng hợp sai/không đối chiếu;\r\n- Không có cơ chế cảnh báo sớm khi sai lệch KH >x%;\r\n- Bỏ sót đơn vị/dự án.",
+        "Tham chiếu Điều/khoản": "QĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 11, PL8) - chế độ báo cáo; QĐ Petrovietnam về báo cáo quản trị",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo thực hiện KH tháng/quý của đơn vị;\r\n- Báo cáo tổng hợp giám sát của Ban chủ trì;\r\n- Biểu mẫu theo quy định;\r\n- Log gửi báo cáo.",
+        "Phương pháp kiểm tra": "Sampling 3 tháng đại diện; Re-calculation tổng hợp; Walk-through cơ chế cảnh báo.",
+        "Tiêu chí đánh giá": "100% báo cáo nộp đúng hạn; số liệu tổng hợp khớp báo cáo gốc (±0%); có cảnh báo khi sai lệch >5%; đầy đủ đơn vị/dự án.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B13",
+        "Bước kiểm tra": "B13. TGĐ xem xét thông qua và trình HĐTV (Control point 8)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét báo cáo giám sát KH và trình HĐTV: phản hồi của TGĐ, chỉ đạo điều hành nếu có dấu hiệu sai lệch.",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ duyệt báo cáo hình thức;\r\n- Không có chỉ đạo điều hành khi có sai lệch;\r\n- Trình HĐTV mà không cảnh báo phát hiện.",
+        "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 8)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ;\r\n- Bút phê/Biên bản;\r\n- Chỉ thị/Văn bản chỉ đạo điều hành của TGĐ (nếu có).",
+        "Phương pháp kiểm tra": "Inspection; Inquiry.",
+        "Tiêu chí đánh giá": "Có ý kiến điều hành cụ thể, không chỉ 'thông qua'; nếu có sai lệch → có văn bản chỉ đạo khắc phục.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B14",
+        "Bước kiểm tra": "B14. HĐTV xem xét thông qua và trình PVN",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc HĐTV xem xét báo cáo giám sát và trình PVN: nội dung biên bản họp, tính trung thực của báo cáo trình PVN.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTV trình PVN báo cáo che giấu phát hiện tiêu cực;\r\n- Không nêu kiến nghị/đề xuất xử lý;\r\n- Biên bản họp HĐTV không đầy đủ.",
+        "Tham chiếu Điều/khoản": "Luật Doanh nghiệp 2020 Đ.96-98; Điều lệ PVEP - thẩm quyền HĐTV; Quy chế làm việc HĐTV PVEP;\r\nQĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 12, PL8).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp HĐTV;\r\n- Tờ trình HĐTV lên PVN;\r\n- Nghị quyết HĐTV (nếu có);\r\n- Phụ lục báo cáo đính kèm.",
+        "Phương pháp kiểm tra": "Inspection; đối chiếu báo cáo nội bộ vs báo cáo trình PVN.",
+        "Tiêu chí đánh giá": "Báo cáo trình PVN trung thực (có nêu rủi ro/phát hiện); có kiến nghị/đề xuất; biên bản HĐTV đầy đủ.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B15",
+        "Bước kiểm tra": "B15. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 9)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát báo cáo giám sát trước khi HĐTV trình PVN: phiếu ý kiến BM.KSNB, đối chiếu báo cáo nội bộ.",
+        "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành sau khi HĐTV đã trình PVN;\r\n- Không phát hiện chênh lệch giữa báo cáo nội bộ và báo cáo trình PVN;\r\n- Mang tính thủ tục.",
+        "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB; QĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 19.6).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Phiếu ý kiến BM.KSNB (B15);\r\n- Bảng đối chiếu báo cáo nội bộ vs báo cáo trình PVN;\r\n- Sổ theo dõi phiếu ý kiến.",
+        "Phương pháp kiểm tra": "Inspection; Confirmation với BM.KSNB; đối chiếu báo cáo.",
+        "Tiêu chí đánh giá": "Phiếu ý kiến TRƯỚC khi HĐTV ký tờ trình PVN; có nội dung thực chất; có đối chiếu báo cáo nội bộ vs báo cáo trình PVN.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B16",
+        "Bước kiểm tra": "B16. PVN nhận báo cáo và chỉ đạo",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc PVN tiếp nhận báo cáo giám sát từ PVEP và các văn bản chỉ đạo của PVN: việc phổ biến & thực hiện chỉ đạo tại PVEP.",
+        "Sai sót/rủi ro tiềm tàng": "- Văn bản chỉ đạo PVN không được phổ biến đến đơn vị liên quan;\r\n- Không có cơ chế theo dõi việc thực hiện chỉ đạo;\r\n- Chỉ đạo PVN bị 'treo' nhiều kỳ.",
+        "Tham chiếu Điều/khoản": "QĐ Petrovietnam về báo cáo công ty con",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản chỉ đạo của PVN (B16);\r\n- Kế hoạch thực hiện chỉ đạo PVN của PVEP;\r\n- Sổ theo dõi chỉ đạo PVN;\r\n- Báo cáo thực hiện chỉ đạo.",
+        "Phương pháp kiểm tra": "Walk-through; Inspection; Inquiry với đơn vị liên quan.",
+        "Tiêu chí đánh giá": "100% chỉ đạo PVN được phổ biến trong 05 ngày; có sổ theo dõi & báo cáo thực hiện định kỳ; không có chỉ đạo bị treo >90 ngày.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B17",
+        "Bước kiểm tra": "B17. Đánh giá thực hiện nhiệm vụ kế hoạch năm",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc đánh giá thực hiện KH năm: phương pháp đánh giá, sử dụng biểu mẫu theo quy định, tính độc lập, liên kết với kỳ KH sau.",
+        "Sai sót/rủi ro tiềm tàng": "- Đánh giá hình thức, chỉ so số tuyệt đối, bỏ qua chất lượng;\r\n- Không phân tích nguyên nhân không đạt KH;\r\n- Đánh giá không liên kết với KPI cá nhân/khen thưởng;\r\n- Báo cáo đánh giá không là cơ sở cho KH năm sau.",
+        "Tham chiếu Điều/khoản": "QĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 21-23); QĐ Petrovietnam về đánh giá hiệu quả DNNN; ",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá thực hiện KH năm;\r\n- Bảng so sánh KH-thực hiện (số tuyệt đối/tỷ lệ/định tính);\r\n- Phân tích nguyên nhân chênh lệch;\r\n- Biểu mẫu theo quy định.",
+        "Phương pháp kiểm tra": "Re-calculation tỷ lệ thực hiện; Analytical review; Inspection.",
+        "Tiêu chí đánh giá": "Có cả đánh giá định lượng & định tính; phân tích nguyên nhân 100% chỉ tiêu không đạt; có khuyến nghị cho kỳ KH năm sau; sử dụng đúng biểu mẫu.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B18",
+        "Bước kiểm tra": "B18. TGĐ xem xét và thông qua trình HĐTV (Control point 10)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét báo cáo đánh giá KH năm và trình HĐTV: ý kiến của TGĐ về kết quả thực hiện, đề xuất xử lý vấn đề.",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua mà không có ý kiến đánh giá cá nhân;\r\n- Không đề xuất xử lý vấn đề trọng yếu;\r\n- Trình HĐTV không kèm kế hoạch khắc phục.",
+        "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ\r\n",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ;\r\n- Bút phê/Biên bản xem xét;\r\n- Kế hoạch khắc phục/đề xuất (nếu có);\r\n- Hồ sơ trình HĐTV.",
+        "Phương pháp kiểm tra": "Inspection; Inquiry.",
+        "Tiêu chí đánh giá": "Có ý kiến đánh giá cá nhân của TGĐ; có đề xuất xử lý vấn đề trọng yếu; trình HĐTV kèm kế hoạch khắc phục.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B19",
+        "Bước kiểm tra": "B19. HĐTV xem xét thông qua và trình PVN",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc HĐTV xem xét báo cáo đánh giá KH năm và trình PVN: nội dung biên bản, tính trung thực, kiến nghị HĐTV.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTV trình PVN báo cáo 'tô hồng';\r\n- Không có kiến nghị thực chất;\r\n- Biên bản họp HĐTV không đầy đủ.",
+        "Tham chiếu Điều/khoản": "Luật QL Vốn NN 68/2025; Điều lệ PVEP; Quy chế làm việc HĐTV; NĐ 366/2025/NĐ-CP.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp HĐTV;\r\n- Tờ trình HĐTV lên PVN;\r\n- Nghị quyết HĐTV (nếu có);\r\n- Phụ lục báo cáo đánh giá.",
+        "Phương pháp kiểm tra": "Inspection; đối chiếu báo cáo nội bộ vs báo cáo trình PVN.",
+        "Tiêu chí đánh giá": "Báo cáo trình PVN trung thực, không 'tô hồng'; có kiến nghị thực chất; biên bản đầy đủ.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B20",
+        "Bước kiểm tra": "B20. Ban KSNB rà soát theo chỉ đạo của HĐTV",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát báo cáo đánh giá KH năm trước khi HĐTV trình PVN: phiếu ý kiến BM.KSNB, đối chiếu báo cáo nội bộ vs báo cáo trình PVN.",
+        "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành sau khi HĐTV đã trình PVN;\r\n- Không phát hiện sai lệch giữa báo cáo nội bộ và báo cáo trình PVN;\r\n- Mang tính thủ tục, sao chép kỳ trước.",
+        "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB; ",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Phiếu ý kiến BM.KSNB (B20);\r\n- Bảng đối chiếu báo cáo nội bộ vs trình PVN;\r\n- So sánh với phiếu ý kiến kỳ trước (chống sao chép).",
+        "Phương pháp kiểm tra": "Inspection; Confirmation; đối chiếu kỳ trước.",
+        "Tiêu chí đánh giá": "Phiếu ý kiến TRƯỚC khi HĐTV trình PVN; nội dung thực chất, không sao chép kỳ trước; có đối chiếu báo cáo nội bộ.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": "B21",
+        "Bước kiểm tra": "B21. PVN phê duyệt báo cáo đánh giá KH năm",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc PVN phê duyệt báo cáo đánh giá KH năm: có QĐ chính thức, sử dụng kết quả phê duyệt làm căn cứ cho KH năm sau",
+        "Sai sót/rủi ro tiềm tàng": "- PVN phê duyệt muộn → ảnh hưởng kỳ lập KH năm sau;\r\n- QĐ phê duyệt không được sử dụng làm căn cứ cho KH năm sau;\r\n- Bài học kinh nghiệm không được tổng kết.",
+        "Tham chiếu Điều/khoản": "Luật QL Vốn NN 68/2025; 366/2025/NĐ-CP; QĐ Petrovietnam về phê duyệt báo cáo đánh giá.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- QĐ phê duyệt báo cáo đánh giá của PVN;\r\n- Biên bản tổng kết & rút kinh nghiệm năm;\r\n- Đề cương sử dụng kết quả cho KH năm sau\r\n",
+        "Phương pháp kiểm tra": "Inspection QĐ; Walk-through việc sử dụng kết quả; Inquiry.",
+        "Tiêu chí đánh giá": "Có QĐ phê duyệt CHÍNH THỨC trước khi lập KH năm sau; có văn bản chứng minh sử dụng kết quả PVN cho KH năm sau",
+        "PIC": "Vũ Ái Ngọc Bình"
+      }
+    ]
+  },
+  "KH_DauTuDADK": {
+    "headers": [
+      "STT",
+      "Hệ thống kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Hệ thống kiểm tra": "Hệ thống Quản trị danh mục đầu tư (Portfolio)_các QĐ 1200/2021, 1347/2025",
+        "Mục tiêu/Nội dung công việc": "1.1_Chế độ báo cáo",
+        "Sai sót/rủi ro tiềm tàng": "Không đảm bảo chế độ báo cáo theo quy định (Nội dung, thời hạn)",
+        "Tham chiếu Điều/khoản": "Điều 15 QĐ 1200\r\nĐiểm 5 Phụ lục QĐ 1347",
+        "Hồ sơ/Bằng chứng cần thu thập": "Các báo cáo định kỳ về QT DMĐT trình HĐTV và trình Petrovietnam năm 2025-2026",
+        "Phương pháp kiểm tra": "Đối chiếu, so sánh",
+        "Tiêu chí đánh giá": "Thời hạn: Đúng hạn/Chậm hạn \r\nNội dung: Đảm bảo các nội dung về loại Báo cáo yêu cầu Quy định",
+        "PIC": "Nguyễn Văn Điều"
+      },
+      {
+        "STT": 2,
+        "Hệ thống kiểm tra": "Hệ thống Quản lý đầu tư DADK (Thủ tục đầu tư)_các QĐ 1780/2025+1189/2025, 1894/2024, 547/2025; QT.TCĐT.16/2024",
+        "Mục tiêu/Nội dung công việc": "2.1_Thủ tục đầu tư DADK Mới Trong nước",
+        "Sai sót/rủi ro tiềm tàng": "(1) Trình tự, thủ tục\r\n(2) Thẩm quyền\r\n(3) Pháp lý dự án mới\r\n(4) Thông số đầu vào để đánh giá khi quyết định đầu tư\r\n(5) Các Key Terms đề xuất chưa hợp lý",
+        "Tham chiếu Điều/khoản": "(1) + (2): Điều 7+8+9+10 QĐ 1780\r\n(3) Thông tin tiếp cận, đánh giá cơ hội đầu tư\r\n(4) Các thông số về Kỹ thuật; pháp lý; Kinh tế; Rủi ro; Giá dầu được quy định tại QĐ 1894 theo từng loại hình Dự án TD, TL hay PTM.\r\n(5) Theo Luật DK; phù hợp với đề xuất công việc/chi phí; phù hợp với thông lệ dầu khí; đảm bảo tính khả thi về kinh tế/kỹ thuật",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ Dự án mới: \r\n- Kế hoạch SXKD hàng năm;\r\n- Nguồn thông tin tiếp cận DA;\r\n- Báo cáo nhanh cơ hội đầu tư hoặc Báo cáo đề xuất tăng tỷ lệ tham gia DA hiện hữu;\r\n- Báo cáo sử dụng vốn tương ứng;\r\n- Hồ sơ thẩm định dự án;\r\n- Các Key Terms được HĐTV phê duyệt;\r\n- Kết quả đàm phán Key Terms và HDDK mới;",
+        "Phương pháp kiểm tra": "(1) Đối chiếu với KH DA mới trong năm;\r\n(2) Rà soát Báo cáo đánh giá cơ hội đầu tư/BCDSV: \r\n- Hồ sơ dự án\r\n- Nội dung Báo cáo chi tiết: Bố cục; nội dung chi tiết các mục quan trọng của 01 DADK như: Pháp lý dự án; Dự kiến Key Terms; Trữ lượng dầu khí đã phát hiện; Trữ lượng tiềm năng; Dự báo SLKT; Phương án Thăm dò/PTM; Khối lượng công việc + Cơ sở dự toán; Các thông số đầu vào khác để đánh giá khả thi Dự án: Giá dầu/khí, xác định IRRmin, chỉ tiêu đánh giá NPV/EMV; Nguồn vốn; Các rủi ro nhận diện về Địa chất, thi công khoan, tiến độ, chi phí, giá dầu\r\n(3) Kiểm tra Keyterms được phê duyệt, so sánh với kết quả đàm phán với KeyTerms được duyệt;\r\n(4) Kiểm tra những nội dung chính của Hợp đồng đã ký; GCNĐT\r\n(5) Kiểm tra thủ tục phê duyệt sử dụng vốn\r\n(6) Tham khảo các PYK của Ban KSNB đối với DA",
+        "Tiêu chí đánh giá": "(1) Phù hợp với Kế hoạch\r\n(2) Hồ sơ pháp lý đảm bảo; Hồ sơ dự án đúng quy định; Các thông số đánh giá về kinh tế-Kỹ thuật có cơ sở, được thuyết minh phù hợp; Kết quả đánh giá đáp ứng các tiêu chí QĐ đầu tư tại QĐ 1894;\r\n(3) Kết quả đàm phán Key Terms không thay đổi so với phê duyệt của HĐTV; trường hợp thay đổi có được xử lý phù hợp không?\r\n(4) Nội dung chính của HDDK/GCNĐT đảm bảo không khác biệt so với Key Terms đã đàm phán.\r\n(5) Phê duyệt sử dụng vốn đúng thẩm quyền, thời hạn không?",
+        "PIC": "Nguyễn Văn Điều"
+      },
+      {
+        "STT": 3,
+        "Hệ thống kiểm tra": "Hệ thống Giám sát đầu tư (Giám sát và đánh giá đầu tư DADK)_QĐ 1780/2025+1189/2025",
+        "Mục tiêu/Nội dung công việc": "3.1_Giám sát và đánh giá đầu tư DADK trong nước (QĐ 1780)",
+        "Sai sót/rủi ro tiềm tàng": "(1) Không đảm bảo nguyên tắc GS&ĐGĐT\r\n(2) Không có kế hoạch GS&ĐGĐT hàng năm\r\n(3) Nội dung GS&ĐGĐT không đầy đủ, phù hợp với quy định của PVEP/Petrovietnam và pháp luật.\r\n(4) Không kịp thời báo cáo kết quả giám sát lên HĐTV, cấp thẩm quyền.\r\n(5) Không đảm bảo công tác Báo cáo Giám sát, đánh giá đầu tư theo quy định của pháp luật.\r\n(6) Chế độ báo cáo Giám sát định kỳ không đảm bảo\r\n(7) Công tác cập nhật lên hệ thống ERP của Tập đoàn",
+        "Tham chiếu Điều/khoản": "(1) Điều 21 QĐ 1780\r\n(2) Điều 24, 25 QĐ 1780\r\n(3) ĐIều 22,23 QĐ 1780\r\n(4) Điều 24, 25 QĐ 1780\r\n(5) Điều 25 QĐ 1780\r\n(6)+(7) Điều 25 QĐ 1780",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch GS&ĐGĐT năm 2025-2026\r\n- Báo cáo kết quả GS&ĐGĐT năm 2025-2026\r\n- Báo cáo GSĐGĐT gửi Bộ TC, Petrovietnam 6 tháng/hàng năm.\r\n- Cập nhật thông tin đầu tư lên hệ thống ERP của Petrovietnam.\r\n- Báo cáo về việc thực hiện việt phân cấp quyết định đầu tư.",
+        "Phương pháp kiểm tra": "Rà soát các thủ tục GS&ĐGĐT thực hiện tại PVEP so với quy định: Kế hoạch, chế độ báo cáo\r\nRà soát nội dung các báo cáo GS&ĐGĐT chi tiết đảm bảo đầy đủ các yêu cầu GS&ĐGĐT\r\nKiểm tra lại, đánh giá các nội dung, thông tin quan trọng của từng dự án.",
+        "Tiêu chí đánh giá": "(1) Kế hoạch được phê duyệt\r\n(2) Tổ chức triển khai Giám sát thực địa\r\n(3) Hồ sơ báo cáo HĐTV, cấp thẩm quyền đảm bảo;\r\n(4) Tình hình xử lý các kiến nghị kịp thời\r\n(5) Nội dung các báo cáo GS&ĐGĐT đảm bảo phản ánh đúng thông tin dự án. ",
+        "PIC": "Nguyễn Văn Điều"
+      },
+      {
+        "STT": 5,
+        "Hệ thống kiểm tra": "Hệ thống Quản lý đầu tư Dự án ngoài Dầu khí (Thủ tục đầu tư và Giám sát đầu tư)_QĐ 1895/2024 - PVEP chưa có Dự án 2024-2026 (do vậy không Kiểm toán hệ thống này)",
+        "Mục tiêu/Nội dung công việc": "Chưa đề xuất kỳ 2026 do PVEP chưa hình thành Dự án theo quy định này giai đoạn 2024-2026",
+        "PIC": "Nguyễn Văn Điều"
+      },
+      {
+        "STT": 6,
+        "Hệ thống kiểm tra": "Hệ thống Quản lý vốn đầu tư ra ngoài DN và KTGS (Giám sát tài chính_vốn đầu tư ra nước ngoài)_QĐ 1469/2024",
+        "Mục tiêu/Nội dung công việc": "Đánh giá hiệu quả đầu tư của Dự án  trong năm 2025 được thực hiện thông qua các tiêu chí  về tình hình góp vốn, riến độ dự án, kết quả tài chính và rủi ro hoạt động của dự án tại địa bàn.",
+        "Sai sót/rủi ro tiềm tàng": "Không",
+        "Tham chiếu Điều/khoản": "Điều 18, 24, 25, 29 và  Mục 5 – Chương IV & Phụ lục 2 (Quy định sử dụng mẫu PVEP-GS-03)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Thông tin về GCNĐTRNN), dòng tiền góp vốn và biểu mẫu PVEP-GS-03 đối với Dự án đầu tư ra NN và rủi ro dự án.",
+        "Phương pháp kiểm tra": "Kiểm tra thông qua nội dung công văn số 851/TDKT-HĐTV về báo cáo giám sát vốn đầu tư  ra nước ngoài trong năm 2025.",
+        "Tiêu chí đánh giá": "Các iêu chí này được tổng hợp thông qua hệ thống Biểu mẫu PVEP-GS-03 bao gồm \r\n1. Têu chí về tiến độ và quản lý đầu tư: a) Tuân thủ pháp lý việc Giấy chứng nhận đăng ký đầu tư ra nước ngoài đã được cấp, b) Tiến độ góp vốn thực tế đã góp trong năm và lũy kế với hạn mức đầu tư được phê duyệt và c) Tiến độ thực hiện dự án hoàn thành các mốc kỹ thuật (như khoan, xây lắp EPC, sản lượng khai thác) so với kế hoạch quản trị của PVEP.\r\n2. Tiêu  chí về quản trị và rủi ro  như tác động từ môi trường đầu tư tại nước sở tại như biến động địa chính trị, xung đột vũ trang, và rủi ro tỷ giá (ví dụ: biến động đồng DZD tại Algeria hoặc lệnh cấm vận tại Venezuela)",
+        "Kết quả kiểm tra": "Đạt",
+        "Kiến nghị": "\r\nTập trung đẩy mạnh các giải pháp kỹ thuật để gia tăng sản lượng tại dự án Algeria và duy trì trạng thái thận trọng, theo dõi sát sao nhằm bảo toàn giá trị đầu tư tại dự án Venezuela, cụ thể  cần thực hiện  báo cáo kịp thời các thông tin bất thường ảnh hưởng đến dự án để HĐTV có cơ sở xem xét và  và chỉ đạo",
+        "PIC": "Nguyễn Bá Lập"
+      }
+    ]
+  },
+  "KH_DauThau_MSTX": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Giai đoạn 1: KH lựa chọn nhà thầu",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Giai đoạn 2: Hồ sơ mời thầu (HSMT)",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Giai đoạn 2: Hồ sơ mời thầu (HSMT)",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Giai đoạn 3: Đánh giá HSDT",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Giai đoạn 3: Đánh giá HSDT",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Giai đoạn 4: Thương thảo, ký kết",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Giai đoạn 5: Thực hiện hợp đồng",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Giai đoạn 5: Thực hiện hợp đồng",
+        "PIC": "Vũ Thúy Quỳnh"
+      },
+      {
+        "STT": 9,
+        "Bước kiểm tra": "Hậu kiểm",
+        "PIC": "Vũ Thúy Quỳnh"
+      }
+    ]
+  },
+  "KH_TaiChinhKT": {
+    "headers": [
+      "STT",
+      "Hạng mục",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Hạng mục": "Tổ chức kế toán, kiểm toán",
+        "Mục tiêu/Nội dung công việc": "PVEP phải tổ chức bộ máy tài chính kế toán theo đúng quy định; sử dụng đồng tiền hạch toán là Đồng Việt Nam (VND), mọi giao dịch ngoại tệ phải quy đổi sang VND",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 3&4",
+        "Hồ sơ/Bằng chứng cần thu thập": "Sổ cái",
+        "Phương pháp kiểm tra": "Kiểm tra toàn bộ sổ cái",
+        "Tiêu chí đánh giá": "PVEP phải tổ chức bộ máy tài chính kế toán theo đúng quy định; sử dụng đồng tiền hạch toán là Đồng Việt Nam (VND), mọi giao dịch ngoại tệ phải quy đổi sang VND",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 2,
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều",
+        "Tiêu chí đánh giá": 0,
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 3,
+        "Hạng mục": "Huy động vốn",
+        "Mục tiêu/Nội dung công việc": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
+        "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
+        "Phương pháp kiểm tra": "Căn cứ CL, KH 5 năm, KHCV, KH SXKD năm có được thể hiện trong các Tờ trình HĐTV và PYK của Ban KSNB",
+        "Tiêu chí đánh giá": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 4,
+        "Hạng mục": "Huy động vốn",
+        "Mục tiêu/Nội dung công việc": "Đúng thẩm quyền huy động vốn",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 9.3",
+        "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
+        "Phương pháp kiểm tra": "Kiểm tra đúng thẩm quyền đối với hạn mức và mục đích vay không",
+        "Tiêu chí đánh giá": "Đúng thẩm quyền huy động vốn",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 5,
+        "Hạng mục": "Quản lý nợ",
+        "Mục tiêu/Nội dung công việc": "Xây dựng, ban hành, thực hiện quy chế quản lý nợ phải trả",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 10.1",
+        "Hồ sơ/Bằng chứng cần thu thập": "Quy chế Quản lý nợ, các quy trình xử lý nợ/ thanh toán, tạm ứng",
+        "Phương pháp kiểm tra": "Kiểm tra tính đầy đủ của QC, QT",
+        "Tiêu chí đánh giá": "Có QC QLN",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 6,
+        "Hạng mục": "Quản lý tài sản",
+        "Mục tiêu/Nội dung công việc": "Xây dựng tiêu chuẩn định mức tài sản cố định và thực hiện khấu hao theo quy định",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều",
+        "Tiêu chí đánh giá": "Xây dựng tiêu chuẩn định mức tài sản cố định và thực hiện khấu hao theo quy định",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 7,
+        "Hạng mục": "Quản lý tài sản",
+        "Mục tiêu/Nội dung công việc": "Thực hiện thanh lý, nhượng bán tài sản cố định hư hỏng, lạc hậu kỹ thuật hoặc không còn nhu cầu sử dụng",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều",
+        "Tiêu chí đánh giá": "Thực hiện thanh lý, nhượng bán tài sản cố định hư hỏng, lạc hậu kỹ thuật hoặc không còn nhu cầu sử dụng",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 8,
+        "Hạng mục": "Quản lý nợ",
+        "Mục tiêu/Nội dung công việc": "Xây dựng và ban hành quy chế quản lý các khoản nợ phải thu, phân công và xác định rõ trách nhiệm tập thể, cá nhân",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều",
+        "Tiêu chí đánh giá": "Xây dựng và ban hành quy chế quản lý các khoản nợ phải thu, phân công và xác định rõ trách nhiệm tập thể, cá nhân",
+        "PIC": "Lê Thùy Dương"
+      },
+      {
+        "STT": 9,
+        "Hạng mục": "Quản lý tài sản",
+        "Mục tiêu/Nội dung công việc": "Tổ chức kiểm kê định kỳ hoặc đột xuất tài sản, đối chiếu các khoản nợ phải trả, nợ phải thu trước khi khóa sổ kế toán",
+        "Tham chiếu Điều/khoản": "QĐ 4452 - Điều",
+        "Tiêu chí đánh giá": "Tổ chức kiểm kê định kỳ hoặc đột xuất tài sản, đối chiếu các khoản nợ phải trả, nợ phải thu trước khi khóa sổ kế toán",
+        "PIC": "Lê Thùy Dương"
+      }
+    ]
+  },
+  "KH_QTRR": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Nhận diện rủi ro",
+        "Mục tiêu/Nội dung công việc": "Đánh giá việc nhận diện rủi ro có được thực hiện khi xây dựng kế hoạch SXKD.\r\nCác rủi ro có được nhận diện đầy đủ trong phạm vi lĩnh vực, nghiệp vụ hoạt động sản xuất kinh doanh theo chức năng nhiệm vụ, chỉ tiêu được giao không?\r\nĐánh giá việc nhận diện rủi ro đối với dự án quan trọng.",
+        "Sai sót/rủi ro tiềm tàng": "Không thực hiện nhận diện rủi ro trong quá trình xây dựng kế hoạch SXKD; Việc nhận diện rủi ro mang tính hình thức, chỉ để hoàn thiện hồ sơ, Không cập nhật nhận diện khi kế hoạch thay đổi.\r\nNhận diện không đầy đủ các rủi ro có thể làm ảnh hưởng tới mục tiêu của PVEP; chỉ nhận diện rủi ro cấp đơn vị, không nhận diện rủi ro cấp Tổng công ty.\r\nCác rủi ro của các dự án quan trọng không được nhận diện đầy đủ và kịp thời",
+        "Tham chiếu Điều/khoản": "QĐ 888: Điều 3, 6, 10, 14",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ rủi ro cấp PVEP",
+        "Phương pháp kiểm tra": "- Thu thập Kế hoạch SXKD, hồ sơ xây dựng kế hoạch, HSRR, biên bản họp/làm việc.\r\n- Đối chiếu thời điểm lập kế hoạch với thời điểm nhận diện rủi ro.\r\n- Phỏng vấn Ban/Đơn vị về quá trình tích hợp QTRR vào lập kế hoạch.\r\n- Kiểm tra việc cập nhật rủi ro khi kế hoạch thay đổi.",
+        "Tiêu chí đánh giá": "- Việc nhận diện rủi ro được thực hiện trong quá trình xây dựng kế hoạch SXKD.\r\n- Rủi ro được xem xét đối với các mục tiêu, chỉ tiêu, giả định trọng yếu của kế hoạch.\r\n- Có bằng chứng nhận diện và cập nhật khi kế hoạch thay đổi.",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Đánh giá rủi ro",
+        "Mục tiêu/Nội dung công việc": "Việc đánh giá và xếp thứ tự ưu tiên rủi ro có dựa trên đánh giá khả năng xảy ra và mức độ ảnh hưởng, sử dụng đúng Thước đo rủi ro và Bản đồ nhiệt 5x5 không?\r\nĐịnh kỳ hàng tháng, quý, năm, các Chủ sở hữu rủi ro thực hiện soát xét, cập nhật tình trạng rủi ro hiện hữu và nhận diện, đánh giá, đề xuất các giải pháp ứng phó các rủi ro mới nổi không?",
+        "Sai sót/rủi ro tiềm tàng": "- Đánh giá rủi ro không dựa trên đầy đủ 02 tiêu chí khả năng xảy ra và mức độ ảnh hưởng.\r\n- Áp dụng không đúng hoặc không thống nhất Thước đo rủi ro, tiêu chí chấm điểm giữa các đơn vị.\r\n- Xếp hạng rủi ro không đúng vị trí trên Bản đồ nhiệt 5x5, dẫn đến sai lệch mức độ ưu tiên.\r\n- Đánh giá mang tính chủ quan, thiếu căn cứ dữ liệu hoặc bằng chứng hỗ trợ.\r\n- Không cập nhật thay đổi mức độ rủi ro khi bối cảnh thay đổi.\r\n- Bỏ sót rủi ro trọng yếu hoặc ưu tiên chưa đúng đối với các rủi ro ảnh hưởng lớn đến mục tiêu/KPI.\r\n- Phân loại rủi ro chưa phản ánh đúng mức độ nghiêm trọng dẫn đến biện pháp ứng phó chưa phù hợp.",
+        "Tham chiếu Điều/khoản": "QĐ 888: Điều 3, 6, 9\r\nQĐ 1638",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ rủi ro cấp PVEP;\r\nBáo cáo Ứng phó rủi ro hàng tháng",
+        "Phương pháp kiểm tra": "- Thu thập HSRR, BC UPRR, Bản đồ nhiệt, kết quả đánh giá rủi ro của các Ban/Đơn vị.\r\n- Đối chiếu tiêu chí đánh giá với Thước đo rủi ro, TNKVRR, MĐCNRR và quy định hiện hành.\r\n- Chọn mẫu rủi ro để kiểm tra cách tính điểm, xếp hạng và vị trí trên Bản đồ nhiệt 5x5.\r\n- Kiểm tra bằng chứng, dữ liệu hỗ trợ việc xác định khả năng xảy ra và mức độ ảnh hưởng.",
+        "Tiêu chí đánh giá": "- Việc đánh giá rủi ro dựa trên đầy đủ tiêu chí khả năng xảy ra và mức độ ảnh hưởng.\r\n- Việc chấm điểm, phân loại và xếp hạng rủi ro tuân thủ Thước đo rủi ro và Bản đồ nhiệt 5x5.\r\n- Có cơ sở, dữ liệu hoặc bằng chứng hỗ trợ việc đánh giá.\r\n- Việc xếp hạng phản ánh đúng mức độ ưu tiên và mức độ nghiêm trọng của rủi ro.",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Ứng phó rủi ro",
+        "Mục tiêu/Nội dung công việc": "Tình trạng triển khai các phương án ứng phó (Phòng ngừa, Giảm thiểu, Chuyển giao) có đúng hạn không? Có phân công đầu mối đúng trách nhiệm không?",
+        "Sai sót/rủi ro tiềm tàng": "- Phương án ứng phó rủi ro không được triển khai hoặc triển khai chậm so với kế hoạch/phê duyệt.\r\n- Chậm thực hiện các biện pháp phòng ngừa, giảm thiểu, chuyển giao rủi ro, làm gia tăng khả năng xảy ra hoặc mức độ tác động của rủi ro.\r\n- Không xác định rõ đầu mối thực hiện, thời hạn hoàn thành và trách nhiệm theo dõi.\r\n- Kế hoạch ứng phó chưa cụ thể, thiếu nguồn lực hoặc không khả thi dẫn đến không triển khai được trên thực tế.\r\n- Không cập nhật tiến độ thực hiện hoặc tình trạng hoàn thành biện pháp ứng phó trong hồ sơ rủi ro.\r\n- Đã triển khai nhưng không đánh giá hiệu quả, dẫn đến rủi ro vẫn tồn tại hoặc tái diễn.\r\n- Biện pháp ứng phó chưa phù hợp với mức độ ưu tiên rủi ro; tập trung nguồn lực chưa đúng trọng tâm.\r\n- Không kịp thời điều chỉnh phương án ứng phó khi bối cảnh, điều kiện thực hiện thay đổi.",
+        "Tham chiếu Điều/khoản": "QĐ 888: Điều 9, 10, 14",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ rủi ro cấp PVEP;\r\nBáo cáo Ứng phó rủi ro hàng tháng",
+        "Phương pháp kiểm tra": "- Thu thập HSRR, BC UPRR, kế hoạch ứng phó rủi ro, hồ sơ theo dõi thực hiện biện pháp ứng phó.\r\n- Đối chiếu thời hạn thực hiện với kế hoạch/phê duyệt và tiến độ thực tế.\r\n- Kiểm tra việc phân công Chủ sở hữu rủi ro, đầu mối thực hiện và trách nhiệm theo dõi.\r\n- Chọn mẫu các rủi ro trọng yếu để kiểm tra tình trạng triển khai biện pháp phòng ngừa, giảm thiểu, chuyển giao rủi ro.",
+        "Tiêu chí đánh giá": "- Các phương án ứng phó rủi ro được triển khai đầy đủ, đúng thời hạn theo kế hoạch/phê duyệt.\r\n- Có phân công rõ Chủ sở hữu rủi ro, đầu mối thực hiện và trách nhiệm theo dõi.\r\n- Kế hoạch ứng phó cụ thể, khả thi và phù hợp với mức độ ưu tiên rủi ro.\r\n- Tình trạng thực hiện được cập nhật đầy đủ trong HSRR/BC UPRR.\r\n- Biện pháp ứng phó được đánh giá hiệu quả và điều chỉnh kịp thời khi bối cảnh thay đổi.",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Văn hóa rủi ro",
+        "Mục tiêu/Nội dung công việc": "Đánh giá việc thực hiện các hoạt động thúc đẩy văn hóa rủi ro tại đơn vị (Họp định kỳ, truyền thông, lồng ghép vào sinh hoạt chuyên môn...).\r\nCử CBNV/Điều phối viên tham gia đầy đủ các chương trình đào tạo rủi ro do Petrovietnam, PVEP tổ chức không?",
+        "Sai sót/rủi ro tiềm tàng": "- Không tổ chức hoặc tổ chức không đầy đủ các hoạt động thúc đẩy văn hóa rủi ro theo kế hoạch.\r\n- Hoạt động truyền thông, phổ biến QTRR thực hiện mang tính hình thức, chưa tạo chuyển biến về nhận thức.\r\n- Nội dung QTRR chưa được lồng ghép vào họp định kỳ, giao ban hoặc sinh hoạt chuyên môn.\r\n- Tần suất triển khai không đáp ứng yêu cầu, thiếu tính liên tục và xuyên suốt.\r\n- Thiếu bằng chứng thực hiện (biên bản họp, tài liệu truyền thông, danh sách tham dự…).\r\n- Nhận thức về vai trò, mục tiêu và trách nhiệm QTRR giữa các đơn vị chưa đồng đều.\r\n- Văn hóa báo cáo, chia sẻ rủi ro chưa được hình thành; người lao động chưa chủ động phát hiện và phản ánh rủi ro.\r\n- Thiếu cơ chế đánh giá hiệu quả các hoạt động phát triển văn hóa rủi ro.",
+        "Tham chiếu Điều/khoản": "QĐ 888: Điều 3, 10, 14",
+        "Phương pháp kiểm tra": "- Thu thập kế hoạch, chương trình truyền thông, tài liệu đào tạo, biên bản họp, giao ban, sinh hoạt chuyên môn có nội dung QTRR.\r\n- Kiểm tra việc lồng ghép nội dung QTRR vào các cuộc họp, hoạt động chuyên môn định kỳ.\r\n- Rà soát hồ sơ, bằng chứng thực hiện (thư mời, danh sách tham dự, hình ảnh, tài liệu phổ biến…).\r\n- Thu thập kế hoạch đào tạo, danh sách triệu tập, danh sách tham gia, tài liệu và chứng nhận đào tạo.\r\n- Đối chiếu thành phần tham gia với yêu cầu của PVN, PVEP.\r\n- Kiểm tra việc phổ biến, chia sẻ lại nội dung đào tạo tại đơn vị.",
+        "Tiêu chí đánh giá": "- Đơn vị triển khai đầy đủ các hoạt động thúc đẩy văn hóa rủi ro theo kế hoạch.\r\n- Nội dung QTRR được lồng ghép vào họp định kỳ, giao ban hoặc sinh hoạt chuyên môn.\r\n- Có đầy đủ hồ sơ, bằng chứng thực hiện.\r\n- CBNV có nhận thức về vai trò, trách nhiệm và mục tiêu QTRR.\r\n- Hình thành cơ chế chia sẻ, báo cáo và trao đổi thông tin rủi ro trong đơn vị.",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Tuân thủ Quy định về QTRR",
+        "Mục tiêu/Nội dung công việc": "Đánh giá việc tuân thủ các chế độ báo cáo theo quy định của PVEP, PVN:\r\nThời hạn báo cáo, đúng biểu mẫu,...\r\nViệc lập HSRR và BC UPRR được thực hiện đúng theo quy trình: \r\nBan/Đơn vị tổ chức xây dựng HSRR cấp Ban/Đơn vị \r\nCBNV có thực hiện nhận diện và báo cáo rủi ro trong phạm vi công việc phụ trách tới cấp quản lý trực tiếp không?\r\nHồ sơ có được trình PTGĐ phụ trách chấp thuận không? \r\nHSRR có được các Ban/Đơn vị gửi Tuyến 2 đúng thời hạn?... ",
+        "Sai sót/rủi ro tiềm tàng": "- Báo cáo rủi ro không được lập hoặc gửi không đúng thời hạn quy định.\r\n- Sử dụng không đúng biểu mẫu, nội dung báo cáo chưa đầy đủ hoặc không thống nhất.\r\n- Số liệu, thông tin trong báo cáo chưa chính xác, chưa phản ánh đầy đủ tình trạng rủi ro.\r\n- Chậm cập nhật các thay đổi, rủi ro phát sinh vào báo cáo định kỳ.\r\n- Thiếu bằng chứng rà soát, phê duyệt trước khi gửi báo cáo.\r\n- Việc tổng hợp báo cáo giữa các đơn vị chưa đồng nhất, ảnh hưởng chất lượng báo cáo cấp PVEP.",
+        "Tham chiếu Điều/khoản": "- 1182/QĐ-DKVN ngày 1/3/2023\r\n- 3776/QĐ-DKVN ngày 7/6/2023\r\n- QĐ 888, QĐ 1638, QT.PC&QLDT.08",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ rủi ro cấp PVEP;\r\nBáo cáo Ứng phó rủi ro hàng tháng",
+        "Phương pháp kiểm tra": "- Đối chiếu thời gian gửi báo cáo với quy định của PVEP, PVN.\r\n- Kiểm tra việc sử dụng biểu mẫu, nội dung và cấu trúc báo cáo theo quy định.\r\n- Rà soát bằng chứng rà soát, phê duyệt trước khi phát hành báo cáo.\r\n- Đối chiếu số liệu, thông tin báo cáo với HSRR và hồ sơ thực tế.",
+        "Tiêu chí đánh giá": "- Báo cáo được lập và gửi đúng thời hạn theo quy định.\r\n- Sử dụng đúng biểu mẫu, nội dung đầy đủ và thống nhất.\r\n- Thông tin, số liệu phản ánh đầy đủ tình trạng rủi ro.\r\n- Có bằng chứng rà soát, phê duyệt trước khi phát hành."
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Chỉ đạo của cấp trên",
+        "Mục tiêu/Nội dung công việc": "Rà soát tình hình thực hiện các chỉ đạo của PVN và PVEP (Xây dựng khung QTRR, xây dựng bộ chỉ số theo dõi cảnh báo RR sớm KR,...). \r\nRà soát tình hình báo cáo và thực hiện kế hoạch QTRR năm 2026 đã được HĐTV thông qua (đánh giá tiến độ và hiệu quả thực hiện của từng công việc)",
+        "Sai sót/rủi ro tiềm tàng": "- Chậm triển khai hoặc chưa hoàn thành các chỉ đạo, nhiệm vụ QTRR theo yêu cầu của PVN, HĐTV.\r\n- Các nhiệm vụ triển khai mang tính hình thức, chưa đánh giá hiệu quả thực tế.\r\n- Chậm cập nhật tiến độ, thiếu cơ chế theo dõi và báo cáo việc thực hiện chỉ đạo.\r\n- Chưa tích hợp kết quả thực hiện vào công tác quản trị và ra quyết định.",
+        "Phương pháp kiểm tra": "- Thu thập các chỉ đạo, kế hoạch triển khai, báo cáo tiến độ và hồ sơ thực hiện của PVN, HĐTV, PVEP.\r\n- Đối chiếu tình trạng thực hiện với yêu cầu, thời hạn và đầu ra theo chỉ đạo.\r\n- Kiểm tra hồ sơ xây dựng khung QTRR, KRIs và các tài liệu liên quan.\r\n- Phỏng vấn đầu mối triển khai về tiến độ, khó khăn, kết quả thực hiện.\r\n- Rà soát cơ chế theo dõi, báo cáo và đánh giá kết quả thực hiện chỉ đạo.",
+        "Tiêu chí đánh giá": "- Các chỉ đạo của PVN, HĐTV và PVEP được triển khai đầy đủ, đúng tiến độ.\r\n- Có cơ chế theo dõi, báo cáo và cập nhật tình trạng thực hiện.\r\n- Kết quả triển khai được áp dụng vào công tác quản trị và điều hành."
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Mức độ phối hợp",
+        "Mục tiêu/Nội dung công việc": "Đánh giá mức độ phối hợp giữa các tuyến.\r\nĐánh giá việc thực hiện chức năng giám sát, tư vấn, hỗ trợ, hướng dẫn Tuyến 1 thực hiện các quy định về QTRR.",
+        "Sai sót/rủi ro tiềm tàng": "- Trao đổi, chia sẻ thông tin rủi ro giữa các tuyến chưa kịp thời, đầy đủ.\r\n- Việc phối hợp trong nhận diện, đánh giá, giám sát và báo cáo rủi ro chưa đồng bộ.\r\n- Tuyến 1 phụ thuộc quá nhiều vào Tuyến 2, chưa chủ động thực hiện trách nhiệm QTRR.\r\n- Thiếu cơ chế phối hợp xử lý các rủi ro liên Ban/đơn vị hoặc rủi ro hệ thống.\r\n- Chưa có cơ chế theo dõi, đánh giá hiệu quả phối hợp giữa các tuyến.\r\n- Rủi ro bị bỏ sót hoặc xử lý chậm do gián đoạn thông tin giữa các tuyến.\r\n- Việc đôn đốc chủ yếu thực hiện khi có yêu cầu hoặc đến kỳ báo cáo, chưa mang tính chủ động và liên tục.",
+        "Tham chiếu Điều/khoản": "QĐ 888: Điều 10, 14, 15",
+        "Hồ sơ/Bằng chứng cần thu thập": "Email hướng dẫn, trao đổi",
+        "Phương pháp kiểm tra": "- Rà soát HSRR, BC UPRR, biên bản họp, email trao đổi, hồ sơ phối hợp giữa Tuyến 1 và Tuyến 2.\r\n- Phỏng vấn Chủ sở hữu rủi ro, Điều phối viên QTRR, đầu mối Tuyến 2 về cơ chế phối hợp, chia sẻ thông tin và xử lý rủi ro.\r\n- Chọn mẫu các rủi ro liên Ban/đơn vị để kiểm tra việc phối hợp xử lý.\r\n- Đánh giá cơ chế theo dõi, báo cáo và xử lý các vướng mắc giữa các tuyến.",
+        "Tiêu chí đánh giá": "- Có cơ chế phối hợp rõ ràng giữa các tuyến trong nhận diện, đánh giá, giám sát và báo cáo rủi ro.\r\n- Thông tin rủi ro được trao đổi, chia sẻ đầy đủ, kịp thời và xuyên suốt.\r\n- Các rủi ro liên Ban/đơn vị được phối hợp xử lý hiệu quả.\r\n- Tuyến 1 chủ động thực hiện trách nhiệm QTRR theo phân công."
+      }
+    ]
+  },
+  "KH_CNTT_CDS": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Quản trị CNTT",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "An toàn thông tin",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "An toàn thông tin",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "An toàn thông tin",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Dữ liệu",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Dữ liệu cá nhân",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Dự án CĐS",
+        "Mục tiêu/Nội dung công việc": "Rà soát tiến độ triển khai các dự án CĐS so với Kế hoạch chi tiết.\r\nĐánh giá tình hình thực hiện các chỉ đạo của HĐTV, TGĐ về CĐS và ERP.\r\nĐánh giá mức độ sẵn sàng vận hành, hỗ trợ được gì? đem lại hiệu quả không?",
+        "Sai sót/rủi ro tiềm tàng": "- Dự án CĐS triển khai chậm tiến độ so với kế hoạch được phê duyệt.\r\n- Các mốc công việc trọng yếu không hoàn thành đúng hạn.\r\n- Chậm nghiệm thu, chậm đưa vào vận hành.\r\n- Không cập nhật tiến độ, thiếu cơ chế theo dõi, cảnh báo.\r\n- Chậm xử lý vướng mắc ảnh hưởng tiến độ chung.\r\n- Kế hoạch chi tiết chưa sát thực tế, phải điều chỉnh nhiều lần.\r\n- Triển khai mang tính hình thức, chưa có kết quả thực tế.\r\n- Hệ thống chưa sẵn sàng vận hành hoặc vận hành không ổn định.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch CĐS, kế hoạch chi tiết dự án.\r\n- Quyết định phê duyệt, tiến độ tổng thể.\r\n- Báo cáo tiến độ, biên bản họp, nhật ký triển khai.\r\n- Hồ sơ nghiệm thu, báo cáo hoàn thành giai đoạn.\r\n- Hồ sơ điều chỉnh tiến độ (nếu có).",
+        "Phương pháp kiểm tra": "- Đối chiếu tiến độ thực tế với kế hoạch chi tiết.\r\n- Rà soát các mốc chính (milestone), đầu ra dự án.\r\n- Phỏng vấn PM/đầu mối triển khai.\r\n- Kiểm tra nguyên nhân chậm tiến độ và biện pháp xử lý.",
+        "Tiêu chí đánh giá": "- Các hạng mục triển khai đúng tiến độ kế hoạch.\r\n- Các mốc trọng yếu hoàn thành đúng hạn.\r\n- Có cơ chế theo dõi, cập nhật và xử lý chậm tiến độ.\r\n- Chỉ đạo của HĐTV/TGĐ được triển khai đầy đủ và đúng tiến độ.\r\n- Có báo cáo, theo dõi và đánh giá kết quả thực hiện.",
+        "PIC": "Chu Nhật Anh"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Mua sắm CNTT",
+        "PIC": "Chu Nhật Anh"
+      }
+    ]
+  },
+  "KH_HopDong": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Soạn thảo",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Soạn thảo",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Đàm phán",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Ký kết",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Thực hiện",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Thực hiện",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Tranh chấp",
+        "PIC": "Châu"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Thanh lý",
+        "PIC": "Châu"
+      }
+    ]
+  },
+  "KH_QLDA": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": "B1",
+        "Bước kiểm tra": "B1.Tiếp nhận vấn đề phát sinh từ Đơn vị đề xuất (NĐH, ĐVĐH, nội bộ PVEP)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì tiếp nhận vấn đề phát sinh từ nguồn hợp lệ  và được chuyển tới các Ban liên quan và TV ban TGĐ phụ trách DA để chỉ đạo xử lý ",
+        "Sai sót/rủi ro tiềm tàng": "- Vấn đề phát sinh không chính thức.\r\n- Sót đối tượng nhận yêu cầu.\r\n- Sai Ban chủ trì\r\n",
+        "Tham chiếu Điều/khoản": "Phụ lục II, III -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản đề xuất của Đơn vị đề xuất.\r\n- Email của cấp có thẩm quyền theo quy định của HDDK, JOA và nội bộ PVEP\r\n- Sổ công văn đi.",
+        "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK)",
+        "Tiêu chí đánh giá": "- Văn bản đề xuất có số, ngày tháng năm và chữ ký của người có thẩm quyền.\r\n- Văn bản được chuyển đến đúng đối tượng nhận yêu cầu theo Phân công Ban TGĐ và chức năng nhiệm vụ của các Ban",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B2",
+        "Bước kiểm tra": "B2. Tổ chức triển khai xem xét, thẩm định đề ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra TV ban TGĐ phụ trách có chỉ đạo xử lý vấn đề hoặc Ban chủ trì chủ động tổ chức triển khai",
+        "Sai sót/rủi ro tiềm tàng": "- Chỉ đạo không đúng Ban chủ trì hoặc không chỉ đạo.\r\n - Ban chủ trì chưa chủ động xử lý,chậm xem xét vấn đề ",
+        "Tham chiếu Điều/khoản": "Điều 5 và Phụ lục II, III -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Chỉ đạo bằng văn bản hoặc email hoặc giao việc trên hệ thống 1Office",
+        "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK)",
+        "Tiêu chí đánh giá": "-  TV ban TGĐ phụ trách có chỉ đạo xử lý, đúng Ban chủ trì theo chức năng nhiệm vụ\r\n- Ban chủ trì chủ động xử lý đúng chức năng nhiệm vụ",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B3",
+        "Bước kiểm tra": "B3. Ban chủ trì rà soát tổng hợp (Control point 1)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát, tổng hợp ý kiến và đề xuất của Ban chủ trì",
+        "Sai sót/rủi ro tiềm tàng": "- Tổng hợp sai số học/sai ý kiến, chưa đầy đủ ý kiến, đề xuất của của các Ban liên quan, TV các Uỷ ban, HĐTĐ;\r\n",
+        "Tham chiếu Điều/khoản": "Phụ lục II, III -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Báo cáo tổng hợp, đề xuất xử lý vấn đề của Ban chủ trì: Tờ trình TV ban TGĐ",
+        "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK)",
+        "Tiêu chí đánh giá": "Tổng hợp số học chính xác (±0%); các ý kiến đề xuất  rõ ràng có đánh giá về cơ sở, tính cần thiết, hợp lý  rõ ràng về kế hoạch, căn cứ pháp lý",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B4",
+        "Bước kiểm tra": "B4. TV TGĐ xem xét thông qua và trình HĐTV (nếu vượt thẩm quyền (Control point 2)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TV ban TGĐ xem xét Tờ trình tổng hợp đề xuất của Ban chủ trì: thẩm quyền, thời hạn, hồ sơ trình HĐTV",
+        "Sai sót/rủi ro tiềm tàng": "- TV ban TGĐ thông qua không có biên bản/bút phê thực chất;\r\n- Trình HĐTV mà chưa đủ hồ sơ (nếu vượt thẩm quyền);\r\n- Thông qua, phê duyệt, trình HĐTV không đúng thẩm quyền.\r\n- Thời hạn trình HĐTV không đúng quy định.\r\n- Thời hạn xem xét không đúng quy định ảnh hưởng đến tiến độ dự án",
+        "Tham chiếu Điều/khoản": "- Điều lệ PVEP - thẩm quyền TGĐ; Quy chế làm việc của TGĐ PVEP; QC QLDADK (Điều 5, Điều 11 và Phụ lục II, III)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TV ban TGĐ;\r\n- Bút phê của TV ban TGĐ;\r\n- Tờ trình và Hồ sơ trình HĐTV\r\n- Thời hạn: Văn bản đề xuất của NĐH, quy định của JOA, PSC",
+        "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK); đối chiếu Quy chế làm việc .",
+        "Tiêu chí đánh giá": "- Có biên bản/bút phê thực chất (có ý kiến điều chỉnh hoặc xác nhận đầy đủ);\r\n- Hồ sơ trình HĐTV đầy đủ phụ lục theo QĐ.\r\n- Đúng thẩm quyền theo Phụ lục I- QĐ 1398.\r\n- Thời gian xem xét đúng quy định ",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B5",
+        "Bước kiểm tra": "B5. HĐTV xem xét phê duyệt/ thông qua và trình PVN (vượt thẩm quyền (Control point 3)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc HĐTV xem xét  phê duyệt, thông qua và quyết định trình PVN: thời gian xem xét,  nội dung thông báo KL/ biên bản, hồ sơ trình PVN.",
+        "Sai sót/rủi ro tiềm tàng": "- Nghị quyết không nêu rõ chỉ đạo cụ thể;\r\n- Hồ sơ trình PVN thiếu;\r\n- Thời hạn xem xét không đúng quy định ảnh hưởng đến tiến độ dự án\r\n",
+        "Tham chiếu Điều/khoản": "- Quy chế làm việc HĐTV PVEP.\r\n- Quy định của PVN (tuỳ theo vấn đề trình HĐTV sẽ kiểm tra theo quy định nào)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Nghị quyết, TBKL, BB của  HĐTV;\r\n- Tờ trình HĐTV lên PVN;\r\n",
+        "Phương pháp kiểm tra": "Inspection NQ/TBKL/BB.",
+        "Tiêu chí đánh giá": "- Nghị quyết, TBKL, BB của  HĐTVcó nội dung  đúng vấn đề đề xuất;\r\n- Thời gian xem xét, thông quy/phê duyệt đúng quy chế làm việc của HĐTV.\r\n- Tờ trình PVN có đủ hồ sơ theo yêu cầu/quy định của PVN.",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B6",
+        "Bước kiểm tra": "B6. Thông báo ý kiến của PVEP cho Đơn vị đề xuất",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TV ban TGĐ, TV các Uỷ ban trả lời Đơn vị đề xuất: nội dung, thời gian",
+        "Sai sót/rủi ro tiềm tàng": "- Không đúng, đủ nội dung ý kiến đã được TV ban TGĐ, HĐTV thông qua/phê duyệt.\r\n",
+        "Tham chiếu Điều/khoản": "Phụ lục II, III -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Công văn của PVEP trả lời Đơn vị đề xuất.",
+        "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK)",
+        "Tiêu chí đánh giá": "- Công văn phát trình trước/sau phê duyệt/thông qua của TV ban TGĐ, HĐTV.\r\n- Nội dung công văn thể hiện đầy đủ ý kiến được  TV ban TGĐ, HĐTV phê duyệt/thông qua.",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B7",
+        "Bước kiểm tra": "B7.  Vai trò, trách nhiệm của Người đại diện PVEP ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra vai trò, trách nhiệm của Người đại diện PVEP về mức độ phối hợp và trách nhiệm báo cáo tham vấn, cung cấp thông tin và cảnh báo các tiềm ẩn rủi ro của DADK  và báo cáo định kỳ theo quy định",
+        "Sai sót/rủi ro tiềm tàng": "- Không báo cáo tham vấn PVEP trước khi trình các Bên theo quy định.\r\n- Không cung cấp thông tin và cảnh báo rủi ro tiềm ẩn của dự án\r\n- Không thực hiện báo cáo định kỳ ",
+        "Tham chiếu Điều/khoản": "Điều 6, Điều 9, Điều 19 -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Công văn, email báo cáo trao đổi của Người đại diện  với PVEP.\r\n- Báo cáo định kỳ của Người đại diện.",
+        "Phương pháp kiểm tra": "Inquiry & Inspection Inquiry về báo cáo, trao đổi",
+        "Tiêu chí đánh giá": "- Có công văn/email báo cáo, trao đổi với PVEP",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B8",
+        "Bước kiểm tra": "B8. Phân nhóm dự án",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát TGĐ phân nhóm dự án",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ không thực hiện phân nhóm theo quy định.\r\n- Thời hạn ban hành phân nhóm không đúng quy định",
+        "Tham chiếu Điều/khoản": "Điều 8  -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Quy định hướng dẫn chi tiết về các tiêu chí phân nhóm DA.\r\n- QĐ phân nhóm DA",
+        "Phương pháp kiểm tra": " Inquiry với Ban QLDA.",
+        "Tiêu chí đánh giá": "Có QĐ phân nhóm và đúng quy định về thời  hạn (trước 15/2 hàng năm).",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B9",
+        "Bước kiểm tra": "B9.Họp UBQL, UBĐH và TBKT",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc tổ chức và tham gia các cuộc họp UBQL, UBĐH và TBKT ",
+        "Sai sót/rủi ro tiềm tàng": "- Ban chủ trì không chuẩn bị nội dung cần thiết để tham gia các cuộc họp\r\n- TV các Ủy ban vắng mặt mà không có ủy quyền/vắng mặt \r\n- TV các Ủy ban không tuân thủ các nội dung PVEP phê duyệt trước khi họp.\r\n- Khi phát sinh tình huống chưa được phê duyệt trước, đại diện có thẩm quyền cao nhất của PVEP tham dự không xin chỉ đạo hoặc chấp thuận của TV ban TGĐ phụ trách DA  (điện thoại/email) để có cơ sở biểu quyết;\r\n- Công tác báo cáo sau cuộc họp chậm hơn 03 ngày làm việc kể từ ngày họp.",
+        "Tham chiếu Điều/khoản": "Điều 16  -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo trước họp có bút phê của TV ban TGĐ.\r\n- Báo cáo sau họp;\r\n- Biên bản  họp\r\n- Hồ sơ thủ tục phê duyệt bổ sung đối với tình huống phát sinh (nếu có).",
+        "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì, Sampling 3-5 cuộc họp",
+        "Tiêu chí đánh giá": "- Có báo cáo trước và sau họp.\r\n- Biên bản họp\r\n- Có đầy đủ hồ sơ thủ tục phê duyệt bổ sung đối với tình huống phát sinh (nếu có).",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": "B10",
+        "Bước kiểm tra": "B10. Giao KHNV trọng tâm năm DADK và báo cáo định kỳ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc giao KHNV trọng tâm và các chỉ tiêu của TGĐ cho TV các Uỷ ban và Người đại diện: nội dung, thời gian, báo cáo định kỳ.",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ không giao hoặc giao muộn theo quy định;\r\n- Người đại diện, TV các Uỷ ban không thực hiện báo cáo định kỳ hoặc thực hiện không đúng  quy định.\r\n- Ban chủ trì không thực hiện báo có định kỳ hoặc thực hiện không đúng quy định.",
+        "Tham chiếu Điều/khoản": "Điều 18, 19  -  Quy chế QLDADK (QĐ 1398)",
+        "Hồ sơ/Bằng chứng cần thu thập": "- QĐ giao KHNV trọng tâm và các chỉ tiêu của TGĐ cho TV các Uỷ ban và Người đại diện.\r\n- Báo cáo định kỳ quý, năm của  TV các Uỷ ban và Người đại diện.\r\n- Báo cáo định kỳ tháng của Ban chủ trì",
+        "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp báo cáo",
+        "Tiêu chí đánh giá": "- Có QĐ giao KHNV trọng tâm và các chỉ tiêu DA.\r\n- Thực hiện đầy đủ các báo cáo định kỳ và đúng thời hạn",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": 1,
+        "Bước kiểm tra": "B1. Tiếp nhận Báo cáo, đề xuất CTTKTDDK/TDDKBS",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc ĐVĐH/NĐH đệ trình Báo cáo (CT TKTĐDK, CT TĐDKBS); sự chuẩn bị mô hình đánh giá của Đại diện PVEP.",
+        "Sai sót/rủi ro tiềm tàng": "- ĐVĐH nộp báo cáo chậm; PVEP chưa chủ động tham gia thống nhất nội dung trước khi đệ trình",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đề xuất của NĐH/ĐVĐH; \r\n- Tài liệu tham gia/xem xét trước đệ trình của PVEP.",
+        "Phương pháp kiểm tra": "- Kiểm tra hồ sơ",
+        "Tiêu chí đánh giá": "Thời gian xử lý: 0 ngày (T0). Phải có đầy đủ báo cáo, mô hình tính toán do PVEP phối hợp chuẩn bị.",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "B2. Thành lập Hội đồng Thẩm định (HĐTĐ)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì đề xuất và TGĐ ký Quyết định thành lập HĐTĐ.",
+        "Sai sót/rủi ro tiềm tàng": "- Chậm đề xuất thành lập HĐTĐ làm ảnh hưởng tiến độ toàn dự án.",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình đề xuất lập HĐTĐ; - Quyết định thành lập HĐTĐ.",
+        "Phương pháp kiểm tra": "Đối chiếu thời gian ký Quyết định với ngày T0",
+        "Tiêu chí đánh giá": "Thời gian hoàn thành: T0 + 1 ngày làm việc",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "B3. Gửi yêu cầu xin ý kiến chuyên môn & HĐTĐ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc gửi tài liệu xin ý kiến Ban chuyên môn/HĐTĐ và việc tổng hợp ý kiến bước đầu.",
+        "Sai sót/rủi ro tiềm tàng": "- Gửi yêu cầu trễ; - Ban CM chậm phản hồi; - Sót tài liệu, biểu mẫu đính kèm.",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Công văn nội bộ (BM.01a/QT.TCĐT.16, BM.02a/QT.TCĐT.16)",
+        "Phương pháp kiểm tra": "Đối chiếu thời gian",
+        "Tiêu chí đánh giá": "Thời gian hoàn thành: T0 + 5 ngày làm việc (Ban CM có 3 ngày phản hồi, Ban CT có 2 ngày tổng hợp",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "B4. Thẩm định của Hội đồng thẩm định",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra hoạt động của HĐTĐ, việc Chủ tịch HĐTĐ cho ý kiến thẩm định và lập Báo cáo thẩm định.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTĐ không hoàn thành thẩm định đúng hạn; \r\n- Thiếu Báo cáo thẩm định hoặc Biên bản của HĐTĐ.",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo thẩm định do Chủ tịch HĐTĐ ký; \r\n- Biên bản/tài liệu liên quan của HĐTĐ",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ của HĐTĐ",
+        "Tiêu chí đánh giá": "Thời gian hoàn thành: Chậm nhất là T0 + 10 ngày ",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "B5. Tổng hợp Báo cáo đánh giá, đề xuất",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì tổng hợp các ý kiến",
+        "Sai sót/rủi ro tiềm tàng": "- Tổng hợp sai lệch ý kiến HĐTĐ; ",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá tổng hợp của Ban chủ trì",
+        "Phương pháp kiểm tra": "Đối chiếu sự thống nhất ý kiến",
+        "Tiêu chí đánh giá": "Thời hạn xử lý: 03 ngày làm việc kể từ khi HĐTĐ có ý kiến",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "B6. Trình báo cáo đánh giá, đề xuất",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Trưởng Đại diện (TĐD) và Ban chủ trì xem xét trình Ban TGĐ quyết định.",
+        "Sai sót/rủi ro tiềm tàng": "Tờ trình thiếu chữ ký xác nhận của các chức danh liên quan.",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình Ban TGĐ trình bày Báo cáo đề xuất ",
+        "Phương pháp kiểm tra": "Kiếm tra Hồ sơ trình",
+        "Tiêu chí đánh giá": "Thời hạn xử lý: 01 ngày làm việc. Đầy đủ chữ ký TĐD/Trưởng ban. ",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "B7. Ban TGĐ Quyết định hoặc Trình HĐTV",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc PTGĐ phụ trách thông qua, TGĐ ra quyết định (nếu thuộc thẩm quyền) hoặc ký Tờ trình trình HĐTV",
+        "Sai sót/rủi ro tiềm tàng": "- Ban TGĐ chậm xem xét; \r\n- Quyết định vượt phân cấp thẩm quyền của PVEP",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình, bút phê của TGĐ/PTGĐ trình trình HĐTV ",
+        "Phương pháp kiểm tra": "Đối chiếu thẩm quyền theo Điều lệ/Quy chế đầu tư.",
+        "Tiêu chí đánh giá": "Thời hạn xử lý: 02 ngày làm việc ",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "B8. HĐTV phê duyệt/trình Tập đoàn",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc HĐTV xem xét thông qua trình Petrovietnam phê duyệt theo qui định ",
+        "Sai sót/rủi ro tiềm tàng": "- Ban chủ trì chậm dự thảo Tờ trình sau khi có chỉ đạo từ HĐTV/Ban TGĐ..",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình trình Tập đoàn; \r\n- Nghị quyết/Quyết định của HĐTV.",
+        "Phương pháp kiểm tra": "Đối chiếu ngày có Quyết định và ngày phát hành công văn.",
+        "Tiêu chí đánh giá": "Ban chủ trì phải dự thảo xong Tờ trình trình Tập đoàn trong 01 ngày làm việc. Thời gian HĐTV phê duyệt: Theo quy chế HĐTV PVEP.",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": 9,
+        "Bước kiểm tra": "B9. Thông báo ý kiến của PVEP",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc TĐD/Ban chủ trì soạn thảo và gửi văn bản thông báo ý kiến chính thức cho NĐH, ĐVĐH",
+        "Sai sót/rủi ro tiềm tàng": "Ra thông báo chậm trễ làm ảnh hưởng tiến độ thực hiện thực tế của NĐH",
+        "Tham chiếu Điều/khoản": "Mục 4 QT.TCĐT.16",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản (Công văn đi) thông báo ý kiến PVEP gửi Đơn vị ĐH",
+        "Phương pháp kiểm tra": "Đối chiếu ngày có Quyết định và ngày phát hành công văn.",
+        "Tiêu chí đánh giá": "Thời hạn xử lý: 01 ngày làm việc kể từ khi có chỉ đạo/Quyết định phê duyệt",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "1",
+        "Bước kiểm tra": "B1. Tiếp nhận Báo cáo, đề xuất CTTKTDDK/TDDKBS",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Đơn vị đề xuất đệ trình Báo cáo CT TKTĐ/TĐDKBS, chuẩn bị mô hình đánh giá và sự phối hợp của các Ban chuyên môn PVEP.",
+        "Sai sót/rủi ro tiềm tàng": "- Đơn vị đề xuất nộp báo cáo trễ tiến độ; \r\n- Văn thư/Ban chủ trì chậm chuyển tiếp hồ sơ.",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo, đề xuất của Đơn vị đề xuất; \r\n- Hồ sơ/Biên bản các cuộc họp thống nhất trước đệ trình; \r\n- Sổ theo dõi văn bản đến",
+        "Phương pháp kiểm tra": "- Kiểm tra hồ sơ; đường đi văn bản",
+        "Tiêu chí đánh giá": "Có đủ báo cáo đề xuất, mô hình tính toán. Thời gian xử lý chuyển tới TV Ban TGĐ phụ trách đảm bảo trong ngày",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "2",
+        "Bước kiểm tra": "B2. Thành lập Hội đồng Thẩm định (HĐTĐ)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra thời gian lập HĐTĐ và thành phần HĐTĐ có tuân thủ đúng cơ cấu quy định hay không",
+        "Sai sót/rủi ro tiềm tàng": "- Ban chủ trì chậm đề xuất lập HĐTĐ hoặc TGĐ chậm ra quyết định; \r\n- Thành phần sai quy định",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398; Điều 3, Phụ lục I QĐ 547",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình đề xuất lập HĐTĐ; \r\n- Quyết định thành lập HĐTĐ do TGĐ ký.",
+        "Phương pháp kiểm tra": "- Đối chiếu thời gian; \r\n- Thành phần HĐTĐ",
+        "Tiêu chí đánh giá": "Quyết định thành lập HĐTĐ ban hành đúng hạn 01 ngày. Cơ cấu đúng Phụ lục I QĐ 547",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "3",
+        "Bước kiểm tra": "B3. Xin ý kiến HĐTĐ và trao đổi làm rõ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì gửi báo cáo/tài liệu cho HĐTĐ và hỗ trợ kết nối với Đơn vị đề xuất để làm rõ dữ liệu",
+        "Sai sót/rủi ro tiềm tàng": "- Chậm gửi tài liệu cho HĐTĐ (không gửi ngay sau khi lập HĐTĐ); \r\n- Thiếu sót thông tin, tài liệu khi cung cấp cho các ủy viên",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Email/Công văn nội bộ gửi tài liệu cho các thành viên HĐTĐ; \r\n- Văn bản trao đổi với ĐVĐH (nếu có).",
+        "Phương pháp kiểm tra": "Đối chiếu thời gian gửi tài liệu so với ngày lập HĐTĐ",
+        "Tiêu chí đánh giá": "Gửi báo cáo, tài liệu liên quan tới HĐTĐ ngay lập tức (Thời gian: 0 ngày) kể từ khi có QĐ thành lập HĐTĐ",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "4",
+        "Bước kiểm tra": "B4. Thẩm định, cho ý kiến về Báo cáo",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra tính tuân thủ trong quá trình HĐTĐ hoạt động (họp hoặc lấy ý kiến), tỷ lệ biểu quyết và thời gian hoàn thành biên bản.",
+        "Sai sót/rủi ro tiềm tàng": "- Ủy viên chậm gửi ý kiến thẩm định; \r\n- Thư ký chậm hoàn thiện Biên bản họp (>24h); \r\n- Cuộc họp thiếu số lượng thành viên dự họp (nhỏ hơn 2/3); \r\n- Quyết định phê duyệt không đạt tỷ lệ 2/3 tán thành",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398; Điều 4, 8, 10, 11 QĐ 547",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp HĐTĐ/Phiếu lấy ý kiến; \r\n- Văn bản ý kiến của Ủy viên; \r\n- Danh sách tham dự và chữ ký.",
+        "Phương pháp kiểm tra": "- Kiếm tra biên bản HĐTĐ;\r\n-Tính tỷ lệ số lượng biểu quyết",
+        "Tiêu chí đánh giá": "Các Ủy viên cho ý kiến và hoàn thành thẩm định đúng hạn 05 ngày. Biên bản hoàn thiện trong vòng 24h. Đồng ý tối thiểu 2/3 tổng số thành viên",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "5",
+        "Bước kiểm tra": "B5. Tổng hợp báo cáo đánh giá và đề xuất",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì tổng hợp kết quả thẩm định thành báo cáo đánh giá, đề xuất trình Lãnh đạo",
+        "Sai sót/rủi ro tiềm tàng": "- Tổng hợp sai lệch hoặc bỏ sót ý kiến phản biện của HĐTĐ; \r\n- Ban chủ trì chậm trình báo cáo tổng hợp.",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá, đề xuất xử lý vấn đề DADK; \r\n- Tờ trình của Ban chủ trì",
+        "Phương pháp kiểm tra": "Đối chiếu chéo nội dung Tờ trình với Biên bản HĐTĐ; Kiểm tra ngày ký tờ trình",
+        "Tiêu chí đánh giá": "Nội dung tờ trình trung thực với ý kiến HĐTĐ. Thời hạn tổng hợp báo cáo đánh giá và trình Lãnh đạo trong 02 ngày (trừ trường hợp đặc biệt).",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "6",
+        "Bước kiểm tra": "B6. Xem xét, quyết định/Trình cấp thẩm quyền",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra thời gian xử lý hồ sơ của Thành viên Ban TGĐ và HĐTV thông qua trình Petrovietnam xem xét phê duyệt .",
+        "Sai sót/rủi ro tiềm tàng": "- Ban TGĐ chậm xem xét hồ sơ hoặc quyết định vượt cấp thẩm quyền; \r\n- Trình HĐTV khi chưa đủ căn cứ đánh giá",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình Ban TGĐ, HĐTV; \r\n- Nghị quyết/Quyết định phê duyệt của PVEP hoặc văn bản trình Petrovietnam",
+        "Phương pháp kiểm tra": "- Kiểm tra thẩm quyền trên Quyết định/Nghị quyết",
+        "Tiêu chí đánh giá": "- TV Ban TGĐ quyết định/ hoặc trình HĐTV đúng hạn 01-02 ngày, HĐTV thông qua trình Petrovietnam đúng hạn 3-5 ngày. \r\n- Phê duyệt đúng phân cấp thẩm quyền",
+        "PIC": "Nguyễn Bá Minh"
+      },
+      {
+        "STT": "7",
+        "Bước kiểm tra": "B7. Thông báo ý kiến PVEP",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì/TV Ban TGĐ/TV Ủy ban ra văn bản thông báo ý kiến chính thức của PVEP cho Đơn vị điều hành (ĐVĐH)/Đơn vị đề xuất.",
+        "Sai sót/rủi ro tiềm tàng": "- Chậm ban hành văn bản thông báo ý kiến cho Lãnh đạo cấp dưới và ĐVĐH; \r\n- Nội dung thông báo không khớp với Quyết định đã phê duyệt",
+        "Tham chiếu Điều/khoản": "Phụ lục II QĐ 1398",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản thông báo (Công văn đi) của PVEP gửi ĐVĐH/Các bên liên quan.",
+        "Phương pháp kiểm tra": "Đối chiếu ngày Quyết định phê duyệt và ngày gửi thông báo đi.",
+        "Tiêu chí đánh giá": "Ban chủ trì thông báo ý kiến của PVEP đúng thời hạn 01 ngày kể từ khi có quyết định",
+        "PIC": "Nguyễn Bá Minh"
+      }
+    ]
+  },
+  "KH_CTHD&NS": {
+    "headers": [
+      "STT",
+      "Hạng mục",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Hạng mục": "Bước 1 – NĐH/ĐVĐH đề xuất CTHĐ&NS",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra NĐH/ĐVĐH đã chủ động xây dựng và đề xuất CTHĐ&NS đúng quy định, đầy đủ biểu mẫu theo QT.QLDA.02.",
+        "Sai sót/rủi ro tiềm tàng": "Đề xuất không đầy đủ biểu mẫu (BM.01a, BM.01b); Không bao gồm báo cáo thực hiện năm báo cáo; Gửi hồ sơ không đúng kênh (1office/email/công văn).",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 1, QT.QLDA.02;\r\nBM.01a/QT.QLDA.02;\r\nBM.01b/QT.QLDA.02",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ đề xuất CTHĐ&NS của NĐH (BM.01a, BM.01b);\r\nEmail/công văn gửi hồ sơ;\r\nThời điểm gửi hồ sơ.",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ;\r\nĐối chiếu với danh mục biểu mẫu bắt buộc;\r\nXem xét thời hạn nộp.",
+        "Tiêu chí đánh giá": "Hồ sơ đầy đủ BM.01a và BM.01b;\r\nGửi đúng kênh quy định;\r\nBao gồm tình hình thực hiện CTHĐ&NS năm báo cáo.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 2,
+        "Hạng mục": "Bước 1 – Nội dung Phần I (Năm báo cáo)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra nội dung Phần I (tình hình thực hiện năm báo cáo) đầy đủ và chính xác theo BM.01a.",
+        "Sai sót/rủi ro tiềm tàng": "Thiếu tổng hợp CTHĐ&NS được duyệt; Không đánh giá tình hình thực hiện NS; Không nêu khó khăn vướng mắc.",
+        "Tham chiếu Điều/khoản": "BM.01a/QT.QLDA.02, Phần I (mục 1–4)",
+        "Hồ sơ/Bằng chứng cần thu thập": "BM.01a đã điền;\r\nSo sánh với CTHĐ&NS được phê duyệt năm báo cáo;\r\nSố liệu thực hiện.",
+        "Phương pháp kiểm tra": "Kiểm tra tính đầy đủ từng mục Phần I;\r\nĐối chiếu số liệu thực tế với kế hoạch duyệt.",
+        "Tiêu chí đánh giá": "Phần I đủ 4 mục: (1) tổng hợp CTHĐ&NS duyệt; (2) tình hình CTHĐ; (3) tình hình ngân sách; (4) khó khăn vướng mắc.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 3,
+        "Hạng mục": "Bước 1 – Nội dung Phần II (Năm kế hoạch)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra nội dung Phần II (CTHĐ&NS năm kế hoạch) đầy đủ, có cơ sở pháp lý và số liệu chi tiết.",
+        "Sai sót/rủi ro tiềm tàng": "Thiếu cơ sở đề xuất (BC sử dụng vốn, CTTKTDDK...); Không kèm bảng tiến độ; Thiếu dự toán chi tiết; Không dự kiến NS 2 năm tiếp theo.",
+        "Tham chiếu Điều/khoản": "BM.01a/QT.QLDA.02, Phần II (mục 1–5)",
+        "Hồ sơ/Bằng chứng cần thu thập": "BM.01a Phần II;\r\nBảng kế hoạch tiến độ;\r\nDự toán chi tiết đơn giá, khối lượng, thành tiền.",
+        "Phương pháp kiểm tra": "Kiểm tra từng mục Phần II;\r\nĐối chiếu dự toán với hợp đồng đang thực hiện.",
+        "Tiêu chí đánh giá": "Phần II đủ 5 mục; Có bảng tiến độ; NS có dự toán chi tiết; Có NS ước tính 2 năm tiếp theo.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 4,
+        "Hạng mục": "Bước 2 – Ban QLDA tiếp nhận và xin ý kiến",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra Ban QLDA đã tiếp nhận đầy đủ hồ sơ và thực hiện xin ý kiến các Ban PVEP đúng quy định, đúng thời hạn.",
+        "Sai sót/rủi ro tiềm tàng": "Không kiểm tra tính đầy đủ hồ sơ; Không hoặc chậm xin ý kiến Ban; Thiếu công văn BM.02a.",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 2, QT.QLDA.02;\r\nBM.02a/QT.QLDA.02\r\n(thời hạn 01 ngày LV)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Công văn xin ý kiến BM.02a;\r\nNgày tiếp nhận hồ sơ;\r\nNgày gửi công văn BM.02a.",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ tiếp nhận;\r\nĐối chiếu ngày gửi BM.02a với ngày nhận hồ sơ.",
+        "Tiêu chí đánh giá": "Ban QLDA tiếp nhận đủ hồ sơ;\r\nGửi BM.02a trong vòng 01 ngày LV;\r\nXác định đúng Ban tham gia.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 5,
+        "Hạng mục": "Bước 3 – Các Ban tham gia gửi ý kiến",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra các Ban tham gia đã xem xét theo lĩnh vực chuyên môn và gửi ý kiến đúng hạn, đúng biểu mẫu BM.02b.",
+        "Sai sót/rủi ro tiềm tàng": "Không gửi ý kiến (mặc nhiên đồng ý); Gửi quá hạn 02 ngày LV; Ý kiến thiếu phân tích; Không dùng BM.02b.",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 3, QT.QLDA.02;\r\nBM.02b/QT.QLDA.02\r\n(thời hạn 02 ngày LV hoặc theo yêu cầu)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Công văn ý kiến BM.02b của các Ban;\r\nNgày gửi ý kiến;\r\nNội dung phân tích trong BM.02b.",
+        "Phương pháp kiểm tra": "Kiểm tra có công văn BM.02b;\r\nTính toán thời hạn so với BM.02a;\r\nĐánh giá chất lượng ý kiến.",
+        "Tiêu chí đánh giá": "Ý kiến gửi ≤02 ngày LV (hoặc theo yêu cầu);\r\nDùng đúng BM.02b;\r\nCó phân tích lý do;\r\nNếu không gửi → xác nhận đồng ý, Trưởng Ban chịu trách nhiệm.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 6,
+        "Hạng mục": "Bước 3 – Chất lượng ý kiến chuyên môn",
+        "Mục tiêu/Nội dung công việc": "Đánh giá ý kiến chuyên môn có đủ cơ sở, phân tích về sự cần thiết, phạm vi, tiến độ, ngân sách và phương án tối ưu.",
+        "Sai sót/rủi ro tiềm tàng": "Ý kiến hình thức, thiếu phân tích kỹ thuật; Không đề xuất điều kiện phê duyệt; Không trao đổi với NĐH khi cần làm rõ.",
+        "Tham chiếu Điều/khoản": "Mục 2.2, QT.QLDA.02; BM.02b",
+        "Hồ sơ/Bằng chứng cần thu thập": "Nội dung BM.02b;\r\nBiên bản trao đổi với NĐH (nếu có);\r\nEmail/công văn làm rõ nội dung.",
+        "Phương pháp kiểm tra": "Rà soát nội dung BM.02b;\r\nPhỏng vấn cán bộ Ban tham gia về quy trình xem xét.",
+        "Tiêu chí đánh giá": "Ý kiến có phân tích về: sự cần thiết, khối lượng, tiến độ, NS, nhân sự;\r\nNêu rõ điều kiện lưu ý;\r\nTrao đổi với NĐH nếu cần.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 7,
+        "Hạng mục": "Bước 4 – Tổng hợp ý kiến và hoàn thiện tờ trình",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra Ban QLDA đã tổng hợp đủ ý kiến các Ban, phối hợp NĐH làm rõ vướng mắc và hoàn thiện tờ trình đúng biểu mẫu, đúng hạn.",
+        "Sai sót/rủi ro tiềm tàng": "Không tổng hợp đủ ý kiến; Không họp nội bộ khi cần; Tờ trình thiếu so sánh KH 5 năm/SXKD; Vượt thời hạn 02 ngày (hoặc 05 ngày với NS năm).",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 4, QT.QLDA.02;\r\nBM.03a/QT.QLDA.02;\r\nBM.03b/QT.QLDA.02\r\n(tối đa 02 ngày LV; 05 ngày LV với NS năm)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tờ trình BM.03a hoặc BM.03b;\r\nBiên bản họp nội bộ (nếu có);\r\nNgày hoàn thiện tờ trình vs. ngày nhận ý kiến.",
+        "Phương pháp kiểm tra": "Kiểm tra tờ trình theo BM.03a/03b;\r\nĐối chiếu thời điểm hoàn thành với thời hạn;\r\nXác nhận đủ nội dung đánh giá.",
+        "Tiêu chí đánh giá": "Tờ trình đủ: tổng hợp chỉ tiêu năm, đánh giá đề xuất NĐH, so sánh KH 5 năm, cơ chế biểu quyết, kiến nghị;\r\nHoàn thành trong thời hạn.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 8,
+        "Hạng mục": "Bước 4 – Chất lượng tờ trình BM.03a (NS năm)",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra tờ trình theo BM.03a đáp ứng đủ các nội dung quy định (6 phần: I – chỉ tiêu năm; II – đánh giá đề xuất NĐH; III – kiến nghị).",
+        "Sai sót/rủi ro tiềm tàng": "Thiếu bảng so sánh 12 chỉ tiêu (Mục I); Không đánh giá biến động so 3 năm liền kề; Thiếu so sánh KH 5 năm/SXKD; Không đề cập cơ chế biểu quyết.",
+        "Tham chiếu Điều/khoản": "BM.03a/QT.QLDA.02 (Mục I, II.1-2.3, III);\r\nMục 3, Bước 4",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tờ trình BM.03a;\r\nBảng 12 chỉ tiêu;\r\nÝ kiến các Ban;\r\nKH 5 năm/SXKD của PVEP.",
+        "Phương pháp kiểm tra": "Kiểm tra từng mục trong BM.03a;\r\nĐối chiếu số liệu chỉ tiêu;\r\nPhỏng vấn cán bộ QLDA.",
+        "Tiêu chí đánh giá": "BM.03a đủ bảng 12 chỉ tiêu (Mục I);\r\nĐánh giá tình hình năm báo cáo;\r\nSo sánh 3 năm liền kề;\r\nSo sánh KH 5 năm;\r\nNêu cơ chế biểu quyết.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 9,
+        "Hạng mục": "Bước 5 – PTGĐ phụ trách DA thông qua tờ trình",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra tờ trình được PTGĐ phụ trách DA xem xét và thông qua đúng thời hạn 01 ngày LV trước khi trình TGĐ.",
+        "Sai sót/rủi ro tiềm tàng": "PTGĐ không ký thông qua hoặc quá hạn 01 ngày LV;\r\nTrình thẳng TGĐ bỏ qua bước PTGĐ.",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 5, QT.QLDA.02\r\n(thời hạn 01 ngày LV)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Chữ ký/xác nhận của PTGĐ trên tờ trình;\r\nNgày ký thông qua vs. ngày hoàn thiện tờ trình.",
+        "Phương pháp kiểm tra": "Kiểm tra tờ trình có chữ ký PTGĐ;\r\nXác nhận thời hạn 01 ngày LV.",
+        "Tiêu chí đánh giá": "Tờ trình có chữ ký thông qua của PTGĐ phụ trách DA;\r\nThời gian xử lý ≤01 ngày LV.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 10,
+        "Hạng mục": "Bước 6 – TGĐ quyết định hoặc trình HĐTV",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra TGĐ đã xem xét, quyết định hoặc trình HĐTV đúng thẩm quyền và thời hạn 01-02 ngày LV.",
+        "Sai sót/rủi ro tiềm tàng": "TGĐ phê duyệt vượt thẩm quyền (không trình HĐTV);\r\nChậm xử lý >02 ngày LV;\r\nKhông có căn cứ xác định thẩm quyền.",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 6, QT.QLDA.02\r\n(thời hạn 01-02 ngày LV);\r\nQuy định thẩm quyền PVEP/PVN",
+        "Hồ sơ/Bằng chứng cần thu thập": "Quyết định/chữ ký phê duyệt TGĐ;\r\nHoặc văn bản trình HĐTV;\r\nNgày ký vs. ngày nhận từ PTGĐ.",
+        "Phương pháp kiểm tra": "Kiểm tra chữ ký phê duyệt hoặc văn bản trình HĐTV;\r\nĐối chiếu mức phê duyệt với phân cấp thẩm quyền.",
+        "Tiêu chí đánh giá": "Trong thẩm quyền → TGĐ ký phê duyệt ≤02 ngày LV;\r\nVượt thẩm quyền → TGĐ trình HĐTV kèm kiến nghị.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 11,
+        "Hạng mục": "Bước 8 – Thông báo kết quả phê duyệt cho NĐH",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra ý kiến phê duyệt của PVEP đã được thông báo đến NĐH/ĐVĐH đúng hạn, đúng nội dung và đúng kênh.",
+        "Sai sót/rủi ro tiềm tàng": "Không thông báo kết quả phê duyệt cho NĐH;\r\nChậm thông báo >03 ngày LV sau họp;\r\nNội dung thiếu điều kiện phê duyệt.",
+        "Tham chiếu Điều/khoản": "Mục 3, Bước 8, QT.QLDA.02\r\n(03 ngày LV sau họp, hoặc 01 ngày LV gửi văn bản)",
+        "Hồ sơ/Bằng chứng cần thu thập": "Văn bản/thư thông báo kết quả phê duyệt gửi NĐH;\r\nNgày gửi vs. ngày họp/phê duyệt.",
+        "Phương pháp kiểm tra": "Kiểm tra văn bản thông báo;\r\nĐối chiếu ngày gửi với thời hạn;\r\nXác nhận nội dung đầy đủ.",
+        "Tiêu chí đánh giá": "Thông báo gửi NĐH ≤03 ngày LV sau họp (hoặc ≤01 ngày LV với văn bản);\r\nNội dung gồm kết quả và điều kiện lưu ý (nếu có).",
+        "PIC": "Nguyễn Thị Hải Yến"
+      },
+      {
+        "STT": 12,
+        "Hạng mục": "Kiểm tra tổng thể thời hạn xử lý toàn quy trình",
+        "Mục tiêu/Nội dung công việc": "Đánh giá tổng thể thời gian xử lý từng bước và toàn bộ quy trình đảm bảo tiến độ, không ảnh hưởng đến hoạt động Dự án.",
+        "Sai sót/rủi ro tiềm tàng": "Tổng thời gian xử lý kéo dài;\r\nKhông có cơ chế theo dõi đôn đốc tiến độ.",
+        "Tham chiếu Điều/khoản": "Tổng hợp thời hạn Bước 1–9, QT.QLDA.02",
+        "Hồ sơ/Bằng chứng cần thu thập": "Log thời gian xử lý từng bước;\r\nSổ theo dõi tiến độ hồ sơ;\r\nPhản hồi từ NĐH.",
+        "Phương pháp kiểm tra": "Lập bảng thời hạn thực tế vs. quy định từng bước;\r\nXác định bước thường bị chậm trễ.",
+        "Tiêu chí đánh giá": "Tổng thời gian xử lý hợp lý;\r\nKhông có bước vượt thời hạn;\r\nCó cơ chế nhắc nhở/đôn đốc.",
+        "PIC": "Nguyễn Thị Hải Yến"
+      }
+    ]
+  },
+  "KH-AFE": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Kiểm tra cơ sở xét duyệt AFE",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo AFE được lập dựa trên các căn cứ pháp lý và kế hoạch đã được phê duyệt,.",
+        "Sai sót/rủi ro tiềm tàng": "AFE được phê duyệt không có căn cứ; nội dung không phù hợp với kế hoạch công việc hoặc ngân sách.",
+        "Tham chiếu Điều/khoản": "Điều 14 (Quy chế 1398),.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản phê duyệt kết quả lựa chọn nhà thầu.- CTHĐ&NS hoặc Kế hoạch công việc dự án đã duyệt.- Báo cáo sử dụng vốn được phê duyệt,.",
+        "Phương pháp kiểm tra": "Đối chiếu nội dung AFE với các kế hoạch, ngân sách và báo cáo sử dụng vốn tương ứng.",
+        "Tiêu chí đánh giá": "Phải có đầy đủ căn cứ: Phê duyệt thầu, CTHĐ&NS, phạm vi/tiến độ triển khai,."
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Kiểm tra thẩm quyền phê duyệt",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo AFE và các điều chỉnh AFE được phê duyệt đúng cấp thẩm quyền (TGĐ hoặc HĐTV).",
+        "Sai sót/rủi ro tiềm tàng": "Phê duyệt vượt thẩm quyền hoặc không đúng phân cấp quy định tại Phụ lục I.",
+        "Tham chiếu Điều/khoản": "Phụ lục I, Mục II.11 (Quy chế 1398).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình phê duyệt AFE.- Văn bản phê duyệt/Nghị quyết/Quyết định phê duyệt AFE.",
+        "Phương pháp kiểm tra": "Đối chiếu cấp phê duyệt trên hồ sơ với bảng phân cấp thẩm quyền tại Phụ lục I.",
+        "Tiêu chí đánh giá": "Cấp phê duyệt phải đúng theo danh mục tại Phụ lục I (TGĐ hoặc HĐTV)."
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Kiểm tra việc điều chỉnh, bổ sung AFE",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra trình tự thực hiện khi có điều chỉnh AFE làm tăng ngân sách vượt hạn mức của Người điều hành.",
+        "Sai sót/rủi ro tiềm tàng": "Tăng ngân sách AFE nhưng không thực hiện thủ tục điều chỉnh CTHĐ&NS tương ứng trước hoặc đồng thời.",
+        "Tham chiếu Điều/khoản": "Điều 14 (Quy chế 1398).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Hồ sơ đề xuất điều chỉnh AFE.- Văn bản phê duyệt điều chỉnh, bổ sung CTHĐ&NS tương ứng.",
+        "Phương pháp kiểm tra": "Kiểm tra thời điểm và hồ sơ phê duyệt điều chỉnh CTHĐ&NS so với thời điểm điều chỉnh AFE.",
+        "Tiêu chí đánh giá": "Việc điều chỉnh CTHĐ&NS phải được thực hiện trước hoặc đồng thời với việc phê duyệt điều chỉnh AFE."
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Kiểm tra quy trình thẩm định và xử lý",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo hồ sơ AFE được xử lý qua đầy đủ các bước thẩm định, lấy ý kiến các Ban chuyên môn/Thành viên Ủy ban,.",
+        "Sai sót/rủi ro tiềm tàng": "Quy trình bị rút gọn trái quy định; thiếu ý kiến chuyên môn của các Ban liên quan hoặc Thành viên Ủy ban.",
+        "Tham chiếu Điều/khoản": "Phụ lục II, III (Quy chế 1398),.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá của Ban chủ trì.- Văn bản đóng góp ý kiến của các Ban chuyên môn/Thành viên Ủy ban.- Biên bản họp Hội đồng thẩm định (nếu có),.",
+        "Phương pháp kiểm tra": "Kiểm tra nhật ký xử lý hồ sơ, các văn bản tham gia ý kiến và báo cáo thẩm định,.",
+        "Tiêu chí đánh giá": "Phải tuân thủ đúng trình tự các bước và thời hạn xử lý theo quy định tại Phụ lục II hoặc III,."
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Kiểm tra việc theo dõi và lưu trữ hồ sơ",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo việc triển khai AFE được theo dõi sát sao và hồ sơ được lưu trữ đầy đủ để phục vụ hậu kiểm.",
+        "Sai sót/rủi ro tiềm tàng": "Thiếu hồ sơ lưu trữ; không cập nhật tình hình thực hiện triển khai AFE.",
+        "Tham chiếu Điều/khoản": "Phụ lục II, III (Quy chế 1398),.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo định kỳ về tình hình thực hiện dự án/AFE\r\n- Hồ sơ lưu trữ tại Ban đầu mối.",
+        "Phương pháp kiểm tra": "Kiểm tra báo cáo thực hiện AFE và các tài liệu liên quan được cung cấp đầy đủ."
+      }
+    ]
+  },
+  "KH_G&A": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Phê duyệt KHNV & NS",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo khoản chi nằm trong kế hoạch Chương trình công tác và Ngân sách được duyệt.",
+        "Sai sót/rủi ro tiềm tàng": "Chi ngoài kế hoạch; Giải ngân vượt ngân sách được phê duyệt.",
+        "Tham chiếu Điều/khoản": "CTHĐ&NS được phê duyệt năm 2025.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Danh mục CTHĐ&NS đã duyệt; Đề nghị chi/thanh toán.",
+        "Phương pháp kiểm tra": "Đối chiếu khoản chi thực tế với danh mục CTHĐ&NS đã được PVEP/PVN phê duyệt.",
+        "Tiêu chí đánh giá": "Khoản chi có tên trong danh mục ngân sách và còn hạn mức.",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Đúng Hạng mục NS",
+        "Mục tiêu/Nội dung công việc": "Hạch toán đúng mã hạng mục ngân sách, đúng niên độ.",
+        "Sai sót/rủi ro tiềm tàng": "Hạch toán sai hạng mục chi phí; Nhầm lẫn niên độ tài chính.",
+        "Tham chiếu Điều/khoản": "Văn bản phê duyệt CTHĐ&NS; Danh mục mã ngân sách (Cost Code).",
+        "Hồ sơ/Bằng chứng cần thu thập": "Chứng từ hạch toán kế toán; Tờ trình thanh toán.",
+        "Phương pháp kiểm tra": "Kiểm tra mã hạch toán trên đề nghị thanh toán; Đối chiếu tính phù hợp nội dung chi và hạng mục phí.",
+        "Tiêu chí đánh giá": "Mã hạch toán khớp với bản chất khoản chi và danh mục mã NS."
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Thẩm quyền Quyết định (LOA)",
+        "Mục tiêu/Nội dung công việc": "Tuân thủ đúng hệ thống phân cấp thẩm quyền quyết định của Tổng công ty.",
+        "Sai sót/rủi ro tiềm tàng": "Phê duyệt vượt thẩm quyền; Ký sai cấp thẩm quyền quy định.",
+        "Tham chiếu Điều/khoản": "Quy chế phân cấp (LOA); Quy định mua sắm thường xuyên.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tờ trình, PR, Hợp đồng, Văn bản phê duyệt.",
+        "Phương pháp kiểm tra": "Kiểm tra chữ ký phê duyệt; Đối chiếu giá trị quyết định với ngưỡng thẩm quyền của HĐTV/TGĐ.",
+        "Tiêu chí đánh giá": "Chữ ký phê duyệt đúng với hạn mức giá trị quy định trong LOA."
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Phê duyệt dự toán",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo giá trị chi tiêu dựa trên dự toán được thẩm định hợp lệ.",
+        "Sai sót/rủi ro tiềm tàng": "Thay đổi phạm vi hoặc giá trị nhưng không phê duyệt dự toán bổ sung.",
+        "Tham chiếu Điều/khoản": "QĐ 1035/QĐ-TDKT về lập và thẩm định dự toán.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ dự toán; Văn bản thẩm định của Ban chức năng.",
+        "Phương pháp kiểm tra": "Kiểm tra hồ sơ dự toán và văn bản thẩm định dự toán trước khi thực hiện.",
+        "Tiêu chí đánh giá": "Dự toán ≥100 triệu phải có văn bản thẩm định của Ban KH&QLDA."
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Đầy đủ hồ sơ Chứng từ",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo tính pháp lý và khả năng truy vết (Audit Trail).",
+        "Sai sót/rủi ro tiềm tàng": "Chứng từ thiếu chữ ký, hóa đơn sai quy định; Thiếu biên bản nghiệm thu.",
+        "Tham chiếu Điều/khoản": "Quy chế quản lý tài chính; Quy định Tạm ứng & Thanh toán.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Hợp đồng, Hóa đơn VAT, Biên bản nghiệm thu/Xác nhận công việc.",
+        "Phương pháp kiểm tra": "Kiểm tra tính nguyên vẹn, đầy đủ và hợp lệ của bộ hồ sơ chứng từ.",
+        "Tiêu chí đánh giá": "Hồ sơ đầy đủ chữ ký, con dấu và hóa đơn hợp lệ theo quy định thuế."
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Đúng mục đích chi phí",
+        "Mục tiêu/Nội dung công việc": "Chi phí phục vụ trực tiếp cho hoạt động SXKD hoặc quản lý dự án.",
+        "Sai sót/rủi ro tiềm tàng": "Chi phí không phục vụ hoạt động dự án; Lạm dụng cho mục đích cá nhân.",
+        "Tham chiếu Điều/khoản": "Điều lệ PVEP; Quy chế quản lý tài chính.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Thuyết minh chi phí; Báo cáo kết quả công việc/dịch vụ.",
+        "Phương pháp kiểm tra": "Đánh giá bản chất khoản chi thông qua giải trình và thực tế hàng hóa/dịch vụ nhận được.",
+        "Tiêu chí đánh giá": "Nội dung chi phù hợp với chức năng nhiệm vụ và KHSXKD của đơn vị."
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Tuân thủ định mức chi phí",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra tuân thủ định mức chi phí hành chính (G&A) và chính sách nhân viên.",
+        "Sai sót/rủi ro tiềm tàng": "Chi sai định mức vé máy bay, phòng nghỉ; Chi vượt định mức tiếp khách.",
+        "Tham chiếu Điều/khoản": "QĐ 1146/QĐ-TDKT (Định mức G&A); Quy chế trả lương/thưởng.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Chứng từ chi tiết (Vé máy bay, hóa đơn KS, danh sách tiệc...); CSNV.",
+        "Phương pháp kiểm tra": "Đối chiếu đơn giá thanh toán thực tế với định mức quy định nội bộ của Tổng công ty.",
+        "Tiêu chí đánh giá": "Các khoản chi không vượt quá hạn mức tối đa quy định cho từng chức danh."
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Tuân thủ quy định nội bộ khác",
+        "Mục tiêu/Nội dung công việc": "Thực hiện đúng các quy trình nghiệp vụ về tạm ứng và thanh toán.",
+        "Sai sót/rủi ro tiềm tàng": "Thanh toán tiền mặt vượt hạn mức; Chậm hoàn ứng theo quy định.",
+        "Tham chiếu Điều/khoản": "Quy chế tài chính; Quy chế tạm ứng & thanh toán.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Đề nghị tạm ứng; Hồ sơ hoàn ứng; Chứng từ chuyển khoản.",
+        "Phương pháp kiểm tra": "Kiểm tra việc áp dụng hình thức thanh toán; Rà soát thời hạn hoàn trả tạm ứng.",
+        "Tiêu chí đánh giá": "Tuân thủ quy trình chuyển khoản và thời gian quyết toán quy định"
+      }
+    ]
+  },
+  "KH_Bảo hiểm": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Hợp đồng bảo hiểm tổng thể của PVEP; HĐBH nhân thọ trả trước; HĐBH HTTN; HĐBH y tế trách nhiệm cao",
+        "Mục tiêu/Nội dung công việc": "Rà soát chi phí đóng góp hàng năm theo ngân sách đã được phê duyệt thực tế & dự phòng; Rà soát định mức theo các QĐ của cấp có thẩm quyền; rà soát thời hạn đóng góp và các điều khoản phạt phát sinh.",
+        "Sai sót/rủi ro tiềm tàng": "HĐ bảo hiểm; Phê duyệt của HĐTV đối với kế hoạch hoạt động và ngân sách trong năm; tiến độ đóng tiền cho bên Bảo hiểm theo QĐ của TGĐ",
+        "Hồ sơ/Bằng chứng cần thu thập": "mức bảo hiểm theo đúng QĐ và trong phạm vi ngân sách phê duyệt; việc chuyển tiền phí đúng thời hạn ",
+        "Phương pháp kiểm tra": "Các điều khoản về phạt nộp chậm phí bảo hiểm hàng tháng/quý/năm",
+        "Tiêu chí đánh giá": "Quy chế quản lý bảo hiểm QĐ 1509/QĐ-TDKT ngày 11/9/2024; QĐ 256/QĐ-TDKT ngày 12/2/2025 về giao kế hoạch hoạt động SXKD 2025 của PVEP; QĐ 289, 791, 1065, 2222, 2137 điều chỉnh KHNV & CPHĐ PVEP",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      }
+    ]
+  },
+  "KH_VBQLNB": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Xây dựng",
+        "Mục tiêu/Nội dung công việc": "Rà soát kế hoạch xây dựng/sửa đổi VBQLNB hàng năm và căn cứ ban hành.",
+        "Sai sót/rủi ro tiềm tàng": "KH xây dựng VBQLNB; phân công soạn thảo; căn cứ pháp lý.",
+        "Tham chiếu Điều/khoản": "Điều 6, 7, 8 - QĐ 1348/QĐ-TDKT",
+        "Hồ sơ/Bằng chứng cần thu thập": "Có KH năm; căn cứ pháp lý cập nhật; phân công rõ.",
+        "Phương pháp kiểm tra": "Đối chiếu KH; rà soát căn cứ.",
+        "Tiêu chí đánh giá": "Trước 15/11: Có văn bản hướng dẫn/yêu cầu lập kế hoạch gửi các Ban .",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Xây dựng",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra dự thảo VBQLNB: tính thống nhất với hệ thống VB hiện hành, không trái pháp luật.",
+        "Sai sót/rủi ro tiềm tàng": "Dự thảo; bảng so sánh với VB hiện hành; ý kiến các Ban.",
+        "Tham chiếu Điều/khoản": "Điều 11, 12, 13 - QĐ 1348/QĐ-TDKT; Mục 3.2 - QT.PC&QLĐT.01",
+        "Hồ sơ/Bằng chứng cần thu thập": "Không mâu thuẫn nội bộ; không trái pháp luật; có lấy ý kiến đủ Ban.",
+        "Phương pháp kiểm tra": "Compare dự thảo với VB liên quan; rà soát pháp lý.",
+        "Tiêu chí đánh giá": "Quy định mâu thuẫn nhau; trái Luật/Nghị định; bỏ qua ý kiến phản biện.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Thẩm định",
+        "Mục tiêu/Nội dung công việc": "Rà soát thẩm định pháp lý và thẩm định nội dung trước khi ban hành.",
+        "Sai sót/rủi ro tiềm tàng": "Phiếu thẩm định; ý kiến Ban Pháp chế.",
+        "Tham chiếu Điều/khoản": "Điều 14 - QĐ 1348/QĐ-TDKT; Mục 2.2, 3.2 - QT.PC&QLĐT.01",
+        "Hồ sơ/Bằng chứng cần thu thập": "Thẩm định pháp lý 100% VBQLNB; ý kiến được tiếp thu/giải trình.",
+        "Phương pháp kiểm tra": "Walk-through quy trình; kiểm tra hồ sơ.",
+        "Tiêu chí đánh giá": "Bỏ qua thẩm định; thẩm định hình thức; không tiếp thu ý kiến.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Ban hành",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra thẩm quyền ký ban hành VBQLNB theo phân cấp.",
+        "Sai sót/rủi ro tiềm tàng": "Quyết định ban hành; phân cấp thẩm quyền.",
+        "Tham chiếu Điều/khoản": "Điều 16, 17 - QĐ 1348/QĐ-TDKT; Mục 3.2 - QT.PC&QLĐT.01",
+        "Hồ sơ/Bằng chứng cần thu thập": "Đúng thẩm quyền HĐTV/TGĐ; đầy đủ chữ ký, đóng dấu, số/ngày.",
+        "Phương pháp kiểm tra": "Đối chiếu thẩm quyền; rà soát chữ ký.",
+        "Tiêu chí đánh giá": "Ban hành vượt thẩm quyền; thiếu số hiệu hệ thống; lưu trữ thiếu bản gốc.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Phổ biến",
+        "Mục tiêu/Nội dung công việc": "Rà soát công tác phổ biến VBQLNB đến CBNV: kênh, tần suất, training.",
+        "Sai sót/rủi ro tiềm tàng": "Bằng chứng đăng tải nội bộ; biên bản tập huấn; danh sách CBNV được phổ biến.",
+        "Tham chiếu Điều/khoản": "Điều 19 - QĐ 1348/QĐ-TDKT",
+        "Hồ sơ/Bằng chứng cần thu thập": "Phổ biến sau ban hành; có training cho VB trọng yếu; CBNV biết và áp dụng.",
+        "Phương pháp kiểm tra": "Phỏng vấn CBNV mẫu; rà soát bằng chứng.",
+        "Tiêu chí đánh giá": "Ban hành xong 'để đó'; CBNV không biết; áp dụng sai gây sai phạm.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Triển khai",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra hiệu lực thực thi: vướng mắc khi áp dụng, exception process.",
+        "Sai sót/rủi ro tiềm tàng": "Báo cáo vướng mắc; danh sách exception/waiver; biên bản giao ban.",
+        "Tham chiếu Điều/khoản": "Điều 20 - QĐ 1348/QĐ-TDKT",
+        "Hồ sơ/Bằng chứng cần thu thập": "Có cơ chế phản hồi; exception có thẩm quyền duyệt và time-bound; vướng mắc được xử lý.",
+        "Phương pháp kiểm tra": "Phỏng vấn các Ban thực thi; rà soát exception.",
+        "Tiêu chí đánh giá": "VB không khả thi nhưng không sửa; exception trở thành thông lệ; CBNV 'lách' VB.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Rà soát định kỳ",
+        "Mục tiêu/Nội dung công việc": "Rà soát hệ thống VBQLNB định kỳ: lỗi thời, mâu thuẫn, gap.",
+        "Sai sót/rủi ro tiềm tàng": "Báo cáo rà soát VB; KH sửa đổi.",
+        "Tham chiếu Điều/khoản": "Điều 21 - QĐ 1348/QĐ-TDKT; Mục 3.3 - QT.PC&QLĐT.01",
+        "Hồ sơ/Bằng chứng cần thu thập": "Rà soát ≥ 1 lần/năm; cập nhật khi pháp luật thay đổi; xử lý mâu thuẫn.",
+        "Phương pháp kiểm tra": "Sample VB; đối chiếu với pháp luật cập nhật.",
+        "Tiêu chí đánh giá": "VB hết hiệu lực vẫn áp dụng; mâu thuẫn tích tụ; gap chưa được xử lý.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Lưu trữ",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra lưu trữ VBQLNB: bản gốc, bản số hóa, danh mục.",
+        "Sai sót/rủi ro tiềm tàng": "Sổ đăng ký VB; kho lưu trữ; cổng tra cứu nội bộ.",
+        "Tham chiếu Điều/khoản": "Điều 17 (khoản 6), Điều 19 - QĐ 1348; Mục 3.2, Mục 4 - QT.PC&QLĐT.01",
+        "Hồ sơ/Bằng chứng cần thu thập": "100% VB có bản gốc lưu trữ; số hóa và đăng tải nội bộ; danh mục cập nhật.",
+        "Phương pháp kiểm tra": "Sample 10 VB ngẫu nhiên; tra cứu trên cổng.",
+        "Tiêu chí đánh giá": "Mất bản gốc; bản nội bộ không đồng nhất với bản gốc; tra cứu khó khăn.",
+        "PIC": "Vũ Ái Ngọc Bình"
+      }
+    ]
+  },
+  "KH_KHCN": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Hoạt động KHCN của PVEP",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra tính tuân thủ các quy định của Luật KHCN & nghị định liên quan; Kiểm tra tính tuân thủ các quy định của Quy định/Quy chế KHCN của Tập đoàn; Tính tuân thủ quy định của PVEP",
+        "Sai sót/rủi ro tiềm tàng": "Hệ thống văn bản pháp luật/quy định của Tập đoàn/Quy định PVEP;\r\nCác quyết định phê duyệt kế hoạch thực hiện hoạt động KHCN của HĐTV;\r\nCác quyết định giao từng nhiệm vụ KHCN của TGĐ;\r\nQĐ phê duyệt quỹ KHCN năm 2025;\r\nCác hồ sơ thanh quyết toán NV KHCN;\r\nBáo cáo tổng kết hoạt động KHCN năm;",
+        "Tham chiếu Điều/khoản": "Đối chiếu KH vs việc thực hiện nhiệm vụ trong năm;\r\nCác QĐ dừng/tạm dừng NV KHCN;\r\nHồ sơ thanh quyết toán từng nhiệm vụ;\r\nViệc thực hiện các nhiệm vụ KHCN theo đúng KH đã được HĐTV phê duyệt và TGĐ giao nhiệm vụ",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tuân thủ các quy định của Pháp luật/quy định của Tập đoàn/PVEP;\r\nChi phí trong ngân sách đã được HĐTV & TGĐ phê duyệt",
+        "Phương pháp kiểm tra": "Phải chuyển trả quỹ KHCN của Chính phủ nếu không sử dụng hết 70% quỹ trong vòng 5 năm",
+        "Tiêu chí đánh giá": "Luật số 93/2025/QH15 KHCN, đổi mới sáng tạo;\r\n Nghị định 249/2025/NĐ-CP;\r\nNghị định 231/2025/NĐ-CP;\r\nQĐ về KHCN và sử dụng quỹ KHCN của Tập đoàn;\r\nQĐ 51/QĐ-TDKT ngày 17/1/2024 quy chế trích lập, quản lý và sử dụng quỹ PTKHCN;\r\nQĐ 850/QĐ_TDKT ngày 26/4/2025 quy chế quản lý HĐ KHCN;\r\nQĐ 448/QĐ_TDKT ngày 18/3/2024 quy chế quản lý hoạt động sáng kiến, sáng chế;\r\nQĐ 1532/QĐ-TDKT ngày 28/8/2025:\r\nQuy chế hoạt động của Hội đồng KHCN - QĐ;\r\nTờ trình 131/CVNB-NKX ngày 23/4/2026 báo cáo việc sử dụng quỹ KHCN 2025 và kế hoạch trích lập quỹ 2026;",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      }
+    ]
+  },
+  "KH_GIÁM SÁT": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Xây dựng KH hoạt động, KTNB/KTGS hàng năm",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra Tờ trình xây dựng Kế hoạch hoạt động của Ban KSNB. Chương trình KTNB/KTGS chi tiết cho năm tiếp theo trình HĐTV.",
+        "Sai sót/rủi ro tiềm tàng": "- Tờ trình bị trễ thời gian.\r\n- Phạm vi đối tượng thiếu.\r\n- Thời gian của kế hoạch bị trùng lặp với các Chương trình khác của Ban",
+        "Tham chiếu Điều/khoản": "Điều 13. QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản tờ trình (số,ngày)\r\n- Biểu mấu kèm theo\r\n- Sổ và số công văn….",
+        "Phương pháp kiểm tra": "Đối chiếu lịch chuẩn",
+        "Tiêu chí đánh giá": "Trình đúng thời hạn trước ngày 25/12 hàng năm không?Kế hoạch cho cả 2 Đoàn đã đúng và đủ không?",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Thông báo và gửi đề cương yêu cầu đối tượng kiểm tra báo cáo",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra nội dung đề cương gửi đối tượng KTNB/KTGS; Nhân sự tham gia có đảm bảo chất lượng và số lượng với yêu cầu công việc đặt ra; Tài liệu yêu cầu có gửi trước 30 ngày triển khai hay không?",
+        "Sai sót/rủi ro tiềm tàng": "-Đề cương gửi chậm\r\n- Số liệu biểu mẫu thiếu\r\n- Bỏ xót hạng mục báo cáo\r\n- Gửi không đúng luồng đầu mối",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản tờ trình (số,ngày)\r\n- Biểu mấu kèm theo\r\n- Sổ và số công văn….",
+        "Phương pháp kiểm tra": "Đối chiếu các thông báo văn bản gửi đối tượng và check mail phản hồi từ đối tượng kiểm tra",
+        "Tiêu chí đánh giá": "Đúng, đầy đủ nội dung; Đúng thời hạn, đủ biểu mẫu…",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Trình HĐTV phương án thành lập Đoàn KTNB/KTGS",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc thành lập Đoàn có đủ yêu cầu thành phần đoàn và cơ cấu đủ nhân sự không?Biểu mẫu và Dự thảo QĐ có đúng và đủ theo quy trình không?",
+        "Sai sót/rủi ro tiềm tàng": "- Thiếu thành viên đủ chuyên môn phục vụ Đoàn.\r\n- Dự thảo thiếu nội dung.",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản tờ trình (số,ngày)\r\n- Biểu mấu kèm theo\r\n- Sổ và số công văn….\r\n- Người soạn thảo.",
+        "Phương pháp kiểm tra": "Đối chiếu trực tiếp",
+        "Tiêu chí đánh giá": "Đúng hạn , đủ số lượng và chuẩn biểu mẫu theo yêu cầu.",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Phân công nhiệm vụ thành viên Đoàn KTNB/KTGS. Gửi báo cáo trước khi triển khai",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra việc thu thập thông tin có đúng trước 15 ngày quy định không?Mãu báo cáo yêu cầu có đúng không?Trưởng Đoàn có tổ chức họp Đoàn trước 10 ngày triển khai để thống nhất: Phân công nhiệm vụ, nhận định đánh giá, các nhiệm vụ kết luận kỳ trước, thuân lợi khó khăn khi triển khai...",
+        "Sai sót/rủi ro tiềm tàng": "- Gửi và nhận thông tin chậm chế không đúng thời hạn.\r\n- Tổ chức họp qua loa và phân công nhiệm vụ thành viên Đoàn không đúng lĩnh vực.",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp\r\n- Mail thông báo tới đối tượng và tài liệu nhận đúng quy định",
+        "Phương pháp kiểm tra": "Đối chiếu trưc tiếp và check chéo qua mail",
+        "Tiêu chí đánh giá": "Đúng hạn và đầy đủ theo yêu cầu",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Thực hiện kiểm tra và báo cáo kết quả cho Trưởng Đoàn",
+        "Mục tiêu/Nội dung công việc": "Kiêm tra xem có Họp Kick off công bố QĐ và chương trình KTNB/KTGS với đối tượng kiểm tra;Quá trình kiể tra có thực hiện đúng và đủ theo yêu cầu báo cáo đã gửi đối tượng kiểm tra không?",
+        "Sai sót/rủi ro tiềm tàng": "- Tiến hành Kick off không đúng thời theo QĐ.\r\n- Thiếu thành viên Đoàn.\r\n- Đối tượng cung cấp hồ sơ không đầy đủ và né tránh.",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp\r\n- Mail thông báo tới đối tượng và báo cáo đối tượng chuẩn bị gửi Đoàn.",
+        "Phương pháp kiểm tra": "Đối chiếu trưc tiếp, check chéo qua mail, phỏng vấn",
+        "Tiêu chí đánh giá": "Đủ thành viên Đoàn, báo cáo đối tượng kiểm tra. Kết quả báo cáo các thành viên và Trưởng Đoàn.",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Họp kết thúc và ký biên bản kiểm tra",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra xem Đoàn có tiến hành họp lập Dự thảo Biên bản KTNB/KTGS?Đoàn có tổ chức họp kết thúc với đối tượng KTNB/KTGS không? Các nội dung tiếp thu chỉnh sửa bổ sung có kịp thời không?Các ý kiến và kiến nghị của đối tượng kiểm tra có bằng chứng và minh bạch không?",
+        "Sai sót/rủi ro tiềm tàng": "- Không họp kết thúc và báo cáo dự thảo biên bản.\r\n- Bỏ sót các lỗi thông qua báo cáo miệng mà không có bằng chứng chứng minh.",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản họp\r\n- Mail thông báo tới đối tượng và báo cáo đối tượng chuẩn bị gửi Đoàn.",
+        "Phương pháp kiểm tra": "Đối chiếu trưc tiếp, check chéo qua mail, phỏng vấn",
+        "Tiêu chí đánh giá": "Đầy đủ thành viên, biên bản họp và dự thảo đẩy đủ.",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Báo cáo kết quả và giám sát việc thực hiện",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra Trưởng Đoàn lập Báo cáo kết quả kiểm tra gửi HĐTV có theo mẫu không?Việc giám sát đối tượng kiểm tra có định kỳ 6 tháng báo cáo kết quả không?",
+        "Sai sót/rủi ro tiềm tàng": "- Báo cáo không đầy đủ kết quả kiểm tra so với thực tế.\r\n- Việc giám sát đối tượng định kỳ không đủ nội dung và thời hạn.",
+        "Tham chiếu Điều/khoản": "- QĐ 1919/QĐ-TDKT ngày 06/11/2025 Quy chế TCHĐ của Ban KSNB.\r\n- Quy trình Mã QT.KSNB.01 ban hành ngày 31/12/2019",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo theo đường công văn trình HĐTV.\r\n- Các văn bản chứng mình việc giám sát định kỳ đúng và đầy đủ nội dung cần giám sát.",
+        "Phương pháp kiểm tra": "Đối chiếu trưc tiếp, check chéo qua mail, phỏng vấn",
+        "Tiêu chí đánh giá": "Đầy đủ văn bản và tình hình thực hiện các kiến nghị của đối tượng kiểm tra.",
+        "PIC": "Giang Anh Dũng"
+      },
+      {
+        "STT": 1,
+        "Bước kiểm tra": "B1. Xây dựng và phê duyệt Kế hoạch giám sát và đánh giá đầutư hàng năm",
+        "Mục tiêu/Nội dung công việc": "TGĐ chỉ đạo xây dựng và trình HĐTV phê duyệt Kế hoạch giám sát và đánh giá đầu tư hàng năm đúng thời hạn và đầy đủ nội dung",
+        "Sai sót/rủi ro tiềm tàng": " - Không trình hoặc trình HĐTV KH GS&ĐGĐT muộn hơn 25/12 năm trước \r\n- KH không đầy đủ nội dung về mục đích, phạm vi, đối tượng, nội dung, thời gian, thành phần đoàn.\r\n- Không tham chiếu Quy định Quản ly đầu tư ra nước ngoài trong hoạt động dầu khí của PVEP (QĐ 1189/QĐ-TDKT ngày 19/6/2025)\r\n",
+        "Tham chiếu Điều/khoản": "Điều 24-26 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình HĐTV KH GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt của HĐTV;\r\n- QĐ 1189.",
+        "Phương pháp kiểm tra": "- Kiểm tra KH GS&ĐGĐT và Tờ trình HĐTV có trình trước ngày 25/12 \r\n- Phê duyệt của HĐTV",
+        "Tiêu chí đánh giá": "- 100% KH GS&ĐGĐT trình HĐTV trước ngày 25/12 năm trước;\r\n- KH GS&ĐGĐT được lập căn cứ theo quy định QĐ 1189;\r\n- KH đầy đủ:  mục đích, phạm vi, đối tượng, nội dung, thời gian, thành phần đoàn.\r\n",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "B2. Xây dựng và phê duyệt Chương trình Giám sát và đánh giá đầu tư hàng năm",
+        "Mục tiêu/Nội dung công việc": "Xây dựng Chương trình GS&ĐGĐT và phê duyệt Chương trình hàng năm đúng với Kế hoạch GS&ĐGĐT HĐTV phê duyệt",
+        "Sai sót/rủi ro tiềm tàng": " - Không có chương trình hoặc chương trình không đúng với Kế hoạch GS&ĐGĐT HĐTV phê duyệt. \r\n- KH không đầy đủ nội dung GS&ĐGĐT theo quy định\r\n- Không tham chiếu Quy định Quản ly đầu tư ra nước ngoài trong hoạt động dầu khí của PVEP (QĐ 1189/QĐ-TDKT ngày 19/6/2025)\r\n",
+        "Tham chiếu Điều/khoản": "Điều 24 và 26 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ Chương trình GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt củaTGĐ;\r\n- QĐ 1189.",
+        "Phương pháp kiểm tra": "- Kiểm tra Chương trình GS&ĐGĐT và Tờ trình HĐTV có trình và phù hợp với KH GS&ĐGĐT  \r\n- Phê duyệt của TGĐ",
+        "Tiêu chí đánh giá": "- 100% Chương trình GS&ĐGĐT phù hợp với KH GS&ĐGĐT;\r\n- Chương trình GS&ĐGĐT được lập căn cứ theo quy định QĐ 1189 và KH GS&ĐGĐT được duyệt;\r\n- Chương trình đầy đủ: đối tượng, nội dung, thời gian, thành phần đoàn.\r\n",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "B3. Tổ chức, thực hiện Chương trình Giám sát và đánh giá đầu tư",
+        "Mục tiêu/Nội dung công việc": "Tổ chức thực hiện GS&ĐGĐT theo đúng Chương trình GS&ĐGĐT được duyệt",
+        "Sai sót/rủi ro tiềm tàng": "- Không tổ chức  thực hiện GS&ĐGĐT.\r\n- Tổ chức thực hiện GS&ĐGĐT không theo đúng Chương trình GS&ĐGĐT được duyệt.\r\n- Không có Biên bản/BC kết quả GS&ĐGĐT ",
+        "Tham chiếu Điều/khoản": "Điều 26-27 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Chương trình GS&ĐGĐT.\r\n- Tờ trình quyết định thành lập đoàn GS&ĐGĐT.\r\n- Biên bản/Báo cáo kết quả GS&ĐGĐT",
+        "Phương pháp kiểm tra": "- Kiểm tra Báo cáo kết quả GS&ĐGĐT",
+        "Tiêu chí đánh giá": "- Kiểm tra Biên bản/ Báo cáo kết quả GS&ĐGĐT (bản có chữ ký)",
+        "PIC": "Trần Ngọc Ánh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "B4. Kết quả GS&ĐGĐT",
+        "Mục tiêu/Nội dung công việc": "HĐTV, TGĐ, Ban chủ trì xử lý các vấn đề phát sinh, kiến nghị giám sát, đầu tư và theo dõi tình hình thực hiện các kiến nghị",
+        "Sai sót/rủi ro tiềm tàng": "- TGĐ không phê duyệt Báo cáo kết quả GS&ĐGĐT.\r\n- Đoàn GS&ĐGĐT không báo cáo đề xuất TGĐ các  vấn đề phát sinh, kiến nghị giám sát, đánh giá đầu tư để đề xuất TGĐ ban hành văn bản yêu cầu thực hiện kiến nghị tại Biên bản GSĐT\r\n- TGĐ không xem xét, xử lý các vấn đề phát sinh, kiến nghị giám sát, đánh giá đầu tư theo thẩm quyền và không báo có kịp thời HĐTV xử lý các vấn đề vướng mắc, phát sinh vượt thẩm quyền.\r\n- HĐTV không xem xét, xử lý các vấn đề phát sịnh, kiến nghị giám sát, đánh giá đầu tư theo thẩm quyền và không báo có kịp thời Petovietenam, các cơ quan thẩm quyền xử lý các vấn đề vướng mắc, phát sinh vượt thẩm quyền.",
+        "Tham chiếu Điều/khoản": "Điều 25-27 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Phê duyệt Báo cáo kết quả GS&ĐGĐT của TGĐ.\r\n- Công văn/Tờ trình của Trưởng đoàn/ban chủ trì báo cáo đề xuất TGĐ các  vấn đề phát sinh, kiến nghị giám sát, đánh giá đầu tư để đề xuất TGĐ ban hành văn bản yêu cầu thực hiện kiến nghị tại Biên bản GSĐT.\r\n- Văn bản yêu cầu của TGĐ thực hiện kiến nghị của Đoàn GSĐT/Ban chủ trì.\r\n- Tờ trình của TGĐ báo cáo HĐTV về các đề vướng mắc, phát sinh vượt thẩm quyền.\r\n- Văn bảncủa HĐTV yêu cầu thực hiện kiến nghị của Đoàn GSĐT/Ban chủ trì.\r\n- Tờ trình của  HĐTV báo cáo Petrovietnam, cơ quan có thẩm quyền về các đề vướng mắc, phát sinh vượt thẩm quyền.",
+        "Phương pháp kiểm tra": "Kiểm tra các công văn, Tờ trình của Ban chủ trì/Đoàn GS&ĐGĐT, TGĐ và HĐTV",
+        "Tiêu chí đánh giá": "- Báo cáo kết quả GS&ĐGĐT của TGĐ.\r\n- Các công văn, Tờ trình của Ban chủ trì/Đoàn GS&ĐGĐT, TGĐ và HĐTV nêu tại cột hồ sơ\r\n"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "B5. Tổ chức, thực hiện theo dõi, kiểm tra quá trình đầu tư dự án theo nội dung và các chỉ tiêu được duyệt",
+        "Mục tiêu/Nội dung công việc": "- Theo dõi, đánh giá tình hình thực hiện các kiến nghị của Đoàn GS&ĐGĐT theo văn bản yêu cầu của HĐTV và TGĐ.\r\n- Theo dõi và giám sát thường xuyên hoạt động đầu tư của PVEP theo ",
+        "Sai sót/rủi ro tiềm tàng": "- Không thực hiện theo dõi, đánh giá tình hình thực hiện các kiến nghị của Đoàn GS&ĐGĐT theo văn bản yêu cầu của HĐTV và TGĐ.\r\n- Không thực hiện theo dõi và giám sát thường xuyên hoạt động đầu tư của PVEP theo ",
+        "Tham chiếu Điều/khoản": "Điều 23, 25, 26, 28 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo kết quả thực hiện ở kỳ GS&ĐGĐT tiếp theo.\r\n-  Văn bản yêu cầu của HĐTV/TGĐ thực hiện kiến nghị của Đoàn GSĐT/Ban chủ trì.",
+        "Phương pháp kiểm tra": "Kiểm tra Báo cáo kết quả thực hiện ở kỳ GS&ĐGĐT tiếp theo",
+        "Tiêu chí đánh giá": "Báo cáo kết quả thực hiện ở kỳ GS&ĐGĐT tiếp theo có nội dung đầy đủ theo yêu cầu của HĐTV và TGĐ"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "B6. Thực hiện báo cáo",
+        "Mục tiêu/Nội dung công việc": "- Thực hiện các báo cáo định kỳ đầy đủ và đúng thời hạn theo quy định.\r\n- Thực hiện báo cáo không định kỳ theo quy định: báo cáo tình hình thực hiện nội dung phân cấp, uỷ quyền đầu tư, sao gửi Petrovietnam các quyết định điều chỉnh đầu tư, dừng dự án, bán/chuyển nhượng",
+        "Sai sót/rủi ro tiềm tàng": "- Không thực hiện các báo cáo định kỳ đầy đủ và/hoặc không đúng thời hạn theo quy định (6 tháng trước 25/6 hàng năm, năm; trước 25/12 hàng năm).\r\n- Không thực hiện báo cáo không định kỳ theo quy định (các QĐ liên quan đến đầu tư 5 ngày sau khi ra QĐ)\r\n- Không trình hoặc trình HĐTV các báo cáo thuộc thẩm quyền HĐTV ký trình Petrovietnam 5 ngày trước ngày đến hạn trình Petrovietnam",
+        "Tham chiếu Điều/khoản": "Điều 27, 29 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo giám sát, đánh giá dự án định kỳ  6 tháng và năm.\r\n- Báo cáo giám sát, đánh giá tổng thể đầu tư hàng năm \r\n- Tờ trình HĐTV dự thảo báo cáo (đối với các báo cáo thuộc thẩm quyền của HĐTV ký trình)\r\n- Tờ trình HĐTV/báo cáo của HĐTV sao gửi Petroviet các quyết định điều chỉnh đầu tư, dừng dự án, bán/chuyển nhượng",
+        "Phương pháp kiểm tra": "Kiểm tra các báo cáo định kỳ và không định kỳ",
+        "Tiêu chí đánh giá": "- 100% các báo cáo được gửi đầy đủ theo quy định.\r\n- 100% báo cáo gửi đúng thời gian quy định"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "B7. Kiểm toán, thanh tra",
+        "Mục tiêu/Nội dung công việc": "- Xây dựng hệ thống kiểm soát nội bộ\r\n- Kế hoạch thanh tra, kiểm toán DADK, báo cáo Petrovietnam\r\n- Báo cáo tổng hợp các DADK đã được kiểm toán trong năm",
+        "Sai sót/rủi ro tiềm tàng": "- Không xây dựng hệ thống kiểm soát nội bộ\r\n- Không có Kế hoạch thanh tra, kiểm toán DADK, báo cáo Petrovietnam\r\n- Không thực hiện Báo cáo tổng hợp các DADK đã được kiểm toán trong năm.",
+        "Tham chiếu Điều/khoản": "Điều 30 QĐ 1189",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Hệ thống kiểm soát nội bộ\r\n- Kế hoạch thanh tra, kiểm toán DADK, báo cáo Petrovietnam\r\n- Báo cáo tổng hợp các DADK đã được kiểm toán trong năm.\r\n- Tờ trình HĐTV  Báo cáo tổng hợp các DADK đã được kiểm toán trong năm.",
+        "Phương pháp kiểm tra": "Kiểm tra có hệ thống kiểm soát nội bộ. Các kế hoạch và báo cáo, tờ trình nêu tại cột hồ sơ",
+        "Tiêu chí đánh giá": "- Có hệ thống kiểm soát nội bộ.\r\n- Có kế hoạch và thực hiện thanh tra, kiểm toán DADK\r\n- Có Báo cáo tổng hợp các DADK đã được kiểm toán trong năm.\r\n"
+      },
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Không có quy định về KTGS trong Quy chế",
+        "Mục tiêu/Nội dung công việc": "Đảm bảo tính phù hợp và cần thiết",
+        "Sai sót/rủi ro tiềm tàng": "Không có cơ chế giám sát",
+        "Tham chiếu Điều/khoản": "N/a",
+        "Hồ sơ/Bằng chứng cần thu thập": "N/a",
+        "Phương pháp kiểm tra": "Rà soát để đảm bảo tính phù hợp trường hợp cần thiết bổ sung quy định trong Quy chế",
+        "Tiêu chí đánh giá": "Hệ thống kiểm soát đã được thiết lập đầy đủ.\r\n- "
+      },
+      {
+        "STT": 1,
+        "Bước kiểm tra": "B1. Xây dựng và phê duyệt Kế hoạch hoạt động & KH KTNB hằng năm ",
+        "Mục tiêu/Nội dung công việc": "Người phụ trách KTNB xây dựng và trình HĐTV phê duyệt Kế hoạch hoạt động và KH KTNB hằng năm đúng thời hạn và đầy đủ nội dung",
+        "Sai sót/rủi ro tiềm tàng": " - Trình HĐTV KH KTNB muộn hơn 25/12 năm trước \r\n- Không gửi KH cho Ban KS PVEP và TGĐ trong 07 ngày làm việc.\r\n- KH KTNB không xây dựng theo định hướng rủi ro \r\n- KH không đầy đủ nội dung về mục tiêu, phạm vi, đối tượng, nội dung, thời gian, nhân lực và phương pháp kiểm toán.\r\n- Không tham chiếu Quy chế Tổ chức và hoạt động của Ban KSNB (QĐ 1450/QĐ-TDKT 13/11/2023);\r\n",
+        "Tham chiếu Điều/khoản": " * QĐ 53/QĐ-TDKT 18/01/2024:\r\n - Điều 13.1.a \r\n  - Điều 14.1\r\n - Điều 15\r\n - Điều 16.1\r\n - Điều 16.2: \r\n - Điều 16.4:  \r\n - Phụ lục I - Bước 1\r\n * QĐ 1450/QĐ-TDKT 13/11/2023 - Quy chế tổ chức Ban KSNB).",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình HĐTV KH KTNB hàng năm \r\n - NQ/QĐ phê duyệt của HĐTV;\r\n- Văn bản gửi TGĐ, Ban KS PVEP;\r\n- Tài liệu đánh giá rủi ro;\r\n- QĐ 1450/QĐ-TDKT Quy chế Ban KSNB.",
+        "Phương pháp kiểm tra": "- Kiểm tra KH KTNB và Tờ trình HĐTV có trình trước ngày 25/12 \r\n- Phê duyệt của HĐTV\r\n- Văn bản gửi TGĐ/Ban KS  trong vòng 7 ngày làm việc; \r\n- Walk-through đánh giá rủi ro\r\n- Đối chiếu cơ sở lập KH KTNB",
+        "Tiêu chí đánh giá": "- 100% KH KTNB trình HĐTV trước ngày 25/12 năm trước;\r\n- 100% KH gửi TGĐ/Ban KS PVEP trong vòng 07 ngày sau phê duyệt;\r\n- KH KTNB được lập I5căn cứ theo định hướng rủi ro;\r\n- KH đầy đủ:  Phạm vi, đối tượng, mục tiêu, nội dung, niên độ, thời gian kiểm toán và lịch trình làm việc\r\n",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "B2. Thu thập thông tin chuẩn bị cho cuộc KTNB",
+        "Mục tiêu/Nội dung công việc": "Người phụ trách KTNB/Trưởng đoàn KTNB có thông báo KH và gửi đề cương yêu cầu cung cấp thông tin cho Đơn vị",
+        "Sai sót/rủi ro tiềm tàng": "- Không có Thông báo KH KTNB chính thức gửi Đơn vị;\r\n- Không có Đề cương yêu cầu cung cấp thông tin;\r\n- Đơn vị che giấu thông tin;\r\n- Đơn vị không thông báo ngay yếu kém/tồn tại/sai phạm;\r\n- Tài liệu mật không được cung cấp theo yêu cầu;\r\n- Đơn vị không gửi BC đầy đủ và đúng hạn",
+        "Tham chiếu Điều/khoản": " * QĐ 53/QĐ-TDKT 18/01/2024:\r\n - Phụ lục I - Bước 2;\r\n - Điều 23.\r\n ",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản Thông báo KH KTNB;\r\n- Đề cương yêu cầu cung cấp thông tin;\r\n- Biên bản giao nhận tài liệu;\r\n- BC Đơn vị thông báo yếu kém/sai phạm;\r\n- Hồ sơ tài liệu thu thập (BCTC, biên bản, hợp đồng...);\r\n- Email/sổ theo dõi gửi tài liệu đúng hạn.",
+        "Phương pháp kiểm tra": " - Kiểm tra thông báo KH và Đề cương\r\n - Tính đầy đủ tài liệu; \r\n - Quy trình thu thập;\r\n - Đối chiếu thông tin thu thập với Đề cương.",
+        "Tiêu chí đánh giá": "- 100% cuộc KTNB có Thông báo KH gửi Đơn vị;\r\n- 100% Đề cương được gửi trước cuộc KTNB;\r\n- 100% Đơn vị cung cấp tài liệu trung thực, không che giấu;\r\n- 100% Đơn vị gửi BC đầy đủ, đúng hạn;\r\n- 100% yếu kém/sai phạm được thông báo ngay.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "B3. Trình thành lập và phê duyệt Đoàn KTNB",
+        "Mục tiêu/Nội dung công việc": "Trưởng Ban KSNB trình HĐTV thành lập Đoàn KTNB và HĐTV phê duyệt Đoàn KTNB đảm bảo đúng thời hạn, đúng Biểu mẫu, đúng thành phần đoàn.",
+        "Sai sót/rủi ro tiềm tàng": " - QĐ thành lập Đoàn KTNB muộn hơn 30 ngày trước triển khai;\r\n- Không sử dụng BM.01.QT.KTNB;\r\n- Thành viên Đoàn KTNB vi phạm tính độc lập;\r\n- Thành viên Đoàn có quan hệ huyết thống đời thứ ba với Người quản lý Đơn vị bị kiểm toán \r\n- Thành viên Đoàn từng chịu trách nhiệm thực hiện hoạt động hoặc quản lý bộ phận đó tại Đơn vị bị kiểm toán trong 03 năm gần nhất;\r\n- Người làm KTNB không đáp ứng tiêu chuẩn chức danh của PVEP\r\n",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n - Điều 6.1.a, 6.1.b, 6.1.c \r\n - Điều 7 \r\n - Điều 10.1, 10.2 \r\n - Điều 11 \r\n - Điều 12;\r\n - Phụ lục I - Bước 3;\r\n - BM.01.QT.KTNB.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình Trưởng Ban KSNB trình HĐTV;\r\n- QĐ thành lập Đoàn KTNB\r\n- Hồ sơ Người phụ trách KTNB\r\n- Hồ sơ Thành viên đoàn\r\n- Bản cam kết không xung đột lợi ích;\r\n",
+        "Phương pháp kiểm tra": "- Kiểm tra QĐ thành lập Đoàn; \r\n - Kiểm tra ngày trong QĐ thành lập đoàn có trước 30 ngày trước ngày triển khai \r\n - Kiểm tra mẫu TV Đoàn và đối chiếu năng lực; \r\n -  Xác nhận với Ban PTNNL đối với trường hợp xung đột lợi ích hoặc từng chịu trách nhiệm/ làm quản lý tại Đơn vị bị kiểm toán 03 năm gần nhất;\r\n- Hồ sơ Người phụ trách KTNB.\r\n - Đối chiếu BM.01.QT.KTNB.",
+        "Tiêu chí đánh giá": "- 100% Đoàn KTNB có QĐ ≥30 ngày trước triển khai;\r\n- 100% sử dụng BM.01.QT.KTNB;\r\n- 100% Thành phần đoàn đảm bảo năng lực, độc lập, không có xung đột lợi ích.\r\n- 100% Người phụ trách có ≥05 năm + ≥02 năm KTNB (Đ.10.2);\r\n- 100% TV đáp ứng tiêu chuẩn chức danh của PVEP;\r\n- Không có TV trong 03 năm gần nhất từng chịu trách nhiệm/ làm quản lý tại Đơn vị bị KT.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "B4. Lập Kế hoạch kiểm toán chi tiết",
+        "Mục tiêu/Nội dung công việc": "Người phụ trách KTNB/Trưởng đoàn KTNB lập KH kiểm toán chi tiết theo đúng thời hạn, đúng biểu mẫu, đúng phương pháp và đầy đủ nội dung",
+        "Sai sót/rủi ro tiềm tàng": "- KH chi tiết lập muộn hơn 15 ngày trước triển khai;\r\n- Không sử dụng BM.02.QT.KTNB;\r\n- Nội dung KH không đầy đủ;\r\n- Phương pháp không áp dụng định hướng theo rủi ro;\r\n- Không bao gồm 3 loại: kiểm toán trước/đồng thời/sau.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 5 (Phạm vi KTNB - 7 phạm vi); Đ.5.4-5.7 (kiểm toán trước/đồng thời/sau);\r\n- Điều 15 (Phương pháp 'định hướng theo rủi ro');\r\n-Phụ lục I Bước 4 (≥15 ngày trước triển khai); BM.02.QT.KTNB.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- KH kiểm toán chi tiết (BM.02.QT.KTNB) - ≥15 ngày trước triển khai;\r\n- Tài liệu phân tích đánh giá rủi ro;\r\n- Hồ sơ xác định mục tiêu/phạm vi/đối tượng/lịch trình/nhân sự/phương pháp;\r\n- KH phân loại kiểm toán trước/đồng thời/sau (Đ.5.4-5.7).",
+        "Phương pháp kiểm tra": "- Kiểm tra KH chi tiết; \r\n- Đo lường số ngày trước triển khai;\r\n- Đối chiếu BM.02.QT.KTNB;\r\n- Walk-through đánh giá rủi ro;\r\n- Phỏng vấn Trưởng đoàn về phương pháp.",
+        "Tiêu chí đánh giá": "- 100% KH chi tiết lập ≥15 ngày trước triển khai;\r\n- 100% sử dụng BM.02.QT.KTNB;\r\n- KH đầy đủ nội dung;\r\n- Áp dụng định hướng rủi ro (Đ.15);\r\n- Phân loại rõ kiểm toán trước/đồng thời/sau (Đ.5.4-5.7).",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "B5. Phân công nhiệm vụ Thành viên Đoàn KTNB ",
+        "Mục tiêu/Nội dung công việc": "Người phụ trách KTNB/Trưởng đoàn KTNB phân công nhiệm vụ cho TV Đoàn đúng biểu mẫu, phù hợp năng lực, tuân thủ nguyên tắc đạo đức nghề nghiệp.",
+        "Sai sót/rủi ro tiềm tàng": "- Không sử dụng BM.03.QT.KTNB;\r\n- Phân công không phù hợp năng lực\r\n- Nội dung bị bỏ sót hoặc trùng lặp;\r\n- Thành viên không tuân thủ nguyên tắc đạo đức nghề nghiệp (chính trực, khách quan, năng lực chuyên môn và tính thận trọng, bảo mật, tư cách nghề nghiệp);\r\n- Thành viên Đoàn KTNB không độc lập với Đơn vị bị kiểm toán;\r\n- Thành viên đoàn không có quyền yêu cầu Đơn vị cung cấp tài liệu;\r\n- Thành viên không tuân thủ chuẩn mực chuyên môn",
+        "Tham chiếu Điều/khoản": "QĐ 53/QĐ-TDKT 18/01/2024:\r\n - Điều 8 \r\n - Điều 9 \r\n - Điều 11 \r\n - Điều 12.2b \r\n - Phụ lục I -  Bước 5;\r\n - BM.03.QT.KTNB.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân công nhiệm vụ Thành viên;\r\n- Hồ sơ năng lực TV;\r\n- Bản cam kết tuân thủ đạo đức nghề nghiệp\r\n- Bản cam kết tính độc lập\r\n- Lịch trình kiểm toán phân theo TV.",
+        "Phương pháp kiểm tra": "- Kiểm tra Bảng phân công; \r\n- Đối chiếu BM.03.QT.KTNB;\r\n- Kiểm tra mẫu thành viên và đối chiếu năng lực với phần việc;\r\n- Walk-through tuân thủ 5 nguyên tắc đạo đức nghề nghiệp KTNB",
+        "Tiêu chí đánh giá": "- 100% có Bảng phân công theo BM.03.QT.KTNB;\r\n- Phân công phù hợp năng lực;\r\n- 100% TV cam kết tuân thủ 5 nguyên tắc đạo đức nghề nghiệp;\r\n- 100% TV cam kết độc lập;\r\n- TV có quyền yêu cầu tài liệu.H8",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "B6. Thực hiện cuộc KTNB tại Đơn vị/bộ phận được kiểm toán",
+        "Mục tiêu/Nội dung công việc": "- Đoàn KTNB thực hiện cuộc kiểm toán theo Kế hoạch, lịch trình\r\n- Thu thập đầy đủ hồ sơ, bằng chứng\r\n - Báo cáo cá nhân và Biên bản KTNB lập đúng biểu mẫu quy định và tuân thủ chuẩn mực\r\n - Ý kiến tư vấn/kiến nghị độc lập, khách quan ",
+        "Sai sót/rủi ro tiềm tàng": "- Không lập BM.04a.QT.KTNB;\r\n- Không lập BM.04b.QT.KTNB;\r\n- Không tuân thủ chuẩn mực chuyên môn;\r\n- Không áp dụng đầy đủ phạm vi KTNB;\r\n- Không có tư vấn/kiến nghị độc lập;\r\n- Không thu thập đầy đủ bằng chứng;\r\n- Thành viên không tuân thủ trách nhiệm của Người làm công tác KTNB.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 5;\r\n- Điều 8;\r\n- Điều 12;\r\n- Phụ lục I Bước 6; BM.04a.QT.KTNB và BM.04b.QT.KTNB.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo cá nhân TV Đoàn \r\n- Biên bản KTNB\r\n- Sổ tay kiểm toán/Working Paper;\r\n- Hồ sơ tài liệu thu thập;\r\n- Bằng chứng kiểm toán;\r\n- Phiếu ý kiến Thành viên;\r\n- Văn bản tư vấn/kiến nghị độc lập",
+        "Phương pháp kiểm tra": "- Kiểm tra mẫu BM.04a/04b;\r\n- Kiểm tra mẫu chọn;\r\n- Walk-through quy trình kiểm toán; - Thực hiện lại xác minh mẫu;\r\n- Phỏng vấn thành viên Đoàn về tính độc lập.",
+        "Tiêu chí đánh giá": "- 100% TV Đoàn lập BM.04a.QT.KTNB;\r\n- 100% cuộc có BM.04b.QT.KTNB;\r\n- Tuân thủ Đ.8 và Đ.9;\r\n- Đầy đủ phạm vi KTNB Đ.5.1-5.7;\r\n- Có tư vấn/kiến nghị độc lập (Đ.5.3);\r\n- 100% phát hiện có bằng chứng đầy đủ.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "B7. Báo cáo HĐTV kết quả KTNB đính kèm Biên bản KTNB ",
+        "Mục tiêu/Nội dung công việc": "Trưởng đoàn KTNB lập Báo cáo HĐTV kết quả KTNB đầy đủ nội dung, đúng thời hạn và biểu mẫu theo quy định",
+        "Sai sót/rủi ro tiềm tàng": "- Không sử dụng BM.05.QT.KTNB;\r\n- Trình HĐTV muộn hơn 20 ngày làm việc sau hoàn thành\r\n- BC gửi không đúng đối tượng liên quan;\r\n- BC không nêu rõ ý kiến không thống nhất của Đơn vị;\r\n- BC KTNB hàng năm không nộp trong thời hạn 30 ngày kể từ ngày kết thúc năm;\r\n- BC hàng năm không đầy đủ nội dung;\r\n- Không có BC bất thường khi phát sinh sai phạm nghiêm trọng.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 18.\r\n- Phụ lục I- Bước 7;\r\n- BM.05.QT.KTNB.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Kiểm tra BC KTNB (BM.05.QT.KTNB) - ngày báo cáo trong vòng 20 ngày làm việc;\r\n- Biên bản KTNB đính kèm (BM.04b);\r\n- Văn bản gửi đến đối tượng liên quan;\r\n- Ý kiến không thống nhất Đơn vị (nếu có);\r\n- BC KTNB hàng năm gửi đồng thời HĐTV/TGĐ/Ban KS PVEP trong vòng 30 ngày kể từ ngày kết thúc năm;\r\n- BC kiểm toán bất thường;\r\n",
+        "Phương pháp kiểm tra": "- Kiểm tra BC KTNB; \r\n- Kiểm tra, đo lường ngày báo cáo kết quả kiểm toán trong vòng 20 ngày làm việc sau hoàn thành cuộc KTNB;\r\n- Kiểm tra, đo lường ngày BC KTNB hàng năm  trong vòng 30 ngày;\r\n- Walk-through BC bất thường;\r\n- Đối chiếu nội dung BC với Phụ lục I; \r\n",
+        "Tiêu chí đánh giá": "- 100% BC cuộc KTNB sử dụng BM.05.QT.KTNB;\r\n- 100% BC trình HĐTV trong vòng 20 ngày làm việc;\r\n- 100% BC gửi đối tượng liên quan;\r\n- 100% trường hợp Đơn vị không thống nhất có ý kiến nêu rõ;\r\n- 100% BC KTNB hàng năm gửi trong vòng 30 ngày sau kết thúc năm;\r\n- 100% sai phạm nghiêm trọng có BC bất thường.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "B8. HĐTV ký Biên bản KTNB và ban hành Quyết định/Thông báo",
+        "Mục tiêu/Nội dung công việc": "- HĐTV ký Biên bản KTNB và Ban hành Quyết định theo đúng trách nhiệm.\r\n- Đôn đốc bộ phận thực hiện kiến nghị.",
+        "Sai sót/rủi ro tiềm tàng": "- HĐTV không ký Biên bản KTNB;\r\n- HĐTV không ban hành QĐ/Thông báo\r\n- HĐTV không phê duyệt KH KTNB\r\n- HĐTV không QĐ tổ chức Phòng KTNB, bổ nhiệm Người làm KTNB;\r\n- HĐTV không QĐ cơ chế tiền lương cho Người làm KTNB;\r\n- HĐTV không tạo điều kiện thuận lợi cho KTNB;\r\n- HĐTV không QĐ thực hiện kiến nghị ;\r\n- TGĐ không tạo thuận lợi cho Phòng KTNB.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 21\r\n- Điều 22 \r\n - Phụ lục I - Bước 8.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản KTNB được HĐTV ký;\r\n- QĐ/Thông báo HĐTV về kết quả KTNB;\r\n- Văn bản chỉ đạo TGĐ và bộ phận thực hiện kiến nghị;\r\n- Hồ sơ HĐTV phê duyệt KH;\r\n- QĐ tổ chức Phòng KTNB, bổ nhiệm Người làm KTNB;\r\n- QĐ cơ chế tiền lương;\r\n- Bằng chứng tạo điều kiện thuận lợi.",
+        "Phương pháp kiểm tra": "- Kiểm tra NQ/QĐ HĐTV; \r\n- Walk-through ký Biên bản → QĐ/Thông báo;\r\n- Kiểm tra mẫu 5 trách nhiệm HĐTV và 4 trách nhiệm TGĐ;\r\n- Phỏng vấn Thư ký HĐTV và TGĐ.",
+        "Tiêu chí đánh giá": "- 100% Biên bản KTNB được HĐTV ký;\r\n- 100% HĐTV ban hành QĐ/Thông báo;\r\n- 100% HĐTV phê duyệt KH KTNB;\r\n- 100% kiến nghị được HĐTV QĐ thực hiện;\r\n- TGĐ đôn đốc thực hiện;\r\n- Có cơ chế tiền lương cho Người làm KTNB.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 9,
+        "Bước kiểm tra": "B9. Lưu trữ Hồ sơ KTNB",
+        "Mục tiêu/Nội dung công việc": "Phòng KTNB lưu trữ hồ sơ KTNB theo đúng quy định của pháp luật và PVEP, lưu trữ toàn bộ bằng văn bản (bản in hoặc bản scan); đảm bảo bảo mật. ",
+        "Sai sót/rủi ro tiềm tàng": "- Không lưu trữ toàn bộ cuộc kiểm toán bằng văn bản;\r\n- Không có chi tiết thành văn bản, lưu giữ theo quy định;\r\n- BC/hồ sơ/tài liệu không lưu giữ theo quy định pháp luật và PVEP;\r\n- Không có cơ chế bảo mật;\r\n- Hồ sơ không đầy đủ;\r\n- Không định kỳ kiểm tra việc duy trì hồ sơ và bảo mật.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 9.4;\r\n- Điều 12.1.f;\r\n- Điều 13.1.h;\r\n- Điều 19\r\n- Phụ lục I - Bước 9.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- Hồ sơ KTNB đầy đủ tài liệu của từng cuộc (KH, QĐ, BM.01-05);\r\n- Bản in hoặc bản scan toàn bộ tài liệu;\r\n- Sổ theo dõi lưu trữ;\r\n- Bằng chứng cơ chế bảo mật;\r\n- Quy định nội bộ PVEP về lưu trữ;\r\n- BC định kỳ kiểm tra duy trì hồ sơ.",
+        "Phương pháp kiểm tra": "- Kiểm tra cách lưu trữ; \r\n- Kiểm tra mẫu 5-10 cuộc và đối chiếu đầy đủ tài liệu;\r\n- Walk-through cơ chế bảo mật; \r\n- Phỏng vấn Phòng KTNB về quy trình lưu trữ.",
+        "Tiêu chí đánh giá": "- 100% cuộc KTNB có hồ sơ lưu trữ đầy đủ;\r\n- Hồ sơ lưu giữ theo quy định pháp luật và PVEP;\r\n- Có cơ chế bảo mật;\r\n- Hồ sơ đầy đủ tài liệu BM.01-05;\r\n- Có sổ theo dõi lưu trữ.F14",
+        "PIC": "Ngô Thị Tuấn Anh"
+      },
+      {
+        "STT": 10,
+        "Bước kiểm tra": "B10. Kiểm tra thực hiện các kiến nghị của KTNB",
+        "Mục tiêu/Nội dung công việc": "Phòng KTNB kiểm tra việc thực hiện kiến nghị KTNB theo Quý và tổng hợp gửi HĐTV/TGĐ/Ban KS PVEP đúng thời hạn quy định.",
+        "Sai sót/rủi ro tiềm tàng": "- Phòng KTNB không kiểm tra việc thực hiện kiến nghị của kiểm toán kỳ trước\r\n- Không kiểm tra/đánh giá kết quả những công việc đã thực hiện theo kiến nghị ;\r\n- BC kiểm tra không gửi HĐTV/TGĐ/Ban KS PVEP;\r\n- Ban/VP/Đơn vị BC tình hình thực hiện kiến nghị muộn hơn 05 ngày làm việc sau Quý;\r\n- Đơn vị không tạo điều kiện thuận lợi cho KTNB;\r\n- Phòng KTNB không sử dụng kết quả làm cơ sở cải tiến hệ thống KSNB.",
+        "Tham chiếu Điều/khoản": "* QĐ 53/QĐ-TDKT 18/01/2024:\r\n- Điều 18.4;\r\n- Điều 23.4;\r\n- Điều 20;\r\n- Điều 13.1.d;\r\n- Phụ lục I- Bước 10.",
+        "Hồ sơ/Bằng chứng cần thu thập": "- KH kiểm tra theo dõi việc thực hiện kiến nghị;\r\n- BC Ban/VP/ĐV trong vòng 05 ngày làm việc kể từ ngày kết thúc Quý;\r\n- BC kiểm tra Phòng KTNB gửi HĐTV/TGĐ/Ban KS PVEP;\r\n- Sổ theo dõi việc thực hiện kiến nghị;\r\n- Hồ sơ đánh giá kết quả thực hiện;\r\n- Chương trình đảm bảo và nâng cao chất lượng KTNB.",
+        "Phương pháp kiểm tra": "- Kiểm tra BC Ban/VP/ĐV; \r\n- Đo lường số ngày báo cáo trong vòng 05 ngày làm việc kể từ ngày kết thúc Quý;\r\n- Kiểm tra việc thực hiện các kiến nghị của KTNB và đối chiếu;\r\n- Walk-through quy trình theo dõi; ",
+        "Tiêu chí đánh giá": "- 100% Ban/VP/ĐV có BC thực hiện kiến nghị đúng hạn;\r\n- 100% KTNB có BC kiểm tra gửi HĐTV/TGĐ/Ban KS PVEP;\r\n- Có KH kiểm tra và theo dõi việc thực hiện kiến nghị;\r\n- 100% kiến nghị được theo dõi đến khi hoàn thành;\r\n- Có chương trình đảm bảo chất lượng KTNB;\r\n- Sử dụng kết quả KTNB cải tiến hệ thống KSNB.",
+        "PIC": "Ngô Thị Tuấn Anh"
+      }
+    ]
+  },
+  "KH_NhanSu": {
+    "headers": [
+      "STT",
+      "Bước kiểm tra",
+      "Mục tiêu/Nội dung công việc",
+      "Sai sót/rủi ro tiềm tàng",
+      "Tham chiếu Điều/khoản",
+      "Hồ sơ/Bằng chứng cần thu thập",
+      "Phương pháp kiểm tra",
+      "Tiêu chí đánh giá",
+      "Kết quả kiểm tra",
+      "Kiến nghị",
+      "PIC",
+      "Ghi chú"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Bước kiểm tra": "Tuyển dụng",
+        "Mục tiêu/Nội dung công việc": "Rà soát KH tuyển dụng, định biên: căn cứ KH SXKD, định mức lao động.",
+        "Sai sót/rủi ro tiềm tàng": "KH tuyển dụng năm; định biên; bảng năng lực hiện có.",
+        "Tham chiếu Điều/khoản": "Đối chiếu KH vs định biên; phân tích gap.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Tuyển dụng theo định biên duyệt; có job description; thẩm quyền duyệt rõ.",
+        "Phương pháp kiểm tra": "Tuyển dôi dư; tuyển không theo định biên; định biên không cập nhật.",
+        "Tiêu chí đánh giá": "Bộ luật Lao động 45/2019; QC Tuyển dụng PVEP (QĐ 1333/QĐ-TDKT ngày 08/12/2020; Luật 68/2025; Quy chế lương sửa đổi QĐ(472/QĐ-TDKT ngày 03/4/2026; Quy trình 19 về tuyển dụng, điều động, luân chuyển và xử lý HĐLĐ ngày 21/5/2025; QĐ phê duyệt định biên BMĐH 2025 & 2026) ",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 2,
+        "Bước kiểm tra": "Tuyển dụng",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra quy trình tuyển dụng: tính minh bạch, cạnh tranh, không xung đột lợi ích.",
+        "Sai sót/rủi ro tiềm tàng": "Hồ sơ tuyển dụng; biên bản phỏng vấn; bảng điểm; QĐ tuyển dụng.",
+        "Tham chiếu Điều/khoản": "Sample 5-10 case tuyển dụng; phỏng vấn Hội đồng.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Đăng tin tuyển dụng công khai; ≥ 2 vòng phỏng vấn; HĐ tuyển dụng đa thành phần.",
+        "Phương pháp kiểm tra": "Tuyển dụng người thân không khai báo; bỏ qua quy trình với các 'trường hợp đặc biệt'.",
+        "Tiêu chí đánh giá": "QC Tuyển dụng PVEP; Bộ luật LĐ Đ.11-12. TULĐTT (3483/TDKT-QTNNL ngày 28/12/2023; Quy trình 19 về tuyển dụng, điều đôngk, luân chuyển và xử lý HĐLĐ ngày 21/5/2025;)",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 3,
+        "Bước kiểm tra": "Hợp đồng lao động",
+        "Mục tiêu/Nội dung công việc": "Rà soát HĐLĐ: loại HĐ, điều khoản bắt buộc, ký đúng thẩm quyền.",
+        "Sai sót/rủi ro tiềm tàng": "Bộ HĐLĐ; QĐ phân cấp ký HĐLĐ.",
+        "Tham chiếu Điều/khoản": "Sample 10% HĐLĐ; đối chiếu với Bộ luật LĐ.",
+        "Hồ sơ/Bằng chứng cần thu thập": "HĐ đủ nội dung Đ.21 BLLĐ; ký đúng thẩm quyền; HĐ xác định/không xác định thời hạn đúng.",
+        "Phương pháp kiểm tra": "Ký HĐ thử việc kéo dài; HĐ thiếu nội dung; ký vượt thẩm quyền.",
+        "Tiêu chí đánh giá": "BLLĐ 45/2019 Đ.13-46; NĐ 145/2020. TULĐTT (3483/TDKT-QTNNL ngày 28/12/2023); Quy chế tiêu chuẩn chức danh PVEP (QĐ 1915/QĐ-TDKT ngày 04/2/2026; Quy chế đánh giá mức độ HTCV - QĐ 2209/QĐ-TDKT ngày 04/2/2026; Quy trình 19 về tuyển dụng, điều động, luân chuyển và xử lý HĐLĐ ngày 21/5/2025;)",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 4,
+        "Bước kiểm tra": "Lương thưởng",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra quỹ lương: trích lập, chi trả, đối chiếu với hệ số/định mức.",
+        "Sai sót/rủi ro tiềm tàng": "Quỹ lương duyệt; bảng lương; báo cáo chi lương; bảng hệ số.",
+        "Tham chiếu Điều/khoản": "Re-calculate quỹ lương; sample 20 cá nhân.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Quỹ lương trong giới hạn duyệt; tính lương đúng hệ số; nộp BHXH đầy đủ.",
+        "Phương pháp kiểm tra": "Quỹ lương vượt không xin duyệt; tính lương sai; trốn BHXH cho lao động.",
+        "Tiêu chí đánh giá": "NĐ 51/2016; NĐ 52/2016; Luật BHXH 58/2014 và các sửa đổi; Luật BHXH số 41/2024/QH15 ngày 29/6/2024); QC Tiền lương PVEP (QĐ 946/QĐ-TDKT ngày 08/5/2025; QĐ 472/QĐ-TDKT ngày 03/4/2026; QĐ 1636/QĐ-TDKT ngày 16/9/2026; QĐ 529/QĐ-TDKT ngày 18/5/2023 & 495/QĐ-TDKT ngày 14/3/2025; QĐ 290/QĐ-TDKT ngày 04/2/2026 trích lập, quản lý. sử dụng quỹ KTPL; QĐ 1757/QĐ-TDKT ngày 04/2/2026 - quy chế thi đua khen thưởng; QĐ 7468/QĐ-CNNL.",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 5,
+        "Bước kiểm tra": "Lương thưởng",
+        "Mục tiêu/Nội dung công việc": "Rà soát chi thưởng cuối năm/đột xuất: căn cứ, thẩm quyền, công bằng.",
+        "Sai sót/rủi ro tiềm tàng": "QĐ thưởng; danh sách thưởng; KPI/đánh giá cá nhân.",
+        "Tham chiếu Điều/khoản": "Đối chiếu danh sách thưởng vs đánh giá; rà soát outlier.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Thưởng gắn KPI/đánh giá; thẩm quyền duyệt rõ; chênh lệch giải thích được.",
+        "Phương pháp kiểm tra": "Thưởng cào bằng không động lực; thưởng 'đặc biệt' cho người thân lãnh đạo; thưởng vượt quỹ.",
+        "Tiêu chí đánh giá": "NĐ 51/2016; QC Tiền lương (QĐ 946/QĐ-TDKT ngày 08/5/2025; QĐ 472/QĐ-TDKT ngày 03/4/2026; QĐ 1636/QĐ-TDKT ngày 16/9/2026; QĐ 529/QĐ-TDKT ngày 18/5/2023 & 495/QĐ-TDKT ngày 14/3/2025;QĐ 290/QĐ-TDKT ngày 04/2/2026 trích lập, quản lý. sử dụng quỹ KTPL; QĐ 1757/QĐ-TDKT ngày 04/2/2026 - quy chế thi đua khen thưởng; Quy trình 23 về khen thưởng cho cá nhân, tập thể ngoài PVEP ngày 16/10/2025",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 6,
+        "Bước kiểm tra": "Đào tạo",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra KH đào tạo: ngân sách, đối tượng, gắn nhu cầu công việc./ phù hợp với TCCD",
+        "Sai sót/rủi ro tiềm tàng": "KH đào tạo; quyết toán đào tạo; báo cáo hiệu quả; danh sách CBNV đào tạo.",
+        "Tham chiếu Điều/khoản": "Đối chiếu KH vs thực hiện; sample khóa lớn.",
+        "Hồ sơ/Bằng chứng cần thu thập": "≥ 70% thực hiện; có đánh giá hiệu quả (Kirkpatrick); cam kết phục vụ với đào tạo lớn.",
+        "Phương pháp kiểm tra": "Đào tạo 'du lịch'; không cam kết phục vụ rồi nghỉ việc; ngân sách không hiệu quả.",
+        "Tiêu chí đánh giá": "QC Đào tạo PVEP (QĐ 1179-QĐ-TDKT ngày 04/2/2026; Quy trình 23 về đào tạo ngày 10/4/2024); BLLĐ Đ.61-62; quy trình 21 ngày 5/3/2025 quản lý NLĐ đi công tác, đào tạo trong nước",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 7,
+        "Bước kiểm tra": "Kỷ luật",
+        "Mục tiêu/Nội dung công việc": "Rà soát quy trình kỷ luật lao động: căn cứ, thủ tục, thẩm quyền.",
+        "Sai sót/rủi ro tiềm tàng": "Hồ sơ kỷ luật; biên bản; QĐ xử lý.",
+        "Tham chiếu Điều/khoản": "Sample các case kỷ luật; rà soát thủ tục.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Theo đúng Đ.122-127 BLLĐ; có biên bản, có mặt người lao động/đại diện CĐ; thời hiệu đúng.",
+        "Phương pháp kiểm tra": "Kỷ luật trái Luật → kiện thắng; chậm xử lý → quá thời hiệu; phân biệt đối xử.",
+        "Tiêu chí đánh giá": "BLLĐ Đ.122-127; NĐ 145/2020; Nội quy lao động - QĐ 631/QĐ-TDKT ngày 02/4/2025; Quy chế xử lý kỷ luật (QĐ 300-QĐ-TDKT ngày 04/2/2026; Quy định về quản lý nghỉ phép, nghỉ việc riêng, chấm công đối với NLĐ - QĐ 702/QĐ-TDKT ngày 04/2/2026;",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 8,
+        "Bước kiểm tra": "Nghỉ việc",
+        "Mục tiêu/Nội dung công việc": "Kiểm tra giải quyết nghỉ việc: thủ tục, thanh toán, bàn giao, kế thừa.",
+        "Sai sót/rủi ro tiềm tàng": "Đơn nghỉ việc; biên bản bàn giao; quyết toán; thu tục chốt sổ BHXH.",
+        "Tham chiếu Điều/khoản": "Sample case nghỉ; rà soát thủ tục.",
+        "Hồ sơ/Bằng chứng cần thu thập": "Báo trước đúng luật; bàn giao đủ; quyết toán trong 14-30 ngày; trả sổ BHXH.",
+        "Phương pháp kiểm tra": "Mất tài sản/dữ liệu khi nghỉ; nợ quyết toán; thu hồi tài khoản chậm.",
+        "Tiêu chí đánh giá": "BLLĐ Đ.34-48; Luật BHXH 58/2014 và các sửa đổi; Luật BHXH số 41/2024/QH15 ngày 29/6/2024); Quy chế xử lý kỷ luật (QĐ 300-QĐ-TDKT ngày 18/2/2025; Quy trình 18 ngày 23/1/2024 chấm dứt HĐLĐ với NLĐ do thay đổi cơ cấu tổ chức, tổ chức lại lao động; Quy trình 17 ngày 23/1/2024 về chấm dứt HĐLĐ đối với NLĐ thường xuyên KHT CV theo HĐLĐ",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      },
+      {
+        "STT": 9,
+        "Bước kiểm tra": "Xung đột lợi ích",
+        "Mục tiêu/Nội dung công việc": "Rà soát kê khai xung đột lợi ích, tài sản: đối tượng, đầy đủ, xử lý.",
+        "Sai sót/rủi ro tiềm tàng": "Bản kê khai TS/thu nhập; bản kê khai COI; báo cáo Thanh tra.",
+        "Tham chiếu Điều/khoản": "Đối chiếu danh sách phải kê khai vs thực tế; sample verify.",
+        "Hồ sơ/Bằng chứng cần thu thập": "100% đối tượng kê khai đúng hạn; xử lý các trường hợp xung đột.",
+        "Phương pháp kiểm tra": "Bỏ sót đối tượng; kê khai không trung thực; biết COI nhưng không xử lý.",
+        "Tiêu chí đánh giá": "Luật Phòng chống TN 36/2018; NĐ 130/2020; QC nội bộ; Quy trình 22 ngày 08/12/2023 giải quyết khiếu nại, tố cáo; ",
+        "Kết quả kiểm tra": " ",
+        "Kiến nghị": " ",
+        "PIC": " ",
+        "Ghi chú": " "
+      }
+    ]
+  },
+  "Mau_KiemTra": {
+    "headers": [
+      "STT",
+      "Mã bước CL (Tham chiếu theo STT Checklist)",
+      "Lĩnh vực",
+      "Mã mẫu",
+      "Đối tượng kiểm tra (Tên / Số hiệu)",
+      "Ngày phát sinh",
+      "Giá trị / Quy mô",
+      "Mã hồ sơ",
+      "PP test áp dụng",
+      "Kết quả test (chi tiết từng tiêu chí)",
+      "Phát hiện / Bằng chứng",
+      "Mức đánh giá",
+      "Kiến nghị / Xử lý",
+      "PIC",
+      "Ngày test",
+      "Trạng thái"
+    ],
+    "items": [
+      {
+        "STT": 1,
+        "Mã bước CL (Tham chiếu theo STT Checklist)": "DT-03",
+        "Lĩnh vực": "Đầu tư DADK",
+        "Mã mẫu": "M-DT03-001",
+        "Đối tượng kiểm tra (Tên / Số hiệu)": "Giếng khoan TĐ-3X, lô 09-2/09",
+        "Ngày phát sinh": "12/03/2026",
+        "Giá trị / Quy mô": "USD 18.5M",
+        "Mã hồ sơ": "BL.001-035",
+        "PP test áp dụng": "Tính toán lại NPV + Kiểm tra AFE",
+        "Kết quả test (chi tiết từng tiêu chí)": "- Tiêu chí 1: AFE phê duyệt đúng thẩm quyền - Đạt; \r\n- Tiêu chí 2: Chi phí thực tế ≤ AFE +10% - Đạt một phần (vượt 11.3%); \r\n- Tiêu chí 3: Phân loại capex/opex đúng - Đạt",
+        "Phát hiện / Bằng chứng": "Chi phí dịch vụ khoan vượt AFE 2.3M USD do day-rate tăng - thiếu phụ lục AFE Supplement",
+        "Mức đánh giá": "Không đạt",
+        "Kiến nghị / Xử lý": "Yêu cầu lập AFE Supplement hồi tố, trình duyệt trước 30/06/2026",
+        "PIC": "NV. A",
+        "Ngày test": "20/04/2026",
+        "Trạng thái": "Mở"
+      },
+      {
+        "STT": 2,
+        "Mã bước CL (Tham chiếu theo STT Checklist)": "DTH-05",
+        "Lĩnh vực": "Đấu thầu",
+        "Mã mẫu": "M-DTH05-001",
+        "Đối tượng kiểm tra (Tên / Số hiệu)": "Gói thầu G&A-2026-12 'Mua sắm thiết bị văn phòng'",
+        "Ngày phát sinh": "05/02/2026",
+        "Giá trị / Quy mô": "VNĐ 2.8 tỷ",
+        "Mã hồ sơ": "BL.036-058",
+        "PP test áp dụng": "Walk-through + Xác nhận",
+        "Kết quả test (chi tiết từng tiêu chí)": "Tiêu chí 1: Giá trúng ≤ dự toán - Đạt (98.7%); Tiêu chí 2: Chênh lệch hợp lý 5-15% - Không đạt (chỉ chênh 1.3%)",
+        "Phát hiện / Bằng chứng": "Giá trúng quá sát dự toán; 3/5 nhà thầu rút trước mở thầu - dấu hiệu rò rỉ thông tin dự toán",
+        "Mức đánh giá": "Không đạt",
+        "Kiến nghị / Xử lý": "Mở rộng kiểm tra: rà soát log truy cập file dự toán; báo cáo TGĐ trong 07 ngày",
+        "PIC": "NV. B",
+        "Ngày test": "22/04/2026",
+        "Trạng thái": "Mở"
+      }
+    ]
+  }
+}

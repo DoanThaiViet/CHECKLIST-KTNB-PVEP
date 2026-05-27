@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVEP — Tra cứu Nhiệm vụ KTGS/KTNB BMĐH 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --green:#006838;--green-light:#00843d;--green-pale:#e8f5e9;--green-bg:#f0f9f1;
+            --blue:#3f51b5;--blue-bg:#e8eaf6;
+            --orange:#e65100;--orange-bg:#fff3e0;
+            --red:#e53935;--red-bg:#ffeaea;
+            --bg:#f5f6f8;--white:#fff;
+            --border:#e0e3e8;--border-light:#eef0f3;
+            --text:#1a1a2e;--text2:#4a5568;--text3:#94a3b8;
+            --shadow:0 1px 3px rgba(0,0,0,0.06);
+            --shadow-lg:0 4px 16px rgba(0,0,0,0.08);
+            --radius:10px;--radius-sm:6px;
+        }
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+        /* HEADER */
+        .header{background:var(--green);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;flex-shrink:0}
+        .header-logo{height:38px;border-radius:4px}
+        .header-title{display:flex;flex-direction:column}
+        .header-title h1{font-size:15px;font-weight:700;letter-spacing:.3px;line-height:1.2}
+        .header-title span{font-size:11px;opacity:.75;font-weight:400}
+        .header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+        .header-badge{font-size:11px;background:rgba(255,255,255,.15);padding:5px 12px;border-radius:16px;font-weight:500;display:flex;align-items:center;gap:5px}
+        .btn-upload{display:flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .15s}
+        .btn-upload:hover{background:rgba(255,255,255,.3)}
+        #fileInput{display:none}
+
+        /* LAYOUT */
+        .layout{display:flex;flex:1;overflow:hidden}
+
+        /* SIDEBAR */
+        .sidebar{width:300px;min-width:300px;background:var(--white);border-right:1px solid var(--border);display:flex;flex-direction:column}
+        .search-wrap{padding:14px 14px 10px;border-bottom:1px solid var(--border-light)}
+        .search-wrap input{width:100%;padding:9px 12px 9px 36px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:13px;color:var(--text);outline:none;transition:border .2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
+        .search-wrap input:focus{border-color:var(--green-light)}
+        .search-wrap input::placeholder{color:var(--text3)}
+        .sidebar-list{flex:1;overflow-y:auto;padding:6px}
+        .sidebar-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;transition:background .12s;margin-bottom:1px}
+        .sidebar-item:hover{background:var(--green-pale)}
+        .sidebar-item.active{background:var(--green);color:#fff}
+        .sidebar-item.active .s-num{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+        .sidebar-item.active .s-name{color:#fff}
+        .sidebar-item.active .s-sub{color:rgba(255,255,255,.7)}
+        .sidebar-item.active .s-badge{background:rgba(255,255,255,.2);color:#fff}
+        .s-num{width:26px;height:26px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0}
+        .s-info{flex:1;min-width:0}
+        .s-name{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .s-sub{font-size:11px;color:var(--text3);margin-top:1px}
+        .s-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;flex-shrink:0;text-transform:uppercase;letter-spacing:.3px}
+        .badge-ktnb{background:var(--blue-bg);color:var(--blue)}
+        .badge-ktgs{background:var(--green-pale);color:var(--green)}
+        .badge-mixed{background:var(--orange-bg);color:var(--orange)}
+        .sidebar-footer{padding:10px 14px;border-top:1px solid var(--border-light);font-size:10px;color:var(--text3);text-align:center}
+
+        /* MAIN */
+        .main{flex:1;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
+        .detail-tabs{display:flex;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:0 28px;flex-shrink:0}
+        .detail-tab{padding:14px 20px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2.5px solid transparent;transition:all .15s;user-select:none}
+        .detail-tab:hover{color:var(--text2)}
+        .detail-tab.active{color:var(--green);border-bottom-color:var(--green)}
+        .detail-body{flex:1;overflow-y:auto;padding:24px 28px 40px}
+
+        /* Welcome */
+        .welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:var(--text3)}
+        .welcome-icon{font-size:44px;margin-bottom:12px;opacity:.4}
+        .welcome h2{font-size:16px;font-weight:600;color:var(--text2);margin-bottom:4px}
+        .welcome p{font-size:13px}
+
+        /* Detail Header */
+        .d-header{margin-bottom:24px}
+        .d-header .top{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+        .d-header h2{font-size:20px;font-weight:800;color:var(--text)}
+        .d-header .docs{font-size:12px;color:var(--text2);line-height:1.6;margin-top:4px}
+
+        /* Task cards */
+        .nv-label{font-size:12px;font-weight:700;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:6px;padding-bottom:6px;border-bottom:1px solid var(--border-light)}
+        .nv-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+        .t-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow);transition:border-color .15s}
+        .t-card:hover{border-color:var(--green-light)}
+        .t-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
+        .t-title{font-size:14px;font-weight:600;color:var(--text)}
+        .t-output{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+        .t-people{display:flex;flex-wrap:wrap;gap:14px}
+        .t-person{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px}
+        .t-person .nm{color:var(--text2);font-weight:500}
+        .sub-list{margin:8px 0 12px;list-style:none}
+        .sub-list li{font-size:12px;color:var(--text2);padding:6px 0 6px 14px;border-left:2px solid var(--border);line-height:1.5}
+        .sub-list li:hover{border-left-color:var(--green)}
+        .task-section{margin-bottom:22px}
+
+        /* CHECKLIST */
+        .cl-empty{text-align:center;padding:60px 20px;color:var(--text3);font-size:13px}
+        .cl-group{margin-bottom:28px}
+        .cl-group-title{font-size:13px;font-weight:700;color:var(--green);padding:10px 16px;background:var(--green-pale);border-radius:8px;margin-bottom:12px;display:flex;align-items:center;gap:8px;border-left:4px solid var(--green)}
+        .cl-group-title .cl-group-icon{font-size:15px}
+        .cl-group-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--text3);background:var(--white);padding:2px 8px;border-radius:10px}
+        .cl-step{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
+        .cl-step-header{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background .1s;user-select:none}
+        .cl-step-header:hover{background:var(--green-pale)}
+        .cl-step-header.open{background:var(--green-pale);border-bottom:1px solid var(--border-light)}
+        .cl-num{width:28px;height:28px;border-radius:8px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+        .cl-step-name{font-size:13px;font-weight:600;color:var(--text);flex:1;line-height:1.4}
+        .cl-arrow{font-size:10px;color:var(--text3);transition:transform .2s;flex-shrink:0}
+        .cl-arrow.open{transform:rotate(180deg)}
+        .cl-step-body{display:none;padding:16px 18px 18px}
+        .cl-step-body.open{display:block}
+        .cl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        @media(max-width:900px){.cl-grid{grid-template-columns:1fr}}
+        .cl-field{padding:10px 14px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
+        .cl-field-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+        .cl-field-value{font-size:12px;color:var(--text2);line-height:1.6;white-space:pre-wrap}
+        .cl-field.full{grid-column:1/-1}
+        .cl-pic-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--green);background:var(--green-pale);padding:3px 10px;border-radius:12px;margin-top:8px}
+
+        /* Toast */
+        .toast{position:fixed;top:20px;right:20px;background:var(--green);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow-lg);z-index:1000;opacity:0;transform:translateY(-10px);transition:all .3s;pointer-events:none}
+        .toast.show{opacity:1;transform:translateY(0)}
+
+        /* Scrollbar */
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);border-radius:3px}
+        ::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.18)}
+
+        .fade-in{animation:fadeIn .25s ease}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+        @media(max-width:768px){
+            .sidebar{width:100%;min-width:100%;position:absolute;z-index:10;height:100%}
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="PVEP.png" alt="PVEP" class="header-logo" onerror="this.style.display='none'">
+        <div class="header-title">
+            <h1>THEO DÕI KIỂM TRA BMĐH</h1>
+            <span>Ban Kiểm soát Nội bộ — PVEP · 2026</span>
+        </div>
+        <div class="header-right">
+            <span class="header-badge">📅 Tháng 5–6/2026</span>
+            <label class="btn-upload" for="fileInput">📤 Cập nhật từ Excel</label>
+            <input type="file" id="fileInput" accept=".xlsx,.xls">
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Tìm lĩnh vực, người thực hiện...">
+            </div>
+            <div class="sidebar-list" id="sidebarList"></div>
+            <div class="sidebar-footer">15 lĩnh vực · 76 bước · PVEP 2026</div>
+        </aside>
+
+        <div class="main" id="mainArea">
+            <div class="detail-tabs" id="detailTabs" style="display:none">
+                <div class="detail-tab active" data-tab="tasks">📋 Nhiệm vụ</div>
+                <div class="detail-tab" data-tab="checklist">✅ Checklist kiểm tra</div>
+            </div>
+            <div class="detail-body" id="detailBody">
+                <div class="welcome">
+                    <div class="welcome-icon">📋</div>
+                    <h2>Chọn lĩnh vực bên trái</h2>
+                    <p>để xem nhiệm vụ và checklist kiểm tra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script>
+// ===== TOAST =====
+function showToast(msg, dur=3000){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),dur);
+}
+
+// ===== PARSE EXCEL SHEET INTO GROUPED CHECKLIST =====
+// Detects group headers like "A. QUẢN TRỊ & TỔ CHỨC CNTT" and splits items into groups
+function parseSheetWithGroups(rows, existingHeaders) {
+  let headerIdx = -1;
+  for(let i=0;i<Math.min(8,rows.length);i++){
+    if(rows[i] && rows[i][0]==='STT'){headerIdx=i;break}
+  }
+  if(headerIdx===-1) return null;
+
+  const headers = existingHeaders || rows[headerIdx].filter(h=>h!=='');
+  const groups = [];
+  let currentGroup = { name: '', items: [] };
+
+  for(let i=headerIdx+1; i<rows.length; i++){
+    const row = rows[i];
+    if(!row || row.every(c=>c===''||c===undefined||c===null)) continue;
+
+    const col0 = row[0];
+    const col1 = row[1] || '';
+    const col2 = row[2] || '';
+
+    // Detect GROUP HEADER: col0 is a long string, not a number, and rest of important cols are empty
+    const isGroupHeader = (typeof col0 === 'string' && col0.length > 3 && isNaN(Number(col0)) && col0 !== 'STT' && (col2 === ''));
+
+    if(isGroupHeader) {
+      if(currentGroup.items.length > 0 || currentGroup.name) {
+        groups.push(currentGroup);
+      }
+      currentGroup = { name: col0.trim(), items: [] };
+      continue;
+    }
+
+    // Data row
+    const item = {};
+    headers.forEach((h, idx) => {
+      if(h && row[idx] !== undefined && row[idx] !== '') {
+        item[h] = String(row[idx]).trim();
+      }
+    });
+    if(Object.keys(item).length > 1) {
+      currentGroup.items.push(item);
+    }
+  }
+
+  if(currentGroup.items.length > 0) {
+    groups.push(currentGroup);
+  }
+
+  const totalItems = groups.reduce((s,g)=>s+g.items.length, 0);
+  if(totalItems < 1) return null;
+
+  // Check if headers look like checklist
+  const hStr = headers.join('|').toLowerCase();
+  if(!hStr.includes('bước') && !hStr.includes('kiểm tra') && !hStr.includes('mục tiêu') && !hStr.includes('nội dung') && !hStr.includes('hệ thống') && !hStr.includes('hạng mục')) return null;
+
+  return { headers, groups };
+}
+
+// ===== LINH VUC DATA =====
+const DATA=[
+{stt:1,name:"Thực hiện chỉ đạo & Kiến nghị",code:"CĐ",team:"mixed",docs:"Tình hình thực hiện chỉ đạo của Petrovietnam, HĐTV; xử lý kiến nghị",clSheet:null,
+tasks:[
+{nv:"N1",title:"Thực hiện chỉ đạo Petrovietnam, HĐTV",output:"",pic:"Lý Quốc Đạt",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Tình hình xử lý kiến nghị PVEP trình Petrovietnam",output:"",pic:"Nguyễn Bá Lập",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Đánh giá thực hiện kết luận & kiến nghị Đoàn KTNB",output:"Thống kê công việc BĐH đã báo cáo, đánh giá mức độ phối hợp",pic:"Ngô Thị Tuấn Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Đánh giá thực hiện kết luận & kiến nghị Đoàn KTGS",output:"Thống kê công việc BĐH đã báo cáo, đánh giá mức độ phối hợp",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+{stt:2,name:"Chiến lược, Kế hoạch SXKD",code:"KH",team:"KTNB",docs:"QĐ Quản lý Chiến lược, Kế hoạch PVEP (5.10)",clSheet:"KH_KeHoach",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QĐ QL KH PVEP với Luật & quy định Petrovietnam",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con cần đánh giá",output:"(i) Lập KH SXKD 5 năm; (ii) KH năm; (iii) KH quý/tháng; (iv) Điều chỉnh KH; (v) BC thực hiện KH",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N3",title:"Vẽ mô hình làn bơi (swimlane)",output:"Actors: BĐH / Ban KH / Đơn vị / PVN",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra theo checklist",output:"Test các bước trong sheet KH_KeHoach",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:3,name:"Chi phí Hoạt động",code:"CP",team:"KTGS",docs:"Định mức QLCP; Xây dựng kế hoạch",clSheet:"KH_CPHĐ",
+tasks:[
+{nv:"N1",title:"Đánh giá thực hiện kế hoạch chi phí HĐ năm 2025",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Đánh giá quy trình xây dựng giám sát",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Chọn mẫu và xây dựng template chọn mẫu",output:"",pic:"Trần Phương Anh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Kiểm tra theo checklist",output:"",pic:"Theo phân công",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+{stt:4,name:"Quản lý Đầu tư",code:"DT",team:"KTNB",docs:"QĐ ĐT DADK trong nước; QĐ ĐT nước ngoài; QC QL Vốn ĐT; QC QL Dự án DK; QC Phân cấp & GS ĐT",clSheet:"KH_DauTuDADK",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Bảng đối chiếu các quy chế ĐT với Luật Dầu khí 12/2022, NĐ 45/2023",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh",
+subItems:["HT Quản trị danh mục đầu tư (Portfolio)","HT QL đầu tư DADK (Thủ tục đầu tư)","HT Giám sát đầu tư","HT QL ĐT ngoài DK","HT QL vốn ĐT ra ngoài DN và KTGS"]},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"Actors: HĐTV/BĐH/Ban ĐT/Ban TC/PM/PVN/Chính phủ",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra theo checklist",output:"100% AFE >5M USD; 30% AFE <5M USD; 100% FDP/ODP phê duyệt 2025-2026",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:5,name:"Đấu thầu / TM Mua sắm TX",code:"DTH-MSTX",team:"KTGS",docs:"QĐ Phân cấp đấu thầu không DADK (5.8)",clSheet:"KH_DauThau_MSTX",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu với Luật Đấu thầu 22/2023, NĐ 24/2024",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) Lập KH LCNT; (ii) Lập HSMT; (iii) Đánh giá HSDT; (iv) Thương thảo-ký kết; (v) QL thực hiện HĐ; (vi) Hậu kiểm",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane — Đơn vị yêu cầu / Tổ chuyên gia / Ban TM-ĐT / BĐH / HĐTV",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% gói >10 tỷ; 50% gói 1-10 tỷ",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+{stt:6,name:"Đấu thầu / TM DADK",code:"DTH-DADK",team:"KTNB",docs:"QĐ QL đấu thầu DADK (1066)",clSheet:"KH_DauThau_DADK",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QĐ Petrovietnam",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) Lập KH LCNT; (ii) Lập HSMT; (iii) Đánh giá HSDT; (iv) Thương thảo; (v) QL HĐ; (vi) Hậu kiểm",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"Actors: Đơn vị yêu cầu / Tổ CG / Ban TM-ĐT / BĐH / HĐTV",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"Phân tầng theo HTPL / chỉ định thầu / đấu thầu rộng rãi",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:7,name:"Tài chính — Kế toán",code:"TC",team:"KTGS",docs:"QC tài chính; Chính sách kế toán; QC QL dòng tiền",clSheet:"KH_TaiChinhKT",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QC TC + CS KT với TT 200/2014, Luật KT 88/2015",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh",subItems:["BC quản trị: QL nợ, tiền gửi, giám sát, xếp hạng DN","Báo cáo tài chính, PPLN","Công bố thông tin"]},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"Actors: Ban TC-KT / Đơn vị / KTĐL / Cơ quan thuế — P2P, O2C, R2R",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% bút toán >5 tỷ; 25 mẫu/tháng <5 tỷ; 100% tờ khai thuế Q1-Q4/2025",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:8,name:"Quản trị Rủi ro",code:"RR",team:"KTGS",docs:"QC QTRR; QC QL Bảo hiểm; Khung QTRR PVN",clSheet:"KH_QTRR",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QC QTRR + QC BH với COSO ERM 2017, NĐ 47/2021",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) Nhận diện; (ii) Đánh giá (Heat map); (iii) Ứng phó; (iv) GS-BC RR; (v) QL BH; (vi) Văn hóa RR",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane — Chủ RR / Bộ phận QTRR / Ban KSNB / BĐH / HĐTV",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% RR Cao; 30% RR TB; 100% HĐ BH hiệu lực",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},
+]},
+{stt:9,name:"CNTT — Chuyển đổi số",code:"IT",team:"KTNB",docs:"QĐ CNTT; KH CĐS; QC ATTT",clSheet:"KH_CNTT_CDS",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QĐ CNTT + KH CĐS với Luật ATTT, Luật An ninh mạng, NĐ 13/2023",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) IT Governance; (ii) ATTT; (iii) QL dữ liệu; (iv) DLCN; (v) DA CĐS; (vi) Mua sắm CNTT",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"Ban CNTT / Đơn vị NV / Nhà thầu / Ban KSNB — ITIL change/incident",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% sự cố ATTT 2025; 30% user core; 100% DA CĐS >2 tỷ",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:10,name:"Quản lý Dự án",code:"QLDA",team:"mixed",docs:"Quy chế Quản lý dự án",clSheet:"KH_QLDA",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QC PVEP với quy định chuyên ngành DK",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:"",
+subItems:["CTHĐ&NS — Nguyễn Thị Hải Yến (KTGS)","QL AFE — Trần Phương Anh (KTGS)","CTTKTD/CTTDDKBS — Nguyễn Bá Minh (KTGS)","QL ODP/FDP — Nguyễn Văn Điều (KTNB)","QLDA chung — Trần Ngọc Ánh (KTNB)"]},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"7 swimlane — Đơn vị đề xuất / Ban PC / Ban TC / LĐ ký / Đối tác",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% HĐ >5 tỷ; 30% HĐ 1-5 tỷ; 100% HĐ tranh chấp 2024-2025",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+]},
+{stt:11,name:"Văn bản QL Nội bộ",code:"VB",team:"KTNB",docs:"QC Soạn thảo-Ban hành VBQLNB; Sổ VBQLNB",clSheet:"KH_VBQLNB",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QC Soạn thảo VBQLNB với Luật Ban hành VBQPPL 80/2015",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) Soạn thảo; (ii) Thẩm định; (iii) Phê duyệt; (iv) Phổ biến; (v) Triển khai; (vi) Rà soát ĐK; (vii) Sửa đổi; (viii) Lưu trữ",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"8 swimlane — Đơn vị soạn / Ban PC / Ban KSNB / BĐH / HĐTV",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% VBQLNB mới 2025-2026; 30% VBQLNB cũ chưa rà soát >3 năm",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+]},
+{stt:12,name:"KHCN",code:"KHCN",team:"KTGS",docs:"",clSheet:"KH_KHCN",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB",output:"Đối chiếu QC PVEP. Điểm khác biệt DNNN.",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+{stt:13,name:"ASXH",code:"ASXH",team:"KTGS",docs:"",clSheet:"KH_ASXH",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB",output:"Đối chiếu QC PVEP. Điểm khác biệt DNNN.",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+{stt:14,name:"Hệ thống Giám sát",code:"GS",team:"mixed",docs:"Các quy định giám sát",clSheet:"KH_GIÁM SÁT",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Phù hợp với quy định PL và Petrovietnam",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N2",title:"Kiểm tra các hệ thống con",output:"11 quy chế/quy định",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:"",
+subItems:["QC QL vốn ĐT ngoài DN — Nguyễn Bá Lập (KTNB)","QĐ QL ĐT DADK trong nước — Nguyễn Văn Điều (KTNB)","QĐ QL ĐT ra nước ngoài — Trần Ngọc Ánh (KTNB)","QC QL Dự án DK — Trần Ngọc Ánh (KTGS)","QC phân cấp & GS ĐT — Nguyễn Bá Lập (KTNB)","QC QL Bảo hiểm — Nguyễn Thị Cẩm Hà (KTGS)","QĐ đấu thầu DADK — Trần Bảo Châu (KTNB)","QĐ phân cấp ĐT không DADK — Vũ Thúy Quỳnh (KTGS)","QC KTNB — Ngô Thị Tuấn Anh (KTNB)","QĐ QL Kế hoạch — Vũ Ái Ngọc Bình (KTGS)","QC TCHĐ Ban KSNB & QT KTGS — Giang Anh Dũng (KTGS)"]},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},
+]},
+{stt:15,name:"Nhân sự",code:"NS",team:"KTGS",docs:"QC QL LĐ-TL; QC Đào tạo; QC Đánh giá-KT-KL",clSheet:"KH_NhanSu",
+tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QC NS PVEP với BLLĐ 45/2019, NĐ 145/2020, Luật BHXH 41/2024",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) Tuyển dụng; (ii) HĐLĐ; (iii) Lương-thưởng; (iv) Đào tạo; (v) Đánh giá HQCV; (vi) Kỷ luật; (vii) Nghỉ việc; (viii) Xung đột lợi ích",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"9 swimlane — Ban NS / Đơn vị / CB-CNV / Công đoàn / BĐH",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% NS tuyển/nghỉ 2025; 30 mẫu lương/tháng; 100% QĐ kỷ luật 2024-2025",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},
+]},
+];
+
+// Also link extra checklist sheets to lĩnh vực
+const EXTRA_CL_MAP = {
+  10: ["KH_QLDA","KH_CTHD&NS","KH-AFE","KH_G&A","KH_HopDong"], // QLDA
+  3: ["KH_CPHĐ"],
+  8: ["KH_QTRR","KH_Bảo hiểm"],
+  14: ["KH_GIÁM SÁT"],
+};
+
+const NV_LABELS={N1:"🔍 N1 — Rà soát VBQLNB vs Pháp luật",N2:"📋 N2 — Liệt kê hệ thống con",N3:"🏊 N3 — Vẽ mô hình Swimlane",N4:"✅ N4 — Chọn mẫu & Kiểm tra"};
+
+let activeIdx=-1, activeTab='tasks', checklistCache=null;
+
+function badgeCls(t){return t==='KTNB'?'badge-ktnb':t==='KTGS'?'badge-ktgs':'badge-mixed'}
+function teamLbl(t){return t==='mixed'?'Cả hai':t}
+
+// Sidebar
+function renderSidebar(q=''){
+  const list=document.getElementById('sidebarList');
+  const s=q.toLowerCase().trim();
+  const filtered=s?DATA.filter(lv=>lv.name.toLowerCase().includes(s)||lv.code.toLowerCase().includes(s)||(lv.docs&&lv.docs.toLowerCase().includes(s))||lv.tasks.some(t=>t.pic.toLowerCase().includes(s)||t.title.toLowerCase().includes(s)||(t.subItems&&t.subItems.some(si=>si.toLowerCase().includes(s))))):DATA;
+  if(!filtered.length){list.innerHTML='<div style="padding:30px;text-align:center;color:var(--text3);font-size:13px">Không tìm thấy</div>';return}
+  list.innerHTML=filtered.map(lv=>{
+    const pc=new Set(lv.tasks.map(t=>t.pic).filter(p=>p!=='Nhiều PIC'&&p!=='Theo phân công')).size;
+    return `<div class="sidebar-item ${activeIdx===lv.stt?'active':''}" onclick="selectLV(${lv.stt})">
+      <div class="s-num">${lv.stt}</div>
+      <div class="s-info"><div class="s-name">${lv.name}</div><div class="s-sub">${lv.tasks.length} NV · ${pc} PIC</div></div>
+      <span class="s-badge ${badgeCls(lv.team)}">${teamLbl(lv.team)}</span>
+    </div>`}).join('');
+}
+
+// Tab switching
+document.getElementById('detailTabs').addEventListener('click',e=>{
+  const tab=e.target.closest('.detail-tab');
+  if(!tab)return;
+  document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  activeTab=tab.dataset.tab;
+  renderDetail();
+});
+
+function selectLV(stt){
+  activeIdx=stt;activeTab='tasks';
+  document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector('.detail-tab[data-tab="tasks"]').classList.add('active');
+  renderSidebar(document.getElementById('search').value);
+  document.getElementById('detailTabs').style.display='flex';
+  renderDetail();
+}
+
+function renderDetail(){
+  const lv=DATA.find(d=>d.stt===activeIdx);
+  if(!lv)return;
+  if(activeTab==='tasks') renderTasks(lv);
+  else renderChecklist(lv);
+}
+
+// Tasks view
+function renderTasks(lv){
+  const body=document.getElementById('detailBody');
+  let h=`<div class="fade-in"><div class="d-header">
+    <div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">LV #${lv.stt} · ${lv.code}</span></div>
+    <h2>${lv.name}</h2>${lv.docs?`<div class="docs">${lv.docs}</div>`:''}</div>`;
+  lv.tasks.forEach(t=>{
+    h+=`<div class="task-section"><div class="nv-label"><span class="nv-dot"></span>${NV_LABELS[t.nv]||t.nv}</div>
+    <div class="t-card"><div class="t-card-top"><div class="t-title">${t.title}</div>
+    ${t.doan&&t.doan!=='mixed'?`<span class="s-badge ${badgeCls(t.doan)}">${t.doan}</span>`:''}</div>`;
+    if(t.output)h+=`<div class="t-output">${t.output}</div>`;
+    if(t.subItems){h+='<ul class="sub-list">';t.subItems.forEach(si=>{h+=`<li>${si}</li>`});h+='</ul>'}
+    h+=`<div class="t-people">
+      <div class="t-person">👤 PIC: <span class="nm">${t.pic}</span></div>
+      ${t.reviewer?`<div class="t-person">👁 Rà soát: <span class="nm">${t.reviewer}</span></div>`:''}
+      ${t.lead?`<div class="t-person">🛡 LĐ: <span class="nm">${t.lead}</span></div>`:''}
+    </div></div></div>`;
+  });
+  h+='</div>';body.innerHTML=h;
+}
+
+// Checklist view with GROUPS
+async function renderChecklist(lv){
+  const body=document.getElementById('detailBody');
+  if(!lv.clSheet){body.innerHTML='<div class="cl-empty">Lĩnh vực này chưa có sheet checklist.</div>';return}
+
+  // Load JSON
+  if(!checklistCache){
+    body.innerHTML='<div class="cl-empty">⏳ Đang tải checklist...</div>';
+    try{const r=await fetch('checklists.json');checklistCache=await r.json()}
+    catch(e){body.innerHTML='<div class="cl-empty">❌ Không tải được checklists.json</div>';return}
+  }
+
+  // Collect all sheets for this LV
+  let allSheets = [lv.clSheet];
+  if (EXTRA_CL_MAP[lv.stt]) allSheets = EXTRA_CL_MAP[lv.stt];
+
+  let h=`<div class="fade-in"><div class="d-header">
+    <div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span>
+    <span style="font-size:12px;color:var(--text3)">Checklist kiểm tra</span></div>
+    <h2>${lv.name}</h2></div>`;
+
+  let hasData = false;
+
+  allSheets.forEach(sheetName => {
+    const clData = checklistCache[sheetName];
+    if(!clData) return;
+
+    const stepKey = clData.headers.find(h2=>h2.includes('Bước')||h2.includes('Hạng mục')||h2.includes('Hệ thống'))||clData.headers[1];
+
+    // Use groups if available, otherwise wrap items into a single group
+    let groups;
+    if (clData.groups && clData.groups.length > 0) {
+      groups = clData.groups;
+    } else if (clData.items && clData.items.length > 0) {
+      groups = [{ name: '', items: clData.items }];
+    } else {
+      return;
+    }
+
+    hasData = true;
+    groups.forEach((g, gi) => {
+      if (!g.items || !g.items.length) return;
+      const gName = g.name || sheetName.replace('KH_','').replace(/_/g,' ');
+      h += renderGroupBlock(gName, sheetName, g.items, stepKey, clData.headers, gi);
+    });
+  });
+
+  if (!hasData) {
+    h += '<div class="cl-empty">Chưa có dữ liệu checklist cho lĩnh vực này.</div>';
+  }
+
+  h+='</div>';body.innerHTML=h;
+}
+
+function renderGroupBlock(groupName, sheetName, items, stepKey, headers, groupIdx) {
+  const fieldMap=[
+    {key:'Mục tiêu/Nội dung công việc',label:'Nội dung công việc',full:true},
+    {key:'Hồ sơ/Bằng chứng cần thu thập',label:'Hồ sơ / Bằng chứng'},
+    {key:'Sai sót/rủi ro tiềm tàng',label:'Sai sót / Rủi ro tiềm tàng'},
+    {key:'Tham chiếu Điều/khoản',label:'Tham chiếu'},
+    {key:'Phương pháp kiểm tra',label:'Phương pháp kiểm tra'},
+    {key:'Tiêu chí đánh giá',label:'Tiêu chí đánh giá'},
+  ];
+
+  let h=`<div class="cl-group">
+    <div class="cl-group-title">
+      <span class="cl-group-icon">📂</span>
+      ${groupName}
+      <span class="cl-group-count">${items.length} bước</span>
+    </div>`;
+
+  items.forEach((item,i)=>{
+    const num=item.STT||(i+1);
+    const stepName=item[stepKey]||'';
+    const pic=item.PIC||'';
+
+    h+=`<div class="cl-step">
+      <div class="cl-step-header" onclick="toggleStep(this)">
+        <div class="cl-num">${num}</div>
+        <div class="cl-step-name">${stepName}</div>
+        <div class="cl-arrow">▼</div>
+      </div>
+      <div class="cl-step-body">
+        <div class="cl-grid">`;
+    fieldMap.forEach(f=>{
+      const val=item[f.key];
+      if(val){h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`}
+    });
+    h+=`</div>`;
+    if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
+    h+=`</div></div>`;
+  });
+
+  h+=`</div>`;
+  return h;
+}
+
+function toggleStep(el){
+  el.classList.toggle('open');
+  el.querySelector('.cl-arrow').classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+// ===== EXCEL UPLOAD =====
+document.getElementById('fileInput').addEventListener('change', async function(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  showToast('⏳ Đang xử lý file Excel...');
+
+  const data = await file.arrayBuffer();
+  const wb = XLSX.read(data);
+
+  const result = {};
+  wb.SheetNames.forEach(sheetName => {
+    const ws = wb.Sheets[sheetName];
+    if(!ws || !ws['!ref']) return;
+    const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
+
+    const parsed = parseSheetWithGroups(rows);
+    if(parsed) {
+      result[sheetName] = parsed;
+    }
+  });
+
+  checklistCache = result;
+
+  // Count groups and items
+  let totalGroups = 0, totalItems = 0;
+  Object.values(result).forEach(d => {
+    d.groups.forEach(g => { totalGroups++; totalItems += g.items.length; });
+  });
+
+  showToast(`✅ Cập nhật thành công! ${Object.keys(result).length} sheet · ${totalGroups} nhóm · ${totalItems} bước`);
+
+  // Re-render if on checklist tab
+  if(activeTab==='checklist'&&activeIdx>0) renderDetail();
+  e.target.value=''; // reset input
+});
+
+// Search
+document.getElementById('search').addEventListener('input',e=>renderSidebar(e.target.value));
+
+// Init
+renderSidebar();
+</script>
+</body>
+</html>
