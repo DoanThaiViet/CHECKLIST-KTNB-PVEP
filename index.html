@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVEP — Tra cứu Nhiệm vụ KTGS/KTNB BMĐH 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --green:#006838;--green-light:#00843d;--green-pale:#e8f5e9;--green-bg:#f0f9f1;
+            --blue:#3f51b5;--blue-bg:#e8eaf6;
+            --orange:#e65100;--orange-bg:#fff3e0;
+            --red:#e53935;--red-bg:#ffeaea;
+            --bg:#f5f6f8;--white:#fff;
+            --border:#e0e3e8;--border-light:#eef0f3;
+            --text:#1a1a2e;--text2:#4a5568;--text3:#94a3b8;
+            --shadow:0 1px 3px rgba(0,0,0,0.06);
+            --shadow-lg:0 4px 16px rgba(0,0,0,0.08);
+            --radius:10px;--radius-sm:6px;
+        }
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+        /* LOGIN */
+        .login-overlay{position:fixed;inset:0;background:linear-gradient(135deg,#006838 0%,#00843d 50%,#2e7d32 100%);display:flex;align-items:center;justify-content:center;z-index:9999}
+        .login-box{background:var(--white);border-radius:16px;padding:40px;width:380px;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center}
+        .login-box img{height:60px;margin-bottom:12px}
+        .login-box h2{font-size:18px;font-weight:800;color:var(--green);margin-bottom:4px}
+        .login-box p{font-size:12px;color:var(--text3);margin-bottom:24px}
+        .login-field{margin-bottom:14px;text-align:left}
+        .login-field label{font-size:11px;font-weight:600;color:var(--text2);display:block;margin-bottom:4px}
+        .login-field input{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:14px;outline:none;transition:border .2s}
+        .login-field input:focus{border-color:var(--green)}
+        .login-btn{width:100%;padding:12px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:8px}
+        .login-btn:hover{background:var(--green-light)}
+        .login-error{color:var(--red);font-size:12px;margin-top:8px;display:none}
+        .login-hidden{display:none!important}
+
+        /* HEADER */
+        .header{background:var(--green);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;flex-shrink:0}
+        .header-logo{height:38px;border-radius:4px}
+        .header-title{display:flex;flex-direction:column}
+        .header-title h1{font-size:15px;font-weight:700;letter-spacing:.3px;line-height:1.2}
+        .header-title span{font-size:11px;opacity:.75;font-weight:400}
+        .header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+        .header-badge{font-size:11px;background:rgba(255,255,255,.15);padding:5px 12px;border-radius:16px;font-weight:500;display:flex;align-items:center;gap:5px}
+        .btn-upload{display:flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .15s}
+        .btn-upload:hover{background:rgba(255,255,255,.3)}
+        .btn-logout{padding:7px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:11px;font-weight:500;font-family:inherit;cursor:pointer;transition:all .15s}
+        .btn-logout:hover{background:rgba(255,0,0,.3)}
+        .user-info{display:flex;align-items:center;gap:8px;font-size:12px}
+        .user-info select{padding:4px 8px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.15);color:#fff;font-family:inherit;font-size:11px;outline:none;cursor:pointer}
+        .user-info select option{color:#333;background:#fff}
+        #fileInput{display:none}
+
+        /* LAYOUT */
+        .layout{display:flex;flex:1;overflow:hidden}
+        .sidebar{width:300px;min-width:300px;background:var(--white);border-right:1px solid var(--border);display:flex;flex-direction:column}
+        .search-wrap{padding:14px 14px 10px;border-bottom:1px solid var(--border-light)}
+        .search-wrap input{width:100%;padding:9px 12px 9px 36px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:13px;color:var(--text);outline:none;transition:border .2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
+        .search-wrap input:focus{border-color:var(--green-light)}
+        .search-wrap input::placeholder{color:var(--text3)}
+        .sidebar-list{flex:1;overflow-y:auto;padding:6px}
+        .sidebar-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;transition:background .12s;margin-bottom:1px}
+        .sidebar-item:hover{background:var(--green-pale)}
+        .sidebar-item.active{background:var(--green);color:#fff}
+        .sidebar-item.active .s-num{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+        .sidebar-item.active .s-name{color:#fff}
+        .sidebar-item.active .s-sub{color:rgba(255,255,255,.7)}
+        .sidebar-item.active .s-badge{background:rgba(255,255,255,.2);color:#fff}
+        .s-num{width:26px;height:26px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0}
+        .s-info{flex:1;min-width:0}
+        .s-name{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .s-sub{font-size:11px;color:var(--text3);margin-top:1px}
+        .s-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;flex-shrink:0;text-transform:uppercase;letter-spacing:.3px}
+        .badge-ktnb{background:var(--blue-bg);color:var(--blue)}
+        .badge-ktgs{background:var(--green-pale);color:var(--green)}
+        .badge-mixed{background:var(--orange-bg);color:var(--orange)}
+        .sidebar-footer{padding:10px 14px;border-top:1px solid var(--border-light);font-size:10px;color:var(--text3);text-align:center}
+
+        /* MAIN */
+        .main{flex:1;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
+        .detail-tabs{display:flex;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:0 28px;flex-shrink:0}
+        .detail-tab{padding:14px 20px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2.5px solid transparent;transition:all .15s;user-select:none}
+        .detail-tab:hover{color:var(--text2)}
+        .detail-tab.active{color:var(--green);border-bottom-color:var(--green)}
+        .detail-body{flex:1;overflow-y:auto;padding:24px 28px 40px}
+
+        .welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:var(--text3)}
+        .welcome-icon{font-size:44px;margin-bottom:12px;opacity:.4}
+        .welcome h2{font-size:16px;font-weight:600;color:var(--text2);margin-bottom:4px}
+        .welcome p{font-size:13px}
+
+        .d-header{margin-bottom:24px}
+        .d-header .top{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+        .d-header h2{font-size:20px;font-weight:800;color:var(--text)}
+        .d-header .docs{font-size:12px;color:var(--text2);line-height:1.6;margin-top:4px}
+
+        .nv-label{font-size:12px;font-weight:700;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:6px;padding-bottom:6px;border-bottom:1px solid var(--border-light)}
+        .nv-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+        .t-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow);transition:border-color .15s}
+        .t-card:hover{border-color:var(--green-light)}
+        .t-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
+        .t-title{font-size:14px;font-weight:600;color:var(--text)}
+        .t-output{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+        .t-people{display:flex;flex-wrap:wrap;gap:14px}
+        .t-person{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px}
+        .t-person .nm{color:var(--text2);font-weight:500}
+        .sub-list{margin:8px 0 12px;list-style:none}
+        .sub-list li{font-size:12px;color:var(--text2);padding:6px 0 6px 14px;border-left:2px solid var(--border);line-height:1.5}
+        .sub-list li:hover{border-left-color:var(--green)}
+        .task-section{margin-bottom:22px}
+
+        /* CHECKLIST */
+        .cl-empty{text-align:center;padding:60px 20px;color:var(--text3);font-size:13px}
+        .cl-group{margin-bottom:28px}
+        .cl-group-title{font-size:13px;font-weight:700;color:var(--green);padding:10px 16px;background:var(--green-pale);border-radius:8px;margin-bottom:12px;display:flex;align-items:center;gap:8px;border-left:4px solid var(--green)}
+        .cl-group-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--text3);background:var(--white);padding:2px 8px;border-radius:10px}
+        .cl-step{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
+        .cl-step-header{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background .1s;user-select:none}
+        .cl-step-header:hover{background:var(--green-pale)}
+        .cl-step-header.open{background:var(--green-pale);border-bottom:1px solid var(--border-light)}
+        .cl-num{width:28px;height:28px;border-radius:8px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+        .cl-step-name{font-size:13px;font-weight:600;color:var(--text);flex:1;line-height:1.4}
+        .cl-arrow{font-size:10px;color:var(--text3);transition:transform .2s;flex-shrink:0}
+        .cl-arrow.open{transform:rotate(180deg)}
+        .cl-step-body{display:none;padding:16px 18px 18px}
+        .cl-step-body.open{display:block}
+        .cl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        @media(max-width:900px){.cl-grid{grid-template-columns:1fr}}
+        .cl-field{padding:10px 14px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
+        .cl-field-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+        .cl-field-value{font-size:12px;color:var(--text2);line-height:1.6;white-space:pre-wrap}
+        .cl-field.full{grid-column:1/-1}
+        .cl-pic-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--green);background:var(--green-pale);padding:3px 10px;border-radius:12px;margin-top:8px}
+
+        /* RESULT FIELDS */
+        .result-section{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+        .result-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
+        .result-row label{font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.4px;min-width:100px;padding-top:6px}
+        .result-row select,.result-row textarea{flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:12px;color:var(--text);outline:none;transition:border .2s}
+        .result-row select:focus,.result-row textarea:focus{border-color:var(--green)}
+        .result-row textarea{resize:vertical;min-height:50px}
+        .result-row .saved-info{font-size:10px;color:var(--text3);margin-top:2px}
+        .btn-save-result{padding:6px 16px;background:var(--green);color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:background .15s}
+        .btn-save-result:hover{background:var(--green-light)}
+
+        /* COMMENTS */
+        .comments-section{margin-top:16px;padding-top:14px;border-top:1px dashed var(--border)}
+        .comments-title{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+        .comment-item{padding:10px 14px;background:var(--bg);border-radius:8px;margin-bottom:6px;border-left:3px solid var(--blue)}
+        .comment-item.leader{border-left-color:var(--orange)}
+        .comment-meta{font-size:10px;color:var(--text3);margin-bottom:4px;display:flex;align-items:center;gap:6px}
+        .comment-meta .c-role{font-weight:700;text-transform:uppercase;font-size:9px;padding:1px 5px;border-radius:3px}
+        .comment-meta .c-role.leader{background:var(--orange-bg);color:var(--orange)}
+        .comment-meta .c-role.pic{background:var(--green-pale);color:var(--green)}
+        .comment-text{font-size:12px;color:var(--text2);line-height:1.5}
+        .comment-form{display:flex;gap:8px;margin-top:8px}
+        .comment-form textarea{flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:12px;resize:none;height:36px;outline:none}
+        .comment-form textarea:focus{border-color:var(--green)}
+        .comment-form button{padding:0 16px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer}
+        .comment-form button:hover{background:#303f9f}
+
+        /* Toast */
+        .toast{position:fixed;top:20px;right:20px;background:var(--green);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow-lg);z-index:1000;opacity:0;transform:translateY(-10px);transition:all .3s;pointer-events:none}
+        .toast.show{opacity:1;transform:translateY(0)}
+
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);border-radius:3px}
+        .fade-in{animation:fadeIn .25s ease}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:768px){.sidebar{width:100%;min-width:100%;position:absolute;z-index:10;height:100%}}
+
+        /* FLOW SWIMLANE HORIZONTAL */
+        .flow-group-label{font-size:13px;font-weight:700;color:var(--green);margin:20px 0 10px;padding:8px 14px;background:var(--green-pale);border-radius:8px;border-left:4px solid var(--green)}
+        .swim-container{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;border:1px solid var(--border); overflow:hidden;}
+        .swim-title{font-size:14px;font-weight:700;color:var(--white);background:var(--green);padding:10px 18px;text-align:center}
+        .swim-body{position:relative;width:100%;display:flex;flex-direction:column;}
+        .swim-lane{display:flex;align-items:stretch;border-bottom:1px solid var(--border-light);min-height:80px;resize:vertical;overflow:hidden;}
+        .swim-lane:last-child{border-bottom:none;}
+        .swim-lane:nth-child(even){background:#fafbfc;}
+        .swim-label{width:140px;min-width:80px;padding:10px 12px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:700;color:var(--green);background:var(--green-pale);border-right:2px solid var(--green);flex-shrink:0;line-height:1.3;resize:horizontal;overflow:hidden;z-index:3;}
+        .swim-cells{display:grid;grid-template-columns:repeat(var(--total-cols), minmax(0,1fr));gap:6px;flex:1;padding:12px 10px;align-items:center;position:relative;}
+        .swim-node{padding:6px 4px;border-radius:6px;font-size:9.5px;font-weight:600;line-height:1.2;text-align:center;border:2px solid var(--border);background:var(--white);color:var(--text);cursor:default;position:relative;z-index:2;transition:box-shadow .15s, transform .15s;word-wrap:break-word;max-height:80px;overflow:hidden;}
+        .swim-node:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);z-index:4;max-height:none;height:auto;}
+        .swim-node.done{background:#c8e6c9;border-color:#2e7d32;color:#1b5e20}
+        .swim-node.partial{background:#fff9c4;border-color:#f9a825;color:#e65100}
+        .swim-node.fail{background:#ffcdd2;border-color:#c62828;color:#b71c1c}
+        .swim-node.control{border-style:dashed;border-color:var(--orange)}
+        .swim-node .sn-num{font-size:9px;font-weight:800;color:var(--green);display:block;margin-bottom:2px}
+        .swim-legend{display:flex;gap:16px;padding:12px 16px;background:var(--green-pale);border-radius:8px;font-size:11px;color:var(--text2);margin-top:12px;flex-wrap:wrap;align-items:center}
+        .swim-legend-item{display:flex;align-items:center;gap:4px}
+        .swim-legend-box{width:14px;height:14px;border-radius:3px;border:2px solid}
+        .flow-fallback{background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);overflow-x:auto}
+        .flow-fallback .mermaid{min-width:600px}
+    </style>
+</head>
+<body>
+    <!-- LOGIN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <img src="PVEP.png" alt="PVEP" onerror="this.style.display='none'">
+            <h2>PVEP — Ban KSNB</h2>
+            <p>Hệ thống Theo dõi Kiểm tra BMĐH 2026</p>
+            <div class="login-field">
+                <label>Tài khoản</label>
+                <input type="text" id="loginUser" value="KSNB" placeholder="Username">
+            </div>
+            <div class="login-field">
+                <label>Mật khẩu</label>
+                <input type="password" id="loginPass" placeholder="Mật khẩu">
+            </div>
+            <button class="login-btn" onclick="doLogin()">Đăng nhập</button>
+            <div class="login-error" id="loginError">Sai tài khoản hoặc mật khẩu</div>
+        </div>
+    </div>
+
+    <!-- APP -->
+    <div id="appWrap" style="display:none;flex-direction:column;height:100vh">
+    <header class="header">
+        <img src="PVEP.png" alt="PVEP" class="header-logo" onerror="this.style.display='none'">
+        <div class="header-title">
+            <h1>THEO DÕI KIỂM TRA BMĐH</h1>
+            <span>Ban Kiểm soát Nội bộ — PVEP · 2026</span>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <span>👤</span>
+                <select id="currentUser"></select>
+            </div>
+            <label class="btn-upload" for="fileInput">📤 Upload Excel</label>
+            <input type="file" id="fileInput" accept=".xlsx,.xls">
+            <button class="btn-logout" onclick="doLogout()">Đăng xuất</button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Tìm lĩnh vực, người thực hiện...">
+            </div>
+            <div class="sidebar-list" id="sidebarList"></div>
+            <div class="sidebar-footer">15 lĩnh vực · 76 bước · PVEP 2026</div>
+        </aside>
+        <div class="main">
+            <div class="detail-tabs" id="detailTabs" style="display:none">
+                <div class="detail-tab active" data-tab="tasks">📋 Nhiệm vụ</div>
+                <div class="detail-tab" data-tab="checklist">✅ Checklist kiểm tra</div>
+                <div class="detail-tab" data-tab="flow">🔄 Quy trình (Flow)</div>
+            </div>
+            <div class="detail-body" id="detailBody">
+                <div class="welcome"><div class="welcome-icon">📋</div><h2>Chọn lĩnh vực bên trái</h2><p>để xem nhiệm vụ và checklist kiểm tra</p></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:false,theme:'base',themeVariables:{primaryColor:'#e8f5e9',primaryBorderColor:'#006838',primaryTextColor:'#1a1a2e',lineColor:'#006838',secondaryColor:'#e8eaf6',tertiaryColor:'#fff3e0'},flowchart:{curve:'basis',padding:12}})</script>
+<script>
+// ===== GLOBALS =====
+let staffList = [];
+let currentUserName = '';
+let currentUserRole = 'pic';
+let allResults = {};
+let allComments = [];
+let checklistCache = null;
+let activeIdx = -1, activeTab = 'tasks';
+
+function showToast(msg, dur=3000){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
+function badgeCls(t){return t==='KTNB'?'badge-ktnb':t==='KTGS'?'badge-ktgs':'badge-mixed'}
+function teamLbl(t){return t==='mixed'?'Cả hai':t}
+function getCurrentUser(){
+  const sel=document.getElementById('currentUser');
+  const opt=sel.options[sel.selectedIndex];
+  currentUserName=opt?opt.text:'';
+  currentUserRole=opt?opt.dataset.role:'pic';
+}
+
+// ===== LOGIN =====
+async function doLogin(){
+  const u=document.getElementById('loginUser').value.trim();
+  const p=document.getElementById('loginPass').value;
+  try{
+    const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u,password:p})});
+    const d=await r.json();
+    if(d.ok){
+      staffList=d.staff;
+      sessionStorage.setItem('loggedIn','1');
+      showApp();
+    } else {
+      document.getElementById('loginError').style.display='block';
+    }
+  }catch(e){document.getElementById('loginError').style.display='block'}
+}
+document.getElementById('loginPass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
+
+function doLogout(){
+  sessionStorage.removeItem('loggedIn');
+  document.getElementById('loginOverlay').classList.remove('login-hidden');
+  document.getElementById('appWrap').style.display='none';
+}
+
+async function showApp(){
+  document.getElementById('loginOverlay').classList.add('login-hidden');
+  document.getElementById('appWrap').style.display='flex';
+
+  // Populate user selector
+  if(!staffList.length){
+    try{const r=await fetch('/api/staff');staffList=await r.json()}catch(e){staffList=[{id:1,name:'User',role:'pic'}]}
+  }
+  const sel=document.getElementById('currentUser');
+  sel.innerHTML=staffList.map(s=>`<option value="${s.id}" data-role="${s.role}">${s.name}</option>`).join('');
+  sel.addEventListener('change',getCurrentUser);
+  getCurrentUser();
+
+  // Load data
+  await Promise.all([loadResults(), loadComments()]);
+  renderSidebar();
+}
+
+// Auto-login bypassed for static GitHub Pages version
+setTimeout(() => { showApp(); }, 50);
+
+// ===== DATA LOADING =====
+async function loadResults(){try{const r=await fetch('/api/results');allResults=await r.json()}catch(e){allResults={}}}
+async function loadComments(){try{const r=await fetch('/api/comments');allComments=await r.json()}catch(e){allComments=[]}}
+
+// ===== LINH VUC DATA (same as before) =====
+const DATA=[
+{stt:1,name:"Chiến lược, Kế hoạch SXKD",code:"KH",team:"KTNB",docs:"QĐ Quản lý KH PVEP (5.10)",clSheet:"KH_KeHoach",tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QĐ QL KH PVEP",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) KH 5 năm; (ii) KH năm; (iii) KH quý/tháng; (iv) Điều chỉnh; (v) BC",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"BĐH / Ban KH / Đơn vị / PVN",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"Sheet KH_KeHoach",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:2,name:"Chi phí Hoạt động",code:"CP",team:"KTGS",docs:"Định mức QLCP",clSheet:"KH_CPHĐ",tasks:[{nv:"N1",title:"Đánh giá thực hiện KH chi phí HĐ 2025",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Đánh giá quy trình xây dựng giám sát",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Chọn mẫu và xây dựng template",output:"",pic:"Trần Phương Anh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Kiểm tra theo checklist",output:"",pic:"Theo phân công",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:3,name:"Quản lý Đầu tư",code:"DT",team:"KTNB",docs:"QĐ ĐT DADK; QC QL Vốn ĐT; QC Phân cấp & GS ĐT",clSheet:"KH_DauTuDADK",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật Dầu khí 12/2022, NĐ 45/2023",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"Portfolio, Thủ tục ĐT, GS ĐT, ĐT ngoài DK",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"HĐTV/BĐH/Ban ĐT/Ban TC/PVN",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% AFE >5M; 30% <5M; 100% FDP/ODP",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:4,name:"Đấu thầu / TM Mua sắm TX",code:"DTH-MSTX",team:"KTGS",docs:"QĐ Phân cấp đấu thầu không DADK",clSheet:"KH_DauThau_MSTX",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật Đấu thầu 22/2023",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"KH LCNT; HSMT; HSDT; Thương thảo; QL HĐ; Hậu kiểm",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% gói >10 tỷ; 50% gói 1-10 tỷ",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:5,name:"Đấu thầu / TM DADK",code:"DTH-DADK",team:"KTNB",docs:"QĐ QL đấu thầu DADK",clSheet:"KH_DauThau_DADK",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"KH LCNT; HSMT; HSDT; Thương thảo; QL HĐ; Hậu kiểm",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:6,name:"Tài chính — Kế toán",code:"TC",team:"KTGS",docs:"QC tài chính; CS kế toán; QC QL dòng tiền",clSheet:"KH_TaiChinh",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"TT 200/2014, Luật KT 88/2015",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"BC quản trị; BCTC, PPLN; Công bố TT",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"P2P, O2C, R2R",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% bút toán >5 tỷ; 25 mẫu/tháng",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"}]},
+{stt:7,name:"Quản trị Rủi ro",code:"RR",team:"KTGS",docs:"QC QTRR; QC QL BH; Khung QTRR PVN",clSheet:"KH_QTRR",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"COSO ERM 2017, NĐ 47/2021",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"Nhận diện; Đánh giá; Ứng phó; GS-BC; QL BH; Văn hóa RR",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% RR Cao; 30% RR TB; 100% HĐ BH",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"}]},
+{stt:8,name:"CNTT — Chuyển đổi số",code:"IT",team:"KTNB",docs:"QĐ CNTT; KH CĐS; QC ATTT",clSheet:"KH_CNTT_CDS",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật ATTT, Luật ANM, NĐ 13/2023",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"IT Governance; ATTT; QL DL; DLCN; DA CĐS; MS CNTT",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"ITIL change/incident",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% sự cố ATTT; 30% user core; 100% DA CĐS >2 tỷ",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:9,name:"Quản lý Dự án",code:"QLDA",team:"mixed",docs:"QC QL dự án",clSheet:"KH_QLDA",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Liệt kê hệ thống con",output:"CTHĐ&NS; AFE; CTTKTD; ODP/FDP; QLDA",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:""},{nv:"N3",title:"Vẽ mô hình swimlane",output:"7 swimlane",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% HĐ >5 tỷ; 30% 1-5 tỷ",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:10,name:"Văn bản QL Nội bộ",code:"VB",team:"KTNB",docs:"QC Soạn thảo-Ban hành VBQLNB",clSheet:"KH_VBQLNB",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật VBQPPL 80/2015",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Liệt kê hệ thống con",output:"8 hệ thống",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"8 swimlane",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% VBQLNB mới; 30% cũ >3 năm",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:11,name:"KHCN",code:"KHCN",team:"KTGS",docs:"",clSheet:"KH_KHCN",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:12,name:"ASXH",code:"ASXH",team:"KTGS",docs:"",clSheet:"KH_ASXH",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:13,name:"Hệ thống Giám sát",code:"GS",team:"mixed",docs:"Các quy định giám sát",clSheet:"KH_GIÁM SÁT",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Kiểm tra 11 hệ thống con",output:"11 quy chế",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:""},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:14,name:"Nhân sự",code:"NS",team:"KTGS",docs:"QC QL LĐ-TL; QC Đào tạo; QC Đánh giá",clSheet:"KH_NhanSu",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"BLLĐ 45/2019, NĐ 145/2020",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"8 hệ thống",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"9 swimlane",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% NS tuyển/nghỉ; 30 mẫu lương",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]}
+];
+const EXTRA_CL_MAP={9:["KH_QLDA","KH_CTHD&NS","KH-AFE","KH_G&A","KH_HopDong"],2:["KH_CPHĐ"],6:["KH_TaiChinh"],7:["KH_QTRR","KH_Bảo hiểm"],13:["KH_GIÁM SÁT"]};
+const NV_LABELS={N1:"🔍 N1 — Rà soát VBQLNB",N2:"📋 N2 — Liệt kê hệ thống con",N3:"🏊 N3 — Vẽ mô hình Swimlane",N4:"✅ N4 — Chọn mẫu & Kiểm tra"};
+
+// ===== SIDEBAR =====
+function renderSidebar(q=''){
+  const list=document.getElementById('sidebarList');
+  const s=q.toLowerCase().trim();
+  const filtered=s?DATA.filter(lv=>lv.name.toLowerCase().includes(s)||lv.code.toLowerCase().includes(s)||lv.tasks.some(t=>t.pic.toLowerCase().includes(s)||t.title.toLowerCase().includes(s))):DATA;
+  if(!filtered.length){list.innerHTML='<div style="padding:30px;text-align:center;color:var(--text3);font-size:13px">Không tìm thấy</div>';return}
+  list.innerHTML=filtered.map(lv=>`<div class="sidebar-item ${activeIdx===lv.stt?'active':''}" onclick="selectLV(${lv.stt})">
+    <div class="s-num">${lv.stt}</div><div class="s-info"><div class="s-name">${lv.name}</div><div class="s-sub">${lv.tasks.length} NV</div></div>
+    <span class="s-badge ${badgeCls(lv.team)}">${teamLbl(lv.team)}</span></div>`).join('');
+}
+
+document.getElementById('detailTabs').addEventListener('click',e=>{const tab=e.target.closest('.detail-tab');if(!tab)return;document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');activeTab=tab.dataset.tab;renderDetail()});
+function selectLV(stt){activeIdx=stt;activeTab='tasks';document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));document.querySelector('.detail-tab[data-tab="tasks"]').classList.add('active');renderSidebar(document.getElementById('search').value);document.getElementById('detailTabs').style.display='flex';renderDetail()}
+function renderDetail(){const lv=DATA.find(d=>d.stt===activeIdx);if(!lv)return;if(activeTab==='tasks')renderTasks(lv);else if(activeTab==='flow')renderFlow(lv);else renderChecklist(lv)}
+
+// ===== TASKS =====
+function renderTasks(lv){
+  const body=document.getElementById('detailBody');
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">LV #${lv.stt} · ${lv.code}</span></div><h2>${lv.name}</h2>${lv.docs?`<div class="docs">${lv.docs}</div>`:''}</div>`;
+  lv.tasks.forEach(t=>{h+=`<div class="task-section"><div class="nv-label"><span class="nv-dot"></span>${NV_LABELS[t.nv]||t.nv}</div><div class="t-card"><div class="t-card-top"><div class="t-title">${t.title}</div>${t.doan&&t.doan!=='mixed'?`<span class="s-badge ${badgeCls(t.doan)}">${t.doan}</span>`:''}</div>${t.output?`<div class="t-output">${t.output}</div>`:''}<div class="t-people"><div class="t-person">👤 PIC: <span class="nm">${t.pic}</span></div>${t.reviewer?`<div class="t-person">👁 Rà soát: <span class="nm">${t.reviewer}</span></div>`:''}${t.lead?`<div class="t-person">🛡 LĐ: <span class="nm">${t.lead}</span></div>`:''}</div></div></div>`});
+  h+='</div>';body.innerHTML=h;
+}
+
+// ===== CHECKLIST =====
+async function renderChecklist(lv){
+  const body=document.getElementById('detailBody');
+  if(!lv.clSheet){body.innerHTML='<div class="cl-empty">Lĩnh vực này chưa có checklist.</div>';return}
+  if(!checklistCache){body.innerHTML='<div class="cl-empty">⏳ Đang tải...</div>';try{const r=await fetch('checklists.json');checklistCache=await r.json()}catch(e){body.innerHTML='<div class="cl-empty">❌ Không tải được</div>';return}}
+  
+  let allSheets=[lv.clSheet];if(EXTRA_CL_MAP[lv.stt])allSheets=EXTRA_CL_MAP[lv.stt];
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">Checklist kiểm tra</span></div><h2>${lv.name}</h2></div>`;
+  let hasData=false;
+
+  allSheets.forEach(sheetName=>{
+    const clData=checklistCache[sheetName];if(!clData)return;
+    const stepKey=clData.headers.find(h2=>h2.includes('Bước')||h2.includes('Hạng mục')||h2.includes('Hệ thống'))||clData.headers[1];
+    let groups;
+    if(clData.groups&&clData.groups.length>0){groups=clData.groups}
+    else if(clData.items&&clData.items.length>0){groups=[{name:'',items:clData.items}]}
+    else return;
+    hasData=true;
+    groups.forEach((g,gi)=>{if(!g.items||!g.items.length)return;const gName=g.name||sheetName.replace('KH_','').replace(/_/g,' ');h+=renderGroupBlock(gName,sheetName,g.items,stepKey,clData.headers,gi)});
+  });
+  if(!hasData)h+='<div class="cl-empty">Chưa có dữ liệu checklist.</div>';
+  h+='</div>';body.innerHTML=h;
+}
+
+function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
+  const fieldMap=[{key:'Mục tiêu/Nội dung công việc',label:'Nội dung công việc',full:true},{key:'Hồ sơ/Bằng chứng cần thu thập',label:'Hồ sơ / Bằng chứng'},{key:'Sai sót/rủi ro tiềm tàng',label:'Sai sót / Rủi ro'},{key:'Tham chiếu Điều/khoản',label:'Tham chiếu'},{key:'Phương pháp kiểm tra',label:'Phương pháp'},{key:'Tiêu chí đánh giá',label:'Tiêu chí đánh giá'}];
+  let h=`<div class="cl-group"><div class="cl-group-title">📂 ${groupName}<span class="cl-group-count">${items.length} bước</span></div>`;
+
+  items.forEach((item,i)=>{
+    const num=item.STT||(i+1);
+    const stepName=item[stepKey]||'';
+    const pic=item.PIC||'';
+    const resultKey=`${sheetName}|${num}`;
+    const result=allResults[resultKey]||{};
+    const stepComments=allComments.filter(c=>c.sheet===sheetName&&c.stepSTT===String(num));
+
+    h+=`<div class="cl-step"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
+    fieldMap.forEach(f=>{const val=item[f.key];if(val)h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`});
+    h+=`</div>`;
+    if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
+
+    // Result fields
+    h+=`<div class="result-section">
+      <div class="result-row"><label>Kết quả KT:</label>
+        <select id="res-kq-${resultKey}" onchange="saveResult('${resultKey}')">
+          <option value="">— Chưa đánh giá —</option>
+          <option value="Đạt" ${result.ketQua==='Đạt'?'selected':''}>✅ Đạt</option>
+          <option value="Đạt một phần" ${result.ketQua==='Đạt một phần'?'selected':''}>🟡 Đạt một phần</option>
+          <option value="Không đạt" ${result.ketQua==='Không đạt'?'selected':''}>❌ Không đạt</option>
+          <option value="N/A" ${result.ketQua==='N/A'?'selected':''}>⬜ N/A</option>
+        </select>
+      </div>
+      <div class="result-row"><label>Kiến nghị:</label>
+        <div style="flex:1"><textarea id="res-kn-${resultKey}" placeholder="Nhập kiến nghị..." onblur="saveResult('${resultKey}')">${result.kienNghi||''}</textarea>
+        ${result.updatedBy?`<div class="saved-info">💾 ${result.updatedBy} · ${new Date(result.updatedAt).toLocaleDateString('vi')}</div>`:''}</div>
+      </div>
+    </div>`;
+
+    // Comments
+    h+=`<div class="comments-section"><div class="comments-title">💬 Nhận xét / Comment (${stepComments.length})</div>`;
+    stepComments.forEach(c=>{
+      h+=`<div class="comment-item ${c.role}"><div class="comment-meta"><span class="c-role ${c.role}">${c.role==='leader'?'🛡 Lãnh đạo':'👤 PIC'}</span><strong>${c.user}</strong> · ${new Date(c.timestamp).toLocaleString('vi')}</div><div class="comment-text">${c.text}</div></div>`;
+    });
+    h+=`<div class="comment-form"><textarea id="cmt-${resultKey}" placeholder="Viết nhận xét..."></textarea><button onclick="postComment('${sheetName}','${num}','cmt-${resultKey}')">Gửi</button></div></div>`;
+
+    h+=`</div></div>`;
+  });
+  h+=`</div>`;return h;
+}
+
+function toggleStep(el){el.classList.toggle('open');el.querySelector('.cl-arrow').classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+
+// ===== SAVE RESULT =====
+async function saveResult(key){
+  getCurrentUser();
+  const kq=document.getElementById('res-kq-'+key);
+  const kn=document.getElementById('res-kn-'+key);
+  if(!kq||!kn)return;
+  const data={ketQua:kq.value,kienNghi:kn.value,updatedBy:currentUserName};
+  try{
+    await fetch('/api/results/'+encodeURIComponent(key),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    allResults[key]={...data,updatedAt:new Date().toISOString()};
+    showToast('💾 Đã lưu');
+  }catch(e){showToast('❌ Lỗi lưu')}
+}
+
+// ===== POST COMMENT =====
+async function postComment(sheet,stepSTT,textareaId){
+  getCurrentUser();
+  const ta=document.getElementById(textareaId);
+  if(!ta||!ta.value.trim())return;
+  try{
+    const r=await fetch('/api/comments',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sheet,stepSTT:String(stepSTT),user:currentUserName,role:currentUserRole,text:ta.value.trim()})});
+    const c=await r.json();
+    allComments.push(c);
+    ta.value='';
+    renderDetail();
+    showToast('💬 Đã gửi comment');
+  }catch(e){showToast('❌ Lỗi gửi comment')}
+}
+
+// ===== EXCEL UPLOAD =====
+document.getElementById('fileInput').addEventListener('change',async function(e){
+  const file=e.target.files[0];if(!file)return;
+  showToast('⏳ Đang upload...');
+  const fd=new FormData();fd.append('file',file);
+  try{
+    const r=await fetch('/api/upload-excel',{method:'POST',body:fd});
+    const d=await r.json();
+    if(d.ok){checklistCache=null;showToast(`✅ Cập nhật! ${d.sheets} sheet · ${d.groups} nhóm · ${d.items} bước`);if(activeTab==='checklist')renderDetail()}
+    else showToast('❌ '+d.error);
+  }catch(e){showToast('❌ Lỗi upload')}
+  e.target.value='';
+});
+
+document.getElementById('search').addEventListener('input',e=>renderSidebar(e.target.value));
+
+// ===== FLOW DIAGRAM (SWIMLANE) =====
+const ARROW_SVG='<svg viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6h16M13 1l5 5-5 5" stroke="#006838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+async function renderFlow(lv){
+  const body=document.getElementById('detailBody');
+  if(!lv.clSheet){body.innerHTML='<div class="cl-empty">Lĩnh vực này chưa có checklist để vẽ flow.</div>';return}
+  if(!checklistCache){body.innerHTML='<div class="cl-empty">⏳ Đang tải...</div>';try{const r=await fetch('checklists.json');checklistCache=await r.json()}catch(e){body.innerHTML='<div class="cl-empty">❌ Không tải được</div>';return}}
+
+  let allSheets=[lv.clSheet];if(EXTRA_CL_MAP[lv.stt])allSheets=EXTRA_CL_MAP[lv.stt];
+
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">Quy trình kiểm tra (Swimlane)</span></div><h2>${lv.name}</h2></div>`;
+  let hasData=false;
+  let chartIdx=0;
+
+  allSheets.forEach(sheetName=>{
+    const clData=checklistCache[sheetName];if(!clData)return;
+    const stepKey=clData.headers.find(h2=>h2.includes('Bước')||h2.includes('Hạng mục')||h2.includes('Hệ thống'))||clData.headers[1];
+    const hasActor=clData.headers.includes('Actor');
+    let groups;
+    if(clData.groups&&clData.groups.length>0){groups=clData.groups}
+    else if(clData.items&&clData.items.length>0){groups=[{name:'',items:clData.items}]}
+    else return;
+    hasData=true;
+
+    groups.forEach((g,gi)=>{
+      if(!g.items||!g.items.length)return;
+      const gName=g.name||sheetName.replace('KH_','').replace(/_/g,' ');
+      h+=`<div class="flow-group-label">📂 ${gName} (${g.items.length} bước)</div>`;
+
+      if(hasActor){
+        // ===== SWIMLANE MODE =====
+        // Collect unique actors in order
+        const actorOrder=[];
+        g.items.forEach(item=>{
+          const a=(item.Actor||'Khác').trim();
+          if(!actorOrder.includes(a))actorOrder.push(a);
+        });
+
+        // Assign each step a column index (sequential)
+        const totalCols=g.items.length;
+
+        // Build lane data: for each actor, which columns have nodes
+        const laneData={};
+        actorOrder.forEach(a=>{laneData[a]=[]});
+        g.items.forEach((item,i)=>{
+          const a=(item.Actor||'Khác').trim();
+          const num=item.STT||(i+1);
+          const name=(item[stepKey]||'').replace(/^B\d+\.\s*/,'').substring(0,40);
+          const rk=`${sheetName}|${num}`;
+          const res=allResults[rk];
+          let cls='';
+          if(res){
+            if(res.ketQua==='Đạt')cls='done';
+            else if(res.ketQua==='Đạt một phần')cls='partial';
+            else if(res.ketQua==='Không đạt')cls='fail';
+          }
+          const isControl=name.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
+          laneData[a].push({col:i,num,name,cls,isControl});
+        });
+
+        h+=`<div class="swim-container"><div class="swim-title">${gName}</div><div class="swim-body">`;
+
+        actorOrder.forEach(actor=>{
+          const nodes=laneData[actor];
+          h+=`<div class="swim-lane"><div class="swim-label">${actor}</div><div class="swim-cells" style="--total-cols:${totalCols}">`;
+
+          nodes.forEach((nd,ni)=>{
+            const ctrlCls=nd.isControl?' control':'';
+            h+=`<div class="swim-node ${nd.cls}${ctrlCls}" data-stt="${nd.num}" style="grid-column:${nd.col + 1}" title="${nd.num}. ${nd.name}"><span class="sn-num">${nd.num}</span>${nd.name||'Bước '+nd.num}</div>`;
+          });
+
+          h+=`</div></div>`;
+        });
+
+        h+=`</div></div>`;
+        chartIdx++;
+      } else {
+        // ===== FALLBACK: Mermaid sequential flow =====
+        let mmd='flowchart TD\n';
+        const ids=[];
+        g.items.forEach((item,i)=>{
+          const num=item.STT||(i+1);
+          const name=(item[stepKey]||'Bước '+(i+1)).replace(/"/g,"'").substring(0,60);
+          const id='s'+chartIdx+'_'+i;
+          ids.push(id);
+          const rk=`${sheetName}|${num}`;
+          const res=allResults[rk];
+          let cls='';
+          if(res){
+            if(res.ketQua==='Đạt')cls=':::done';
+            else if(res.ketQua==='Đạt một phần')cls=':::partial';
+            else if(res.ketQua==='Không đạt')cls=':::fail';
+          }
+          mmd+=`  ${id}["${num}. ${name}"]${cls}\n`;
+        });
+        for(let i=0;i<ids.length-1;i++){mmd+=`  ${ids[i]} --> ${ids[i+1]}\n`}
+        mmd+=`  classDef done fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20\n`;
+        mmd+=`  classDef partial fill:#fff9c4,stroke:#f9a825,color:#e65100\n`;
+        mmd+=`  classDef fail fill:#ffcdd2,stroke:#c62828,color:#b71c1c\n`;
+        h+=`<div class="flow-fallback"><div class="mermaid" id="mmd-${chartIdx}">${mmd}</div></div>`;
+        chartIdx++;
+      }
+    });
+  });
+
+  if(!hasData)h+='<div class="cl-empty">Chưa có dữ liệu.</div>';
+  h+=`<div class="swim-legend"><strong>Chú giải:</strong>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#c8e6c9;border-color:#2e7d32"></span> Đạt</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff9c4;border-color:#f9a825"></span> Đạt một phần</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#ffcdd2;border-color:#c62828"></span> Không đạt</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff;border-color:#ccc"></span> Chưa đánh giá</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff;border-color:var(--orange);border-style:dashed"></span> Control Point</span>
+  </div>`;
+  h+='</div>';
+  body.innerHTML=h;
+
+  // Render mermaid fallback charts if any
+  const mmdEls=document.querySelectorAll('.mermaid');
+  if(mmdEls.length>0){try{await mermaid.run({querySelector:'.mermaid'})}catch(e){console.warn('Mermaid:',e)}}
+
+  // Draw SVG flow arrows
+  setTimeout(() => {
+    drawFlowArrows();
+    if(window.flowObserver) { window.flowObserver.disconnect(); }
+    else { window.flowObserver = new ResizeObserver(() => { drawFlowArrows(); }); }
+    document.querySelectorAll('.swim-lane, .swim-body').forEach(el => window.flowObserver.observe(el));
+  }, 150);
+}
+
+function drawFlowArrows() {
+  document.querySelectorAll('.swim-body').forEach(body => {
+    let svg = body.querySelector('.arrows-overlay');
+    if(!svg) {
+      svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('class', 'arrows-overlay');
+      svg.style.position = 'absolute';
+      svg.style.top = '0';
+      svg.style.left = '0';
+      svg.style.width = '100%';
+      svg.style.height = '100%';
+      svg.style.pointerEvents = 'none';
+      svg.style.zIndex = '1';
+      svg.innerHTML = '<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#006838"/></marker></defs>';
+      body.insertBefore(svg, body.firstChild);
+    }
+    
+    // Clean old paths
+    Array.from(svg.children).forEach(c => { if(c.tagName === 'path') c.remove(); });
+
+    const nodes = Array.from(body.querySelectorAll('.swim-node'));
+    nodes.sort((a,b) => {
+      const v1 = parseInt(String(a.dataset.stt).replace(/\D/g, '')) || 0;
+      const v2 = parseInt(String(b.dataset.stt).replace(/\D/g, '')) || 0;
+      return v1 - v2;
+    });
+
+    const bodyRect = body.getBoundingClientRect();
+    
+    for(let i=0; i<nodes.length-1; i++){
+      const n1 = nodes[i];
+      const n2 = nodes[i+1];
+      const r1 = n1.getBoundingClientRect();
+      const r2 = n2.getBoundingClientRect();
+      
+      const x1 = r1.right - bodyRect.left;
+      const y1 = r1.top + r1.height/2 - bodyRect.top;
+      const x2 = r2.left - bodyRect.left;
+      const y2 = r2.top + r2.height/2 - bodyRect.top;
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      
+      if (Math.abs(y1 - y2) < 10) {
+        // Same lane: Straight line right
+        path.setAttribute('d', `M ${x1} ${y1} L ${x2 - 2} ${y2}`);
+      } else {
+        // Different lane: Orthogonal (vuông góc xuống/lên đầu ô tiếp theo)
+        const targetX = r2.left + r2.width/2 - bodyRect.left;
+        let targetY;
+        if (y2 > y1) {
+            targetY = r2.top - bodyRect.top - 2;
+        } else {
+            targetY = r2.bottom - bodyRect.top + 2;
+        }
+        path.setAttribute('d', `M ${x1} ${y1} L ${targetX} ${y1} L ${targetX} ${targetY}`);
+      }
+      
+      path.setAttribute('stroke', '#006838');
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('stroke-linejoin', 'round');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('marker-end', 'url(#arrowhead)');
+      svg.appendChild(path);
+    }
+  });
+}
+window.addEventListener('resize', drawFlowArrows);
+</script>
+</body>
+</html>
