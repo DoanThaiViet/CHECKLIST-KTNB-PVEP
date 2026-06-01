@@ -1236,17 +1236,6 @@
           },
           {
             "Hạng mục": "Huy động vốn vay",
-            "Mục tiêu/Nội dung công việc": "Tổng mức huy động vốn trong hạn mức cho phép",
-            "Sai sót/rủi ro tiềm tàng": "Huy động vốn vượt hạn mức vốn chủ sở hữu hoặc vượt phê duyệt",
-            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 8",
-            "Hồ sơ/Bằng chứng cần thu thập": "BCTC, bảng dư nợ vay, bảo lãnh, xác nhận ngân hàng, báo cáo hạn mức",
-            "Phương pháp kiểm tra": "Đối chiếu dư nợ, bảo lãnh, vốn chủ sở hữu",
-            "Tiêu chí đánh giá": "Tổng dư nợ, bảo lãnh và nghĩa vụ tài chính không vượt giới hạn theo quy định và phê duyệt của cấp có thẩm quyền",
-            "Kiến nghị": "Báo cáo cấp có thẩm quyền, điều chỉnh kế hoạch vay, kiểm soát phát sinh mới",
-            "PIC": "Lê Thùy Dương"
-          },
-          {
-            "Hạng mục": "Huy động vốn vay",
             "Mục tiêu/Nội dung công việc": "Lựa chọn TCTD/MLA/trung gian thu xếp vốn",
             "Sai sót/rủi ro tiềm tàng": "Chọn TCTD không minh bạch; thiếu so sánh điều kiện vay",
             "Tham chiếu Điều/khoản": "QT.TCĐT.07 – các bước lựa chọn TCTD/MLA",
@@ -1255,6 +1244,42 @@
             "Tiêu chí đánh giá": "Có hồ sơ mời chào, tối thiểu có cơ sở so sánh lãi suất, phí, điều kiện vay, năng lực TCTD và lý do lựa chọn",
             "Kiến nghị": "Bổ sung hồ sơ so sánh, tiêu chí đánh giá và phê duyệt lựa chọn",
             "PIC": "Lê Thùy Dương"
+          },
+          {
+            "Hạng mục": "Huy động vốn",
+            "Mục tiêu/Nội dung công việc": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm",
+            "Sai sót/rủi ro tiềm tàng": "Phương án huy động vốn không phù hợp, không căn cứ chiến lược, kế hoạch 05 năm và hàng năm",
+            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
+            "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm"
+          },
+          {
+            "Hạng mục": "Huy động vốn",
+            "Mục tiêu/Nội dung công việc": "Phương án huy động vốn phải đảm bảo khả năng thanh toán nợ",
+            "Sai sót/rủi ro tiềm tàng": "- Không thể hiện khả năng trả nợ\r\n- Dòng tiền không cập nhật tiến độ, hiện trạng thực tế",
+            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
+            "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Phương án huy động vốn phải đảm bảo khả năng thanh toán nợ"
+          },
+          {
+            "Hạng mục": "Huy động vốn",
+            "Mục tiêu/Nội dung công việc": "Người phê duyệt phương án huy động vốn chịu trách nhiệm KTGS đảm bảo vốn huy động được sử dụng đúng mục đích, hiệu quả",
+            "Sai sót/rủi ro tiềm tàng": "- Huy động vốn vượt hạn mức vốn chủ sở hữu hoặc vượt phê duyệt\r\n- Vốn vay không được sử dụng đúng mục đích, hiệu quả",
+            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
+            "Hồ sơ/Bằng chứng cần thu thập": "Sổ cái, BCTC, bảng dư nợ vay, Hồ sơ giải ngân, QĐ góp tiền, Tờ trình góp tiền, Cash call của NĐH",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Người phê duyệt phương án huy động vốn chịu trách nhiệm KTGS đảm bảo vốn huy động được sử dụng đúng mục đích, hiệu quả"
+          },
+          {
+            "Hạng mục": "Huy động vốn",
+            "Mục tiêu/Nội dung công việc": "Đảm bảo tỷ lệ Hệ số nợ/ VCSH",
+            "Sai sót/rủi ro tiềm tàng": "- Hệ số nợ/ VCSH > 3\r\n- Tính sai do không loại trừ Quỹ KT, Quỹ PL, Quỹ PT KHCN khỏi nợ; không loại 'Nguồn kinh phí & quỹ khác' khỏi VCSH",
+            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.5",
+            "Hồ sơ/Bằng chứng cần thu thập": "Báo cáo sơ kết, tổng kết SXKD",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Đảm bảo tỷ lệ Hệ số nợ/ VCSH <= 3"
           }
         ]
       },
@@ -1540,42 +1565,6 @@
             "Tiêu chí đánh giá": "Hồ sơ được lưu đầy đủ, đúng nơi lưu, đúng thời hạn, có bản cứng/bản mềm theo quy định",
             "Kiến nghị": "Bổ sung hồ sơ, số hóa, phân công đầu mối quản lý lưu trữ",
             "PIC": "Lê Thùy Dương"
-          },
-          {
-            "Hạng mục": "Huy động vốn",
-            "Mục tiêu/Nội dung công việc": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm",
-            "Sai sót/rủi ro tiềm tàng": "Phương án huy động vốn không phù hợp, không căn cứ chiến lược, kế hoạch 05 năm và hàng năm",
-            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
-            "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Phương án huy động vốn căn cứ chiến lược, kế hoạch đầu tư phát triển 05 năm và hàng năm"
-          },
-          {
-            "Hạng mục": "Huy động vốn",
-            "Mục tiêu/Nội dung công việc": "Phương án huy động vốn phải đảm bảo khả năng thanh toán nợ",
-            "Sai sót/rủi ro tiềm tàng": "- Không thể hiện khả năng trả nợ\r\n- Dòng tiền không cập nhật tiến độ, hiện trạng thực tế",
-            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
-            "Hồ sơ/Bằng chứng cần thu thập": "Các Tờ trình HĐTV và PYK của Ban KSNB",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Phương án huy động vốn phải đảm bảo khả năng thanh toán nợ"
-          },
-          {
-            "Hạng mục": "Huy động vốn",
-            "Mục tiêu/Nội dung công việc": "Người phê duyệt phương án huy động vốn chịu trách nhiệm KTGS đảm bảo vốn huy động được sử dụng đúng mục đích, hiệu quả",
-            "Sai sót/rủi ro tiềm tàng": "Vốn vay không được sử dụng đúng mục đích, hiệu quả",
-            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.2",
-            "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ giải ngân, QĐ góp tiền, Tờ trình góp tiền, Cash call của NĐH",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Người phê duyệt phương án huy động vốn chịu trách nhiệm KTGS đảm bảo vốn huy động được sử dụng đúng mục đích, hiệu quả"
-          },
-          {
-            "Hạng mục": "Huy động vốn",
-            "Mục tiêu/Nội dung công việc": "Đảm bảo tỷ lệ Hệ số nợ/ VCSH",
-            "Sai sót/rủi ro tiềm tàng": "- Hệ số nợ/ VCSH > 3\r\n- Tính sai do không loại trừ Quỹ KT, Quỹ PL, Quỹ PT KHCN khỏi nợ; không loại 'Nguồn kinh phí & quỹ khác' khỏi VCSH",
-            "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 8.5",
-            "Hồ sơ/Bằng chứng cần thu thập": "Báo cáo sơ kết, tổng kết SXKD",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Đảm bảo tỷ lệ Hệ số nợ/ VCSH <= 3"
           },
           {
             "Hạng mục": "Quản lý nợ",
