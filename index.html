@@ -117,6 +117,7 @@
         .cl-group-title{font-size:13px;font-weight:700;color:var(--green);padding:10px 16px;background:var(--green-pale);border-radius:8px;margin-bottom:12px;display:flex;align-items:center;gap:8px;border-left:4px solid var(--green)}
         .cl-group-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--text3);background:var(--white);padding:2px 8px;border-radius:10px}
         .cl-step{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
+        .cl-step.control{border:2px dashed var(--orange)}
         .cl-step-header{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background .1s;user-select:none}
         .cl-step-header:hover{background:var(--green-pale)}
         .cl-step-header.open{background:var(--green-pale);border-bottom:1px solid var(--border-light)}
@@ -414,7 +415,10 @@ function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
     const result=allResults[resultKey]||{};
     const stepComments=allComments.filter(c=>c.sheet===sheetName&&c.stepSTT===String(num));
 
-    h+=`<div class="cl-step"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
+    const isControl = stepName.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
+    const controlCls = isControl ? ' control' : '';
+
+    h+=`<div class="cl-step${controlCls}"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
     fieldMap.forEach(f=>{const val=item[f.key];if(val)h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`});
     h+=`</div>`;
     if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
@@ -582,18 +586,31 @@ async function renderFlow(lv){
           ids.push(id);
           const rk=`${sheetName}|${num}`;
           const res=allResults[rk];
-          let cls='';
+          
+          let classes = [];
           if(res){
-            if(res.ketQua==='Đạt')cls=':::done';
-            else if(res.ketQua==='Đạt một phần')cls=':::partial';
-            else if(res.ketQua==='Không đạt')cls=':::fail';
+            if(res.ketQua==='Đạt') classes.push('done');
+            else if(res.ketQua==='Đạt một phần') classes.push('partial');
+            else if(res.ketQua==='Không đạt') classes.push('fail');
           }
-          mmd+=`  ${id}["${num}. ${name}"]${cls}\n`;
+          const isControl = name.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
+          if (isControl) classes.push('control');
+          
+          let clsStr = classes.length > 0 ? `:::${classes.join(',')}` : '';
+          
+          // Mermaid supports multiple classes separated by commas, but wait, the ::: shorthand only applies the last class or needs comma?
+          // Actually, in mermaid, multiple classes with ::: shorthand is not standard. Let's use the explicit `class NodeId className` at the end.
+          
+          mmd+=`  ${id}["${num}. ${name}"]\n`;
+          if (classes.length > 0) {
+              mmd+= `  class ${id} ${classes.join(',')}\n`;
+          }
         });
         for(let i=0;i<ids.length-1;i++){mmd+=`  ${ids[i]} --> ${ids[i+1]}\n`}
         mmd+=`  classDef done fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20\n`;
         mmd+=`  classDef partial fill:#fff9c4,stroke:#f9a825,color:#e65100\n`;
         mmd+=`  classDef fail fill:#ffcdd2,stroke:#c62828,color:#b71c1c\n`;
+        mmd+=`  classDef control stroke-dasharray: 5 5,stroke:#f57c00,stroke-width:2px\n`;
         h+=`<div class="flow-fallback"><div class="mermaid" id="mmd-${chartIdx}">${mmd}</div></div>`;
         chartIdx++;
       }
