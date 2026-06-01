@@ -1401,33 +1401,6 @@
         ]
       },
       {
-        "name": "VII. Doanh thu, chi phí",
-        "items": [
-          {
-            "Hạng mục": "Doanh thu, chi phí",
-            "Mục tiêu/Nội dung công việc": "Ghi nhận doanh thu đúng bản chất, đúng kỳ",
-            "Sai sót/rủi ro tiềm tàng": "Ghi thiếu/thừa doanh thu, sai kỳ kế toán",
-            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 19",
-            "Hồ sơ/Bằng chứng cần thu thập": "Hợp đồng, hóa đơn, biên bản nghiệm thu, sao kê ngân hàng, sổ doanh thu",
-            "Phương pháp kiểm tra": "Đối chiếu hợp đồng, nghiệm thu, hóa đơn, tiền về",
-            "Tiêu chí đánh giá": "Doanh thu có đủ căn cứ hợp đồng, nghiệm thu, hóa đơn/chứng từ; ghi nhận đúng kỳ kế toán",
-            "Kiến nghị": "Điều chỉnh kế toán, rà soát quy trình ghi nhận doanh thu",
-            "PIC": "Lê Thùy Dương"
-          },
-          {
-            "Hạng mục": "Doanh thu, chi phí",
-            "Mục tiêu/Nội dung công việc": "Ghi nhận chi phí hợp lệ, hợp lý",
-            "Sai sót/rủi ro tiềm tàng": "Hạch toán chi phí không đủ chứng từ, chi ngoài định mức",
-            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 20",
-            "Hồ sơ/Bằng chứng cần thu thập": "Hợp đồng, hóa đơn, nghiệm thu, đề nghị thanh toán, phê duyệt chi",
-            "Phương pháp kiểm tra": "Kiểm tra chứng từ chi phí và phê duyệt thanh toán",
-            "Tiêu chí đánh giá": "Chi phí phục vụ hoạt động của PVEP, có đủ chứng từ, phê duyệt, nghiệm thu và không vượt định mức/quy định",
-            "Kiến nghị": "Loại trừ/điều chỉnh chi phí, bổ sung chứng từ, xử lý khoản chi sai",
-            "PIC": "Lê Thùy Dương"
-          }
-        ]
-      },
-      {
         "name": "VIII. Phân phối lợi nhuận, nghĩa vụ tài chính",
         "items": [
           {
