@@ -430,7 +430,7 @@ function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
     const result=allResults[resultKey]||{};
     const stepComments=allComments.filter(c=>c.sheet===sheetName&&c.stepSTT===String(num));
 
-    h+=`<div class="cl-step"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
+    h+=`<div class="cl-step" data-sheet="${sheetName.replace(/"/g,'&quot;')}" data-step="${num}"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
     fieldMap.forEach(f=>{const val=item[f.key];if(val)h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`});
     h+=`</div>`;
     if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
@@ -465,6 +465,36 @@ function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
 }
 
 function toggleStep(el){el.classList.toggle('open');el.querySelector('.cl-arrow').classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+
+// ===== JUMP TO CHECKLIST =====
+async function jumpToChecklist(sheetName, stepNum) {
+    activeTab = 'checklist';
+    document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.detail-tab[data-tab="checklist"]').classList.add('active');
+    
+    const lv = DATA.find(d => d.stt === activeIdx);
+    if (!lv) return;
+    await renderChecklist(lv);
+    
+    setTimeout(() => {
+        const selector = `.cl-step[data-sheet="${sheetName.replace(/"/g,'\\\"')}"][data-step="${stepNum}"]`;
+        const el = document.querySelector(selector);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const header = el.querySelector('.cl-step-header');
+            if (header && !header.classList.contains('open')) {
+                toggleStep(header);
+            }
+            el.style.transition = 'box-shadow 0.3s, transform 0.3s';
+            el.style.boxShadow = '0 0 0 4px var(--orange)';
+            el.style.transform = 'scale(1.02)';
+            setTimeout(() => { 
+                el.style.boxShadow = ''; 
+                el.style.transform = '';
+            }, 2000);
+        }
+    }, 100);
+}
 
 // ===== SAVE RESULT =====
 async function saveResult(key){
@@ -580,7 +610,8 @@ async function renderFlow(lv){
 
           nodes.forEach((nd,ni)=>{
             const ctrlCls=nd.isControl?' control':'';
-            h+=`<div class="swim-node ${nd.cls}${ctrlCls}" data-stt="${nd.num}" style="grid-column:${nd.col + 1}" title="${nd.num}. ${nd.name}"><span class="sn-num">${nd.num}</span>${nd.name||'Bước '+nd.num}</div>`;
+            const safeSheet = sheetName.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+            h+=`<div class="swim-node ${nd.cls}${ctrlCls}" data-stt="${nd.num}" style="grid-column:${nd.col + 1}; cursor:pointer;" title="Nhấn để xem checklist bước này" onclick="jumpToChecklist('${safeSheet}', '${nd.num}')"><span class="sn-num">${nd.num}</span>${nd.name||'Bước '+nd.num}</div>`;
           });
 
           h+=`</div></div>`;
@@ -614,6 +645,8 @@ async function renderFlow(lv){
           if (classes.length > 0) {
               mmd+= `  class ${id} ${classes.join(',')}\n`;
           }
+          const safeSheet = sheetName.replace(/'/g,"\\'");
+          mmd+=`  click ${id} href "javascript:jumpToChecklist('${safeSheet}', '${num}')" "Xem checklist bước này"\n`;
         });
         for(let i=0;i<ids.length-1;i++){mmd+=`  ${ids[i]} --> ${ids[i+1]}\n`}
         mmd+=`  classDef done fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20\n`;
