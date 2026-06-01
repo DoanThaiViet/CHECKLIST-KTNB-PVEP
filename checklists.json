@@ -1283,6 +1283,106 @@
             "Kết quả kiểm tra": "Đạt",
             "Kiến nghị": "Tối ưu dòng tiền, chuyển phần nhàn rỗi sang kỳ hạn phù hợp",
             "PIC": "Lê Thùy Dương"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra tính đầy đủ, hiệu lực và sự phù hợp của khung quản lý vốn bằng tiền: Quy chế QĐ 1668 đã thay thế QĐ 531/QĐ-TDKT (07/6/2022); các nguyên tắc an toàn - hiệu quả - bảo toàn & phát triển vốn - thanh khoản được cụ thể hóa trong quy trình nội bộ.",
+            "Sai sót/rủi ro tiềm tàng": "- Vẫn áp dụng quy chế cũ (QĐ 531) đã hết hiệu lực;\r\n- Chưa ban hành Quy trình thực hiện gửi tiền & phân bổ tiền gửi theo Điều 13.3;\r\n- Nguyên tắc quản lý chỉ nêu hình thức, không lượng hóa thành tiêu chí kiểm soát;\r\n- Chưa rà soát đồng bộ với Quy chế QLTC hiện hành của PVEP.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 - Điều 1, Điều 4, 7,  Điều 18.1; QĐ 4452",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Quy trình thực hiện gửi tiền/phân bổ tiền gửi (Điều 13.3);\r\n- Đối chiếu Quy chế VBT vs Quy chế QLTC;\r\n- Danh mục văn bản pháp lý liên quan còn hiệu lực.\r\n- Phương án gửi tiền hàng tháng",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Chỉ gửi khi có tiền tạm thời nhàn rỗi; kỳ hạn gửi phù hợp kế hoạch dòng tiền và không ảnh hưởng khả năng thanh toán",
+            "Kết quả kiểm tra": "Đạt",
+            "Kiến nghị": "Điều chỉnh kỳ hạn, tăng dự báo dòng tiền, báo cáo trường hợp rút trước hạn"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc xác định nhu cầu thanh toán thường xuyên trên cơ sở cân đối thu/chi trong tháng; mức dự trữ VNĐ cuối kỳ (≈ ¼ tháng chi tiêu kế tiếp); phần dôi dư được chuyển sang tiền gửi có kỳ hạn/đầu tư theo Điều 7.",
+            "Sai sót/rủi ro tiềm tàng": "- Để số dư không kỳ hạn quá lớn → lãng phí cơ hội sinh lời;\r\n- Dự trữ thấp hơn nhu cầu → rủi ro thanh khoản;\r\n- Báo cáo dòng tiền không sát thực tế;\r\n- Không kịp thời chuyển phần dôi dư sang tiền gửi có kỳ hạn.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 6.1, 6.2; Điều 6.3 dẫn chiếu Điều 7); báo cáo dòng tiền của PVEP.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình BTGĐ hàng tháng\r\n- Báo cáo dòng tiền tháng (thu/chi);\r\n- Bảng tính mức dự trữ cuối kỳ",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Dự trữ cuối kỳ xấp xỉ ¼ tháng chi tiêu kế tiếp (chênh lệch có giải trình); số dư không kỳ hạn dôi dư được chuyển kịp thời sang tiền gửi có kỳ hạn; báo cáo dòng tiền khớp sao kê (±0%).",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ triển khai đánh giá, chấm điểm, xếp hạng TCTD trong Quý II hằng năm (sau BCTC năm đã kiểm toán) và trình HĐTV phê duyệt trước 30/6; rà soát giữa kỳ sau BCTC bán niên soát xét (không muộn hơn 30/9).",
+            "Sai sót/rủi ro tiềm tàng": "- Đánh giá/trình HĐTV trễ mốc 30/6;\r\n- Không thực hiện rà soát giữa kỳ trước 30/9;\r\n- Chấm điểm không theo đúng thang điểm Phụ lục 1 (sai trọng số 750/250);\r\n- Số liệu đầu vào không lấy từ BCTC kiểm toán/soát xét;\r\n- TCTD không đạt điều kiện tối thiểu (vốn điều lệ ≥3 lần vốn pháp định, VCSH >10.000 tỷ, CAR ≥8%) vẫn được đưa vào danh sách.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 8.1, 8.2, 8.3); Phụ lục 1 (tiêu chí & thang điểm); quy định NHNN về CAR.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá, bảng chấm điểm xếp hạng TCTD;\r\n- BCTC năm đã kiểm toán/BCTC bán niên soát xét của các TCTD;\r\n- Tờ trình & QĐ phê duyệt danh sách TCTD của HĐTV;\r\n- Bảng kiểm tra điều kiện tối thiểu của từng TCTD.",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Đánh giá & trình HĐTV trước 30/6; rà soát giữa kỳ trước 30/9; điểm chấm khớp Phụ lục 1 (±0); số liệu từ BCTC kiểm toán/soát xét; 100% TCTD trong danh sách đạt điều kiện tối thiểu Điều 8.1.c.",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc gửi tiền chỉ thực hiện tại các TCTD trong danh sách được HĐTV phê duyệt; mỗi TCTD chỉ giao dịch với 01 đầu mối (Hội sở hoặc chi nhánh được chỉ định bằng văn bản); các trường hợp ngoài danh sách/ngoài đầu mối phải được HĐTV quyết định.",
+            "Sai sót/rủi ro tiềm tàng": "- Gửi tiền tại TCTD ngoài danh sách phê duyệt;\r\n- Giao dịch nhiều đầu mối/chi nhánh không được chỉ định;\r\n- Văn bản chỉ định đầu mối thiếu hoặc hết hiệu lực;\r\n- Trường hợp đặc biệt (TCTD có vốn góp PVN/ngân hàng nước ngoài) chưa trình HĐTV.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 9.1, 9.2); danh sách TCTD được HĐTV phê duyệt.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Danh sách TCTD được HĐTV phê duyệt (hiệu lực);\r\n- Văn bản chỉ định đầu mối cung cấp dịch vụ của từng TCTD;\r\n- Danh mục hợp đồng/giao dịch tiền gửi trong kỳ;\r\n- QĐ HĐTV cho các trường hợp đặc biệt (nếu có).",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "100% giao dịch gửi tiền tại TCTD trong danh sách; mỗi TCTD chỉ 01 đầu mối có văn bản chỉ định hiệu lực; mọi trường hợp đặc biệt đều có QĐ HĐTV.",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc tuân thủ đồng thời các giới hạn: trần theo nhóm (Nhóm I ≤25%, II.1 ≤20%, II.2 ≤15%, II.3 ≤10% VCSH của TCTD); tổng dư tại mỗi TCTD ≤35% tổng tiền gửi có kỳ hạn của PVEP; hạn mức theo Nhóm (Nhóm I: 60-70%, Nhóm II: 30-40% tổng dư tiền gửi).",
+            "Sai sót/rủi ro tiềm tàng": "- Dư tiền gửi tại 1 TCTD vượt %VCSH theo nhóm;\r\n- Vượt trần 35% tổng tiền gửi tại 1 TCTD → rủi ro tập trung;\r\n- Tỷ trọng Nhóm I/Nhóm II ngoài biên độ quy định;\r\n- Tính trần dựa trên VCSH không cập nhật theo BCTC mới nhất.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 10.1, 10.2, 10.3, 10.4); BCTC TCTD; danh sách phân nhóm TCTD.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng theo dõi dư tiền gửi theo từng TCTD & theo nhóm;\r\n- VCSH của từng TCTD theo BCTC gần nhất;\r\n- Bảng tính tỷ lệ trần (% VCSH, % tổng tiền gửi);\r\n- Phân loại nhóm TCTD (Nhóm I/II.1/II.2/II.3).",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Đồng thời thỏa mãn cả 3 giới hạn Điều 10 tại mọi thời điểm trong kỳ; không có TCTD vượt trần %VCSH; không vượt 35% tổng tiền gửi; tỷ trọng nhóm trong biên độ 60-70% (I) và 30-40% (II).",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc lập Phương án gửi tiền: bản chào lãi suất từ các TCTD, quy tắc thu thập trong 24h, xử lý khi TCTD điều chỉnh lãi suất làm thay đổi xếp hạng; lãi suất trung bình cộng; nguyên tắc lựa chọn theo nhóm và xếp hạng.",
+            "Sai sót/rủi ro tiềm tàng": "- Chỉ lấy chào giá từ 1 vài TCTD, thiếu cạnh tranh;\r\n- Bản chào lãi suất quá 24h kể từ khi PVEP thông báo;\r\n- TCTD tăng lãi suất làm đổi xếp hạng nhưng không yêu cầu các TCTD khác cập nhật/đánh giá lại;\r\n- Lựa chọn TCTD không theo thứ tự xếp hạng từ cao xuống thấp;\r\n- Số tiền gửi vượt mức trần Điều 10.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.1 a-e, Điều 11.2 a-c); Phụ lục 2 (xếp hạng theo lãi suất, trọng số 40%); quy định NHNN về lãi suất.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Bản chào lãi suất các TCTD (kèm dấu thời gian email);\r\n- Phương án gửi tiền đã lập & phê duyệt;\r\n- Bảng tính lãi suất trung bình cộng & xếp hạng theo Phụ lục 2;\r\n- Bảng đối chiếu phân bổ với mức trần Điều 10.",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Có bản chào từ đủ TCTD theo nhóm, trong 24h; xử lý đúng khi lãi suất điều chỉnh làm đổi xếp hạng; lựa chọn theo thứ tự xếp hạng cao→thấp; điểm lãi suất khớp Phụ lục 2; phân bổ không vượt trần Điều 10.",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc phân bổ số tiền gửi trong tháng theo thứ tự xếp hạng từ cao xuống thấp; cơ chế tái tục các hợp đồng đến hạn; xử lý khi TCTD hết hạn mức/có dấu hiệu rủi ro; xử lý khi số tiền dự kiến gửi nhỏ hơn số đến hạn.",
+            "Sai sót/rủi ro tiềm tàng": "- Phân bổ không theo thứ tự xếp hạng;\r\n- Tái tục tự động vào TCTD đã hết hạn mức hoặc có dấu hiệu rủi ro;\r\n- Khi số gửi < số đến hạn không giảm vào TCTD xếp hạng thấp/lãi suất thấp;\r\n- Không cập nhật khi TCTD có dấu hiệu rủi ro làm thay đổi thứ tự phân bổ.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.2.a, 11.2.b, 11.2.c); kết quả xếp hạng (Phụ lục 1 & 2).",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân bổ số tiền gửi theo TCTD trong tháng;\r\n- Danh sách hợp đồng đến hạn & quyết định tái tục;\r\n- Bảng theo dõi hạn mức còn lại theo TCTD;\r\n- Ghi nhận dấu hiệu rủi ro TCTD (nếu có).",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Phân bổ đúng thứ tự xếp hạng cao→thấp; tái tục chỉ vào TCTD còn hạn mức & không có dấu hiệu rủi ro; khi số gửi < số đến hạn → giảm vào TCTD xếp hạng/lãi suất thấp; có cập nhật khi TCTD rủi ro.",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc tuân thủ thời hạn gửi tiền không quá 12 tháng; tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II tối đa 50% tổng hạn mức trần tiền gửi của mỗi TCTD; việc cân đối kỳ hạn dựa trên tương quan lãi suất, số dư dòng tiền ước tính và số đến hạn tháng kế tiếp.",
+            "Sai sót/rủi ro tiềm tàng": "- Gửi tiền kỳ hạn vượt 12 tháng (thuộc thẩm quyền HĐTV theo Điều 7.2/12.3);\r\n- Tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II vượt 50% trần của TCTD đó;\r\n- Cân đối kỳ hạn không dựa trên dòng tiền ước tính → rủi ro thanh khoản;\r\n- Tập trung kỳ hạn dài làm giảm khả năng thanh toán.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.3.a, 11.3.b; Điều 7.1); báo cáo dòng tiền ước tính.",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng tổng hợp kỳ hạn các hợp đồng tiền gửi;\r\n- Bảng tính tỷ trọng kỳ hạn 12 tháng theo TCTD Nhóm II;\r\n- Báo cáo dòng tiền ước tính & lịch đến hạn;\r\n- Phương án cân đối kỳ hạn.",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "100% hợp đồng có kỳ hạn ≤12 tháng (trừ trường hợp HĐTV phê duyệt); tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II ≤50% trần; kỳ hạn được cân đối theo dòng tiền ước tính & lịch đến hạn.",
+            "Kết quả kiểm tra": "Đạt"
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban TCĐT/Ban KTKT thực hiện theo dõi, quản lý vốn bằng tiền; thực hiện đầy đủ biện pháp quản trị rủi ro; đảm bảo an toàn vốn & khả năng thanh toán nợ đến hạn; theo dõi giám sát hoạt động gửi tiền tại các TCTD.",
+            "Sai sót/rủi ro tiềm tàng": "- Không theo dõi sát hạn mức/kỳ hạn theo thời gian thực;\r\n- Thiếu cơ chế quản trị rủi ro TCTD (cảnh báo sớm);\r\n- Không kiến nghị TGĐ/HĐTV biện pháp khi TCTD có dấu hiệu rủi ro;\r\n- Hợp đồng tiền gửi đang thực hiện (theo QĐ 531) không được theo dõi đến hết thời hạn.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 13.3, 13.4, 13.8; Điều 14; Điều 18.2)",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Sổ/bảng theo dõi hợp đồng tiền gửi (số dư, kỳ hạn, lãi suất, ngày đến hạn);\r\n- Báo cáo đánh giá rủi ro TCTD định kỳ;\r\n- Văn bản kiến nghị TGĐ/HĐTV (nếu có);\r\n- Danh mục hợp đồng chuyển tiếp từ QĐ 531.",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Theo dõi đầy đủ, cập nhật kịp thời mọi hợp đồng; có cơ chế cảnh báo sớm & kiến nghị khi TCTD rủi ro; hợp đồng chuyển tiếp từ QĐ 531 được theo dõi đến hết thời hạn (Điều 18.2)."
+          },
+          {
+            "Hạng mục": "Quản lý vốn bằng tiền",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ báo cáo HĐTV về tình hình quản lý vốn bằng tiền định kỳ hàng quý trước ngày cuối cùng của tháng tiếp theo sau khi kết thúc Quý, theo biểu mẫu Phụ lục 3; các báo cáo bất thường theo yêu cầu quản lý.",
+            "Sai sót/rủi ro tiềm tàng": "- Báo cáo quý nộp trễ mốc 'trước ngày cuối tháng tiếp theo';\r\n- Không sử dụng biểu mẫu Phụ lục 3;\r\n- Số liệu báo cáo không khớp sổ theo dõi/sao kê;\r\n- Không lập báo cáo bất thường khi có yêu cầu/sự kiện rủi ro.",
+            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 17.1, 17.2; Điều 13.7, 14.5); Phụ lục 3 (biểu mẫu báo cáo).",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo quản lý vốn bằng tiền hàng quý (theo Phụ lục 3);\r\n- Log/văn bản trình HĐTV (ngày trình);\r\n- Bảng đối chiếu số liệu báo cáo vs sổ theo dõi/sao kê;\r\n- Báo cáo bất thường (nếu có).",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "100% báo cáo quý trình HĐTV đúng hạn (trước ngày cuối tháng tiếp theo); đúng biểu mẫu Phụ lục 3; số liệu khớp sổ theo dõi/sao kê (±0%); có báo cáo bất thường khi phát sinh.",
+            "Kết quả kiểm tra": "Đạt"
           }
         ]
       },
@@ -1432,17 +1532,6 @@
         "items": [
           {
             "Hạng mục": "Báo cáo, lưu trữ, trách nhiệm",
-            "Mục tiêu/Nội dung công việc": "Báo cáo định kỳ",
-            "Sai sót/rủi ro tiềm tàng": "Không báo cáo hoặc báo cáo thiếu thông tin trọng yếu",
-            "Tham chiếu Điều/khoản": "QĐ 1668 – Điều 17; QĐ 358; QT.TCĐT.07; QT.TCĐT.09",
-            "Hồ sơ/Bằng chứng cần thu thập": "Báo cáo quý/năm, báo cáo đột xuất, sổ theo dõi gửi báo cáo, email gửi báo cáo",
-            "Phương pháp kiểm tra": "Kiểm tra danh mục và thời hạn báo cáo",
-            "Tiêu chí đánh giá": "Báo cáo được lập đúng kỳ hạn, đúng nơi nhận, phản ánh đầy đủ tình hình vốn, nợ, tiền gửi, thu xếp vốn và các rủi ro phát sinh",
-            "Kiến nghị": "Chuẩn hóa lịch báo cáo, bổ sung chỉ tiêu cảnh báo, quy trách nhiệm đầu mối",
-            "PIC": "Lê Thùy Dương"
-          },
-          {
-            "Hạng mục": "Báo cáo, lưu trữ, trách nhiệm",
             "Mục tiêu/Nội dung công việc": "Lưu trữ hồ sơ",
             "Sai sót/rủi ro tiềm tàng": "Thất lạc hồ sơ, thiếu bản cứng/bản mềm",
             "Tham chiếu Điều/khoản": "QT.TCĐT.07 – mục 5; QT.TCĐT.09 – mục 4",
@@ -1521,121 +1610,13 @@
             "Tiêu chí đánh giá": "Tổ chức kiểm kê định kỳ hoặc đột xuất tài sản, đối chiếu các khoản nợ phải trả, nợ phải thu trước khi khóa sổ kế toán"
           },
           {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra tính đầy đủ, hiệu lực và sự phù hợp của khung quản lý vốn bằng tiền: Quy chế QĐ 1668 đã thay thế QĐ 531/QĐ-TDKT (07/6/2022); các nguyên tắc an toàn - hiệu quả - bảo toàn & phát triển vốn - thanh khoản được cụ thể hóa trong quy trình nội bộ.",
-            "Sai sót/rủi ro tiềm tàng": "- Vẫn áp dụng quy chế cũ (QĐ 531) đã hết hiệu lực;\r\n- Chưa ban hành Quy trình thực hiện gửi tiền & phân bổ tiền gửi theo Điều 13.3;\r\n- Nguyên tắc quản lý chỉ nêu hình thức, không lượng hóa thành tiêu chí kiểm soát;\r\n- Chưa rà soát đồng bộ với Quy chế QLTC hiện hành của PVEP.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 - Điều 1, Điều 4, 7,  Điều 18.1; QĐ 4452",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Quy trình thực hiện gửi tiền/phân bổ tiền gửi (Điều 13.3);\r\n- Đối chiếu Quy chế VBT vs Quy chế QLTC;\r\n- Danh mục văn bản pháp lý liên quan còn hiệu lực.\r\n- Phương án gửi tiền hàng tháng",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Chỉ gửi khi có tiền tạm thời nhàn rỗi; kỳ hạn gửi phù hợp kế hoạch dòng tiền và không ảnh hưởng khả năng thanh toán",
-            "Kết quả kiểm tra": "Đạt",
-            "Kiến nghị": "Điều chỉnh kỳ hạn, tăng dự báo dòng tiền, báo cáo trường hợp rút trước hạn"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc xác định nhu cầu thanh toán thường xuyên trên cơ sở cân đối thu/chi trong tháng; mức dự trữ VNĐ cuối kỳ (≈ ¼ tháng chi tiêu kế tiếp); phần dôi dư được chuyển sang tiền gửi có kỳ hạn/đầu tư theo Điều 7.",
-            "Sai sót/rủi ro tiềm tàng": "- Để số dư không kỳ hạn quá lớn → lãng phí cơ hội sinh lời;\r\n- Dự trữ thấp hơn nhu cầu → rủi ro thanh khoản;\r\n- Báo cáo dòng tiền không sát thực tế;\r\n- Không kịp thời chuyển phần dôi dư sang tiền gửi có kỳ hạn.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 6.1, 6.2; Điều 6.3 dẫn chiếu Điều 7); báo cáo dòng tiền của PVEP.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình BTGĐ hàng tháng\r\n- Báo cáo dòng tiền tháng (thu/chi);\r\n- Bảng tính mức dự trữ cuối kỳ",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Dự trữ cuối kỳ xấp xỉ ¼ tháng chi tiêu kế tiếp (chênh lệch có giải trình); số dư không kỳ hạn dôi dư được chuyển kịp thời sang tiền gửi có kỳ hạn; báo cáo dòng tiền khớp sao kê (±0%).",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ triển khai đánh giá, chấm điểm, xếp hạng TCTD trong Quý II hằng năm (sau BCTC năm đã kiểm toán) và trình HĐTV phê duyệt trước 30/6; rà soát giữa kỳ sau BCTC bán niên soát xét (không muộn hơn 30/9).",
-            "Sai sót/rủi ro tiềm tàng": "- Đánh giá/trình HĐTV trễ mốc 30/6;\r\n- Không thực hiện rà soát giữa kỳ trước 30/9;\r\n- Chấm điểm không theo đúng thang điểm Phụ lục 1 (sai trọng số 750/250);\r\n- Số liệu đầu vào không lấy từ BCTC kiểm toán/soát xét;\r\n- TCTD không đạt điều kiện tối thiểu (vốn điều lệ ≥3 lần vốn pháp định, VCSH >10.000 tỷ, CAR ≥8%) vẫn được đưa vào danh sách.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 8.1, 8.2, 8.3); Phụ lục 1 (tiêu chí & thang điểm); quy định NHNN về CAR.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá, bảng chấm điểm xếp hạng TCTD;\r\n- BCTC năm đã kiểm toán/BCTC bán niên soát xét của các TCTD;\r\n- Tờ trình & QĐ phê duyệt danh sách TCTD của HĐTV;\r\n- Bảng kiểm tra điều kiện tối thiểu của từng TCTD.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Đánh giá & trình HĐTV trước 30/6; rà soát giữa kỳ trước 30/9; điểm chấm khớp Phụ lục 1 (±0); số liệu từ BCTC kiểm toán/soát xét; 100% TCTD trong danh sách đạt điều kiện tối thiểu Điều 8.1.c.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc gửi tiền chỉ thực hiện tại các TCTD trong danh sách được HĐTV phê duyệt; mỗi TCTD chỉ giao dịch với 01 đầu mối (Hội sở hoặc chi nhánh được chỉ định bằng văn bản); các trường hợp ngoài danh sách/ngoài đầu mối phải được HĐTV quyết định.",
-            "Sai sót/rủi ro tiềm tàng": "- Gửi tiền tại TCTD ngoài danh sách phê duyệt;\r\n- Giao dịch nhiều đầu mối/chi nhánh không được chỉ định;\r\n- Văn bản chỉ định đầu mối thiếu hoặc hết hiệu lực;\r\n- Trường hợp đặc biệt (TCTD có vốn góp PVN/ngân hàng nước ngoài) chưa trình HĐTV.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 9.1, 9.2); danh sách TCTD được HĐTV phê duyệt.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Danh sách TCTD được HĐTV phê duyệt (hiệu lực);\r\n- Văn bản chỉ định đầu mối cung cấp dịch vụ của từng TCTD;\r\n- Danh mục hợp đồng/giao dịch tiền gửi trong kỳ;\r\n- QĐ HĐTV cho các trường hợp đặc biệt (nếu có).",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% giao dịch gửi tiền tại TCTD trong danh sách; mỗi TCTD chỉ 01 đầu mối có văn bản chỉ định hiệu lực; mọi trường hợp đặc biệt đều có QĐ HĐTV.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc tuân thủ đồng thời các giới hạn: trần theo nhóm (Nhóm I ≤25%, II.1 ≤20%, II.2 ≤15%, II.3 ≤10% VCSH của TCTD); tổng dư tại mỗi TCTD ≤35% tổng tiền gửi có kỳ hạn của PVEP; hạn mức theo Nhóm (Nhóm I: 60-70%, Nhóm II: 30-40% tổng dư tiền gửi).",
-            "Sai sót/rủi ro tiềm tàng": "- Dư tiền gửi tại 1 TCTD vượt %VCSH theo nhóm;\r\n- Vượt trần 35% tổng tiền gửi tại 1 TCTD → rủi ro tập trung;\r\n- Tỷ trọng Nhóm I/Nhóm II ngoài biên độ quy định;\r\n- Tính trần dựa trên VCSH không cập nhật theo BCTC mới nhất.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 10.1, 10.2, 10.3, 10.4); BCTC TCTD; danh sách phân nhóm TCTD.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng theo dõi dư tiền gửi theo từng TCTD & theo nhóm;\r\n- VCSH của từng TCTD theo BCTC gần nhất;\r\n- Bảng tính tỷ lệ trần (% VCSH, % tổng tiền gửi);\r\n- Phân loại nhóm TCTD (Nhóm I/II.1/II.2/II.3).",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Đồng thời thỏa mãn cả 3 giới hạn Điều 10 tại mọi thời điểm trong kỳ; không có TCTD vượt trần %VCSH; không vượt 35% tổng tiền gửi; tỷ trọng nhóm trong biên độ 60-70% (I) và 30-40% (II).",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc lập Phương án gửi tiền: bản chào lãi suất từ các TCTD, quy tắc thu thập trong 24h, xử lý khi TCTD điều chỉnh lãi suất làm thay đổi xếp hạng; lãi suất trung bình cộng; nguyên tắc lựa chọn theo nhóm và xếp hạng.",
-            "Sai sót/rủi ro tiềm tàng": "- Chỉ lấy chào giá từ 1 vài TCTD, thiếu cạnh tranh;\r\n- Bản chào lãi suất quá 24h kể từ khi PVEP thông báo;\r\n- TCTD tăng lãi suất làm đổi xếp hạng nhưng không yêu cầu các TCTD khác cập nhật/đánh giá lại;\r\n- Lựa chọn TCTD không theo thứ tự xếp hạng từ cao xuống thấp;\r\n- Số tiền gửi vượt mức trần Điều 10.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.1 a-e, Điều 11.2 a-c); Phụ lục 2 (xếp hạng theo lãi suất, trọng số 40%); quy định NHNN về lãi suất.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bản chào lãi suất các TCTD (kèm dấu thời gian email);\r\n- Phương án gửi tiền đã lập & phê duyệt;\r\n- Bảng tính lãi suất trung bình cộng & xếp hạng theo Phụ lục 2;\r\n- Bảng đối chiếu phân bổ với mức trần Điều 10.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Có bản chào từ đủ TCTD theo nhóm, trong 24h; xử lý đúng khi lãi suất điều chỉnh làm đổi xếp hạng; lựa chọn theo thứ tự xếp hạng cao→thấp; điểm lãi suất khớp Phụ lục 2; phân bổ không vượt trần Điều 10.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc phân bổ số tiền gửi trong tháng theo thứ tự xếp hạng từ cao xuống thấp; cơ chế tái tục các hợp đồng đến hạn; xử lý khi TCTD hết hạn mức/có dấu hiệu rủi ro; xử lý khi số tiền dự kiến gửi nhỏ hơn số đến hạn.",
-            "Sai sót/rủi ro tiềm tàng": "- Phân bổ không theo thứ tự xếp hạng;\r\n- Tái tục tự động vào TCTD đã hết hạn mức hoặc có dấu hiệu rủi ro;\r\n- Khi số gửi < số đến hạn không giảm vào TCTD xếp hạng thấp/lãi suất thấp;\r\n- Không cập nhật khi TCTD có dấu hiệu rủi ro làm thay đổi thứ tự phân bổ.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.2.a, 11.2.b, 11.2.c); kết quả xếp hạng (Phụ lục 1 & 2).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân bổ số tiền gửi theo TCTD trong tháng;\r\n- Danh sách hợp đồng đến hạn & quyết định tái tục;\r\n- Bảng theo dõi hạn mức còn lại theo TCTD;\r\n- Ghi nhận dấu hiệu rủi ro TCTD (nếu có).",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Phân bổ đúng thứ tự xếp hạng cao→thấp; tái tục chỉ vào TCTD còn hạn mức & không có dấu hiệu rủi ro; khi số gửi < số đến hạn → giảm vào TCTD xếp hạng/lãi suất thấp; có cập nhật khi TCTD rủi ro.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc tuân thủ thời hạn gửi tiền không quá 12 tháng; tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II tối đa 50% tổng hạn mức trần tiền gửi của mỗi TCTD; việc cân đối kỳ hạn dựa trên tương quan lãi suất, số dư dòng tiền ước tính và số đến hạn tháng kế tiếp.",
-            "Sai sót/rủi ro tiềm tàng": "- Gửi tiền kỳ hạn vượt 12 tháng (thuộc thẩm quyền HĐTV theo Điều 7.2/12.3);\r\n- Tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II vượt 50% trần của TCTD đó;\r\n- Cân đối kỳ hạn không dựa trên dòng tiền ước tính → rủi ro thanh khoản;\r\n- Tập trung kỳ hạn dài làm giảm khả năng thanh toán.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.3.a, 11.3.b; Điều 7.1); báo cáo dòng tiền ước tính.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng tổng hợp kỳ hạn các hợp đồng tiền gửi;\r\n- Bảng tính tỷ trọng kỳ hạn 12 tháng theo TCTD Nhóm II;\r\n- Báo cáo dòng tiền ước tính & lịch đến hạn;\r\n- Phương án cân đối kỳ hạn.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% hợp đồng có kỳ hạn ≤12 tháng (trừ trường hợp HĐTV phê duyệt); tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II ≤50% trần; kỳ hạn được cân đối theo dòng tiền ước tính & lịch đến hạn.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc các trường hợp vượt thẩm quyền được trình đúng cấp: HĐTV phê duyệt danh sách TCTD, trường hợp vượt trần Điều 10, phương án kỳ hạn >12 tháng và các hình thức đầu tư khác ngoài tiền gửi (đầu tư giấy tờ có giá - Điều 7.1.b).",
-            "Sai sót/rủi ro tiềm tàng": "- Thực hiện gửi vượt trần/kỳ hạn >12 tháng khi chưa có phê duyệt HĐTV;\r\n- TGĐ phê duyệt phương án ngoài thẩm quyền (>12 tháng);\r\n- Đầu tư giấy tờ có giá không có phương án trình HĐTV theo Quy chế QLTC;\r\n- Hồ sơ trình thiếu căn cứ phân cấp.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 12.1, 12.2, 12.3; Điều 13.1, 13.2, 13.6; Điều 7.1.b, 7.2); Quy chế QLTC PVEP.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình & QĐ/Nghị quyết HĐTV cho các trường hợp vượt thẩm quyền;\r\n- Phương án gửi tiền >12 tháng/đầu tư giấy tờ có giá (nếu có);\r\n- Bảng phân cấp thẩm quyền theo Quy chế;\r\n- Hồ sơ phê duyệt của TGĐ trong phạm vi ≤12 tháng.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% trường hợp vượt trần/kỳ hạn >12 tháng/đầu tư khác đều có phê duyệt HĐTV trước khi thực hiện; TGĐ chỉ phê duyệt trong thẩm quyền ≤12 tháng; hồ sơ đầy đủ căn cứ phân cấp."
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban TCĐT/Ban KTKT thực hiện theo dõi, quản lý vốn bằng tiền; thực hiện đầy đủ biện pháp quản trị rủi ro; đảm bảo an toàn vốn & khả năng thanh toán nợ đến hạn; theo dõi giám sát hoạt động gửi tiền tại các TCTD.",
-            "Sai sót/rủi ro tiềm tàng": "- Không theo dõi sát hạn mức/kỳ hạn theo thời gian thực;\r\n- Thiếu cơ chế quản trị rủi ro TCTD (cảnh báo sớm);\r\n- Không kiến nghị TGĐ/HĐTV biện pháp khi TCTD có dấu hiệu rủi ro;\r\n- Hợp đồng tiền gửi đang thực hiện (theo QĐ 531) không được theo dõi đến hết thời hạn.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 13.3, 13.4, 13.8; Điều 14; Điều 18.2); chuẩn mực quản trị rủi ro nội bộ.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Sổ/bảng theo dõi hợp đồng tiền gửi (số dư, kỳ hạn, lãi suất, ngày đến hạn);\r\n- Báo cáo đánh giá rủi ro TCTD định kỳ;\r\n- Văn bản kiến nghị TGĐ/HĐTV (nếu có);\r\n- Danh mục hợp đồng chuyển tiếp từ QĐ 531.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Theo dõi đầy đủ, cập nhật kịp thời mọi hợp đồng; có cơ chế cảnh báo sớm & kiến nghị khi TCTD rủi ro; hợp đồng chuyển tiếp từ QĐ 531 được theo dõi đến hết thời hạn (Điều 18.2)."
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ báo cáo HĐTV về tình hình quản lý vốn bằng tiền định kỳ hàng quý trước ngày cuối cùng của tháng tiếp theo sau khi kết thúc Quý, theo biểu mẫu Phụ lục 3; các báo cáo bất thường theo yêu cầu quản lý.",
-            "Sai sót/rủi ro tiềm tàng": "- Báo cáo quý nộp trễ mốc 'trước ngày cuối tháng tiếp theo';\r\n- Không sử dụng biểu mẫu Phụ lục 3;\r\n- Số liệu báo cáo không khớp sổ theo dõi/sao kê;\r\n- Không lập báo cáo bất thường khi có yêu cầu/sự kiện rủi ro.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 17.1, 17.2; Điều 13.7, 14.5); Phụ lục 3 (biểu mẫu báo cáo).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo quản lý vốn bằng tiền hàng quý (theo Phụ lục 3);\r\n- Log/văn bản trình HĐTV (ngày trình);\r\n- Bảng đối chiếu số liệu báo cáo vs sổ theo dõi/sao kê;\r\n- Báo cáo bất thường (nếu có).",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% báo cáo quý trình HĐTV đúng hạn (trước ngày cuối tháng tiếp theo); đúng biểu mẫu Phụ lục 3; số liệu khớp sổ theo dõi/sao kê (±0%); có báo cáo bất thường khi phát sinh.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
             "Hạng mục": "Tổ chức kế toán, kiểm toán",
             "Mục tiêu/Nội dung công việc": "PVEP phải tổ chức bộ máy tài chính kế toán theo đúng quy định; sử dụng đồng tiền hạch toán là Đồng Việt Nam (VND), mọi giao dịch ngoại tệ phải quy đổi sang VND",
             "Tham chiếu Điều/khoản": "QĐ 4452 - Điều 3&4",
             "Hồ sơ/Bằng chứng cần thu thập": "Sổ cái",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "PVEP phải tổ chức bộ máy tài chính kế toán theo đúng quy định; sử dụng đồng tiền hạch toán là Đồng Việt Nam (VND), mọi giao dịch ngoại tệ phải quy đổi sang VND"
+            "Tiêu chí đánh giá": "PVEP phải tổ chức bộ máy tài chính kế toán theo đúng quy định; sử dụng đồng tiền hạch toán là Đồng Việt Nam (VND), mọi giao dịch ngoại tệ phải quy đổi sang VND",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Hệ thống VBQLNB về tài chính",
@@ -1657,34 +1638,7 @@
             "Kết quả kiểm tra": "PVEP không cung cấp bảo lãnh vay vốn cho công ty con trong niên độ kiểm tra, ko có số dư bảo lãnh vay vốn cho công ty con tại 31/12/2025 và 20/5/2026"
           },
           {
-            "Hạng mục": "B6. Kiểm soát chuyển nhượng vốn đầu tư ra ngoài PVEP",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc chuyển nhượng các khoản đầu tư vốn ra ngoài PVEP: nguyên tắc thị trường, công khai, minh bạch; xác định giá khởi điểm qua tổ chức thẩm định giá có chức năng; phản ánh đầy đủ giá trị thực (gồm quyền sử dụng đất, quyền SHTT); đúng thẩm quyền.",
-            "Sai sót/rủi ro tiềm tàng": "- Chuyển nhượng không qua đấu giá/chào bán cạnh tranh công khai;\r\n- Giá khởi điểm không qua tổ chức thẩm định giá có chức năng;\r\n- Bỏ sót giá trị quyền sử dụng đất/quyền SHTT khi định giá → thất thoát vốn;\r\n- Chuyển nhượng vượt thẩm quyền quyết định (Đ.9.3).",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 9.5); pháp luật về thẩm định giá, chứng khoán, đất đai.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Hồ sơ chuyển nhượng & phương thức (đấu giá/chào bán/thỏa thuận);\r\n- Chứng thư thẩm định giá khởi điểm;\r\n- Hồ sơ xác định giá trị quyền sử dụng đất/SHTT;\r\n- Văn bản phê duyệt theo thẩm quyền.",
-            "Phương pháp kiểm tra": "Inspection hồ sơ chuyển nhượng; đối chiếu chứng thư thẩm định giá; Re-calculation cấu phần giá trị.",
-            "Tiêu chí đánh giá": "Chuyển nhượng theo nguyên tắc thị trường, công khai; giá khởi điểm có chứng thư thẩm định giá; phản ánh đủ giá trị thực (gồm đất & SHTT); đúng thẩm quyền quyết định."
-          },
-          {
-            "Hạng mục": "B7. Kiểm soát đầu tư, mua sắm tài sản cố định",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc quyết định dự án đầu tư/mua sắm TSCĐ đúng thẩm quyền & phân cấp; tuân thủ pháp luật đấu thầu, xây dựng; định mức mua sắm phương tiện đi lại (xe ô tô) cho chức danh lãnh đạo; trách nhiệm người quyết định khi tài sản không sử dụng được/kém hiệu quả.",
-            "Sai sót/rủi ro tiềm tàng": "- Quyết định đầu tư/mua sắm vượt thẩm quyền hoặc không qua đấu thầu;\r\n- Mua sắm xe ô tô vượt tiêu chuẩn/định mức quy định;\r\n- TSCĐ đầu tư xong không sử dụng được/không hiệu quả nhưng không quy trách nhiệm;\r\n- Mua sắm TSCĐ ngoài đưa về sử dụng không qua đấu thầu.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 12.2, 12.3 a-c, 12.4); pháp luật đấu thầu, xây dựng; định mức mua sắm xe công.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Quyết định đầu tư/mua sắm & hồ sơ phân cấp thẩm quyền;\r\n- Hồ sơ đấu thầu/lựa chọn nhà thầu;\r\n- Hồ sơ mua sắm phương tiện đi lại & đối chiếu định mức;\r\n- Báo cáo hiệu quả sử dụng TSCĐ đã đầu tư.",
-            "Phương pháp kiểm tra": "Inspection hồ sơ; đối chiếu phân cấp & định mức; Sampling gói mua sắm.",
-            "Tiêu chí đánh giá": "Đầu tư/mua sắm đúng thẩm quyền & qua đấu thầu theo quy định; mua sắm xe trong định mức; có theo dõi hiệu quả & quy trách nhiệm với TSCĐ kém hiệu quả."
-          },
-          {
-            "Hạng mục": "B8. Kiểm soát thanh lý, nhượng bán tài sản cố định (Control point 4)",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc thanh lý/nhượng bán TSCĐ: thành lập hội đồng thanh lý đúng thành phần; phương thức đấu giá/thẩm định giá (TSCĐ >100 triệu phải đấu giá); xác định trách nhiệm khi nhượng bán không thu hồi đủ vốn; tài sản gắn liền đất theo pháp luật đất đai.",
-            "Sai sót/rủi ro tiềm tàng": "- Thanh lý/nhượng bán không qua đấu giá với tài sản giá trị còn lại >100 triệu;\r\n- Giá bán thấp hơn giá thị trường/không qua thẩm định giá;\r\n- Nhượng bán không thu hồi đủ vốn nhưng không báo cáo HĐTV/PVN & không quy trách nhiệm;\r\n- Hội đồng thanh lý thiếu thành phần bắt buộc.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 14.2 a-b; Điều 14.3; Điều 14.4).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Quyết định thành lập hội đồng thanh lý;\r\n- Biên bản xác định hiện trạng & giá trị còn lại;\r\n- Chứng thư thẩm định giá/hồ sơ đấu giá;\r\n- Báo cáo HĐTV/PVN với trường hợp không thu hồi đủ vốn.",
-            "Phương pháp kiểm tra": "Inspection hồ sơ thanh lý; đối chiếu phương thức bán với ngưỡng 100 triệu; Re-calculation giá trị còn lại.",
-            "Tiêu chí đánh giá": "Hội đồng thanh lý đủ thành phần; TSCĐ >100 triệu được đấu giá; giá bán ≥ giá thị trường (qua thẩm định giá); trường hợp không thu hồi đủ vốn được báo cáo HĐTV/PVN & quy trách nhiệm."
-          },
-          {
-            "Hạng mục": "B9. Kiểm soát quản lý nợ phải trả",
+            "Hạng mục": "Kiểm soát quản lý nợ phải trả",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc theo dõi, phân loại nợ phải trả theo từng đối tượng; mở sổ đầy đủ (gồm lãi phải trả); cân đối dòng tiền đảm bảo trả nợ đúng hạn; cảnh báo sớm khó khăn thanh toán; xử lý nợ phải trả không có đối tượng.",
             "Sai sót/rủi ro tiềm tàng": "- Không mở sổ/theo dõi đầy đủ nợ phải trả & lãi phải trả;\r\n- Phát sinh nợ quá hạn do không cân đối dòng tiền;\r\n- Không phát hiện sớm khó khăn thanh toán → phát sinh nợ quá hạn, nợ không trả được;\r\n- Nợ phải trả không có đối tượng không được hạch toán vào thu nhập khác.",
             "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 10.1, 10.2, 10.3, 10.4).",
@@ -1693,7 +1647,7 @@
             "Tiêu chí đánh giá": "Có quy chế & sổ theo dõi đầy đủ (gồm lãi); không có nợ quá hạn do lỗi cân đối dòng tiền; có cơ chế cảnh báo sớm; nợ không có đối tượng được hạch toán đúng vào thu nhập khác."
           },
           {
-            "Hạng mục": "B10. Kiểm soát quản lý nợ phải thu & trích lập dự phòng",
+            "Hạng mục": "Kiểm soát quản lý nợ phải thu & trích lập dự phòng",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc theo dõi, phân loại nợ phải thu; trích lập dự phòng nợ phải thu khó đòi (quá hạn >6 tháng hoặc khách nợ phá sản/mất tích...); việc bán nợ đúng quy định; xử lý nợ không thu hồi được & trách nhiệm liên quan.",
             "Sai sót/rủi ro tiềm tàng": "- Không phân loại/theo dõi nợ phải thu theo đối tượng;\r\n- Không trích/trích thiếu dự phòng nợ phải thu khó đòi;\r\n- Bán nợ cho tổ chức không có chức năng mua bán nợ/bán trực tiếp cho khách nợ;\r\n- Bán nợ gây thua lỗ, mất vốn nhưng không quy trách nhiệm;\r\n- Xóa nợ không tiếp tục theo dõi ngoài bảng.",
             "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 16.1-16.7).",
@@ -1702,17 +1656,7 @@
             "Tiêu chí đánh giá": "Có quy chế & phân loại đầy đủ; dự phòng nợ khó đòi trích đúng & đủ; bán nợ đúng đối tượng có chức năng & đúng thẩm quyền; nợ xóa được theo dõi ngoài bảng & quy trách nhiệm khi gây mất vốn."
           },
           {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc quản lý vốn bằng tiền: mở tài khoản đúng quy định; quản lý ngoại tệ theo pháp luật quản lý ngoại hối; kiểm kê tiền mặt định kỳ/đột xuất & lưu biên bản; đối chiếu xác nhận số dư tiền gửi ngân hàng định kỳ; ban hành quy chế quản lý vốn bằng tiền",
-            "Sai sót/rủi ro tiềm tàng": "- Mở/sử dụng tài khoản không đúng quy định;\r\n- Không kiểm kê tiền mặt định kỳ/không lưu biên bản kiểm kê;\r\n- Không đối chiếu xác nhận số dư tiền gửi ngân hàng định kỳ → không phát hiện chênh lệch;\r\n- Quản lý ngoại tệ không tuân thủ pháp luật quản lý ngoại hối.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 17.1 a-d; Điều 17.2 a-c); Quy chế quản lý vốn bằng tiền (QĐ 1668).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Danh sách tài khoản ngân hàng & mục đích;\r\n- Biên bản kiểm kê tiền mặt định kỳ/đột xuất;\r\n- Biên bản đối chiếu/xác nhận số dư tiền gửi ngân hàng;\r\n- Hồ sơ quản lý ngoại tệ.",
-            "Phương pháp kiểm tra": "Inspection biên bản kiểm kê & đối chiếu; Confirmation số dư với ngân hàng (mẫu); đối chiếu sổ kế toán.",
-            "Tiêu chí đánh giá": "Tài khoản mở đúng quy định; kiểm kê tiền mặt định kỳ & lưu biên bản đầy đủ; đối chiếu xác nhận số dư ngân hàng định kỳ, chênh lệch (nếu có) được điều chỉnh kịp thời; quản lý ngoại tệ tuân thủ.",
-            "Kết quả kiểm tra": "Đạt"
-          },
-          {
-            "Hạng mục": "B12. Kiểm soát kiểm kê & đánh giá lại tài sản (Control point 5)",
+            "Hạng mục": "Kiểm soát kiểm kê & đánh giá lại tài sản",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc kiểm kê tài sản định kỳ/đột xuất khi khóa sổ & khi chia tách/sáp nhập/chuyển đổi sở hữu; xử lý tài sản tổn thất & tài sản thừa sau kiểm kê; đánh giá lại tài sản đúng các trường hợp quy định & theo quy định Nhà nước.",
             "Sai sót/rủi ro tiềm tàng": "- Không kiểm kê khi khóa sổ lập BCTC/khi tổ chức lại doanh nghiệp;\r\n- Tài sản tổn thất do chủ quan không quy trách nhiệm bồi thường;\r\n- Tài sản thừa chưa rõ nguyên nhân không hạch toán vào phải trả/phải nộp khác;\r\n- Đánh giá lại tài sản ngoài các trường hợp quy định/không theo quy định Nhà nước;\r\n- Tổn thất tài sản không xử lý → báo cáo không trung thực tình hình tài chính.",
             "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 18.1, 18.2 a-đ, 18.3, 18.4 a-b).",
@@ -1721,34 +1665,7 @@
             "Tiêu chí đánh giá": "Kiểm kê đầy đủ khi khóa sổ & tổ chức lại DN; tổn thất do chủ quan được quy trách nhiệm & bồi thường; tài sản thừa hạch toán đúng; đánh giá lại chỉ trong trường hợp quy định & theo quy định Nhà nước."
           },
           {
-            "Hạng mục": "B13. Kiểm soát ghi nhận doanh thu & thu nhập",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc ghi nhận đầy đủ, đúng kỳ doanh thu SXKD, doanh thu hoạt động tài chính (lãi tiền gửi, lãi tỷ giá, cổ tức/lợi nhuận được chia) và thu nhập khác (thanh lý TSCĐ, bồi thường, nợ phải trả mất chủ...); kê khai nộp thuế với lợi nhuận chia từ đầu tư ra nước ngoài.",
-            "Sai sót/rủi ro tiềm tàng": "- Ghi nhận doanh thu không đúng kỳ/bỏ sót doanh thu tài chính (lãi tiền gửi, cổ tức);\r\n- Cổ tức/lợi nhuận chia từ công ty con/đầu tư ngoài không ghi nhận đầy đủ;\r\n- Thu nhập khác (thanh lý, bồi thường, nợ mất chủ) không ghi tăng thu nhập;\r\n- Lợi nhuận chia từ đầu tư nước ngoài không kê khai nộp thuế TNDN tại Việt Nam.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 19.1, 19.2 a-e, 19.3 a-c, 19.4); Luật Thuế TNDN.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Sổ chi tiết doanh thu SXKD, doanh thu tài chính, thu nhập khác;\r\n- Bảng kê cổ tức/lợi nhuận được chia & chứng từ;\r\n- Hồ sơ thu nhập khác (thanh lý, bồi thường...);\r\n- Hồ sơ kê khai thuế với lợi nhuận từ đầu tư nước ngoài.",
-            "Phương pháp kiểm tra": "Analytical review biến động doanh thu; Sampling chứng từ ghi nhận; đối chiếu cổ tức với nghị quyết chia.",
-            "Tiêu chí đánh giá": "Doanh thu & thu nhập ghi nhận đầy đủ, đúng kỳ; cổ tức/lợi nhuận chia ghi nhận khớp nghị quyết chia; thu nhập khác ghi tăng đúng quy định; lợi nhuận từ đầu tư nước ngoài được kê khai nộp thuế tại Việt Nam."
-          },
-          {
-            "Hạng mục": "B14. Kiểm soát quản lý chi phí & loại trừ chi phí không hợp lệ",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc ghi nhận chi phí SXKD, chi phí tài chính, chi phí khác theo định mức kinh tế-kỹ thuật; loại trừ các khoản không được tính vào chi phí (mua sắm/xây dựng TSCĐ, lãi vay vốn hóa, chi không liên quan SXKD, chi không có chứng từ hợp lệ); xác định chi phí được trừ tính thuế TNDN.",
-            "Sai sót/rủi ro tiềm tàng": "- Tính vào chi phí SXKD các khoản phải vốn hóa (mua sắm/xây dựng TSCĐ, lãi vay đầu tư-xây dựng - Đ.20.2);\r\n- Ghi nhận chi phí không có chứng từ hợp lệ/không liên quan SXKD;\r\n- Chi vượt định mức kinh tế-kỹ thuật chưa được phê duyệt;\r\n- Xác định sai chi phí được trừ khi tính thuế TNDN.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 20.1 a-c; Điều 20.2 a-c; Điều 20.3; Điều 24); Luật Thuế TNDN.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Sổ chi tiết chi phí theo khoản mục;\r\n- Định mức kinh tế-kỹ thuật đã được HĐTV phê duyệt (Đ.24.1);\r\n- Bảng kê các khoản loại trừ khỏi chi phí SXKD;\r\n- Tờ khai quyết toán thuế TNDN & bảng điều chỉnh chi phí được trừ.",
-            "Phương pháp kiểm tra": "Sampling chứng từ chi phí; đối chiếu định mức; Re-calculation chi phí được trừ thuế.",
-            "Tiêu chí đánh giá": "Chi phí ghi nhận đúng bản chất & trong định mức đã duyệt; các khoản phải vốn hóa không tính vào chi phí SXKD; không có chi phí thiếu chứng từ; chi phí được trừ thuế xác định đúng Luật Thuế TNDN."
-          },
-          {
-            "Hạng mục": "B15. Kiểm soát chi phí hoạt động dầu khí - đặc thù (Control point 6)",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc hạch toán chi phí tìm kiếm-thăm dò, phát triển mỏ, khai thác theo từng hợp đồng dầu khí/dự án; xử lý dự án thăm dò thành công (kết chuyển chi phí trả trước dài hạn) & không thành công (phân bổ vào chi phí SXKD trong ≤5 năm, có phê duyệt kết thúc dự án của HĐTV); xử lý chênh lệch chi phí thu hồi theo hợp đồng dầu khí vs sổ kế toán.",
-            "Sai sót/rủi ro tiềm tàng": "- Không theo dõi chi phí dầu khí theo từng hợp đồng/dự án;\r\n- Dự án thăm dò không thành công phân bổ vào chi phí quá 5 năm hoặc không có QĐ kết thúc dự án/quyết toán của HĐTV;\r\n- Chi phí thăm dò không được thu hồi không ghi nhận trực tiếp vào chi phí kỳ phát sinh;\r\n- Xử lý sai chênh lệch chi phí thu hồi theo HĐ dầu khí vs sổ kế toán (Đ.23.3.e);\r\n- Nguồn vốn cho hoạt động dầu khí không đúng quy định (VCSH/Quỹ ĐTPT/vốn tự huy động).",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 21; Điều 22; Điều 23.3 a-e); hợp đồng dầu khí (PSC/JOC); NĐ 36/2021.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng theo dõi chi phí dầu khí theo từng HĐ/dự án;\r\n- QĐ kết thúc dự án & quyết toán chi phí thăm dò không thành công của HĐTV;\r\n- Bảng phân bổ chi phí trả trước dài hạn (dự án thành công);\r\n- Hồ sơ xử lý chênh lệch chi phí thu hồi (Đ.23.3.e) & sản lượng dự báo được HĐTV phê duyệt.",
-            "Phương pháp kiểm tra": "Inspection hồ sơ theo từng dự án; Re-calculation phân bổ chi phí & thời hạn ≤5 năm; đối chiếu HĐ dầu khí.",
-            "Tiêu chí đánh giá": "Chi phí dầu khí theo dõi theo từng HĐ/dự án; dự án không thành công phân bổ ≤5 năm & có QĐ kết thúc/quyết toán của HĐTV; chênh lệch chi phí thu hồi xử lý đúng Đ.23.3.e với sản lượng dự báo được phê duyệt; nguồn vốn đúng quy định."
-          },
-          {
-            "Hạng mục": "B16. Kiểm soát phân phối lợi nhuận & trích lập quỹ (Control point 7)",
+            "Hạng mục": "Kiểm soát phân phối lợi nhuận & trích lập quỹ",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc phân phối lợi nhuận sau khi bù lỗ & nộp thuế TNDN: trích Quỹ ĐTPT ≤30%; trích quỹ khen thưởng-phúc lợi & quỹ thưởng người quản lý theo kết quả xếp loại doanh nghiệp (A/B/C); nộp phần lợi nhuận còn lại về PVN; mọi phương án phân phối được PVN chấp thuận.",
             "Sai sót/rủi ro tiềm tàng": "- Trích Quỹ ĐTPT vượt 30% lợi nhuận;\r\n- Trích quỹ KT-PL & quỹ thưởng người quản lý không đúng mức theo xếp loại A/B/C (hoặc trích khi không thực hiện xếp loại);\r\n- Không nộp/nộp thiếu phần lợi nhuận còn lại về PVN;\r\n- Phân phối lợi nhuận khi chưa được PVN chấp thuận;\r\n- Bù lỗ năm trước không đúng quy định trước khi phân phối.",
             "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 26.1; Điều 26.2 a-đ; Điều 26.3); kết quả xếp loại doanh nghiệp.",
@@ -1757,40 +1674,13 @@
             "Tiêu chí đánh giá": "Quỹ ĐTPT ≤30%; quỹ KT-PL & quỹ thưởng QL trích đúng mức theo xếp loại A/B/C; lợi nhuận còn lại nộp đủ về PVN; phương án phân phối có chấp thuận của PVN; bù lỗ năm trước đúng quy định."
           },
           {
-            "Hạng mục": "B17. Kiểm soát quản lý & sử dụng các quỹ",
+            "Hạng mục": "Kiểm soát quản lý & sử dụng các quỹ",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc sử dụng các quỹ (ĐTPT, PT KHCN, dự phòng rủi ro môi trường, khen thưởng, phúc lợi, thưởng người quản lý) đúng mục đích & đối tượng; ban hành quy chế sử dụng quỹ (riêng quỹ KT-PL có sự tham gia của Công đoàn); Quỹ PT KHCN trích ≤10% thu nhập tính thuế; tạm trích quỹ trên cơ sở có lãi & đã nộp thuế.",
             "Sai sót/rủi ro tiềm tàng": "- Sử dụng quỹ sai mục đích/sai đối tượng;\r\n- Chưa ban hành quy chế sử dụng quỹ; quỹ KT-PL ban hành không có sự tham gia của Công đoàn;\r\n- Quỹ PT KHCN trích vượt 10% thu nhập tính thuế;\r\n- Tạm trích quỹ khi chưa có lãi/chưa nộp thuế TNDN;\r\n- Chi từ quỹ vượt mức TGĐ được phép quyết định.",
             "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 27.1 a-b; Điều 27.2 a-e).",
             "Hồ sơ/Bằng chứng cần thu thập": "- Quy chế quản lý, sử dụng các quỹ (kèm ý kiến Công đoàn với quỹ KT-PL);\r\n- Sổ theo dõi trích lập & sử dụng từng quỹ;\r\n- Bảng tính trích Quỹ PT KHCN vs 10% thu nhập tính thuế;\r\n- Chứng từ chi từ quỹ (mẫu) & phê duyệt.",
             "Phương pháp kiểm tra": "Inspection quy chế & sổ quỹ; Re-calculation mức trích Quỹ KHCN; Sampling chứng từ chi quỹ.",
             "Tiêu chí đánh giá": "Đã ban hành quy chế sử dụng quỹ (quỹ KT-PL có Công đoàn tham gia); quỹ chi đúng mục đích & đối tượng; Quỹ PT KHCN ≤10% thu nhập tính thuế; tạm trích chỉ khi có lãi & đã nộp thuế; chi trong thẩm quyền."
-          },
-          {
-            "Hạng mục": "B18. Kiểm soát kế hoạch tài chính, kế toán & kiểm toán",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc xây dựng KH SXKD & KH tài chính (trung-dài hạn & hàng năm) trình HĐTV thông qua, trình PVN phê duyệt; tổ chức công tác kế toán-thống kê đầy đủ, trung thực; kiểm toán độc lập BCTC năm & kiểm toán nội bộ; BCTC năm được kiểm toán trước khi nộp & công khai.",
-            "Sai sót/rủi ro tiềm tàng": "- KH tài chính không bám KH SXKD 5 năm/định hướng PVN;\r\n- KH chưa trình HĐTV thông qua/chưa được PVN phê duyệt nhưng đã thực hiện;\r\n- BCTC năm chưa kiểm toán đã nộp cơ quan nhà nước/công khai;\r\n- Không thực hiện kiểm toán nội bộ theo quy định;\r\n- Lựa chọn kiểm toán độc lập chưa qua HĐTV PVN thông qua.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 28.1-28.4; Điều 29.1-29.3; Điều 30.1-30.4).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- KH SXKD & KH tài chính trình HĐTV/PVN & văn bản phê duyệt;\r\n- BCTC năm đã kiểm toán & báo cáo kiểm toán độc lập;\r\n- Báo cáo kiểm toán nội bộ;\r\n- Hồ sơ lựa chọn đơn vị kiểm toán độc lập (HĐTV PVN thông qua).",
-            "Phương pháp kiểm tra": "Inspection KH & phê duyệt; đối chiếu mốc kiểm toán trước nộp/công khai; Inquiry KTNB.",
-            "Tiêu chí đánh giá": "KH tài chính bám KH SXKD & được PVN phê duyệt trước khi thực hiện; BCTC năm được kiểm toán trước khi nộp & công khai; có kiểm toán nội bộ; lựa chọn kiểm toán độc lập qua HĐTV PVN thông qua."
-          },
-          {
-            "Hạng mục": "B19. Kiểm soát tuân thủ phân cấp thẩm quyền HĐTV - TGĐ (Control point 8)",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc tuân thủ phân cấp: các nội dung phải trình PVN phê duyệt chủ trương (đầu tư/đầu tư ra ngoài, huy động vốn, nhượng bán tài sản vượt phân cấp, phân phối lợi nhuận); thẩm quyền quyết định của HĐTV vs TGĐ; nghĩa vụ trung thực, không tư lợi, không lạm quyền của người quản lý.",
-            "Sai sót/rủi ro tiềm tàng": "- Quyết định vượt thẩm quyền HĐTV mà chưa có chủ trương PVN;\r\n- TGĐ quyết định nội dung thuộc thẩm quyền HĐTV;\r\n- Người quản lý lợi dụng chức vụ sử dụng vốn/tài sản PVEP thu lợi riêng cho bản thân/gia đình/người khác;\r\n- Không báo cáo kịp thời khi PVEP không thanh toán được nợ nhưng vẫn tăng lương/thưởng;\r\n- Quyết định vượt/không đúng thẩm quyền gây thiệt hại không quy trách nhiệm bồi thường.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 32; Điều 33; Điều 34; Điều 35).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân cấp thẩm quyền HĐTV/TGĐ & đối chiếu các quyết định trong kỳ;\r\n- Nghị quyết HĐTV/PVN cho các nội dung vượt phân cấp;\r\n- Hồ sơ các quyết định lớn (đầu tư, huy động vốn, nhượng bán tài sản, phân phối LN);\r\n- Báo cáo của TGĐ về kết quả điều hành gửi HĐTV.",
-            "Phương pháp kiểm tra": "Inspection các quyết định lớn; đối chiếu phân cấp thẩm quyền; rà soát xung đột lợi ích.",
-            "Tiêu chí đánh giá": "100% quyết định trong đúng thẩm quyền; nội dung vượt phân cấp có chủ trương PVN trước khi thực hiện; không có dấu hiệu lạm quyền/tư lợi; báo cáo kịp thời khi mất khả năng thanh toán; quyết định gây thiệt hại được quy trách nhiệm."
-          },
-          {
-            "Hạng mục": "B20. Kiểm soát quản lý vốn đầu tư & người đại diện tại doanh nghiệp khác (Control point 9)",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc PVEP quản lý phần vốn tại công ty con/công ty liên kết & vai trò người đại diện phần vốn: ban hành quy chế quản lý tài chính công ty con 100% vốn; cử & giám sát người đại diện; yêu cầu người đại diện xin ý kiến trước khi biểu quyết các vấn đề trọng yếu; thu hồi kịp thời lợi nhuận/cổ tức về PVEP.",
-            "Sai sót/rủi ro tiềm tàng": "- Chưa ban hành quy chế QLTC cho công ty con 100% vốn (Đ.40; Đ.37.3.b);\r\n- Người đại diện biểu quyết vấn đề trọng yếu mà chưa xin ý kiến PVEP bằng văn bản (Đ.38.1);\r\n- Không yêu cầu/giám sát thu hồi cổ tức, lợi nhuận về PVEP kịp thời;\r\n- Người đại diện không báo cáo định kỳ tình hình tài chính DN có vốn góp;\r\n- Không kiểm tra, giám sát người đại diện → không phát hiện thiếu sót/yếu kém.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 36; Điều 37.3; Điều 38.1-38.3; Điều 39; Điều 40).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Quy chế QLTC công ty con 100% vốn;\r\n- Văn bản cử & giao nhiệm vụ người đại diện;\r\n- Văn bản xin ý kiến/chỉ đạo người đại diện về các vấn đề trọng yếu;\r\n- Báo cáo định kỳ của người đại diện & chứng từ thu hồi cổ tức/lợi nhuận về PVEP.",
-            "Phương pháp kiểm tra": "Inspection quy chế & hồ sơ người đại diện; Sampling văn bản xin ý kiến; đối chiếu thu hồi cổ tức.",
-            "Tiêu chí đánh giá": "Đã ban hành quy chế QLTC công ty con 100% vốn; người đại diện xin ý kiến PVEP trước khi biểu quyết vấn đề trọng yếu; cổ tức/lợi nhuận được thu hồi kịp thời về PVEP; người đại diện báo cáo định kỳ & được giám sát đầy đủ."
           }
         ]
       }
