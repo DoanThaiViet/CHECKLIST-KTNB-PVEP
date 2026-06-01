@@ -3435,7 +3435,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản tờ trình (số,ngày)\r\n- Biểu mấu kèm theo\r\n- Sổ và số công văn….",
             "Phương pháp kiểm tra": "Đối chiếu lịch chuẩn",
             "Tiêu chí đánh giá": "Trình đúng thời hạn trước ngày 25/12 hàng năm không?Kế hoạch cho cả 2 Đoàn đã đúng và đủ không?",
-            "Actor": "HDTV",
+            "Actor": "Hội đồng thành viên",
             "PIC": "Giang Anh Dũng"
           },
           {
@@ -3459,7 +3459,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản tờ trình (số,ngày)\r\n- Biểu mấu kèm theo\r\n- Sổ và số công văn….\r\n- Người soạn thảo.",
             "Phương pháp kiểm tra": "Đối chiếu trực tiếp",
             "Tiêu chí đánh giá": "Đúng hạn , đủ số lượng và chuẩn biểu mẫu theo yêu cầu.",
-            "Actor": "HĐTV",
+            "Actor": "Hội đồng thành viên",
             "PIC": "Giang Anh Dũng"
           },
           {
@@ -3537,12 +3537,13 @@
           {
             "STT": "1",
             "Bước kiểm tra": "B1. Xây dựng và phê duyệt Kế hoạch giám sát và đánh giá đầutư hàng năm",
-            "Mục tiêu/Nội dung công việc": "3.1_Giám sát và đánh giá đầu tư DADK trong nước (QĐ 1780)",
-            "Sai sót/rủi ro tiềm tàng": "(1) Không đảm bảo nguyên tắc GS&ĐGĐT\r\n(2) Không có kế hoạch GS&ĐGĐT hàng năm\r\n(3) Nội dung GS&ĐGĐT không đầy đủ, phù hợp với quy định của PVEP/Petrovietnam và pháp luật.\r\n(4) Không kịp thời báo cáo kết quả giám sát lên HĐTV, cấp thẩm quyền.\r\n(5) Không đảm bảo công tác Báo cáo Giám sát, đánh giá đầu tư theo quy định của pháp luật.\r\n(6) Chế độ báo cáo Giám sát định kỳ không đảm bảo\r\n(7) Công tác cập nhật lên hệ thống ERP của Tập đoàn",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra trách nhiệm của Ban Chủ trì/TGĐ thực hiện thủ tục xây dựng KH GS&ĐGĐT DADK trong nước hàng năm trình HĐTV",
+            "Sai sót/rủi ro tiềm tàng": "(1) Không đảm bảo nguyên tắc GS&ĐGĐT\r\n(2) Không có kế hoạch GS&ĐGĐT hàng năm\r\n(3) Phạm vi GS&ĐGĐT không đầy đủ",
             "Tham chiếu Điều/khoản": "(1) Điều 21 QĐ 1780\r\n(2) Điều 24, 25 QĐ 1780\r\n(3) ĐIều 22,23 QĐ 1780\r\n(4) Điều 24, 25 QĐ 1780\r\n(5) Điều 25 QĐ 1780\r\n(6)+(7) Điều 25 QĐ 1780",
             "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch GS&ĐGĐT năm 2025-2026\r\n- Báo cáo kết quả GS&ĐGĐT năm 2025-2026\r\n- Báo cáo GSĐGĐT gửi Bộ TC, Petrovietnam 6 tháng/hàng năm.\r\n- Cập nhật thông tin đầu tư lên hệ thống ERP của Petrovietnam.\r\n- Báo cáo về việc thực hiện việt phân cấp quyết định đầu tư.",
             "Phương pháp kiểm tra": "Rà soát các thủ tục GS&ĐGĐT thực hiện tại PVEP so với quy định: Kế hoạch, chế độ báo cáo\r\nRà soát nội dung các báo cáo GS&ĐGĐT chi tiết đảm bảo đầy đủ các yêu cầu GS&ĐGĐT\r\nKiểm tra lại, đánh giá các nội dung, thông tin quan trọng của từng dự án.",
             "Tiêu chí đánh giá": "(1) Kế hoạch được phê duyệt\r\n(2) Tổ chức triển khai Giám sát thực địa\r\n(3) Hồ sơ báo cáo HĐTV, cấp thẩm quyền đảm bảo;\r\n(4) Tình hình xử lý các kiến nghị kịp thời\r\n(5) Nội dung các báo cáo GS&ĐGĐT đảm bảo phản ánh đúng thông tin dự án.",
+            "Actor": "Ban TCĐT",
             "PIC": "Nguyễn Văn Điều"
           },
           {
