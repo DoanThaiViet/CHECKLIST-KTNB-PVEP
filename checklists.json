@@ -476,7 +476,7 @@
         "name": "",
         "items": [
           {
-            "Bước kiểm tra": "Bước 1: Tiếp nhận và thẩm định các  nội dung ĐVĐH trình duyệt \r\n(Control Point 1)",
+            "Bước kiểm tra": "Bước 1: Tiếp nhận và thẩm định  đề xuất của NĐH \r\n(Control Point 1)",
             "Mục tiêu/Nội dung công việc": "1. KHTTLCNT, KHLCNT (Cơ sở xây dựng theo pháp lý DADK, căn cứ phân chia gói thầu, HTLCNT, Dự toán, Kế hoạch triển khai, Loại Hợp đồng, Hồ sơ trình duyệt)\r\n2. Danh sách nhà thầu\r\n3. KQLCNT",
             "Sai sót/rủi ro tiềm tàng": "1. DADK chưa đủ cơ sở pháp lý phê duyệt dự án; Phân chia gói thầu không hợp lý, có dấu hiệu chia nhỏ gói thầu; HTLCNT không đảm bảo khả năng cạnh tranh, minh bạch, hiệu quả; Dự toán không phù hợp; Thời gian triển khai không thực tế tiến độ DADK; Loại hợp đồng không phù hợp tính chất gói; Thiếu tài liệu trình duyệt\r\n2. DSNT thiếu thông tin pháp lý, năng lực tài chính/kỹ thuật, kinh nghiệm tại VN; lập không đúng tiêu chí Điều 13.1\r\n3.  KQLCNT: Phê duyệt KQLCNT khi Dự án chưa đáp ứng đầy đủ điều kiện pháp lý; Nội dung công việc giá gói thầu không phù hợp CTHĐ&NS đã được phê duyệt; Không đúng thẩm quyền theo HĐDK hoặc quy định nội bộ của PVEP; Đánh giá không theo tiêu chí đã đặt ra tại HSMT, tiêu chí Thương mại, kỹ thuật, xử lý tình huống không phù hợp;  Quá trình lựa chọn/trao thầu không bảo đảm cạnh tranh, công bằng, minh bạch hoặc hiệu quả kinh tế theo quy định; Tờ trình thiếu, chưa thể hiện đầy đủ các nội dung theo quy định làm cơ sở xem xét, phê duyệt.",
             "Tham chiếu Điều/khoản": "Điều 12, Điều 13, Điều 14 của QC 1066",
@@ -530,7 +530,7 @@
             "PIC": "Trần Bảo Châu"
           },
           {
-            "Bước kiểm tra": "B6: Gửi thông báo tới NĐH ý kiến phê duyệt triển khai thực hiện. NDH ký kết và thực hiện HĐ (",
+            "Bước kiểm tra": "B6: Gửi thông báo tới NĐH ý kiến phê duyệt triển khai thực hiện.",
             "Mục tiêu/Nội dung công việc": "Đảm bảo tuân thủ chỉ đạo phê duyệt của cấp thẩm quyền",
             "Sai sót/rủi ro tiềm tàng": "Sai khác nội dung thực hiện so với phê duyệt;",
             "Tham chiếu Điều/khoản": "Điều 5 của QC 1066",
@@ -541,100 +541,14 @@
             "PIC": "Trần Bảo Châu"
           },
           {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Trách nhiệm của Đơn vị Điều hành",
-            "Tham chiếu Điều/khoản": "Điều 15",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Đơn vị ĐH cần trình PVEP:\r\n- Thể thức đấu thầu, mua sắm.\r\n- KHTTLCNT trong vòng 45 ngày từ ngày CTHĐ&NS được phê duyệt;\r\n- KHLCNT tối thiểu 30 ngày trước thời hạn cần trình theo quy định tại HĐDK. \r\n- Các phát sinh trong quá trình thực hiện vượt thẩm quyền phân cấp quyết định.",
-            "Sai sót/rủi ro tiềm tàng": "- Chưa xây dựng thể thức đấu thầu, mua sắm được PVEP phê duyệt;\r\n- Trình KHTTLCNT, KHLCNT muộn so với quy định;\r\n- Không trình phê duyệt các phát sinh vượt thẩm quyền trong khi triển khai.",
-            "Tham chiếu Điều/khoản": "Điều 15.1.a",
-            "Phương pháp kiểm tra": "- Kiểm tra thể thức đấu thầu, mua sắm được PVEP phê duyệt;\r\n- Rà soát thời gian trình KHTTLCNT, KHLCNT theo đúng quy định HĐDK, JOA, quy định nội bộ PVEP. \r\n- Rà soát đảm bảo các phát sinh vượt thẩm quyền đã trình PVN, PVEP theo đúng phân cấp thẩm quyền.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "các gói thầu quan trọng hoặc có giá trị lớn gồm: thu nổ địa chấn, giàn khoan, FEED, EPC/EPCI, FSO/FPSO, O&M, Đơn vị ĐH trao đổi, tham vấn PVEP về HSMT/HSYC, phương pháp đánh giá, tiêu chí đánh giá HSDT, kết quả lựa chọn nhà thầu trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK và các thỏa thuận liên quan.",
-            "Sai sót/rủi ro tiềm tàng": "Không xin ý kiến tham vấn PVEP các gói thầu lớn đối với các nội dung quy định tại Điều 15.1b trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK.",
-            "Tham chiếu Điều/khoản": "Điều 15.1.b",
-            "Phương pháp kiểm tra": "Thực hiện rà soát việc tham vấn ý kiến PVEP đối với các gói thầu lớn trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "- Trường hợp chi phí thực tế vượt giá trị trao thầu phê duyệt, Đơn vị ĐH cần thực hiện thủ tục xin phê duyệt cần thiết theo quy định về bổ sung CTHĐ&NS hoặc giá trị điều chỉnh của Hợp đồng trước khi thực hiện.\r\n- Quản lý tiến độ, chất lượng, đánh giá kết quả thực hiện hợp đồng, cập nhật vào cơ sở dữ liệu về nhà thầu",
-            "Sai sót/rủi ro tiềm tàng": "-Tiếp tục triển khai/thanh toán khi chi phí vượt giá trị trao thầu mà chưa xin phê duyệt điều chỉnh.\r\n- Thiếu quản lý tiến độ, chất lượng, đánh giá thực hiện, cập nhật cơ sở dữ liệu về nhà thầu.",
-            "Tham chiếu Điều/khoản": "Điều 15.1.c",
-            "Phương pháp kiểm tra": "-Rà soát giá trị thực tế thực hiện gói thầu, đối chiếu với giá trị trao thầu được phê duyệt, xem xét hồ sơ xin phê duyệt điều chỉnh đã được PVEP/các Bên phê duyệt. \r\n- Đánh giá công tác quản lý tiến độ, chất lượng, kết quả thực hiện gói thầu, cập nhật cơ sở dữ liệu về nhà thầu.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "- Đơn vị ĐH xây dựng, quản lý và cập nhật cơ sở dữ liệu về hoạt động đấu thầu của Đơn vị gồm các thông tin: Danh sách nhà thầu thông tin pháp lý và năng lực, thông tin về vi phạm của nhà thầu (nếu có), hình thức lựa chọn nhà thầu, giá trị hợp đồng, hình thức hợp đồng, giá hàng hóa dịch vụ làm cơ sở xem xét đề xuất và phê duyệt các nội dung liên quan đến hoạt động đấu thầu các DADK.",
-            "Sai sót/rủi ro tiềm tàng": "Chưa xây dưng, hoặc cơ sở dữ liệu về nhà thầu không cập nhật, thiếu thông tin năng lực, vi phạm, giá, hợp đồng...",
-            "Tham chiếu Điều/khoản": "Điều 15.1.d",
-            "Phương pháp kiểm tra": "Rà soát việc xây dựng, quản lý và cập nhật cơ sở dữ liệu về hoạt động đấu thầu của Đơn vị theo quy định tại Điều 15.1d",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Chế độ báo cáo",
-            "Tham chiếu Điều/khoản": "Điều 17",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Trước ngày 30/01 hàng năm, Người Đại diện DADK, Giám đốc/ Trưởng ĐVĐH,  GĐ Dự án báo cáo về tình hình thực hiện hoạt động đấu thầu, các hợp đồng đã ký kết của DADK và đề xuất sơ bộ KHTTLCNT dự kiến cho năm sau.",
-            "Sai sót/rủi ro tiềm tàng": "Báo cáo theo yêu cầu tại Điều 17.1 không được thực hiện, hoặc gửi muộn, thiếu nội dung theo yêu cầu (tình hình đấu thầu, ký kết hợp đồng, sơ bộ KHTTLCNT năm sau)",
-            "Tham chiếu Điều/khoản": "Điều 17.1",
-            "Hồ sơ/Bằng chứng cần thu thập": "Các Báo cáo định kỳ (3 tháng hoặc 6 tháng) về tình hình triển khai hoạt động đấu thầu từ các DADK gửi về Ban chủ trì.",
-            "Phương pháp kiểm tra": "Thực hiện thủ tục rà soát tuân thủ chế độ báo cáo tại Điều 17.1: Người đại diện DADK, Giám đốc/Trưởng ĐVĐH, GĐ DADK thực hiện chế độ báo cáo trước ngày 30/01 theo quy định. Thu thập danh mục các báo cáo của NĐD gửi PVEP, đảm bảo báo cáo được gửi đầy đủ, đúng hạn và có phản hồi/đôn đốc/đánh giá từ PVEP đối với trường hợp thực hiện không đúng quy định.",
-            "Tiêu chí đánh giá": "Tính tuân thủ chế độ báo cáo: Đảm bảo thực hiện báo cáo định kỳ đúng thời hạn quy định (ví dụ: tuân thủ Điều 17.3 về thời hạn báo cáo các chiến dịch lớn).\r\n\r\nChất lượng nội dung báo cáo: Báo cáo phải phản ánh chính xác tiến độ, đầy đủ các thông tin bắt buộc theo quy định tại Điều 17.4 (gồm các gói thầu đã triển khai, đối chiếu so với KHTTLCNT/KHLCNT được duyệt, đánh giá hoạt động trong kỳ và dự kiến kế hoạch kỳ tiếp theo).\r\n\r\nThời hạn xử lý thông tin: Ban chủ trì phải tuân thủ đúng thời hạn quy định (trong vòng 30 ngày kể từ ngày nhận đủ báo cáo từ các DADK) để trình Tổng Giám đốc xem xét báo cáo HĐTV.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Báo cáo định kỳ 6 tháng hoặc theo yêu cầu TGĐ/HĐTV, Trưởng Đại diện dự án, GĐ Dự án DK báo cáo triển khai thực hiện công tác đấu thầu lựa chọn nhà thầu đối với những gói thầu thuộc thẩm quyền của PVEP theo quy định tại HĐDK, TTĐH",
-            "Sai sót/rủi ro tiềm tàng": "Báo cáo định kỳ 6 tháng không thực hiện định kỳ hoặc gửi muộn.",
-            "Tham chiếu Điều/khoản": "Điều 17.2",
-            "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ Ban chủ trì tổng hợp, lập Tờ trình trình Tổng Giám đốc xem xét để báo cáo Hội đồng Thành viên (HĐTV).",
-            "Phương pháp kiểm tra": "Thực hiện thủ tục rà soát tuân thủ chế độ báo cáo tại Điều 17.2 định kỳ 6 tháng. Thu thập danh mục các báo cáo của NĐD gửi PVEP, đảm bảo báo cáo được gửi đầy đủ, đúng hạn và có phản hồi/đôn đốc/đánh giá từ PVEP đối với trường hợp thực hiện không đúng quy định.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Báo cáo các chiến dịch trọng điểm (địa chấn, khoan...) định kỳ 3 tháng hoặc theo yêu cầu của TGĐ/HĐTV, Trưởng dự án, GĐ/Trưởng các ĐVĐH, GĐ Dự án DK báo cáo cập nhật triển khai thực hiện đấu thầu với những công việc thuộc thẩm quyền của PVEP.",
-            "Sai sót/rủi ro tiềm tàng": "Không có báo cáo định kỳ 3 tháng với các chiến dịch lớn; nội dung không phản ánh đúng tiến độ triển khai đấu thầu",
-            "Tham chiếu Điều/khoản": "Điều 17.3",
-            "Phương pháp kiểm tra": "- Kiểm tra tuân thủ chế độ báo cáo quy định tại Điều 17.3 thời hạn và chất lượng các nội dung báo cáo với yêu cầu quản trị tại PVEP",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Báo cáo bao gồm các thông tin: Các gói thầu đã triển khai trong kỳ (so sánh với KHTTLCNT, KHLCNT được phê duyệt), đánh giá thực hiện hoạt động đấu thầu trong kỳ, dự kiến KH kỳ tiếp theo.",
-            "Sai sót/rủi ro tiềm tàng": "Báo cáo không đầy đủ, thiếu các thông tin theo quy định tại Điều 17.4",
-            "Tham chiếu Điều/khoản": "Điều 17.4",
-            "Phương pháp kiểm tra": "Kiểm tra chọn mẫu báo cáo đầy đủ nội dung tuân thủ Điều 17.4",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Rà soát hệ thống",
-            "Mục tiêu/Nội dung công việc": "Trong vòng 30 ngày từ ngày nhận được đầy đủ báo cáo từ các DADK, Ban chủ trì trình TGĐ xem xét báo cáo HĐTV.",
-            "Sai sót/rủi ro tiềm tàng": "Ban chủ trì chậm trình báo cáo hoặc trình thiếu nội dung tổng hợp, đánh giá, kiến nghị",
-            "Tham chiếu Điều/khoản": "Điều 17.5",
-            "Phương pháp kiểm tra": "Kiểm tra chọn mẫu đánh giá tuân thủ thời hạn trình, nội dung báo cáo của Ban chức năng trình TGĐ xem xét và báo cáo HĐTV theo thời hạn quy định.",
-            "PIC": "Trần Bảo Châu"
-          },
-          {
-            "Bước kiểm tra": "Tổ chức kiểm tra, giám sát hoạt động đấu thầu.",
-            "Mục tiêu/Nội dung công việc": "Tổ chức kiểm tra, giám sát hoạt động đấu thầu.",
-            "Sai sót/rủi ro tiềm tàng": "BĐH không thực hiện kiểm tra, giám sát hoạt động đấu thầu định kỳ.",
-            "Tham chiếu Điều/khoản": "Điều 18, Điều 19",
-            "Hồ sơ/Bằng chứng cần thu thập": "Các Biên bản, Thông báo kết luận của các đợt kiểm tra, giám sát hoạt động đấu thầu do PVEP tổ chức.",
-            "Phương pháp kiểm tra": "Kiểm tra việc ban hành quy định, hướng dẫn của BĐH đối với côn tác KTGS hoạt động đấu thầu.\r\n-Thu thập kế hoạch KTGS được TGD phê duyệt. Kiểm tra việc thực hiện (Phạm vi, thời hạn, chế độ báo cáo, Biên bản) để đảm bảo tuân thủ đúng quy định.",
-            "Tiêu chí đánh giá": "Ban Điều hành phải tổ chức các hoạt động kiểm tra, giám sát định kỳ đối với hoạt động đấu thầu tại đơn vị/dự án để kịp thời phát hiện và chấn chỉnh sai sót.",
+            "Bước kiểm tra": "B7: Hậu kiểm",
+            "Mục tiêu/Nội dung công việc": "Đảm bảo NDH tuân thủ trách nhiệm đúng quy định\r\nBDH tuân thủ chế độ báo cáo; thực hiện trách nhiệm kiểm tra giám sát DADK đúng quy định của QC 1066",
+            "Sai sót/rủi ro tiềm tàng": "NDH chưa đề xuất, xây dựng thể thức đấu thầu, mua sắm được PVEP phê duyệt; Trình KHTTLCNT, KHLCNT muộn so với quy định; Không trình phê duyệt các phát sinh vượt thẩm quyền trong khi triển khai; Không xin ý kiến tham vấn PVEP các gói thầu lớn đối với các nội dung quy định tại Điều 15.1b trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK; Tiếp tục triển khai/thanh toán khi chi phí vượt giá trị trao thầu mà chưa xin phê duyệt điều chỉnh; Thiếu quản lý tiến độ, chất lượng, đánh giá thực hiện, cập nhật cơ sở dữ liệu về nhà thầu; Chưa xây dưng, hoặc cơ sở dữ liệu về nhà thầu không cập nhật, thiếu thông tin năng lực, vi phạm, giá, hợp đồng...\r\nBDH không đáp ứng thời hạn và chất lượng nội dung các Báo cáo theo quy định\r\nBĐH không thực hiện kiểm tra, giám sát hoạt động đấu thầu định kỳ.",
+            "Tham chiếu Điều/khoản": "Điều 15, Điều 17, Điều 18, Điều 19 của QC 1066",
+            "Hồ sơ/Bằng chứng cần thu thập": "Các Báo cáo định kỳ (3 tháng hoặc 6 tháng) về tình hình triển khai hoạt động đấu thầu từ các DADK gửi về Ban QLDA; Hồ sơ Ban chủ trì tổng hợp, lập Tờ trình trình Tổng Giám đốc xem xét để báo cáo HĐTV. Các Biên bản, Thông báo kết luận của các đợt kiểm tra, giám sát hoạt động đấu thầu do PVEP tổ chức.",
+            "Phương pháp kiểm tra": "Kiểm tra thể thức đấu thầu, mua sắm được PVEP phê duyệt; Rà soát thời gian trình KHTTLCNT, KHLCNT theo đúng quy định HĐDK, JOA, quy định nội bộ PVEP; Rà soát đảm bảo các phát sinh vượt thẩm quyền đã trình PVN, PVEP theo đúng phân cấp thẩm quyền; Thực hiện rà soát việc tham vấn ý kiến PVEP đối với các gói thầu lớn trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK; Rà soát giá trị thực tế thực hiện gói thầu, đối chiếu với giá trị trao thầu được phê duyệt, xem xét hồ sơ xin phê duyệt điều chỉnh đã được PVEP/các Bên phê duyệt, Đánh giá công tác quản lý tiến độ, chất lượng, kết quả thực hiện gói thầu, cập nhật cơ sở dữ liệu về nhà thầu; 'Kiểm tra việc ban hành quy định, hướng dẫn của BĐH đối với côn tác KTGS hoạt động đấu thầu; Thu thập kế hoạch KTGS được TGD phê duyệt. Kiểm tra việc thực hiện (Phạm vi, thời hạn, chế độ báo cáo, Biên bản) để đảm bảo tuân thủ đúng quy định.",
+            "Tiêu chí đánh giá": "Đảm bảo thực hiện báo cáo định kỳ tuân thủ thời hạn quy định; chất lượng nội dung báo cáo phải phản ánh chính xác tiến độ, đầy đủ các thông tin bắt buộc theo quy định",
+            "Actor": "Ban KSNB",
             "PIC": "Trần Bảo Châu"
           }
         ]
@@ -2513,7 +2427,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Công văn của PVEP trả lời Đơn vị đề xuất.",
             "Phương pháp kiểm tra": "Sampling 10-15 vấn đề (30% các vấn đề (CTHĐ&NS, CT TKTDDK/TDDKBS/ODP/FDP trình HĐTV năm 2025 - dùng mẫu và kết quả từ nhóm KTGS xử lý các vấn đề DADK)",
             "Tiêu chí đánh giá": "- Công văn phát trình trước/sau phê duyệt/thông qua của TV ban TGĐ, HĐTV.\r\n- Nội dung công văn thể hiện đầy đủ ý kiến được  TV ban TGĐ, HĐTV phê duyệt/thông qua.",
-            "Actor": "TV Ban TGĐ, TV Uỷ ban",
+            "Actor": "TV Ban TGĐ, TV các Uỷ ban",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2573,7 +2487,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ hoàn thiện thủ tục sau khi xử lý khẩn cấp",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp hồ sơ",
             "Tiêu chí đánh giá": "- Có đầy đủ hoàn hiện các thủ tục cần thiết",
-            "Actor": "Thành viên các Uỷ Ban",
+            "Actor": "TV các Uỷ Ban",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2585,7 +2499,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- QĐ  Kiểm toán, kiểm kê vật tư, tài sản, giám sát, kiểm tra và thanh tra và các báo cáo kết quả.\r\n-QĐ  kiểm toán kỹ thuật, tài chính, kiểm tra vật tư, tài sản, giám sát đầu tư, giám sát tuân thủ hàng năm đối với ĐVĐH và báo cáo kết quả",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp hồ sơ",
             "Tiêu chí đánh giá": "Có đầy đủ các QĐ và báo cáo kết quả",
-            "Actor": "Ban KTKT, Ban QLDA, Ban TCĐT",
+            "Actor": "Ban chuyên môn",
             "PIC": "Trần Ngọc Ánh"
           }
         ]
@@ -3440,7 +3354,7 @@
           },
           {
             "STT": "B7",
-            "Bước kiểm tra": "Thẩm định (Control point 4)",
+            "Bước kiểm tra": "Thẩm định",
             "Mục tiêu/Nội dung công việc": "Rà soát thẩm định pháp lý và thẩm định nội dung trước khi ban hành.",
             "Sai sót/rủi ro tiềm tàng": "Phiếu thẩm định; ý kiến Ban Pháp chế.",
             "Tham chiếu Điều/khoản": "Điều 14",
