@@ -1528,6 +1528,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Quy trình thực hiện gửi tiền/phân bổ tiền gửi (Điều 13.3);\r\n- Đối chiếu Quy chế VBT vs Quy chế QLTC;\r\n- Danh mục văn bản pháp lý liên quan còn hiệu lực.\r\n- Phương án gửi tiền hàng tháng",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
             "Tiêu chí đánh giá": "Chỉ gửi khi có tiền tạm thời nhàn rỗi; kỳ hạn gửi phù hợp kế hoạch dòng tiền và không ảnh hưởng khả năng thanh toán",
+            "Kết quả kiểm tra": "Đạt",
             "Kiến nghị": "Điều chỉnh kỳ hạn, tăng dự báo dòng tiền, báo cáo trường hợp rút trước hạn"
           },
           {
@@ -1537,7 +1538,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 6.1, 6.2; Điều 6.3 dẫn chiếu Điều 7); báo cáo dòng tiền của PVEP.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình BTGĐ hàng tháng\r\n- Báo cáo dòng tiền tháng (thu/chi);\r\n- Bảng tính mức dự trữ cuối kỳ",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Dự trữ cuối kỳ xấp xỉ ¼ tháng chi tiêu kế tiếp (chênh lệch có giải trình); số dư không kỳ hạn dôi dư được chuyển kịp thời sang tiền gửi có kỳ hạn; báo cáo dòng tiền khớp sao kê (±0%)."
+            "Tiêu chí đánh giá": "Dự trữ cuối kỳ xấp xỉ ¼ tháng chi tiêu kế tiếp (chênh lệch có giải trình); số dư không kỳ hạn dôi dư được chuyển kịp thời sang tiền gửi có kỳ hạn; báo cáo dòng tiền khớp sao kê (±0%).",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1546,7 +1548,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 8.1, 8.2, 8.3); Phụ lục 1 (tiêu chí & thang điểm); quy định NHNN về CAR.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá, bảng chấm điểm xếp hạng TCTD;\r\n- BCTC năm đã kiểm toán/BCTC bán niên soát xét của các TCTD;\r\n- Tờ trình & QĐ phê duyệt danh sách TCTD của HĐTV;\r\n- Bảng kiểm tra điều kiện tối thiểu của từng TCTD.",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Đánh giá & trình HĐTV trước 30/6; rà soát giữa kỳ trước 30/9; điểm chấm khớp Phụ lục 1 (±0); số liệu từ BCTC kiểm toán/soát xét; 100% TCTD trong danh sách đạt điều kiện tối thiểu Điều 8.1.c."
+            "Tiêu chí đánh giá": "Đánh giá & trình HĐTV trước 30/6; rà soát giữa kỳ trước 30/9; điểm chấm khớp Phụ lục 1 (±0); số liệu từ BCTC kiểm toán/soát xét; 100% TCTD trong danh sách đạt điều kiện tối thiểu Điều 8.1.c.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1555,7 +1558,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 9.1, 9.2); danh sách TCTD được HĐTV phê duyệt.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Danh sách TCTD được HĐTV phê duyệt (hiệu lực);\r\n- Văn bản chỉ định đầu mối cung cấp dịch vụ của từng TCTD;\r\n- Danh mục hợp đồng/giao dịch tiền gửi trong kỳ;\r\n- QĐ HĐTV cho các trường hợp đặc biệt (nếu có).",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% giao dịch gửi tiền tại TCTD trong danh sách; mỗi TCTD chỉ 01 đầu mối có văn bản chỉ định hiệu lực; mọi trường hợp đặc biệt đều có QĐ HĐTV."
+            "Tiêu chí đánh giá": "100% giao dịch gửi tiền tại TCTD trong danh sách; mỗi TCTD chỉ 01 đầu mối có văn bản chỉ định hiệu lực; mọi trường hợp đặc biệt đều có QĐ HĐTV.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1564,7 +1568,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 10.1, 10.2, 10.3, 10.4); BCTC TCTD; danh sách phân nhóm TCTD.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Bảng theo dõi dư tiền gửi theo từng TCTD & theo nhóm;\r\n- VCSH của từng TCTD theo BCTC gần nhất;\r\n- Bảng tính tỷ lệ trần (% VCSH, % tổng tiền gửi);\r\n- Phân loại nhóm TCTD (Nhóm I/II.1/II.2/II.3).",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Đồng thời thỏa mãn cả 3 giới hạn Điều 10 tại mọi thời điểm trong kỳ; không có TCTD vượt trần %VCSH; không vượt 35% tổng tiền gửi; tỷ trọng nhóm trong biên độ 60-70% (I) và 30-40% (II)."
+            "Tiêu chí đánh giá": "Đồng thời thỏa mãn cả 3 giới hạn Điều 10 tại mọi thời điểm trong kỳ; không có TCTD vượt trần %VCSH; không vượt 35% tổng tiền gửi; tỷ trọng nhóm trong biên độ 60-70% (I) và 30-40% (II).",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1573,7 +1578,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.1 a-e, Điều 11.2 a-c); Phụ lục 2 (xếp hạng theo lãi suất, trọng số 40%); quy định NHNN về lãi suất.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Bản chào lãi suất các TCTD (kèm dấu thời gian email);\r\n- Phương án gửi tiền đã lập & phê duyệt;\r\n- Bảng tính lãi suất trung bình cộng & xếp hạng theo Phụ lục 2;\r\n- Bảng đối chiếu phân bổ với mức trần Điều 10.",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Có bản chào từ đủ TCTD theo nhóm, trong 24h; xử lý đúng khi lãi suất điều chỉnh làm đổi xếp hạng; lựa chọn theo thứ tự xếp hạng cao→thấp; điểm lãi suất khớp Phụ lục 2; phân bổ không vượt trần Điều 10."
+            "Tiêu chí đánh giá": "Có bản chào từ đủ TCTD theo nhóm, trong 24h; xử lý đúng khi lãi suất điều chỉnh làm đổi xếp hạng; lựa chọn theo thứ tự xếp hạng cao→thấp; điểm lãi suất khớp Phụ lục 2; phân bổ không vượt trần Điều 10.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1582,7 +1588,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.2.a, 11.2.b, 11.2.c); kết quả xếp hạng (Phụ lục 1 & 2).",
             "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân bổ số tiền gửi theo TCTD trong tháng;\r\n- Danh sách hợp đồng đến hạn & quyết định tái tục;\r\n- Bảng theo dõi hạn mức còn lại theo TCTD;\r\n- Ghi nhận dấu hiệu rủi ro TCTD (nếu có).",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Phân bổ đúng thứ tự xếp hạng cao→thấp; tái tục chỉ vào TCTD còn hạn mức & không có dấu hiệu rủi ro; khi số gửi < số đến hạn → giảm vào TCTD xếp hạng/lãi suất thấp; có cập nhật khi TCTD rủi ro."
+            "Tiêu chí đánh giá": "Phân bổ đúng thứ tự xếp hạng cao→thấp; tái tục chỉ vào TCTD còn hạn mức & không có dấu hiệu rủi ro; khi số gửi < số đến hạn → giảm vào TCTD xếp hạng/lãi suất thấp; có cập nhật khi TCTD rủi ro.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1591,16 +1598,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.3.a, 11.3.b; Điều 7.1); báo cáo dòng tiền ước tính.",
             "Hồ sơ/Bằng chứng cần thu thập": "- Bảng tổng hợp kỳ hạn các hợp đồng tiền gửi;\r\n- Bảng tính tỷ trọng kỳ hạn 12 tháng theo TCTD Nhóm II;\r\n- Báo cáo dòng tiền ước tính & lịch đến hạn;\r\n- Phương án cân đối kỳ hạn.",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% hợp đồng có kỳ hạn ≤12 tháng (trừ trường hợp HĐTV phê duyệt); tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II ≤50% trần; kỳ hạn được cân đối theo dòng tiền ước tính & lịch đến hạn."
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra có hay không trường hợp rút tiền gửi trước hạn",
-            "Sai sót/rủi ro tiềm tàng": "- Rút trước hạn không thuộc trường hợp được phép → mất lãi không cần thiết;\r\n- Rút trước hạn không theo thứ tự thời hạn gửi thực tế ít nhất;\r\n- Rút số tiền lớn hơn nhu cầu thanh toán thực tế;\r\n- Thiếu phê duyệt/giải trình cho việc rút trước hạn.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 11.c); Quy trình thực hiện gửi tiền (Điều 13.3).",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Đề xuất/phê duyệt rút tiền gửi trước hạn;\r\n- Hợp đồng tiền gửi liên quan & bảng tính tổn thất lãi;\r\n- Chứng từ thanh toán cấp bách phát sinh;\r\n- Giải trình lý do rút trước hạn.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Mọi lần rút trước hạn đều thuộc trường hợp được phép & có phê duyệt; rút theo thứ tự thời hạn gửi thực tế ít nhất; số tiền rút phù hợp nhu cầu (không dư thừa); có giải trình đầy đủ."
+            "Tiêu chí đánh giá": "100% hợp đồng có kỳ hạn ≤12 tháng (trừ trường hợp HĐTV phê duyệt); tỷ trọng kỳ hạn 12 tháng của TCTD Nhóm II ≤50% trần; kỳ hạn được cân đối theo dòng tiền ước tính & lịch đến hạn.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
@@ -1627,16 +1626,8 @@
             "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 17.1, 17.2; Điều 13.7, 14.5); Phụ lục 3 (biểu mẫu báo cáo).",
             "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo quản lý vốn bằng tiền hàng quý (theo Phụ lục 3);\r\n- Log/văn bản trình HĐTV (ngày trình);\r\n- Bảng đối chiếu số liệu báo cáo vs sổ theo dõi/sao kê;\r\n- Báo cáo bất thường (nếu có).",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "100% báo cáo quý trình HĐTV đúng hạn (trước ngày cuối tháng tiếp theo); đúng biểu mẫu Phụ lục 3; số liệu khớp sổ theo dõi/sao kê (±0%); có báo cáo bất thường khi phát sinh."
-          },
-          {
-            "Hạng mục": "Quản lý vốn bằng tiền",
-            "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB thực hiện trách nhiệm giám sát thực hiện Quy chế trước HĐTV (Điều 15); cơ chế yêu cầu Ban chủ trì cung cấp tài liệu, đối chiếu & báo cáo HĐTV; việc xử lý vi phạm gắn với bình xét thi đua khen thưởng/kỷ luật (Điều 16).",
-            "Sai sót/rủi ro tiềm tàng": "- Ban KSNB không tổ chức giám sát độc lập việc thực hiện Quy chế;\r\n- Ban chủ trì không cung cấp đầy đủ tài liệu khi Ban KSNB yêu cầu;\r\n- Phát hiện vi phạm nhưng không gắn với bình xét thi đua/kỷ luật;\r\n- Không có báo cáo giám sát của Ban KSNB lên HĐTV.",
-            "Tham chiếu Điều/khoản": "QĐ 1668 (Điều 15.1, 15.2; Điều 16); Quy chế TCHĐ Ban KSNB & Quy trình KTGS.",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch & báo cáo giám sát của Ban KSNB lên HĐTV;\r\n- Văn bản yêu cầu/biên bản cung cấp tài liệu của Ban chủ trì;\r\n- Hồ sơ xử lý vi phạm (nếu có) & liên kết bình xét thi đua;\r\n- Sổ theo dõi kiến nghị giám sát.",
-            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
-            "Tiêu chí đánh giá": "Ban KSNB có giám sát độc lập & báo cáo HĐTV; Ban chủ trì cung cấp đầy đủ tài liệu theo yêu cầu; vi phạm (nếu có) được gắn với bình xét thi đua/kỷ luật; kiến nghị giám sát được theo dõi đến khi khắc phục."
+            "Tiêu chí đánh giá": "100% báo cáo quý trình HĐTV đúng hạn (trước ngày cuối tháng tiếp theo); đúng biểu mẫu Phụ lục 3; số liệu khớp sổ theo dõi/sao kê (±0%); có báo cáo bất thường khi phát sinh.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "Tổ chức kế toán, kiểm toán",
@@ -1714,10 +1705,11 @@
             "Hạng mục": "Quản lý vốn bằng tiền",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc quản lý vốn bằng tiền: mở tài khoản đúng quy định; quản lý ngoại tệ theo pháp luật quản lý ngoại hối; kiểm kê tiền mặt định kỳ/đột xuất & lưu biên bản; đối chiếu xác nhận số dư tiền gửi ngân hàng định kỳ; ban hành quy chế quản lý vốn bằng tiền",
             "Sai sót/rủi ro tiềm tàng": "- Mở/sử dụng tài khoản không đúng quy định;\r\n- Không kiểm kê tiền mặt định kỳ/không lưu biên bản kiểm kê;\r\n- Không đối chiếu xác nhận số dư tiền gửi ngân hàng định kỳ → không phát hiện chênh lệch;\r\n- Quản lý ngoại tệ không tuân thủ pháp luật quản lý ngoại hối.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 17.1 a-d; Điều 17.2 a-c); Quy chế quản lý vốn bằng tiền (QĐ 1668 - xem sheet VBT).",
+            "Tham chiếu Điều/khoản": "QĐ 4452 (Điều 17.1 a-d; Điều 17.2 a-c); Quy chế quản lý vốn bằng tiền (QĐ 1668).",
             "Hồ sơ/Bằng chứng cần thu thập": "- Danh sách tài khoản ngân hàng & mục đích;\r\n- Biên bản kiểm kê tiền mặt định kỳ/đột xuất;\r\n- Biên bản đối chiếu/xác nhận số dư tiền gửi ngân hàng;\r\n- Hồ sơ quản lý ngoại tệ.",
             "Phương pháp kiểm tra": "Inspection biên bản kiểm kê & đối chiếu; Confirmation số dư với ngân hàng (mẫu); đối chiếu sổ kế toán.",
-            "Tiêu chí đánh giá": "Tài khoản mở đúng quy định; kiểm kê tiền mặt định kỳ & lưu biên bản đầy đủ; đối chiếu xác nhận số dư ngân hàng định kỳ, chênh lệch (nếu có) được điều chỉnh kịp thời; quản lý ngoại tệ tuân thủ."
+            "Tiêu chí đánh giá": "Tài khoản mở đúng quy định; kiểm kê tiền mặt định kỳ & lưu biên bản đầy đủ; đối chiếu xác nhận số dư ngân hàng định kỳ, chênh lệch (nếu có) được điều chỉnh kịp thời; quản lý ngoại tệ tuân thủ.",
+            "Kết quả kiểm tra": "Đạt"
           },
           {
             "Hạng mục": "B12. Kiểm soát kiểm kê & đánh giá lại tài sản (Control point 5)",
