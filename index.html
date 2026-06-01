@@ -117,7 +117,6 @@
         .cl-group-title{font-size:13px;font-weight:700;color:var(--green);padding:10px 16px;background:var(--green-pale);border-radius:8px;margin-bottom:12px;display:flex;align-items:center;gap:8px;border-left:4px solid var(--green)}
         .cl-group-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--text3);background:var(--white);padding:2px 8px;border-radius:10px}
         .cl-step{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
-        .cl-step.control{border:2px dashed var(--orange)}
         .cl-step-header{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background .1s;user-select:none}
         .cl-step-header:hover{background:var(--green-pale)}
         .cl-step-header.open{background:var(--green-pale);border-bottom:1px solid var(--border-light)}
@@ -188,7 +187,23 @@
         .swim-node.done{background:#c8e6c9;border-color:#2e7d32;color:#1b5e20}
         .swim-node.partial{background:#fff9c4;border-color:#f9a825;color:#e65100}
         .swim-node.fail{background:#ffcdd2;border-color:#c62828;color:#b71c1c}
-        .swim-node.control{border-style:dashed;border-color:var(--orange)}
+        .swim-node.control {
+            border: 2px solid var(--orange);
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            color: #e65100;
+            box-shadow: 0 0 0 rgba(245, 124, 0, 0.4);
+            animation: controlPulse 2s infinite;
+        }
+        .swim-node.control .sn-num {
+            color: #d84315;
+            font-size: 10px;
+            font-weight: 900;
+        }
+        @keyframes controlPulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0.5); }
+            70% { box-shadow: 0 0 0 6px rgba(245, 124, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0); }
+        }
         .swim-node .sn-num{font-size:9px;font-weight:800;color:var(--green);display:block;margin-bottom:2px}
         .swim-legend{display:flex;gap:16px;padding:12px 16px;background:var(--green-pale);border-radius:8px;font-size:11px;color:var(--text2);margin-top:12px;flex-wrap:wrap;align-items:center}
         .swim-legend-item{display:flex;align-items:center;gap:4px}
@@ -415,10 +430,7 @@ function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
     const result=allResults[resultKey]||{};
     const stepComments=allComments.filter(c=>c.sheet===sheetName&&c.stepSTT===String(num));
 
-    const isControl = stepName.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
-    const controlCls = isControl ? ' control' : '';
-
-    h+=`<div class="cl-step${controlCls}"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
+    h+=`<div class="cl-step"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
     fieldMap.forEach(f=>{const val=item[f.key];if(val)h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`});
     h+=`</div>`;
     if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
@@ -607,7 +619,7 @@ async function renderFlow(lv){
         mmd+=`  classDef done fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20\n`;
         mmd+=`  classDef partial fill:#fff9c4,stroke:#f9a825,color:#e65100\n`;
         mmd+=`  classDef fail fill:#ffcdd2,stroke:#c62828,color:#b71c1c\n`;
-        mmd+=`  classDef control stroke-dasharray: 5 5,stroke:#f57c00,stroke-width:2px\n`;
+        mmd+=`  classDef control fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#e65100\n`;
         h+=`<div class="flow-fallback"><div class="mermaid" id="mmd-${chartIdx}">${mmd}</div></div>`;
         chartIdx++;
       }
