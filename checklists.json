@@ -3882,6 +3882,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình HĐTV KH KTNB hàng năm \r\n - NQ/QĐ phê duyệt của HĐTV;\r\n- Văn bản gửi TGĐ, Ban KS PVEP;\r\n- Tài liệu đánh giá rủi ro;\r\n- QĐ 1450/QĐ-TDKT Quy chế Ban KSNB.",
             "Phương pháp kiểm tra": "- Kiểm tra KH KTNB và Tờ trình HĐTV có trình trước ngày 25/12 \r\n- Phê duyệt của HĐTV\r\n- Văn bản gửi TGĐ/Ban KS  trong vòng 7 ngày làm việc; \r\n- Walk-through đánh giá rủi ro\r\n- Đối chiếu cơ sở lập KH KTNB",
             "Tiêu chí đánh giá": "- 100% KH KTNB trình HĐTV trước ngày 25/12 năm trước;\r\n- 100% KH gửi TGĐ/Ban KS PVEP trong vòng 07 ngày sau phê duyệt;\r\n- KH KTNB được lập I5căn cứ theo định hướng rủi ro;\r\n- KH đầy đủ:  Phạm vi, đối tượng, mục tiêu, nội dung, niên độ, thời gian kiểm toán và lịch trình làm việc",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3893,6 +3894,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Văn bản Thông báo KH KTNB;\r\n- Đề cương yêu cầu cung cấp thông tin;\r\n- Biên bản giao nhận tài liệu;\r\n- BC Đơn vị thông báo yếu kém/sai phạm;\r\n- Hồ sơ tài liệu thu thập (BCTC, biên bản, hợp đồng...);\r\n- Email/sổ theo dõi gửi tài liệu đúng hạn.",
             "Phương pháp kiểm tra": "- Kiểm tra thông báo KH và Đề cương\r\n - Tính đầy đủ tài liệu; \r\n - Quy trình thu thập;\r\n - Đối chiếu thông tin thu thập với Đề cương.",
             "Tiêu chí đánh giá": "- 100% cuộc KTNB có Thông báo KH gửi Đơn vị;\r\n- 100% Đề cương được gửi trước cuộc KTNB;\r\n- 100% Đơn vị cung cấp tài liệu trung thực, không che giấu;\r\n- 100% Đơn vị gửi BC đầy đủ, đúng hạn;\r\n- 100% yếu kém/sai phạm được thông báo ngay.",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3904,6 +3906,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình Trưởng Ban KSNB trình HĐTV;\r\n- QĐ thành lập Đoàn KTNB\r\n- Hồ sơ Người phụ trách KTNB\r\n- Hồ sơ Thành viên đoàn\r\n- Bản cam kết không xung đột lợi ích;",
             "Phương pháp kiểm tra": "- Kiểm tra QĐ thành lập Đoàn; \r\n - Kiểm tra ngày trong QĐ thành lập đoàn có trước 30 ngày trước ngày triển khai \r\n - Kiểm tra mẫu TV Đoàn và đối chiếu năng lực; \r\n -  Xác nhận với Ban PTNNL đối với trường hợp xung đột lợi ích hoặc từng chịu trách nhiệm/ làm quản lý tại Đơn vị bị kiểm toán 03 năm gần nhất;\r\n- Hồ sơ Người phụ trách KTNB.\r\n - Đối chiếu BM.01.QT.KTNB.",
             "Tiêu chí đánh giá": "- 100% Đoàn KTNB có QĐ ≥30 ngày trước triển khai;\r\n- 100% sử dụng BM.01.QT.KTNB;\r\n- 100% Thành phần đoàn đảm bảo năng lực, độc lập, không có xung đột lợi ích.\r\n- 100% Người phụ trách có ≥05 năm + ≥02 năm KTNB (Đ.10.2);\r\n- 100% TV đáp ứng tiêu chuẩn chức danh của PVEP;\r\n- Không có TV trong 03 năm gần nhất từng chịu trách nhiệm/ làm quản lý tại Đơn vị bị KT.",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3915,6 +3918,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- KH kiểm toán chi tiết (BM.02.QT.KTNB) - ≥15 ngày trước triển khai;\r\n- Tài liệu phân tích đánh giá rủi ro;\r\n- Hồ sơ xác định mục tiêu/phạm vi/đối tượng/lịch trình/nhân sự/phương pháp;\r\n- KH phân loại kiểm toán trước/đồng thời/sau (Đ.5.4-5.7).",
             "Phương pháp kiểm tra": "- Kiểm tra KH chi tiết; \r\n- Đo lường số ngày trước triển khai;\r\n- Đối chiếu BM.02.QT.KTNB;\r\n- Walk-through đánh giá rủi ro;\r\n- Phỏng vấn Trưởng đoàn về phương pháp.",
             "Tiêu chí đánh giá": "- 100% KH chi tiết lập ≥15 ngày trước triển khai;\r\n- 100% sử dụng BM.02.QT.KTNB;\r\n- KH đầy đủ nội dung;\r\n- Áp dụng định hướng rủi ro (Đ.15);\r\n- Phân loại rõ kiểm toán trước/đồng thời/sau (Đ.5.4-5.7).",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3926,6 +3930,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Bảng phân công nhiệm vụ Thành viên;\r\n- Hồ sơ năng lực TV;\r\n- Bản cam kết tuân thủ đạo đức nghề nghiệp\r\n- Bản cam kết tính độc lập\r\n- Lịch trình kiểm toán phân theo TV.",
             "Phương pháp kiểm tra": "- Kiểm tra Bảng phân công; \r\n- Đối chiếu BM.03.QT.KTNB;\r\n- Kiểm tra mẫu thành viên và đối chiếu năng lực với phần việc;\r\n- Walk-through tuân thủ 5 nguyên tắc đạo đức nghề nghiệp KTNB",
             "Tiêu chí đánh giá": "- 100% có Bảng phân công theo BM.03.QT.KTNB;\r\n- Phân công phù hợp năng lực;\r\n- 100% TV cam kết tuân thủ 5 nguyên tắc đạo đức nghề nghiệp;\r\n- 100% TV cam kết độc lập;\r\n- TV có quyền yêu cầu tài liệu.H8",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3937,6 +3942,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo cá nhân TV Đoàn \r\n- Biên bản KTNB\r\n- Sổ tay kiểm toán/Working Paper;\r\n- Hồ sơ tài liệu thu thập;\r\n- Bằng chứng kiểm toán;\r\n- Phiếu ý kiến Thành viên;\r\n- Văn bản tư vấn/kiến nghị độc lập",
             "Phương pháp kiểm tra": "- Kiểm tra mẫu BM.04a/04b;\r\n- Kiểm tra mẫu chọn;\r\n- Walk-through quy trình kiểm toán; - Thực hiện lại xác minh mẫu;\r\n- Phỏng vấn thành viên Đoàn về tính độc lập.",
             "Tiêu chí đánh giá": "- 100% TV Đoàn lập BM.04a.QT.KTNB;\r\n- 100% cuộc có BM.04b.QT.KTNB;\r\n- Tuân thủ Đ.8 và Đ.9;\r\n- Đầy đủ phạm vi KTNB Đ.5.1-5.7;\r\n- Có tư vấn/kiến nghị độc lập (Đ.5.3);\r\n- 100% phát hiện có bằng chứng đầy đủ.",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3948,6 +3954,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Kiểm tra BC KTNB (BM.05.QT.KTNB) - ngày báo cáo trong vòng 20 ngày làm việc;\r\n- Biên bản KTNB đính kèm (BM.04b);\r\n- Văn bản gửi đến đối tượng liên quan;\r\n- Ý kiến không thống nhất Đơn vị (nếu có);\r\n- BC KTNB hàng năm gửi đồng thời HĐTV/TGĐ/Ban KS PVEP trong vòng 30 ngày kể từ ngày kết thúc năm;\r\n- BC kiểm toán bất thường;",
             "Phương pháp kiểm tra": "- Kiểm tra BC KTNB; \r\n- Kiểm tra, đo lường ngày báo cáo kết quả kiểm toán trong vòng 20 ngày làm việc sau hoàn thành cuộc KTNB;\r\n- Kiểm tra, đo lường ngày BC KTNB hàng năm  trong vòng 30 ngày;\r\n- Walk-through BC bất thường;\r\n- Đối chiếu nội dung BC với Phụ lục I;",
             "Tiêu chí đánh giá": "- 100% BC cuộc KTNB sử dụng BM.05.QT.KTNB;\r\n- 100% BC trình HĐTV trong vòng 20 ngày làm việc;\r\n- 100% BC gửi đối tượng liên quan;\r\n- 100% trường hợp Đơn vị không thống nhất có ý kiến nêu rõ;\r\n- 100% BC KTNB hàng năm gửi trong vòng 30 ngày sau kết thúc năm;\r\n- 100% sai phạm nghiêm trọng có BC bất thường.",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3959,6 +3966,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Biên bản KTNB được HĐTV ký;\r\n- QĐ/Thông báo HĐTV về kết quả KTNB;\r\n- Văn bản chỉ đạo TGĐ và bộ phận thực hiện kiến nghị;\r\n- Hồ sơ HĐTV phê duyệt KH;\r\n- QĐ tổ chức Phòng KTNB, bổ nhiệm Người làm KTNB;\r\n- QĐ cơ chế tiền lương;\r\n- Bằng chứng tạo điều kiện thuận lợi.",
             "Phương pháp kiểm tra": "- Kiểm tra NQ/QĐ HĐTV; \r\n- Walk-through ký Biên bản → QĐ/Thông báo;\r\n- Kiểm tra mẫu 5 trách nhiệm HĐTV và 4 trách nhiệm TGĐ;\r\n- Phỏng vấn Thư ký HĐTV và TGĐ.",
             "Tiêu chí đánh giá": "- 100% Biên bản KTNB được HĐTV ký;\r\n- 100% HĐTV ban hành QĐ/Thông báo;\r\n- 100% HĐTV phê duyệt KH KTNB;\r\n- 100% kiến nghị được HĐTV QĐ thực hiện;\r\n- TGĐ đôn đốc thực hiện;\r\n- Có cơ chế tiền lương cho Người làm KTNB.",
+            "Actor": "Hội đồng thành viên",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3970,6 +3978,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Hồ sơ KTNB đầy đủ tài liệu của từng cuộc (KH, QĐ, BM.01-05);\r\n- Bản in hoặc bản scan toàn bộ tài liệu;\r\n- Sổ theo dõi lưu trữ;\r\n- Bằng chứng cơ chế bảo mật;\r\n- Quy định nội bộ PVEP về lưu trữ;\r\n- BC định kỳ kiểm tra duy trì hồ sơ.",
             "Phương pháp kiểm tra": "- Kiểm tra cách lưu trữ; \r\n- Kiểm tra mẫu 5-10 cuộc và đối chiếu đầy đủ tài liệu;\r\n- Walk-through cơ chế bảo mật; \r\n- Phỏng vấn Phòng KTNB về quy trình lưu trữ.",
             "Tiêu chí đánh giá": "- 100% cuộc KTNB có hồ sơ lưu trữ đầy đủ;\r\n- Hồ sơ lưu giữ theo quy định pháp luật và PVEP;\r\n- Có cơ chế bảo mật;\r\n- Hồ sơ đầy đủ tài liệu BM.01-05;\r\n- Có sổ theo dõi lưu trữ.F14",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           },
           {
@@ -3981,6 +3990,7 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- KH kiểm tra theo dõi việc thực hiện kiến nghị;\r\n- BC Ban/VP/ĐV trong vòng 05 ngày làm việc kể từ ngày kết thúc Quý;\r\n- BC kiểm tra Phòng KTNB gửi HĐTV/TGĐ/Ban KS PVEP;\r\n- Sổ theo dõi việc thực hiện kiến nghị;\r\n- Hồ sơ đánh giá kết quả thực hiện;\r\n- Chương trình đảm bảo và nâng cao chất lượng KTNB.",
             "Phương pháp kiểm tra": "- Kiểm tra BC Ban/VP/ĐV; \r\n- Đo lường số ngày báo cáo trong vòng 05 ngày làm việc kể từ ngày kết thúc Quý;\r\n- Kiểm tra việc thực hiện các kiến nghị của KTNB và đối chiếu;\r\n- Walk-through quy trình theo dõi;",
             "Tiêu chí đánh giá": "- 100% Ban/VP/ĐV có BC thực hiện kiến nghị đúng hạn;\r\n- 100% KTNB có BC kiểm tra gửi HĐTV/TGĐ/Ban KS PVEP;\r\n- Có KH kiểm tra và theo dõi việc thực hiện kiến nghị;\r\n- 100% kiến nghị được theo dõi đến khi hoàn thành;\r\n- Có chương trình đảm bảo chất lượng KTNB;\r\n- Sử dụng kết quả KTNB cải tiến hệ thống KSNB.",
+            "Actor": "Ban KSNB",
             "PIC": "Ngô Thị Tuấn Anh"
           }
         ]
