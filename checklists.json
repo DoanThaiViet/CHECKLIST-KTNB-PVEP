@@ -477,7 +477,7 @@
         "items": [
           {
             "Bước kiểm tra": "Bước 1: Tiếp nhận và thẩm định  đề xuất của NĐH \r\n(Control Point 1)",
-            "Mục tiêu/Nội dung công việc": "1. KHTTLCNT, KHLCNT (Cơ sở xây dựng theo pháp lý DADK, căn cứ phân chia gói thầu, HTLCNT, Dự toán, Kế hoạch triển khai, Loại Hợp đồng, Hồ sơ trình duyệt)\r\n2. Danh sách nhà thầu\r\n3. KQLCNT",
+            "Mục tiêu/Nội dung công việc": "ujjk",
             "Sai sót/rủi ro tiềm tàng": "1. DADK chưa đủ cơ sở pháp lý phê duyệt dự án; Phân chia gói thầu không hợp lý, có dấu hiệu chia nhỏ gói thầu; HTLCNT không đảm bảo khả năng cạnh tranh, minh bạch, hiệu quả; Dự toán không phù hợp; Thời gian triển khai không thực tế tiến độ DADK; Loại hợp đồng không phù hợp tính chất gói; Thiếu tài liệu trình duyệt\r\n2. DSNT thiếu thông tin pháp lý, năng lực tài chính/kỹ thuật, kinh nghiệm tại VN; lập không đúng tiêu chí Điều 13.1\r\n3.  KQLCNT: Phê duyệt KQLCNT khi Dự án chưa đáp ứng đầy đủ điều kiện pháp lý; Nội dung công việc giá gói thầu không phù hợp CTHĐ&NS đã được phê duyệt; Không đúng thẩm quyền theo HĐDK hoặc quy định nội bộ của PVEP; Đánh giá không theo tiêu chí đã đặt ra tại HSMT, tiêu chí Thương mại, kỹ thuật, xử lý tình huống không phù hợp;  Quá trình lựa chọn/trao thầu không bảo đảm cạnh tranh, công bằng, minh bạch hoặc hiệu quả kinh tế theo quy định; Tờ trình thiếu, chưa thể hiện đầy đủ các nội dung theo quy định làm cơ sở xem xét, phê duyệt.",
             "Tham chiếu Điều/khoản": "Điều 12, Điều 13, Điều 14 của QC 1066",
             "Hồ sơ/Bằng chứng cần thu thập": "Văn bản/Hồ sơ đề xuất của Người điều hành (NĐH) hoặc Đơn vị điều hành (ĐVĐH) về KHTTLCNT/KHLCNT; Hồ sơ cơ sở pháp lý phê duyệt đầu tư triển khai Dự án của cấp có thẩm quyền để đối chiếu điều kiện tiên quyết;  Tờ trình đề nghị phê duyệt KHTTLCNT/KHLCNT của Ban QLDA; Tài liệu cơ sở xác định giá gói thầu; Tờ trình và Hồ sơ dự thảo HSMT/HSYC do Người điều hành trình duyệt.\r\nVăn bản đóng góp ý kiến của các Ban chuyên môn phối hợp rà soát kỹ thuật, thương mại, pháp lý; Báo cáo đánh giá HSDT của Người điều hành; Biên bản mở thầu, Biên bản làm việc/làm rõ HSDT (nếu có); Báo cáo thẩm định KQLCNT của BĐH; Tờ trình phê duyệt kết quả lựa chọn nhà thầu trình Tổng Giám đốc hoặc Hội đồng Thành viên PVEP theo đúng phân cấp thẩm quyền.",
@@ -541,7 +541,7 @@
             "PIC": "Trần Bảo Châu"
           },
           {
-            "Bước kiểm tra": "B7: Hậu kiểm",
+            "Bước kiểm tra": "B7: Kiểm tra hệ thống",
             "Mục tiêu/Nội dung công việc": "Đảm bảo NDH tuân thủ trách nhiệm đúng quy định\r\nBDH tuân thủ chế độ báo cáo; thực hiện trách nhiệm kiểm tra giám sát DADK đúng quy định của QC 1066",
             "Sai sót/rủi ro tiềm tàng": "NDH chưa đề xuất, xây dựng thể thức đấu thầu, mua sắm được PVEP phê duyệt; Trình KHTTLCNT, KHLCNT muộn so với quy định; Không trình phê duyệt các phát sinh vượt thẩm quyền trong khi triển khai; Không xin ý kiến tham vấn PVEP các gói thầu lớn đối với các nội dung quy định tại Điều 15.1b trước khi thực hiện thủ tục trình duyệt theo quy định của HĐDK; Tiếp tục triển khai/thanh toán khi chi phí vượt giá trị trao thầu mà chưa xin phê duyệt điều chỉnh; Thiếu quản lý tiến độ, chất lượng, đánh giá thực hiện, cập nhật cơ sở dữ liệu về nhà thầu; Chưa xây dưng, hoặc cơ sở dữ liệu về nhà thầu không cập nhật, thiếu thông tin năng lực, vi phạm, giá, hợp đồng...\r\nBDH không đáp ứng thời hạn và chất lượng nội dung các Báo cáo theo quy định\r\nBĐH không thực hiện kiểm tra, giám sát hoạt động đấu thầu định kỳ.",
             "Tham chiếu Điều/khoản": "Điều 15, Điều 17, Điều 18, Điều 19 của QC 1066",
@@ -2439,7 +2439,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Công văn, email báo cáo trao đổi của Người đại diện  với PVEP.\r\n- Báo cáo định kỳ của Người đại diện.",
             "Phương pháp kiểm tra": "Inquiry & Inspection Inquiry về báo cáo, trao đổi",
             "Tiêu chí đánh giá": "- Có công văn/email báo cáo, trao đổi với PVEP",
-            "Actor": "Người đại diện",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2451,7 +2450,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Quy định hướng dẫn chi tiết về các tiêu chí phân nhóm DA.\r\n- QĐ phân nhóm DA",
             "Phương pháp kiểm tra": "- Inquiry với Ban QLDA.\r\n- Kiểm tra nguyên tắc phân nhóm theo quy định theo QĐ TGĐ",
             "Tiêu chí đánh giá": "Có QĐ phân nhóm và đúng quy định về thời  hạn (trước 15/2 hàng năm).",
-            "Actor": "Tổng Giám đốc",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2463,7 +2461,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo trước họp có bút phê của TV ban TGĐ.\r\n- Báo cáo sau họp;\r\n- Biên bản  họp\r\n- Hồ sơ thủ tục phê duyệt bổ sung đối với tình huống phát sinh (nếu có).",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì, Sampling 3-5 cuộc họp",
             "Tiêu chí đánh giá": "- Có báo cáo trước và sau họp.\r\n- Biên bản họp\r\n- Có đầy đủ hồ sơ thủ tục phê duyệt bổ sung đối với tình huống phát sinh (nếu có).",
-            "Actor": "Ban chủ trì",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2475,7 +2472,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- QĐ giao KHNV trọng tâm và các chỉ tiêu của TGĐ cho TV các Uỷ ban và Người đại diện.\r\n- Báo cáo định kỳ quý, năm của  TV các Uỷ ban và Người đại diện.\r\n- Báo cáo định kỳ tháng của Ban chủ trì",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp báo cáo",
             "Tiêu chí đánh giá": "- Có QĐ giao KHNV trọng tâm và các chỉ tiêu DA.\r\n- Thực hiện đầy đủ các báo cáo định kỳ và đúng thời hạn\r\n- Nội dung đầy đủ so với quy định",
-            "Actor": "Tổng Giám đốc",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2487,7 +2483,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "Hồ sơ hoàn thiện thủ tục sau khi xử lý khẩn cấp",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp hồ sơ",
             "Tiêu chí đánh giá": "- Có đầy đủ hoàn hiện các thủ tục cần thiết",
-            "Actor": "TV các Uỷ Ban",
             "PIC": "Trần Ngọc Ánh"
           },
           {
@@ -2499,7 +2494,6 @@
             "Hồ sơ/Bằng chứng cần thu thập": "- QĐ  Kiểm toán, kiểm kê vật tư, tài sản, giám sát, kiểm tra và thanh tra và các báo cáo kết quả.\r\n-QĐ  kiểm toán kỹ thuật, tài chính, kiểm tra vật tư, tài sản, giám sát đầu tư, giám sát tuân thủ hàng năm đối với ĐVĐH và báo cáo kết quả",
             "Phương pháp kiểm tra": "Inspection; Inquiry với Ban chủ trì cung cấp hồ sơ",
             "Tiêu chí đánh giá": "Có đầy đủ các QĐ và báo cáo kết quả",
-            "Actor": "Ban chuyên môn",
             "PIC": "Trần Ngọc Ánh"
           }
         ]
@@ -3378,7 +3372,7 @@
           },
           {
             "STT": "B9",
-            "Bước kiểm tra": "Ban hành (Control point 5)",
+            "Bước kiểm tra": "Ban hành (Control point 4)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra thẩm quyền ký ban hành VBQLNB theo phân cấp.",
             "Sai sót/rủi ro tiềm tàng": "Quyết định ban hành; phân cấp thẩm quyền.",
             "Tham chiếu Điều/khoản": "Điều 16, 17",
@@ -3390,7 +3384,7 @@
           },
           {
             "STT": "B10",
-            "Bước kiểm tra": "Ban hành (Control point 6)",
+            "Bước kiểm tra": "Ban hành (Control point 5)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra quy trình ban hành: Kiểm tra thành phần hồ sơ trình ký VBQLNB (đối với cả thẩm quyền của TGĐ và HĐTV)",
             "Sai sót/rủi ro tiềm tàng": "Hồ sơ trình ký thiếu các thành phần bắt buộc (Tờ trình, văn bản thẩm định, bản tổng hợp ý kiến); Tờ trình thiếu chữ ký của các bên liên quan.",
             "Tham chiếu Điều/khoản": "Điều 17 (Khoản 1, 2, 4)",
@@ -3402,7 +3396,7 @@
           },
           {
             "STT": "B11",
-            "Bước kiểm tra": "Phổ biến (Control point 7)",
+            "Bước kiểm tra": "Phổ biến",
             "Mục tiêu/Nội dung công việc": "Rà soát công tác phổ biến VBQLNB đến CBNV: kênh, tần suất, training.",
             "Sai sót/rủi ro tiềm tàng": "Bằng chứng đăng tải nội bộ; biên bản tập huấn; danh sách CBNV được phổ biến.",
             "Tham chiếu Điều/khoản": "Điều 19",
@@ -3426,7 +3420,7 @@
           },
           {
             "STT": "B13",
-            "Bước kiểm tra": "Rà soát định kỳ (Control point 8)",
+            "Bước kiểm tra": "Rà soát định kỳ (Control point 6)",
             "Mục tiêu/Nội dung công việc": "Rà soát hệ thống VBQLNB định kỳ: lỗi thời, mâu thuẫn, gap.",
             "Sai sót/rủi ro tiềm tàng": "Báo cáo rà soát VB; KH sửa đổi.",
             "Tham chiếu Điều/khoản": "Điều 21",
