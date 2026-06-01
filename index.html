@@ -555,7 +555,8 @@ async function renderFlow(lv){
             else if(res.ketQua==='Đạt một phần')cls='partial';
             else if(res.ketQua==='Không đạt')cls='fail';
           }
-          const isControl=name.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
+          const fullText = (item[stepKey]||'').toLowerCase();
+          const isControl = fullText.includes('control point') || fullText.includes('ksnb');
           laneData[a].push({col:i,num,name,cls,isControl});
         });
 
@@ -593,13 +594,9 @@ async function renderFlow(lv){
             else if(res.ketQua==='Đạt một phần') classes.push('partial');
             else if(res.ketQua==='Không đạt') classes.push('fail');
           }
-          const isControl = name.toLowerCase().includes('control point')||(item[stepKey]||'').toLowerCase().includes('ksnb');
+          const fullText = (item[stepKey]||'').toLowerCase();
+          const isControl = fullText.includes('control point') || fullText.includes('ksnb');
           if (isControl) classes.push('control');
-          
-          let clsStr = classes.length > 0 ? `:::${classes.join(',')}` : '';
-          
-          // Mermaid supports multiple classes separated by commas, but wait, the ::: shorthand only applies the last class or needs comma?
-          // Actually, in mermaid, multiple classes with ::: shorthand is not standard. Let's use the explicit `class NodeId className` at the end.
           
           mmd+=`  ${id}["${num}. ${name}"]\n`;
           if (classes.length > 0) {
