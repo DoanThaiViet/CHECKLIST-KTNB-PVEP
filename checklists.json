@@ -129,7 +129,7 @@
           },
           {
             "STT": "B3",
-            "Bước kiểm tra": "B3. Ban chủ trì rà soát tổng hợp KHSXKD của PVEP (Control point 1)",
+            "Bước kiểm tra": "B3. Ban chủ trì rà soát tổng hợp KHSXKD của PVEP",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát, tổng hợp KHSXKD của PVEP: tính chính xác số học, cơ sở điều chỉnh đề xuất đơn vị, phản hồi đơn vị về điều chỉnh.",
             "Sai sót/rủi ro tiềm tàng": "- Tổng hợp sai số học/sai phân loại CP;\r\n- Điều chỉnh đề xuất đơn vị không có cơ sở;\r\n- Không thông báo lại đơn vị về điều chỉnh;\r\n- Không đối chiếu với KH SXKD 5 năm đã duyệt.",
             "Tham chiếu Điều/khoản": "QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 14, PL 6); KH SXKD 5 năm đã phê duyệt; Định mức CPQL.",
@@ -141,7 +141,7 @@
           },
           {
             "STT": "B4",
-            "Bước kiểm tra": "B4. TGĐ xem xét thông qua và trình HĐTV (Control point 2)",
+            "Bước kiểm tra": "B4. TGĐ xem xét thông qua và trình HĐTV (Control point 1)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét bản tổng hợp KHSXKD và quyết định trình HĐTV, ý kiến điều chỉnh trước khi trình.",
             "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua hình thức, không có biên bản/bút phê thực chất;\r\n- Trình HĐTV mà chưa đủ hồ sơ;\r\n- Không tham vấn các ban chức năng liên quan.",
             "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 6)",
@@ -165,7 +165,7 @@
           },
           {
             "STT": "B6",
-            "Bước kiểm tra": "B6. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 3)",
+            "Bước kiểm tra": "B6. Ban KSNB rà soát theo chỉ đạo của HĐTV",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát KHSXKD theo chỉ đạo HĐTV: thời điểm phát hành phiếu ý kiến BM.KSNB, nội dung thực chất của phiếu, độ độc lập.",
             "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành SAU khi HĐTV đã ban hành NQ → mất tính kiểm soát;\r\n- Phiếu ý kiến mang tính thủ tục, không nêu phát hiện;\r\n- Không có cơ chế Ban KSNB tiếp cận hồ sơ đầy đủ;\r\n- Phiếu ý kiến không được lưu hồ sơ tại Ban KSNB.",
             "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB",
@@ -189,7 +189,7 @@
           },
           {
             "STT": "B8",
-            "Bước kiểm tra": "B8. Ban chủ trì rà soát đề xuất giao KHSXKD, KHNV & CPHĐ (Control point 4)",
+            "Bước kiểm tra": "B8. Ban chủ trì rà soát đề xuất giao KHSXKD, KHNV & CPHĐ",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc rà soát đề xuất giao KHSXKD/KHNV/CPHĐ cho từng đơn vị: cơ sở phân bổ, đối chiếu định mức CPQL, biểu mẫu KHSXKD/CPQL.",
             "Sai sót/rủi ro tiềm tàng": "- Đề xuất giao KH không bám sát KH đã được PVN duyệt;\r\n- Phân bổ CPQL/CPHĐ không công bằng, thiếu cơ sở;\r\n- Bỏ qua đối chiếu định mức CPQL → dư địa lạm chi;\r\n- Sử dụng sai biểu mẫu.",
             "Tham chiếu Điều/khoản": "QĐ phê duyệt KH của PVN (Bước 7); QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 14, PL 7); Quy định về định mức CPQL.",
@@ -201,7 +201,7 @@
           },
           {
             "STT": "B9",
-            "Bước kiểm tra": "B9. TGĐ xem xét thông qua và trình HĐTV (Control point 5)",
+            "Bước kiểm tra": "B9. TGĐ xem xét thông qua và trình HĐTV (Control point 2)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét đề xuất giao KH và trình HĐTV: ý kiến điều chỉnh trước khi trình.",
             "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua mà không kiểm tra cơ sở phân bổ;\r\n- Trình HĐTV mà chưa hoàn thiện hồ sơ;\r\n- Bỏ qua tham vấn các ban chức năng.",
             "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 7)",
@@ -225,7 +225,7 @@
           },
           {
             "STT": "B11",
-            "Bước kiểm tra": "B11. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 6)",
+            "Bước kiểm tra": "B11. Ban KSNB rà soát theo chỉ đạo của HĐTV",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát đề xuất giao KH theo chỉ đạo HĐTV: phiếu ý kiến BM.KSNB, đối chiếu Quy trình KTGS hiện hành.",
             "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành SAU NQ HĐTV;\r\n- Phiếu ý kiến không trích dẫn Quy trình KTGS;\r\n- Không có rà soát độc lập về cơ sở phân bổ.",
             "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB",
@@ -237,7 +237,7 @@
           },
           {
             "STT": "B12",
-            "Bước kiểm tra": "B12. Quản lý giám sát thực hiện KH - Tổng hợp báo cáo (Control point 7)",
+            "Bước kiểm tra": "B12. Quản lý giám sát thực hiện KH - Tổng hợp báo cáo",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban chủ trì  giám sát thực hiện KH và tổng hợp báo cáo: tần suất báo cáo, chất lượng tổng hợp, cảnh báo sớm sai lệch.",
             "Sai sót/rủi ro tiềm tàng": "- Báo cáo giám sát chậm;\r\n- Số liệu tổng hợp sai/không đối chiếu;\r\n- Không có cơ chế cảnh báo sớm khi sai lệch KH >x%;\r\n- Bỏ sót đơn vị/dự án.",
             "Tham chiếu Điều/khoản": "QĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 11, PL8) - chế độ báo cáo; QĐ Petrovietnam về báo cáo quản trị",
@@ -249,7 +249,7 @@
           },
           {
             "STT": "B13",
-            "Bước kiểm tra": "B13. TGĐ xem xét thông qua và trình HĐTV (Control point 8)",
+            "Bước kiểm tra": "B13. TGĐ xem xét thông qua và trình HĐTV (Control point 3)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét báo cáo giám sát KH và trình HĐTV: phản hồi của TGĐ, chỉ đạo điều hành nếu có dấu hiệu sai lệch.",
             "Sai sót/rủi ro tiềm tàng": "- TGĐ duyệt báo cáo hình thức;\r\n- Không có chỉ đạo điều hành khi có sai lệch;\r\n- Trình HĐTV mà không cảnh báo phát hiện.",
             "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ; QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 13, PL 8)",
@@ -273,7 +273,7 @@
           },
           {
             "STT": "B15",
-            "Bước kiểm tra": "B15. Ban KSNB rà soát theo chỉ đạo của HĐTV (Control point 9)",
+            "Bước kiểm tra": "B15. Ban KSNB rà soát theo chỉ đạo của HĐTV",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc Ban KSNB rà soát báo cáo giám sát trước khi HĐTV trình PVN: phiếu ý kiến BM.KSNB, đối chiếu báo cáo nội bộ.",
             "Sai sót/rủi ro tiềm tàng": "- Phiếu ý kiến BM.KSNB phát hành sau khi HĐTV đã trình PVN;\r\n- Không phát hiện chênh lệch giữa báo cáo nội bộ và báo cáo trình PVN;\r\n- Mang tính thủ tục.",
             "Tham chiếu Điều/khoản": "Quy chế TCHĐ Ban KSNB và Quy trình KTGS; Điều lệ PVEP - vai trò Ban KSNB; QĐ QĐ Quản trị Chiến lược Kế hoạch PVEP - QĐ 1761 (Điều 19.6).",
@@ -309,7 +309,7 @@
           },
           {
             "STT": "B18",
-            "Bước kiểm tra": "B18. TGĐ xem xét và thông qua trình HĐTV (Control point 10)",
+            "Bước kiểm tra": "B18. TGĐ xem xét và thông qua trình HĐTV (Control point 4)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra việc TGĐ xem xét báo cáo đánh giá KH năm và trình HĐTV: ý kiến của TGĐ về kết quả thực hiện, đề xuất xử lý vấn đề.",
             "Sai sót/rủi ro tiềm tàng": "- TGĐ thông qua mà không có ý kiến đánh giá cá nhân;\r\n- Không đề xuất xử lý vấn đề trọng yếu;\r\n- Trình HĐTV không kèm kế hoạch khắc phục.",
             "Tham chiếu Điều/khoản": "Điều lệ PVEP - thẩm quyền TGĐ; Phân công nhiệm vụ BTGĐ",
@@ -2292,7 +2292,7 @@
             "Sai sót/rủi ro tiềm tàng": "- TGĐ không thực hiện phân nhóm theo quy định.\r\n- Thời hạn ban hành phân nhóm không đúng quy định",
             "Tham chiếu Điều/khoản": "Điều 8  -  Quy chế QLDADK (QĐ 1398)",
             "Hồ sơ/Bằng chứng cần thu thập": "- Quy định hướng dẫn chi tiết về các tiêu chí phân nhóm DA.\r\n- QĐ phân nhóm DA",
-            "Phương pháp kiểm tra": "- Inquiry với Ban QLDA.\r\n- Kiểm tra nguyên tắc phân nhóm theo quy định theo QĐ TGĐ",
+            "Phương pháp kiểm tra": "- Inquiry với Ban QLDA.\r\n- Kiểm tra tiêu chí phân nhóm theo quy định theo QĐ TGĐ",
             "Tiêu chí đánh giá": "Có QĐ phân nhóm và đúng quy định về thời  hạn (trước 15/2 hàng năm).",
             "PIC": "Trần Ngọc Ánh"
           },
@@ -3144,7 +3144,7 @@
           },
           {
             "STT": "B3",
-            "Bước kiểm tra": "Xây dựng (Control point 2)",
+            "Bước kiểm tra": "Xây dựng",
             "Mục tiêu/Nội dung công việc": "Kiểm tra bổ sung, điều chỉnh kế hoạch",
             "Sai sót/rủi ro tiềm tàng": "Tự ý soạn thảo văn bản ngoài kế hoạch không theo yêu cầu/đề xuất; không báo cáo điều chỉnh tiến độ đối với văn bản chậm trễ.",
             "Tham chiếu Điều/khoản": "Điều 9",
@@ -3168,7 +3168,7 @@
           },
           {
             "STT": "B5",
-            "Bước kiểm tra": "Xây dựng (Control point 3)",
+            "Bước kiểm tra": "Xây dựng (Control point 2)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra trình tự, thủ tục soạn thảo",
             "Sai sót/rủi ro tiềm tàng": "Vi phạm thời gian lấy ý kiến đề cương/dự thảo; không trình Phó Tổng giám đốc phụ trách xem xét theo quy trình.",
             "Tham chiếu Điều/khoản": "Điều 13",
@@ -3216,7 +3216,7 @@
           },
           {
             "STT": "B9",
-            "Bước kiểm tra": "Ban hành (Control point 4)",
+            "Bước kiểm tra": "Ban hành (Control point 3)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra thẩm quyền ký ban hành VBQLNB theo phân cấp.",
             "Sai sót/rủi ro tiềm tàng": "Quyết định ban hành; phân cấp thẩm quyền.",
             "Tham chiếu Điều/khoản": "Điều 16, 17",
@@ -3228,7 +3228,7 @@
           },
           {
             "STT": "B10",
-            "Bước kiểm tra": "Ban hành (Control point 5)",
+            "Bước kiểm tra": "Ban hành (Control point 4)",
             "Mục tiêu/Nội dung công việc": "Kiểm tra quy trình ban hành: Kiểm tra thành phần hồ sơ trình ký VBQLNB (đối với cả thẩm quyền của TGĐ và HĐTV)",
             "Sai sót/rủi ro tiềm tàng": "Hồ sơ trình ký thiếu các thành phần bắt buộc (Tờ trình, văn bản thẩm định, bản tổng hợp ý kiến); Tờ trình thiếu chữ ký của các bên liên quan.",
             "Tham chiếu Điều/khoản": "Điều 17 (Khoản 1, 2, 4)",
@@ -3264,7 +3264,7 @@
           },
           {
             "STT": "B13",
-            "Bước kiểm tra": "Rà soát định kỳ (Control point 6)",
+            "Bước kiểm tra": "Rà soát định kỳ (Control point 5)",
             "Mục tiêu/Nội dung công việc": "Rà soát hệ thống VBQLNB định kỳ: lỗi thời, mâu thuẫn, gap.",
             "Sai sót/rủi ro tiềm tàng": "Báo cáo rà soát VB; KH sửa đổi.",
             "Tham chiếu Điều/khoản": "Điều 21",
@@ -3539,17 +3539,17 @@
             "Bước kiểm tra": "B1. Xây dựng và phê duyệt Kế hoạch giám sát và đánh giá đầutư hàng năm",
             "Mục tiêu/Nội dung công việc": "Kiểm tra trách nhiệm của Ban Chủ trì/TGĐ thực hiện thủ tục xây dựng KH GS&ĐGĐT DADK trong nước hàng năm trình HĐTV",
             "Sai sót/rủi ro tiềm tàng": "(1) Không đảm bảo nguyên tắc GS&ĐGĐT\r\n(2) Không có kế hoạch GS&ĐGĐT hàng năm\r\n(3) Phạm vi GS&ĐGĐT không đầy đủ",
-            "Tham chiếu Điều/khoản": "(1) Điều 21 QĐ 1780\r\n(2) Điều 24, 25 QĐ 1780\r\n(3) ĐIều 22,23 QĐ 1780\r\n(4) Điều 24, 25 QĐ 1780\r\n(5) Điều 25 QĐ 1780\r\n(6)+(7) Điều 25 QĐ 1780",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch GS&ĐGĐT năm 2025-2026\r\n- Báo cáo kết quả GS&ĐGĐT năm 2025-2026\r\n- Báo cáo GSĐGĐT gửi Bộ TC, Petrovietnam 6 tháng/hàng năm.\r\n- Cập nhật thông tin đầu tư lên hệ thống ERP của Petrovietnam.\r\n- Báo cáo về việc thực hiện việt phân cấp quyết định đầu tư.",
-            "Phương pháp kiểm tra": "Rà soát các thủ tục GS&ĐGĐT thực hiện tại PVEP so với quy định: Kế hoạch, chế độ báo cáo\r\nRà soát nội dung các báo cáo GS&ĐGĐT chi tiết đảm bảo đầy đủ các yêu cầu GS&ĐGĐT\r\nKiểm tra lại, đánh giá các nội dung, thông tin quan trọng của từng dự án.",
-            "Tiêu chí đánh giá": "(1) Kế hoạch được phê duyệt\r\n(2) Tổ chức triển khai Giám sát thực địa\r\n(3) Hồ sơ báo cáo HĐTV, cấp thẩm quyền đảm bảo;\r\n(4) Tình hình xử lý các kiến nghị kịp thời\r\n(5) Nội dung các báo cáo GS&ĐGĐT đảm bảo phản ánh đúng thông tin dự án.",
+            "Tham chiếu Điều/khoản": "(1) Điều 24, 25 QĐ 1780\r\n(2) ĐIều 22,23 QĐ 1780\r\n(3) Điều 24, 25 QĐ 1780\r\n(4) Điều 25 QĐ 1780",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình của TGĐ xây dựng KH GS&ĐGĐT 2025-2026\r\n- Phê duyệt KH của HĐTV về GS&ĐGĐT năm 2025-2026",
+            "Phương pháp kiểm tra": "- Đối chiếu nội dung đề xuất/phê duyệt KH và các nguyên tắc/phạm vi yêu cầu GS&ĐGĐT.\r\n- Đối chiếu quy định về thời hạn lập/phê duyệt KH",
+            "Tiêu chí đánh giá": "- Thời hạn\r\nKế hoạch giám sát và đánh giá đầu tư hàng năm của PVEP và điều chỉnh (nếu có)\r\nTrước ngày 25 tháng 12 hàng năm",
             "Actor": "Ban TCĐT",
             "PIC": "Nguyễn Văn Điều"
           },
           {
             "STT": "2",
             "Bước kiểm tra": "B2. Xây dựng và phê duyệt Chương trình Giám sát và đánh giá đầu tư hàng năm",
-            "Mục tiêu/Nội dung công việc": "3.1_Giám sát và đánh giá đầu tư DADK trong nước (QĐ 1780)",
+            "Mục tiêu/Nội dung công việc": "Kiểm tra việc triển khai Kế hoạch GS&ĐGĐT của TGĐ",
             "Sai sót/rủi ro tiềm tàng": "(1) Không đảm bảo nguyên tắc GS&ĐGĐT\r\n(2) Không có kế hoạch GS&ĐGĐT hàng năm\r\n(3) Nội dung GS&ĐGĐT không đầy đủ, phù hợp với quy định của PVEP/Petrovietnam và pháp luật.\r\n(4) Không kịp thời báo cáo kết quả giám sát lên HĐTV, cấp thẩm quyền.\r\n(5) Không đảm bảo công tác Báo cáo Giám sát, đánh giá đầu tư theo quy định của pháp luật.\r\n(6) Chế độ báo cáo Giám sát định kỳ không đảm bảo\r\n(7) Công tác cập nhật lên hệ thống ERP của Tập đoàn",
             "Tham chiếu Điều/khoản": "(1) Điều 21 QĐ 1780\r\n(2) Điều 24, 25 QĐ 1780\r\n(3) ĐIều 22,23 QĐ 1780\r\n(4) Điều 24, 25 QĐ 1780\r\n(5) Điều 25 QĐ 1780\r\n(6)+(7) Điều 25 QĐ 1780",
             "Hồ sơ/Bằng chứng cần thu thập": "- Kế hoạch GS&ĐGĐT năm 2025-2026\r\n- Báo cáo kết quả GS&ĐGĐT năm 2025-2026\r\n- Báo cáo GSĐGĐT gửi Bộ TC, Petrovietnam 6 tháng/hàng năm.\r\n- Cập nhật thông tin đầu tư lên hệ thống ERP của Petrovietnam.\r\n- Báo cáo về việc thực hiện việt phân cấp quyết định đầu tư.",
@@ -3622,8 +3622,8 @@
             "Bước kiểm tra": "B1. Xây dựng và phê duyệt Kế hoạch giám sát và đánh giá đầutư hàng năm",
             "Mục tiêu/Nội dung công việc": "TGĐ chỉ đạo xây dựng và trình HĐTV phê duyệt Kế hoạch giám sát và đánh giá đầu tư hàng năm đúng thời hạn và đầy đủ nội dung",
             "Sai sót/rủi ro tiềm tàng": "- Không trình hoặc trình HĐTV KH GS&ĐGĐT muộn hơn 25/12 năm trước \r\n- KH không đầy đủ nội dung về mục đích, phạm vi, đối tượng, nội dung, thời gian, thành phần đoàn.\r\n- Không tham chiếu Quy định Quản ly đầu tư ra nước ngoài trong hoạt động dầu khí của PVEP (QĐ 1189/QĐ-TDKT ngày 19/6/2025)",
-            "Tham chiếu Điều/khoản": "Điều 24-26 QĐ 1189",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình HĐTV KH GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt của HĐTV;\r\n- QĐ 1189.",
+            "Tham chiếu Điều/khoản": "Điều 25-27 QĐ 1189",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình HĐTV KH GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt của HĐTV;",
             "Phương pháp kiểm tra": "- Kiểm tra KH GS&ĐGĐT và Tờ trình HĐTV có trình trước ngày 25/12 \r\n- Phê duyệt của HĐTV",
             "Tiêu chí đánh giá": "- 100% KH GS&ĐGĐT trình HĐTV trước ngày 25/12 năm trước;\r\n- KH GS&ĐGĐT được lập căn cứ theo quy định QĐ 1189;\r\n- KH đầy đủ:  mục đích, phạm vi, đối tượng, nội dung, thời gian, thành phần đoàn.",
             "Actor": "Ban TCĐT, HĐTV",
@@ -3634,8 +3634,8 @@
             "Bước kiểm tra": "B2. Xây dựng và phê duyệt Chương trình Giám sát và đánh giá đầu tư hàng năm",
             "Mục tiêu/Nội dung công việc": "Xây dựng Chương trình GS&ĐGĐT và phê duyệt Chương trình hàng năm đúng với Kế hoạch GS&ĐGĐT HĐTV phê duyệt",
             "Sai sót/rủi ro tiềm tàng": "- Không có chương trình hoặc chương trình không đúng với Kế hoạch GS&ĐGĐT HĐTV phê duyệt. \r\n- KH không đầy đủ nội dung GS&ĐGĐT theo quy định\r\n- Không tham chiếu Quy định Quản ly đầu tư ra nước ngoài trong hoạt động dầu khí của PVEP (QĐ 1189/QĐ-TDKT ngày 19/6/2025)",
-            "Tham chiếu Điều/khoản": "Điều 24 và 26 QĐ 1189",
-            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ Chương trình GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt củaTGĐ;\r\n- QĐ 1189.",
+            "Tham chiếu Điều/khoản": "Điều 26-27 QĐ 1189",
+            "Hồ sơ/Bằng chứng cần thu thập": "- Tờ trình TGĐ Chương trình GSĐGĐT hàng năm \r\n - NQ/QĐ phê duyệt củaTGĐ;",
             "Phương pháp kiểm tra": "- Kiểm tra Chương trình GS&ĐGĐT và Tờ trình HĐTV có trình và phù hợp với KH GS&ĐGĐT  \r\n- Phê duyệt của TGĐ",
             "Tiêu chí đánh giá": "- 100% Chương trình GS&ĐGĐT phù hợp với KH GS&ĐGĐT;\r\n- Chương trình GS&ĐGĐT được lập căn cứ theo quy định QĐ 1189 và KH GS&ĐGĐT được duyệt;\r\n- Chương trình đầy đủ: đối tượng, nội dung, thời gian, thành phần đoàn.",
             "Actor": "Ban TCĐT, TGĐ",
