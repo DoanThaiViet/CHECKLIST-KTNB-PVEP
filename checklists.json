@@ -1185,20 +1185,8 @@
         "items": [
           {
             "Hạng mục": "Kiểm soát bảo toàn & phát triển vốn",
-            "Mục tiêu/Nội dung công việc": "Theo dõi riêng từng nguồn vốn của PVEP",
-            "Sai sót/rủi ro tiềm tàng": "Không hạch toán/theo dõi riêng nguồn vốn; sử dụng vốn sai mục đích",
-            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 5",
-            "Hồ sơ/Bằng chứng cần thu thập": "BCTC, sổ cái, thuyết minh BCTC, hồ sơ góp/tăng vốn",
-            "Phương pháp kiểm tra": "Đối chiếu sổ kế toán, BCTC, thuyết minh nguồn vốn",
-            "Tiêu chí đánh giá": "Có theo dõi riêng vốn PVN đầu tư, vốn PVEP tự huy động và các nguồn vốn khác; số liệu khớp giữa sổ kế toán, BCTC và thuyết minh",
-            "Kết quả kiểm tra": "Đạt",
-            "Kiến nghị": "Yêu cầu phân loại, hạch toán lại và hoàn thiện thuyết minh nguồn vốn",
-            "PIC": "Lê Thùy Dương"
-          },
-          {
-            "Hạng mục": "Kiểm soát bảo toàn & phát triển vốn",
-            "Mục tiêu/Nội dung công việc": "Thay đổi vốn điều lệ đúng thẩm quyền",
-            "Sai sót/rủi ro tiềm tàng": "Tăng/giảm vốn điều lệ chưa được phê duyệt hoặc chưa đăng ký thay đổi",
+            "Mục tiêu/Nội dung công việc": "Điều chỉnh vốn điều lệ đúng thẩm quyền",
+            "Sai sót/rủi ro tiềm tàng": "- QĐ tăng/giảm vốn điều lệ vượt thẩm quyền (HĐTV Petrovietnam)\r\n- Chưa đăng ký thay đổi đúng pháp luật sau khi được phê duyệt điều chỉnh VĐL\r\n- VCSH năm lớn hơn vốn điều lệ đã duyệt nhưng không nộp phần chênh lệch về PVN (Đ.6.5);",
             "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 6",
             "Hồ sơ/Bằng chứng cần thu thập": "Nghị quyết/quyết định HĐTV, PVN; hồ sơ đăng ký doanh nghiệp; chứng từ góp vốn",
             "Phương pháp kiểm tra": "Kiểm tra hồ sơ pháp lý, quyết định phê duyệt",
@@ -1211,7 +1199,7 @@
             "Hạng mục": "Kiểm soát bảo toàn & phát triển vốn",
             "Mục tiêu/Nội dung công việc": "Bảo toàn và phát triển vốn",
             "Sai sót/rủi ro tiềm tàng": "- Không đánh giá mức độ bảo toàn vốn định kỳ;\r\n- VCSH năm lớn hơn vốn điều lệ đã duyệt nhưng không nộp phần chênh lệch về PVN (Đ.6.5);\r\n- Trích lập dự phòng thiếu/không đúng (giảm giá tồn kho, phải thu khó đòi, tổn thất đầu tư tài chính dài hạn...);\r\n- Không loại trừ đúng các yếu tố khách quan khi đánh giá bảo toàn vốn.",
-            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 6, 7",
+            "Tham chiếu Điều/khoản": "QĐ 4452 – Điều 7",
             "Hồ sơ/Bằng chứng cần thu thập": "- Báo cáo đánh giá bảo toàn vốn định kỳ;\r\n- BCTC năm (VCSH vs vốn điều lệ) & chứng từ nộp chênh lệch về PVN (nếu có);\r\n- Bảng kê trích lập các khoản dự phòng;\r\n- Báo cáo biến động VCSH gửi PVN.",
             "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
             "Tiêu chí đánh giá": "Đánh giá bảo toàn vốn đầy đủ theo kỳ; phần chênh lệch VCSH > vốn điều lệ đã nộp PVN (hoặc có phương án); dự phòng trích đúng & đủ; báo cáo biến động vốn gửi PVN đúng hạn.",
@@ -1289,12 +1277,12 @@
           {
             "Hạng mục": "Quản lý vốn bằng tiền",
             "Mục tiêu/Nội dung công việc": "Quản lý tiền mặt tại quỹ",
-            "Sai sót/rủi ro tiềm tàng": "- Chưa có/ chưa cập nhật quyết định hạn mức tồn quỹ tiền mặt;\r\n- Tồn quỹ thực tế vượt hạn mức nhưng không chuyển vào tài khoản TCTD;\r\n- Chi tiền mặt sai mục đích (ngoài tạm ứng, công tác phí, đào tạo...);\r\n- Không kiểm kê/đối chiếu định kỳ cuối quý.",
+            "Sai sót/rủi ro tiềm tàng": "Chưa có/ chưa cập nhật quyết định hạn mức tồn quỹ tiền mặt",
             "Tham chiếu Điều/khoản": "QĐ 1668 – Điều 5",
-            "Hồ sơ/Bằng chứng cần thu thập": "- QĐ hạn mức tồn quỹ tiền mặt của TGĐ;\r\n- Sổ quỹ tiền mặt, biên bản kiểm kê quỹ cuối quý/cuối năm;\r\n- Biên bản đối chiếu thủ quỹ - kế toán tiền mặt;\r\n- Chứng từ chi tiền mặt mẫu.",
-            "Phương pháp kiểm tra": "Kiểm kê quỹ, đối chiếu sổ quỹ",
-            "Tiêu chí đánh giá": "Có QĐ hạn mức tồn quỹ còn hiệu lực; tồn quỹ ≤ hạn mức (hoặc phần vượt đã chuyển TCTD); chi đúng mục đích; có biên bản kiểm kê & đối chiếu định kỳ; chênh lệch thừa/thiếu được xử lý theo quy định.",
-            "Kiến nghị": "Nộp bớt tiền vào ngân hàng, kiểm kê định kỳ, xử lý chênh lệch",
+            "Hồ sơ/Bằng chứng cần thu thập": "QĐ hạn mức tồn quỹ tiền mặt của TGĐ",
+            "Phương pháp kiểm tra": "Kiểm tra văn bản báo cáo, kiểm định supporting documents",
+            "Tiêu chí đánh giá": "Có QĐ hạn mức tồn quỹ còn hiệu lực",
+            "Kết quả kiểm tra": "Đạt",
             "PIC": "Lê Thùy Dương"
           },
           {
