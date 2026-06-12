@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Báo cáo KQKD 2025 &amp; Kế hoạch 2026 — Ban HK&amp;KHDN · Bảo hiểm PVI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   THEME TOKENS — TỔNG CÔNG TY BẢO HIỂM PVI (Light Executive)
+   Brand colors extracted from PVI report deck.
+   ============================================================ */
+:root{
+  /* PVI brand */
+  --pvi-blue:#003087;     /* PVI corporate blue (primary) */
+  --pvi-indigo:#1A237E;   /* deep indigo */
+  --pvi-cyan:#0097DC;     /* PVI bright accent */
+  --pvi-sky:#1565C0;
+  --gold:#E65100;         /* highlight / warning accent */
+  --green:#2E7D32; --red:#C62828; --teal:#00ACC1;
+  --info:#1565C0; --caution:#E65100; --success:#2E7D32; --danger:#C62828; --warning:#E65100;
+
+  --ink-900:#0F1B33; --ink-700:#1E2A44; --ink-600:#3A4861; --ink-500:#64748B;
+  --bg-100:#F5F7FA; --bg-200:#E6F1FB; --white:#FFFFFF;
+
+  /* Fonts */
+  --font-display:"Montserrat", "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body:"Be Vietnam Pro", system-ui, sans-serif;
+
+  /* animation engine hooks */
+  --ac-accent:#003087; --ac-accent-2:#0097DC; --ac-accent-3:#1A237E; --ac-accent-4:#1565C0;
+  --ac-fg:#0F1B33; --ac-muted:#64748B;
+  --ac-track:rgba(0,48,135,.10); --ac-line:rgba(0,48,135,.14);
+  --ac-ease:cubic-bezier(.22,.8,.18,1); --ac-ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  --ac-dur:.8s; --ac-stagger:80ms;
+
+  --rail:268px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ============== viewport base ============== */
+html, body{ height:100%; overflow-x:hidden; }
+html{ scroll-snap-type:y mandatory; scroll-behavior:smooth; }
+.slide{ width:100vw; height:100vh; height:100dvh; overflow:hidden; scroll-snap-align:start; display:flex; flex-direction:column; position:relative; }
+.slide-content{ flex:1; display:flex; flex-direction:column; justify-content:center; max-height:100%; overflow:hidden; padding:var(--slide-padding); }
+:root{
+  --title-size:clamp(1.8rem, 6vh, 4rem);
+  --h2-size:clamp(1.5rem, 4.5vh, 3rem);
+  --h3-size:clamp(1.2rem, 3.5vh, 2.1rem);
+  --body-size:clamp(1rem, 2.5vh, 1.7rem);
+  --small-size:clamp(.82rem, 2vh, 1.35rem);
+  --slide-padding:clamp(1.2rem, 4.5vh, 4rem);
+  --content-gap:clamp(.8rem, 2.5vh, 2.2rem);
+}
+@media (max-height:760px){ :root{ --slide-padding:clamp(.9rem,3vh,2rem); --body-size:clamp(.85rem,2vh,1.25rem); --small-size:clamp(.72rem,1.6vh,1rem);} }
+@media (max-height:600px){ :root{ --slide-padding:.7rem; } .hint,.nav-dots{ display:none; } }
+@media (prefers-reduced-motion:reduce){ *,*::before,*::after{ animation-duration:.01ms!important; transition-duration:.2s!important; } html{ scroll-behavior:auto; } }
+
+/* ============== animation core ============== */
+.ac-reveal{ opacity:0; transform:translateY(28px); }
+.ac-reveal--left{ transform:translateX(-32px);} .ac-reveal--right{ transform:translateX(32px);} .ac-reveal--zoom{ transform:scale(.86);}
+.ac-on .ac-reveal{ animation:ac-fade-up var(--ac-dur) var(--ac-ease) both; animation-delay:calc(var(--i,0)*var(--ac-stagger) + var(--ac-delay,0ms)); }
+.ac-on .ac-reveal--left,.ac-on .ac-reveal--right{ animation-name:ac-fade-x; }
+.ac-on .ac-reveal--zoom{ animation-name:ac-zoom-in; animation-timing-function:var(--ac-ease-bounce); }
+@keyframes ac-fade-up{ from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
+@keyframes ac-fade-x{ from{opacity:0} to{opacity:1;transform:none} }
+@keyframes ac-zoom-in{ from{opacity:0;transform:scale(.86)} to{opacity:1;transform:scale(1)} }
+.ac-pop{ opacity:0; transform:scale(.4); }
+.ac-on .ac-pop{ animation:ac-pop var(--ac-dur) var(--ac-ease-bounce) both; animation-delay:calc(var(--i,0)*var(--ac-stagger) + var(--ac-delay,0ms)); }
+@keyframes ac-pop{ from{opacity:0;transform:scale(.4)} to{opacity:1;transform:scale(1)} }
+.ac-bar{ height:0!important; transition:height 1s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
+.ac-on .ac-bar{ height:var(--h)!important; }
+.ac-fill-x{ width:0!important; transition:width 1s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
+.ac-on .ac-fill-x{ width:var(--w)!important; }
+.ac-ring-val{ stroke-dasharray:var(--circ); stroke-dashoffset:var(--circ); transition:stroke-dashoffset 1.2s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
+.ac-on .ac-ring-val{ stroke-dashoffset:calc(var(--circ)*(1 - var(--p))); }
+.ac-float{ animation:ac-float 6s ease-in-out infinite; }
+@keyframes ac-float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.ac-drift{ animation:ac-drift 22s ease-in-out infinite alternate; }
+@keyframes ac-drift{ 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(4%,-3%) scale(1.08)} }
+@media (prefers-reduced-motion:reduce){
+  .ac-reveal,.ac-pop{ opacity:1!important; transform:none!important; }
+  .ac-bar{ height:var(--h)!important; } .ac-fill-x{ width:var(--w)!important; }
+  .ac-ring-val{ stroke-dashoffset:calc(var(--circ)*(1 - var(--p)))!important; }
+  .ac-float,.ac-drift{ animation:none!important; }
+}
+
+/* ============== global look ============== */
+body{
+  font-family:var(--font-body); color:var(--ink-600);
+  background:
+    radial-gradient(1100px 760px at 84% -12%, rgba(0,151,220,.12), transparent 60%),
+    radial-gradient(940px 680px at -8% 112%, rgba(0,48,135,.10), transparent 55%),
+    linear-gradient(135deg,#FFFFFF 0%, #EAF1F9 100%);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{ width:min(94%, 1500px); margin-inline:auto; position:relative; z-index:2; }
+@media (min-width:1000px){ .slide-content{ padding-left:calc(var(--slide-padding) + var(--rail)); } }
+
+.head{ display:flex; flex-direction:column; gap:.35rem; margin-bottom:clamp(.6rem,2.2vh,1.4rem); }
+.eyebrow{ font-family:var(--font-display); font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--pvi-cyan); font-size:clamp(.62rem,1vw,.82rem); }
+.s-title{ font-family:var(--font-display); font-weight:800; color:var(--pvi-blue); font-size:clamp(1.35rem,3.4vw,2.5rem); line-height:1.1; letter-spacing:-.01em; }
+.s-sub{ font-size:var(--small-size); color:var(--ink-500); }
+.unit{ font-size:.72rem; color:var(--ink-500); font-style:italic; align-self:flex-start; }
+
+/* ============== rail ============== */
+.rail{ position:fixed; inset:0 auto 0 0; width:var(--rail); height:100dvh; z-index:50; display:flex; flex-direction:column; justify-content:center; gap:.1rem; padding:1.4rem 1rem;
+  background:linear-gradient(180deg, rgba(255,255,255,.93), rgba(234,241,249,.9)); backdrop-filter:blur(10px); border-right:1px solid rgba(0,48,135,.12); }
+.rail__brand{ display:flex; align-items:center; gap:.6rem; margin-bottom:.1rem; }
+.rail__logo{ width:38px; height:38px; border-radius:9px; background:linear-gradient(135deg,var(--pvi-blue),var(--pvi-cyan)); display:grid; place-content:center; color:#fff; font-family:var(--font-display); font-weight:800; font-size:.92rem; box-shadow:0 6px 16px rgba(0,48,135,.35); }
+.rail__title{ font-family:var(--font-display); font-weight:800; color:var(--pvi-blue); font-size:.92rem; line-height:1.05; }
+.rail__sub{ font-size:.56rem; color:var(--ink-500); text-transform:uppercase; letter-spacing:.14em; margin:.12rem 0 1rem; }
+.rail__item{ display:flex; gap:.5rem; align-items:center; padding:.42rem .5rem; border-radius:10px; cursor:pointer; color:var(--ink-500); font-size:.72rem; font-weight:600; line-height:1.2; transition:color .25s, background .25s; }
+.rail__item .dot{ width:7px; height:7px; border-radius:50%; background:var(--ac-track); flex:none; transition:background .25s, box-shadow .25s; }
+.rail__num{ font-family:var(--font-display); font-weight:700; opacity:.45; font-size:.68rem; min-width:1.4em; }
+.rail__item:hover{ color:var(--ink-700); background:rgba(0,151,220,.08); }
+.rail__item.is-active{ color:var(--pvi-blue); background:rgba(0,48,135,.10); }
+.rail__item.is-active .dot{ background:var(--pvi-cyan); box-shadow:0 0 0 4px rgba(0,151,220,.18); }
+.rail__item.is-active .rail__num{ opacity:1; color:var(--pvi-blue); }
+@media (max-width:999px){ .rail{ display:none; } }
+
+/* ============== counter / progress / hint ============== */
+.counter{ position:fixed; top:1rem; right:1.4rem; z-index:60; font-family:var(--font-display); font-weight:700; color:var(--pvi-blue); font-size:.92rem; background:rgba(255,255,255,.75); padding:.3rem .8rem; border-radius:999px; border:1px solid rgba(0,48,135,.14); backdrop-filter:blur(6px); }
+.counter #cur{ color:var(--pvi-cyan); } .counter .sep{ opacity:.4; margin:0 .16rem; }
+.progress{ position:fixed; top:0; left:0; height:3px; width:100%; z-index:61; }
+.progress__fill{ height:100%; width:0; background:linear-gradient(90deg,var(--pvi-blue),var(--pvi-cyan)); transition:width .45s var(--ac-ease); }
+.hint{ position:fixed; bottom:.9rem; left:1.4rem; z-index:55; font-size:.64rem; color:var(--ink-500); letter-spacing:.04em; }
+@media (max-width:999px){ .hint{ display:none; } }
+
+/* nav buttons */
+.navbtns{ position:fixed; right:1.4rem; bottom:1.2rem; z-index:65; display:flex; flex-direction:column; gap:.55rem; }
+.navbtn{ width:48px; height:48px; border-radius:50%; border:1px solid rgba(0,48,135,.22); background:rgba(255,255,255,.88); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); color:var(--pvi-blue); cursor:pointer; display:grid; place-content:center; box-shadow:0 10px 26px rgba(0,48,135,.2); transition:background .2s, color .2s, transform .2s, opacity .2s; }
+.navbtn:hover{ background:var(--pvi-blue); color:#fff; transform:translateY(-2px) scale(1.06); }
+.navbtn:active{ transform:scale(.94); }
+.navbtn:disabled{ opacity:.35; cursor:default; pointer-events:none; }
+@media (max-width:600px){ .navbtn{ width:42px; height:42px; } .navbtns{ right:.8rem; bottom:.8rem; } }
+
+/* ============== ambient (insurance motif) ============== */
+.ambient{ position:fixed; inset:0; overflow:hidden; z-index:0; pointer-events:none; }
+.orb{ position:absolute; border-radius:50%; filter:blur(80px); }
+.orb--1{ width:50vmax; height:50vmax; top:-18vmax; left:-10vmax; background:radial-gradient(circle,rgba(0,48,135,.20),transparent 68%); }
+.orb--2{ width:46vmax; height:46vmax; bottom:-16vmax; right:-12vmax; background:radial-gradient(circle,rgba(0,151,220,.20),transparent 68%); }
+.grid-glow{ position:absolute; inset:0; background-image:linear-gradient(rgba(0,48,135,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,48,135,.06) 1px,transparent 1px); background-size:46px 46px; mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%); -webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%); opacity:.6; }
+.shield{ position:absolute; opacity:.06; color:var(--pvi-blue); }
+
+/* ============== components ============== */
+.kpis{ display:grid; gap:clamp(.6rem,1.4vw,1rem); }
+.kpis--4{ grid-template-columns:repeat(4,1fr); } .kpis--3{ grid-template-columns:repeat(3,1fr); } .kpis--2{ grid-template-columns:repeat(2,1fr); }
+.kpi{ background:#fff; border:1px solid var(--ac-line); border-top:4px solid var(--pvi-blue); border-radius:16px; padding:clamp(.9rem,1.8vw,1.4rem); box-shadow:0 12px 34px rgba(0,48,135,.07); display:flex; flex-direction:column; gap:.3rem; transition:transform .3s, box-shadow .3s, border-color .3s; }
+.kpi:hover{ transform:translateY(-6px); box-shadow:0 22px 50px rgba(0,48,135,.16); }
+.kpi--cyan{ border-top-color:var(--pvi-cyan);} .kpi--green{ border-top-color:var(--green);} .kpi--red{ border-top-color:var(--red);} .kpi--gold{ border-top-color:var(--gold);}
+.kpi__v{ font-family:var(--font-display); font-weight:800; color:var(--pvi-blue); font-size:clamp(1.5rem,3.2vw,2.5rem); line-height:1; letter-spacing:-.01em; }
+.kpi--green .kpi__v{ color:var(--green);} .kpi--red .kpi__v{ color:var(--red);} .kpi--cyan .kpi__v{ color:var(--pvi-cyan);} .kpi--gold .kpi__v{ color:var(--gold);}
+.kpi__l{ font-weight:700; color:var(--ink-700); font-size:clamp(.82rem,1.5vw,1.05rem); }
+.kpi__t{ font-size:var(--small-size); color:var(--ink-500); }
+.tag{ align-self:flex-start; font-family:var(--font-display); font-weight:700; font-size:.7rem; padding:.18rem .55rem; border-radius:999px; }
+.tag--g{ color:var(--green); background:rgba(46,125,50,.12);} .tag--r{ color:var(--red); background:rgba(198,40,40,.12);} .tag--b{ color:var(--pvi-cyan); background:rgba(0,151,220,.12);} .tag--o{ color:var(--gold); background:rgba(230,81,0,.12);}
+
+/* tables */
+.tbl{ width:100%; border-collapse:collapse; font-size:var(--small-size); background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 12px 36px rgba(0,48,135,.08); }
+.tbl th{ background:var(--pvi-blue); color:#fff; font-family:var(--font-display); font-weight:700; padding:.6rem .7rem; text-align:right; font-size:clamp(.72rem,1.3vw,.95rem); }
+.tbl th:first-child{ text-align:left; }
+.tbl td{ padding:.5rem .7rem; text-align:right; border-bottom:1px solid var(--ac-line); color:var(--ink-700); }
+.tbl td:first-child{ text-align:left; font-weight:600; color:var(--pvi-blue); }
+.tbl tr:last-child td{ border-bottom:none; }
+.tbl tr.total td{ background:rgba(0,48,135,.06); font-weight:800; color:var(--pvi-blue); }
+.pos{ color:var(--green); font-weight:700; } .neg{ color:var(--red); font-weight:700; }
+
+/* bar chart */
+.chart{ background:#fff; border:1px solid var(--ac-line); border-radius:16px; padding:clamp(.9rem,2vw,1.5rem) clamp(.7rem,1.6vw,1.2rem) clamp(.6rem,1.4vw,1rem); box-shadow:0 12px 36px rgba(0,48,135,.07); }
+.bars{ display:flex; align-items:flex-end; gap:clamp(.25rem,.8vw,.7rem); height:clamp(150px,30vh,300px); }
+.barcol{ flex:1; display:flex; flex-direction:column; align-items:center; gap:.3rem; height:100%; justify-content:flex-end; }
+.barstack{ width:100%; max-width:34px; display:flex; flex-direction:column-reverse; height:100%; justify-content:flex-start; align-self:flex-end; }
+.seg{ width:100%; border-radius:4px 4px 0 0; }
+.seg--goc{ background:linear-gradient(180deg,var(--pvi-blue),#00205c); }
+.seg--tai{ background:linear-gradient(180deg,var(--pvi-cyan),#0079b3); border-radius:4px 4px 0 0; }
+.barcol small{ font-size:.6rem; color:var(--ink-500); font-weight:600; }
+.barval{ font-size:.58rem; color:var(--pvi-blue); font-weight:700; font-family:var(--font-display); }
+.legend{ display:flex; gap:1.2rem; justify-content:center; margin-top:.6rem; flex-wrap:wrap; }
+.legend span{ display:flex; align-items:center; gap:.4rem; font-size:.74rem; color:var(--ink-600); font-weight:600; }
+.legend i{ width:14px; height:14px; border-radius:4px; display:inline-block; }
+
+/* horizontal bars */
+.hbars{ display:flex; flex-direction:column; gap:.55rem; }
+.hbar{ display:grid; grid-template-columns:clamp(90px,16%,170px) 1fr auto; align-items:center; gap:.6rem; }
+.hbar__l{ font-weight:600; color:var(--ink-700); font-size:var(--small-size); }
+.hbar__track{ height:clamp(16px,2.4vh,26px); background:var(--ac-track); border-radius:999px; overflow:hidden; }
+.hbar__fill{ height:100%; border-radius:999px; background:linear-gradient(90deg,var(--pvi-blue),var(--pvi-cyan)); }
+.hbar__v{ font-family:var(--font-display); font-weight:700; color:var(--pvi-blue); font-size:var(--small-size); white-space:nowrap; }
+
+/* donut */
+.donut-wrap{ display:flex; align-items:center; gap:clamp(.8rem,2vw,1.6rem); }
+.donut{ width:clamp(120px,16vw,190px); height:auto; transform:rotate(-90deg); }
+.donut-leg{ display:flex; flex-direction:column; gap:.6rem; }
+.donut-leg div{ display:flex; align-items:center; gap:.5rem; font-size:var(--body-size); color:var(--ink-700); font-weight:600; }
+.donut-leg i{ width:14px; height:14px; border-radius:4px; }
+
+/* generic cards */
+.cards{ display:grid; gap:clamp(.6rem,1.4vw,1rem); }
+.cards--3{ grid-template-columns:repeat(3,1fr);} .cards--2{ grid-template-columns:repeat(2,1fr);}
+.card{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvi-cyan); border-radius:14px; padding:clamp(.85rem,1.8vw,1.3rem); box-shadow:0 10px 30px rgba(0,48,135,.06); transition:transform .3s, box-shadow .3s; }
+.card:hover{ transform:translateY(-5px); box-shadow:0 20px 46px rgba(0,48,135,.15); }
+.card--warn{ border-left-color:var(--gold);} .card--bad{ border-left-color:var(--red);} .card--ok{ border-left-color:var(--green);}
+.card h4{ font-family:var(--font-display); color:var(--pvi-blue); font-weight:700; font-size:clamp(.92rem,1.7vw,1.18rem); margin-bottom:.35rem; display:flex; align-items:center; gap:.45rem; }
+.card p{ color:var(--ink-600); font-size:var(--small-size); line-height:1.45; }
+.card__ic{ width:30px; height:30px; flex:none; border-radius:8px; background:rgba(0,151,220,.12); color:var(--pvi-cyan); display:grid; place-content:center; }
+.card--warn .card__ic{ background:rgba(230,81,0,.12); color:var(--gold);} .card--bad .card__ic{ background:rgba(198,40,40,.12); color:var(--red);} .card--ok .card__ic{ background:rgba(46,125,50,.12); color:var(--green);}
+
+/* numbered steps */
+.steps{ display:grid; gap:clamp(.55rem,1.2vw,.9rem); }
+.step{ display:grid; grid-template-columns:auto 1fr; gap:.8rem; align-items:start; background:#fff; border:1px solid var(--ac-line); border-radius:14px; padding:clamp(.75rem,1.6vw,1.1rem); box-shadow:0 8px 24px rgba(0,48,135,.06); transition:transform .3s, box-shadow .3s; }
+.step:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,48,135,.14); }
+.step__n{ width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,var(--pvi-blue),var(--pvi-cyan)); color:#fff; font-family:var(--font-display); font-weight:800; display:grid; place-content:center; font-size:1.1rem; box-shadow:0 6px 16px rgba(0,48,135,.25); }
+.step h4{ font-family:var(--font-display); color:var(--pvi-blue); font-weight:700; font-size:clamp(.88rem,1.6vw,1.1rem); margin-bottom:.2rem; }
+.step p{ color:var(--ink-600); font-size:var(--small-size); line-height:1.4; }
+
+/* section divider */
+.divider{ display:flex; flex-direction:column; align-items:flex-start; gap:.6rem; }
+.divider__no{ font-family:var(--font-display); font-weight:800; font-size:clamp(4rem,16vw,12rem); line-height:.8; letter-spacing:-.02em;
+  background:linear-gradient(120deg,var(--pvi-indigo),var(--pvi-blue) 45%,var(--pvi-cyan)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.divider__t{ font-family:var(--font-display); font-weight:800; color:var(--pvi-blue); font-size:clamp(1.4rem,4vw,3rem); max-width:22ch; line-height:1.12; }
+.divider__bar{ width:90px; height:5px; border-radius:99px; background:linear-gradient(90deg,var(--pvi-blue),var(--pvi-cyan)); }
+
+/* hero */
+.hero{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:.5rem; }
+.hero__kicker{ font-family:var(--font-display); font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--pvi-cyan); font-size:clamp(.7rem,1.4vw,1rem); }
+.hero__word{ font-family:var(--font-display); font-weight:800; line-height:.9; letter-spacing:-.02em; font-size:clamp(3.6rem,15vw,11rem);
+  background:linear-gradient(120deg,var(--pvi-indigo) 0%,var(--pvi-blue) 45%,var(--pvi-cyan) 70%,var(--pvi-blue) 100%); background-size:220% 100%;
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.ac-on .hero__word{ animation:heroIn 1.2s var(--ac-ease-bounce) .08s both, shine 6s linear 1.3s infinite; }
+@keyframes heroIn{ 0%{opacity:0;transform:scale(.6);filter:blur(20px)} 60%{opacity:1;filter:blur(0)} 80%{transform:scale(1.06)} 100%{opacity:1;transform:scale(1)} }
+@keyframes shine{ to{ background-position:220% 0; } }
+.hero__sub{ font-family:var(--font-display); font-weight:700; color:var(--ink-700); font-size:clamp(1rem,2.8vw,1.9rem); max-width:24ch; line-height:1.2; }
+.hero__org{ color:var(--pvi-blue); font-weight:700; font-size:clamp(.85rem,1.6vw,1.15rem); margin-top:.6rem; }
+.hero__meta{ color:var(--ink-500); font-size:clamp(.78rem,1.3vw,1rem); }
+.hero__pills{ display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.8rem; }
+.pill{ font-family:var(--font-display); font-weight:700; font-size:clamp(.74rem,1.3vw,.95rem); color:#fff; background:linear-gradient(135deg,var(--pvi-blue),var(--pvi-cyan)); padding:.45rem 1rem; border-radius:999px; box-shadow:0 8px 20px rgba(0,48,135,.22); }
+
+/* toc */
+.toc{ display:flex; flex-direction:column; gap:clamp(.5rem,1.4vh,1rem); }
+.toc__item{ display:grid; grid-template-columns:auto 1fr; gap:1rem; align-items:center; background:#fff; border:1px solid var(--ac-line); border-radius:14px; padding:clamp(.7rem,1.6vw,1.1rem) clamp(.9rem,2vw,1.4rem); box-shadow:0 10px 28px rgba(0,48,135,.06); transition:transform .3s, box-shadow .3s, border-color .3s; cursor:pointer; }
+.toc__item:hover{ transform:translateX(8px); box-shadow:0 18px 40px rgba(0,48,135,.14); border-color:var(--pvi-cyan); }
+.toc__no{ font-family:var(--font-display); font-weight:800; font-size:clamp(1.4rem,3.2vw,2.4rem); color:var(--pvi-cyan); min-width:1.6em; }
+.toc__t{ font-family:var(--font-display); font-weight:700; color:var(--pvi-blue); font-size:clamp(.95rem,1.9vw,1.4rem); }
+
+.note{ font-size:var(--small-size); color:var(--ink-700); background:rgba(0,151,220,.08); border:1px dashed rgba(0,151,220,.4); border-radius:12px; padding:.7rem 1rem; }
+.note--g{ color:var(--green); background:rgba(46,125,50,.08); border-color:rgba(46,125,50,.4); }
+.note--o{ color:var(--gold); background:rgba(230,81,0,.08); border-color:rgba(230,81,0,.4); }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(.8rem,2vw,1.6rem); align-items:center; }
+@media (max-width:860px){ .grid2,.kpis--4{ grid-template-columns:1fr 1fr; } .donut-wrap{ flex-direction:column; } }
+@media (max-width:600px){ .kpis--4,.kpis--3,.cards--3,.cards--2,.grid2{ grid-template-columns:1fr; } .tbl{ display:block; overflow-x:auto; white-space:nowrap; } }
+
+.end__big{ font-family:var(--font-display); font-weight:800; font-size:clamp(2.2rem,8vw,5.5rem); line-height:1.05; letter-spacing:-.01em;
+  background:linear-gradient(120deg,var(--pvi-indigo),var(--pvi-blue) 45%,var(--pvi-cyan)); background-size:220% 100%;
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.ac-on .end__big{ animation:heroIn 1.2s var(--ac-ease-bounce) .15s both, shine 6s linear 1.4s infinite; }
+
+/* ============== SLIDE 1 — photo motion background (PVI HQ stairs) ============== */
+.hero-stage{ position:absolute; inset:0; z-index:0; overflow:hidden; background:#04162a; }
+/* the reference photo, with a slow Ken-Burns push toward the tower */
+.hero-stage__photo{ position:absolute; inset:-5%; width:110%; height:110%;
+  background-image:url("1780624473615_3504659696103963496_3504659696103963496_b92882459629cb269087bb8e63a541d6.jpg");
+  background-size:cover; background-position:50% 40%; transform-origin:50% 36%;
+  filter:saturate(1.08) contrast(1.05); animation:heroKen 32s ease-in-out infinite alternate; will-change:transform; }
+@keyframes heroKen{ 0%{ transform:scale(1.05) translateY(0); } 100%{ transform:scale(1.17) translateY(-2.2%); } }
+
+/* pulsing glow behind the rooftop PVI sign */
+.hero-pulse{ position:absolute; left:50%; top:24%; width:34vmax; height:34vmax; transform:translate(-50%,-50%);
+  background:radial-gradient(circle, rgba(126,230,255,.34), rgba(126,230,255,0) 62%); mix-blend-mode:screen; pointer-events:none;
+  animation:heroPulse 4.6s ease-in-out infinite; }
+@keyframes heroPulse{ 0%,100%{ opacity:.30; transform:translate(-50%,-50%) scale(.9); } 50%{ opacity:.8; transform:translate(-50%,-50%) scale(1.1); } }
+
+/* digital-rain canvas (matches the binary code in the sky) */
+.hero-rain{ position:absolute; inset:0; width:100%; height:100%; opacity:.45; mix-blend-mode:screen; pointer-events:none; }
+
+/* glowing data-motes drifting UP the staircase toward the building */
+.hero-motes{ position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.mote{ position:absolute; bottom:-4%; width:6px; height:6px; border-radius:50%;
+  background:radial-gradient(circle,#dffaff 0%,#7fe6ff 45%,rgba(126,230,255,0) 70%);
+  box-shadow:0 0 10px 2px rgba(126,230,255,.65); opacity:0;
+  animation:moteRise var(--md,12s) linear infinite; animation-delay:var(--mdel,0s); }
+@keyframes moteRise{ 0%{ transform:translateY(0) scale(.6); opacity:0; }
+  12%{ opacity:.95; } 78%{ opacity:.85; } 100%{ transform:translateY(-94vh) scale(1.25); opacity:0; } }
+
+.hero-stage__veil{ position:absolute; inset:0; background:
+   linear-gradient(180deg, rgba(2,10,28,.42) 0%, rgba(2,10,28,.10) 40%, rgba(2,8,22,.74) 100%),
+   radial-gradient(120% 95% at 50% 40%, rgba(0,48,135,.16), rgba(2,6,18,.50) 92%); }
+.hero-stage__scan{ position:absolute; left:0; right:0; height:42%; top:-42%;
+  background:linear-gradient(180deg, transparent, rgba(0,151,220,.18), transparent); mix-blend-mode:screen; }
+.slide--hero.ac-on .hero-stage__scan{ animation:scan 7.5s cubic-bezier(.16,.7,.2,1) forwards; }
+@keyframes scan{ 0%{ top:-42%; opacity:0; } 12%{ opacity:1; } 100%{ top:120%; opacity:0; } }
+
+.slide--hero .hero{ z-index:2; }
+/* logo sits on a frosted chip so the navy mark stays legible on the dark photo */
+.hero__logo{ margin-bottom:.7rem; }
+.hero__logo .pvi-logo{ height:clamp(48px,8vh,82px); width:auto; display:block; }
+.slide--hero .hero__logo{ display:inline-flex; padding:.6rem 1.15rem; border-radius:16px;
+  background:rgba(255,255,255,.94); box-shadow:0 12px 34px rgba(0,0,0,.45); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); }
+.slide:not(.slide--hero) .hero__logo .pvi-logo{ filter:drop-shadow(0 8px 20px rgba(0,48,135,.18)); }
+.slide--hero .hero__kicker{ color:#8fd6ff; }
+.slide--hero .hero__word{ background:linear-gradient(120deg,#ffffff 0%,#a7e2ff 52%,#ffffff 100%); background-size:220% 100%;
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 8px 40px rgba(0,0,0,.35); }
+.slide--hero .hero__sub{ color:#fff; text-shadow:0 2px 14px rgba(0,0,0,.5); }
+.slide--hero .hero__org{ color:#cfeaff; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+.slide--hero .hero__meta{ color:rgba(255,255,255,.82); }
+.rail__brand{ color:var(--pvi-blue); }
+.rail__brand .pvi-logo{ height:30px; width:auto; display:block; }
+@media (prefers-reduced-motion:reduce){ .hero-stage__photo{ animation:none!important; } .hero-pulse,.mote{ animation:none!important; } .hero-stage__scan{ display:none; } }
+</style>
+</head>
+<body>
+
+<!-- ambient -->
+<div class="ambient" aria-hidden="true">
+  <div class="orb orb--1 ac-drift"></div>
+  <div class="orb orb--2 ac-drift" style="animation-delay:-8s"></div>
+  <div class="grid-glow"></div>
+  <svg class="shield ac-float" style="top:12%;right:8%;width:120px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3z"/></svg>
+  <svg class="shield ac-float" style="bottom:14%;left:6%;width:90px;animation-delay:-3s" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3z"/></svg>
+</div>
+
+<!-- rail -->
+<nav class="rail" id="rail" aria-label="Mục lục slide"></nav>
+
+<!-- counter / progress / hint -->
+<div class="progress"><div class="progress__fill" id="prog"></div></div>
+<div class="counter"><span id="cur">01</span><span class="sep">/</span><span id="tot">18</span></div>
+<div class="hint">↑ ↓ · cuộn hoặc bấm nút để chuyển slide</div>
+<div class="navbtns" aria-label="Điều hướng slide">
+  <button class="navbtn" id="navPrev" aria-label="Slide trước" title="Slide trước (↑)">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <button class="navbtn" id="navNext" aria-label="Slide sau" title="Slide sau (↓)">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+</div>
+
+<main id="deck">
+
+<!-- ===== S1 HERO ===== -->
+<section class="slide slide--hero" data-title="Trang bìa">
+  <div class="hero-stage" aria-hidden="true">
+    <div class="hero-stage__photo"></div>
+    <div class="hero-pulse"></div>
+    <canvas class="hero-rain"></canvas>
+    <div class="hero-motes" id="heroMotes"></div>
+    <svg class="hero-stage__svg" style="display:none" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#04162a"/><stop offset="0.5" stop-color="#072a45"/><stop offset="0.82" stop-color="#0b3a5c"/><stop offset="1" stop-color="#0a3454"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d5d86"/><stop offset="1" stop-color="#0c3a5c"/></linearGradient><linearGradient id="stepFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fd8ff"/><stop offset="1" stop-color="#0a3454"/></linearGradient><radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7fe6ff" stop-opacity="0.9"/><stop offset="1" stop-color="#7fe6ff" stop-opacity="0"/></radialGradient><filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect x="0" y="0" width="1600" height="1000" fill="url(#sky)"/><text x="120" y="60" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:0.0s">01001011<tspan x="120" dy="26">10110100</tspan><tspan x="120" dy="26">00101101</tspan></text><text x="270" y="100" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-0.9s">01001011<tspan x="270" dy="26">10110100</tspan><tspan x="270" dy="26">00101101</tspan></text><text x="420" y="140" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-1.8s">01001011<tspan x="420" dy="26">10110100</tspan><tspan x="420" dy="26">00101101</tspan></text><text x="570" y="180" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-2.7s">01001011<tspan x="570" dy="26">10110100</tspan><tspan x="570" dy="26">00101101</tspan></text><text x="720" y="60" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-3.6s">01001011<tspan x="720" dy="26">10110100</tspan><tspan x="720" dy="26">00101101</tspan></text><text x="870" y="100" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-4.5s">01001011<tspan x="870" dy="26">10110100</tspan><tspan x="870" dy="26">00101101</tspan></text><text x="1020" y="140" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-5.4s">01001011<tspan x="1020" dy="26">10110100</tspan><tspan x="1020" dy="26">00101101</tspan></text><text x="1170" y="180" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-6.3s">01001011<tspan x="1170" dy="26">10110100</tspan><tspan x="1170" dy="26">00101101</tspan></text><text x="1320" y="60" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-7.2s">01001011<tspan x="1320" dy="26">10110100</tspan><tspan x="1320" dy="26">00101101</tspan></text><text x="1470" y="100" font-family="monospace" font-size="20" fill="#2db7e6" opacity="0.10" class="rain" style="animation-delay:-8.1s">01001011<tspan x="1470" dy="26">10110100</tspan><tspan x="1470" dy="26">00101101</tspan></text><g opacity="0.25" fill="#0c3552"><rect x="120" y="420" width="90" height="200" fill="#0c3552"/><rect x="230" y="470" width="70" height="150" fill="#0b3150"/><rect x="1320" y="440" width="90" height="180" fill="#0c3552"/><rect x="1420" y="480" width="70" height="140" fill="#0b3150"/></g><ellipse cx="800" cy="540" rx="220" ry="120" fill="url(#halo)" opacity="0.5"/><rect x="705" y="150" width="190" height="406" fill="url(#glass)" stroke="#4ec3ef" stroke-width="2" opacity="0.97"/><rect x="713" y="160" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="738" y="160" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="763" y="160" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="788" y="160" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="812" y="160" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="837" y="160" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="862" y="160" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="713" y="178" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="738" y="178" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="763" y="178" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="788" y="178" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="812" y="178" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="837" y="178" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="862" y="178" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="713" y="195" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="738" y="195" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="763" y="195" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="788" y="195" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="812" y="195" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="837" y="195" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="862" y="195" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="713" y="213" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="738" y="213" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="763" y="213" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="788" y="213" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="812" y="213" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="837" y="213" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="862" y="213" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="713" y="230" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="738" y="230" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="763" y="230" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="788" y="230" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="812" y="230" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="837" y="230" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="862" y="230" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="713" y="248" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="738" y="248" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="763" y="248" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="788" y="248" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="812" y="248" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="837" y="248" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="862" y="248" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="713" y="265" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="738" y="265" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="763" y="265" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="788" y="265" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="812" y="265" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="837" y="265" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="862" y="265" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="713" y="283" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="738" y="283" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="763" y="283" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="788" y="283" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="812" y="283" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="837" y="283" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="862" y="283" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="713" y="300" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="738" y="300" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="763" y="300" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="788" y="300" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="812" y="300" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="837" y="300" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="862" y="300" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="713" y="318" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="738" y="318" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="763" y="318" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="788" y="318" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="812" y="318" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="837" y="318" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="862" y="318" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="713" y="335" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="738" y="335" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="763" y="335" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="788" y="335" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="812" y="335" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="837" y="335" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="862" y="335" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="713" y="353" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="738" y="353" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="763" y="353" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="788" y="353" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="812" y="353" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="837" y="353" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="862" y="353" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="713" y="371" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="738" y="371" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="763" y="371" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="788" y="371" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="812" y="371" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="837" y="371" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="862" y="371" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="713" y="388" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="738" y="388" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="763" y="388" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="788" y="388" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="812" y="388" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="837" y="388" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="862" y="388" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="713" y="406" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="738" y="406" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="763" y="406" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="788" y="406" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="812" y="406" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="837" y="406" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="862" y="406" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="713" y="423" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="738" y="423" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="763" y="423" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="788" y="423" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="812" y="423" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="837" y="423" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="862" y="423" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="713" y="441" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="738" y="441" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="763" y="441" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="788" y="441" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="812" y="441" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="837" y="441" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="862" y="441" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="713" y="458" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="738" y="458" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="763" y="458" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="788" y="458" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="812" y="458" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="837" y="458" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="862" y="458" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="713" y="476" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="738" y="476" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="763" y="476" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="788" y="476" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="812" y="476" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="837" y="476" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="862" y="476" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="713" y="493" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="738" y="493" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="763" y="493" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="788" y="493" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="812" y="493" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="837" y="493" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="862" y="493" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="713" y="511" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="738" y="511" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="763" y="511" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="788" y="511" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="812" y="511" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="837" y="511" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="862" y="511" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="713" y="528" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="738" y="528" width="21" height="14" fill="#ade5ff" opacity="0.85"/><rect x="763" y="528" width="21" height="14" fill="#ade5ff" opacity="0.65"/><rect x="788" y="528" width="21" height="14" fill="#ade5ff" opacity="0.55"/><rect x="812" y="528" width="21" height="14" fill="#ade5ff" opacity="0.18"/><rect x="837" y="528" width="21" height="14" fill="#ade5ff" opacity="0.3"/><rect x="862" y="528" width="21" height="14" fill="#ade5ff" opacity="0.85"/><g transform="translate(774,90) scale(0.34)"><path fill="#E3122B" fill-rule="evenodd" d="M80.0,4.0 L97.0,52.5 L148.5,53.8 L107.6,85.0 L122.3,134.2 L80.0,105.0 L37.7,134.2 L52.4,85.0 L11.5,53.8 L63.0,52.5 Z M80.0,38.0 L88.8,63.9 L116.1,64.3 L94.3,80.6 L102.3,106.7 L80.0,91.0 L57.7,106.7 L65.7,80.6 L43.9,64.3 L71.2,63.9 Z"/></g><text x="800" y="128" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="34" fill="#dff4ff" opacity="0.92">PVI</text><path d="M680,556 L920,556 L925,561 L675,561 Z" fill="url(#stepFill)" opacity="0.12"/><path d="M675,561 L925,561 L937,571 L663,571 Z" fill="url(#stepFill)" opacity="0.12"/><path d="M663,571 L937,571 L954,587 L646,587 Z" fill="url(#stepFill)" opacity="0.13"/><path d="M646,587 L954,587 L976,607 L624,607 Z" fill="url(#stepFill)" opacity="0.13"/><path d="M624,607 L976,607 L1002,632 L598,632 Z" fill="url(#stepFill)" opacity="0.14"/><path d="M598,632 L1002,632 L1034,660 L566,660 Z" fill="url(#stepFill)" opacity="0.14"/><path d="M566,660 L1034,660 L1069,692 L531,692 Z" fill="url(#stepFill)" opacity="0.15"/><path d="M531,692 L1069,692 L1108,728 L492,728 Z" fill="url(#stepFill)" opacity="0.15"/><path d="M492,728 L1108,728 L1151,768 L449,768 Z" fill="url(#stepFill)" opacity="0.16"/><path d="M449,768 L1151,768 L1197,811 L403,811 Z" fill="url(#stepFill)" opacity="0.16"/><path d="M403,811 L1197,811 L1248,857 L352,857 Z" fill="url(#stepFill)" opacity="0.17"/><path d="M352,857 L1248,857 L1302,906 L298,906 Z" fill="url(#stepFill)" opacity="0.17"/><path d="M298,906 L1302,906 L1359,959 L241,959 Z" fill="url(#stepFill)" opacity="0.18"/><path d="M241,959 L1359,959 L1420,1015 L180,1015 Z" fill="url(#stepFill)" opacity="0.18"/><line x1="180" y1="1015" x2="680" y2="556" stroke="#7fe8ff" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/><line x1="1420" y1="1015" x2="920" y2="556" stroke="#7fe8ff" stroke-width="3.5" opacity="0.7" filter="url(#glow)"/><line x1="800" y1="1015" x2="800" y2="556" stroke="#2f9fd0" stroke-width="2" opacity="0.22"/><line x1="680" y1="556" x2="920" y2="556" stroke="#6fe6ff" stroke-width="1.6" opacity="0.50" filter="url(#glow)"/><line x1="675" y1="561" x2="925" y2="561" stroke="#6fe6ff" stroke-width="1.8" opacity="0.54" filter="url(#glow)"/><line x1="663" y1="571" x2="937" y2="571" stroke="#6fe6ff" stroke-width="2.1" opacity="0.57" filter="url(#glow)"/><line x1="646" y1="587" x2="954" y2="587" stroke="#6fe6ff" stroke-width="2.3" opacity="0.61" filter="url(#glow)"/><line x1="624" y1="607" x2="976" y2="607" stroke="#6fe6ff" stroke-width="2.6" opacity="0.64" filter="url(#glow)"/><line x1="598" y1="632" x2="1002" y2="632" stroke="#6fe6ff" stroke-width="2.8" opacity="0.68" filter="url(#glow)"/><line x1="566" y1="660" x2="1034" y2="660" stroke="#6fe6ff" stroke-width="3.1" opacity="0.71" filter="url(#glow)"/><line x1="531" y1="692" x2="1069" y2="692" stroke="#6fe6ff" stroke-width="3.3" opacity="0.75" filter="url(#glow)"/><line x1="492" y1="728" x2="1108" y2="728" stroke="#6fe6ff" stroke-width="3.5" opacity="0.79" filter="url(#glow)"/><line x1="449" y1="768" x2="1151" y2="768" stroke="#6fe6ff" stroke-width="3.8" opacity="0.82" filter="url(#glow)"/><line x1="403" y1="811" x2="1197" y2="811" stroke="#6fe6ff" stroke-width="4.0" opacity="0.86" filter="url(#glow)"/><line x1="352" y1="857" x2="1248" y2="857" stroke="#6fe6ff" stroke-width="4.3" opacity="0.89" filter="url(#glow)"/><line x1="298" y1="906" x2="1302" y2="906" stroke="#6fe6ff" stroke-width="4.5" opacity="0.93" filter="url(#glow)"/><line x1="241" y1="959" x2="1359" y2="959" stroke="#6fe6ff" stroke-width="4.8" opacity="0.96" filter="url(#glow)"/><line x1="180" y1="1015" x2="1420" y2="1015" stroke="#6fe6ff" stroke-width="5.0" opacity="1.00" filter="url(#glow)"/><ellipse cx="800" cy="556" rx="150" ry="30" fill="#aef0ff" opacity="0.65" filter="url(#glow)"/><g transform="translate(800,1009) scale(1.4)"><g class="walker"><ellipse cx="0" cy="2" rx="26" ry="7" fill="#000" opacity="0.35"/><g class="walker__body"><rect class="leg leg-b" x="-9" y="-58" width="13" height="60" rx="6" fill="#0a2238"/><rect class="leg leg-f" x="-4" y="-58" width="13" height="60" rx="6" fill="#0d2c47"/><path d="M-18,-118 Q0,-128 18,-118 L14,-58 L-14,-58 Z" fill="#103354"/><rect class="arm arm-b" x="-22" y="-116" width="11" height="52" rx="5" fill="#0a2238"/><rect class="arm arm-f" x="11" y="-116" width="11" height="52" rx="5" fill="#0d2c47"/><circle cx="0" cy="-138" r="16" fill="#14406a"/><path d="M18,-118 L14,-58" stroke="#8fefff" stroke-width="3" opacity="1" filter="url(#glow)"/><path d="M-18,-118 L-14,-58" stroke="#8fefff" stroke-width="3" opacity=".7" filter="url(#glow)"/><ellipse cx="2" cy="-138" rx="30" ry="30" fill="url(#halo)" opacity=".7"/><circle cx="4" cy="-140" r="17" fill="none" stroke="#8fefff" stroke-width="2.4" opacity=".85" filter="url(#glow)"/></g></g></g></svg>
+    <div class="hero-stage__veil"></div>
+    <div class="hero-stage__scan"></div>
+  </div>
+  <div class="slide-content"><div class="wrap hero">
+    <div class="hero__logo ac-reveal"><img class="pvi-logo" src="PVI%20Logo%20(cropped).png" alt="Bảo hiểm PVI" /></div>
+    <div class="hero__kicker ac-reveal" style="--i:1">Tổng công ty Bảo hiểm PVI · Ban Hàng không &amp; Khách hàng Doanh nghiệp</div>
+    <div class="hero__word">BÁO CÁO</div>
+    <div class="hero__sub ac-reveal" style="--i:2">Kết quả kinh doanh 2025 &amp; Kế<br>hoạch 2026</div>
+    <div class="hero__org ac-reveal" style="--i:3">Ban Hàng không &amp; Khách hàng Doanh nghiệp — Bảo hiểm PVI</div>
+    <div class="hero__meta ac-reveal" style="--i:4">Tháng 6/2026</div>
+    <div class="hero__pills">
+      <span class="pill ac-pop" style="--i:5">Phòng HKKG</span>
+      <span class="pill ac-pop" style="--i:6">Phòng PTKD</span>
+      <span class="pill ac-pop" style="--i:7">Phòng TMĐT</span>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S2 MỤC LỤC ===== -->
+<section class="slide" data-title="Mục lục">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">Nội dung báo cáo</div><h2 class="s-title ac-reveal" style="--i:1">Mục lục</h2></div>
+    <div class="toc">
+      <div class="toc__item ac-reveal" style="--i:1" data-go="2"><span class="toc__no">01</span><span class="toc__t">Kết quả kinh doanh 2025 của Ban HK&amp;KHDN</span></div>
+      <div class="toc__item ac-reveal" style="--i:2" data-go="4"><span class="toc__no">02</span><span class="toc__t">Kết quả kinh doanh 2025 của từng Phòng</span></div>
+      <div class="toc__item ac-reveal" style="--i:3" data-go="8"><span class="toc__no">03</span><span class="toc__t">Kế hoạch doanh thu 2026 của Ban HK&amp;KHDN</span></div>
+      <div class="toc__item ac-reveal" style="--i:4" data-go="10"><span class="toc__no">04</span><span class="toc__t">Thực hiện 6 tháng 2026 &amp; so sánh kế hoạch năm</span></div>
+      <div class="toc__item ac-reveal" style="--i:5" data-go="12"><span class="toc__no">05</span><span class="toc__t">Khó khăn, Thách thức &amp; Giải pháp của từng Phòng</span></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== DIVIDER 1 ===== -->
+<section class="slide" data-title="Phần 1">
+  <div class="slide-content"><div class="wrap divider">
+    <div class="divider__no ac-reveal">01</div>
+    <div class="divider__bar ac-reveal" style="--i:1"></div>
+    <div class="divider__t ac-reveal" style="--i:2">KẾT QUẢ KINH DOANH 2025 CỦA BAN HK&amp;KHDN</div>
+  </div></div>
+</section>
+
+<!-- ===== S3 TỔNG QUAN 2025 ===== -->
+<section class="slide" data-title="Tổng quan KQKD 2025">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">01 · Kết quả kinh doanh 2025</div><h2 class="s-title ac-reveal" style="--i:1">Tổng quan kết quả kinh doanh năm 2025</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: VND</span></div>
+    <div class="kpis kpis--4" style="margin-bottom:var(--content-gap)">
+      <div class="kpi ac-pop" style="--i:0"><span class="kpi__v">1.469,8 tỷ</span><span class="kpi__l">Toàn Ban — Tổng DT</span><span class="tag tag--g">Hoàn thành 136,1% KH</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:1"><span class="kpi__v">477,6 tỷ</span><span class="kpi__l">Phòng HKKG</span><span class="tag tag--g">117,9% KH</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:2"><span class="kpi__v">947,1 tỷ</span><span class="kpi__l">Phòng PTKD</span><span class="tag tag--g">156,6% KH</span></div>
+      <div class="kpi kpi--red ac-pop" style="--i:3"><span class="kpi__v">45,1 tỷ</span><span class="kpi__l">Phòng TMĐT</span><span class="tag tag--r">64,4% KH</span></div>
+    </div>
+    <div class="chart ac-reveal" style="--i:4">
+      <div class="s-sub" style="margin-bottom:.7rem;font-weight:600;color:var(--pvi-blue)">Cơ cấu Doanh thu BH Gốc / Nhận TBH — 2025 (tỷ VND)</div>
+      <div class="hbars">
+        <div class="hbar ac-reveal" style="--i:5"><span class="hbar__l">Toàn Ban</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:100%"></div></div><span class="hbar__v" style="line-height:1.2">Gốc 698,8<br>Nhận TBH 771,0</span></div>
+        <div class="hbar ac-reveal" style="--i:6"><span class="hbar__l">HKKG</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:32%;background:linear-gradient(90deg,var(--pvi-blue),var(--pvi-blue))"></div></div><span class="hbar__v" style="line-height:1.2">Gốc 337,8<br>Nhận TBH 139,7</span></div>
+        <div class="hbar ac-reveal" style="--i:7"><span class="hbar__l">PTKD</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:64%;background:linear-gradient(90deg,var(--pvi-cyan),var(--pvi-blue))"></div></div><span class="hbar__v" style="line-height:1.2">Gốc 315,8<br>Nhận TBH 631,3</span></div>
+        <div class="hbar ac-reveal" style="--i:8"><span class="hbar__l">TMĐT</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:6%;background:var(--gold)"></div></div><span class="hbar__v" style="line-height:1.2">Gốc 45,1<br>Nhận TBH —</span></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S4 DT 2025 vs KH ===== -->
+<section class="slide" data-title="DT 2025 vs Kế hoạch">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">01 · Kết quả kinh doanh 2025</div><h2 class="s-title ac-reveal" style="--i:1">Doanh thu 2025 – so sánh với Kế hoạch 2025</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="grid2" style="align-items:start">
+      <table class="tbl ac-reveal" style="--i:3">
+        <thead><tr><th>Phòng</th><th>DT Gốc</th><th>Nhận TBH</th><th>Tổng</th><th>KH 2025</th><th>Tỷ lệ HT%</th></tr></thead>
+        <tbody>
+          <tr><td>HKKG</td><td>337,8</td><td>139,7</td><td>477,6</td><td>405,0</td><td class="pos">117,9%</td></tr>
+          <tr><td>PTKD</td><td>315,8</td><td>631,3</td><td>947,1</td><td>605,0</td><td class="pos">156,6%</td></tr>
+          <tr><td>TMĐT</td><td>45,1</td><td>—</td><td>45,1</td><td>70,0</td><td class="neg">64,4%</td></tr>
+          <tr class="total"><td>Toàn Ban</td><td>698,8</td><td>771,0</td><td>1.469,8</td><td>1.080,0</td><td class="pos">136,1%</td></tr>
+        </tbody>
+      </table>
+      <div class="chart ac-reveal" style="--i:4;display:flex;flex-direction:column;align-items:center;padding:1.4rem">
+        <div class="s-sub" style="margin-bottom:1rem;font-weight:600;color:var(--pvi-blue)">Tỷ trọng Doanh thu các Phòng</div>
+        <div class="donut-wrap">
+          <svg class="donut" viewBox="0 0 120 120" style="width:140px">
+            <circle cx="60" cy="60" r="48" fill="none" stroke="var(--gold)" stroke-width="24"/>
+            <circle class="ac-ring-val" cx="60" cy="60" r="48" fill="none" stroke="var(--pvi-blue)" stroke-width="24" stroke-linecap="round" style="--circ:301.6;--p:.969;--i:5"/>
+            <circle class="ac-ring-val" cx="60" cy="60" r="48" fill="none" stroke="var(--pvi-cyan)" stroke-width="24" stroke-linecap="round" style="--circ:301.6;--p:.644;--i:6;animation-delay:400ms"/>
+          </svg>
+          <div class="donut-leg">
+            <div><i style="background:var(--pvi-cyan)"></i>PTKD 64,4%</div>
+            <div><i style="background:var(--pvi-blue)"></i>HKKG 32,5%</div>
+            <div><i style="background:var(--gold)"></i>TMĐT 3,1%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="note note--g ac-reveal" style="--i:4;margin-top:var(--content-gap)">✔ Toàn Ban vượt 389,8 tỷ so kế hoạch 2025. PTKD bứt phá 156,6% nhờ dịch vụ nhận TBH fronting quốc tế; HKKG vượt 117,9%; riêng TMĐT chưa đạt kế hoạch.</div>
+  </div></div>
+</section>
+
+<!-- ===== S5 DT theo tháng 2025 ===== -->
+<section class="slide" data-title="Doanh thu theo tháng 2025">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">02 · Kết quả từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Doanh thu theo tháng 2025 — Gốc / Nhận tái</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND · Tổng năm 1.469,8 tỷ</span></div>
+    <div class="chart ac-reveal" style="--i:3">
+      <div class="bars" id="bars2025"></div>
+      <table class="tbl" style="margin-top:1.2rem">
+        <thead>
+          <tr><th style="text-align:left">Chỉ tiêu</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th><th style="text-align:center">T7</th><th style="text-align:center">T8</th><th style="text-align:center">T9</th><th style="text-align:center">T10</th><th style="text-align:center">T11</th><th style="text-align:center">T12</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BH Gốc</td><td style="text-align:center">92.4</td><td style="text-align:center">58.8</td><td style="text-align:center">61.3</td><td style="text-align:center">58.5</td><td style="text-align:center">37.8</td><td style="text-align:center">72.7</td><td style="text-align:center">86.4</td><td style="text-align:center">34.0</td><td style="text-align:center">57.4</td><td style="text-align:center">53.3</td><td style="text-align:center">49.3</td><td style="text-align:center">37.4</td></tr>
+          <tr><td>Nhận TBH</td><td style="text-align:center">155.0</td><td style="text-align:center">104.1</td><td style="text-align:center">79.0</td><td style="text-align:center">30.4</td><td style="text-align:center">40.2</td><td style="text-align:center">97.1</td><td style="text-align:center">114.0</td><td style="text-align:center">7.3</td><td style="text-align:center">49.4</td><td style="text-align:center">34.6</td><td style="text-align:center">48.9</td><td style="text-align:center">10.5</td></tr>
+        </tbody>
+      </table>
+      <div class="legend" style="margin-top:1.2rem"><span><i style="background:linear-gradient(180deg,var(--pvi-blue),#00205c)"></i>BH Gốc · 698,8 tỷ</span><span><i style="background:linear-gradient(180deg,var(--pvi-cyan),#0079b3)"></i>Nhận TBH · 771,0 tỷ</span></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== DIVIDER 2 ===== -->
+<section class="slide" data-title="Phần 2">
+  <div class="slide-content"><div class="wrap divider">
+    <div class="divider__no ac-reveal">02</div>
+    <div class="divider__bar ac-reveal" style="--i:1"></div>
+    <div class="divider__t ac-reveal" style="--i:2">KẾT QUẢ KINH DOANH 2025 CỦA TỪNG PHÒNG</div>
+  </div></div>
+</section>
+
+<!-- ===== S6 PTKD 2025 ===== -->
+<section class="slide" data-title="Phòng PTKD 2025">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">02 · Kết quả từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng PTKD — Kết quả 2025</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="grid2">
+      <div>
+        <div class="kpis kpis--2" style="gap:.8rem;margin-bottom:1rem">
+          <div class="kpi ac-pop" style="--i:0"><span class="kpi__v">947,1 tỷ</span><span class="kpi__l">Tổng DT PTKD</span><span class="tag tag--g">156,6% KH</span></div>
+          <div class="kpi kpi--green ac-pop" style="--i:3"><span class="kpi__v">+342 tỷ</span><span class="kpi__l">Vượt KH 2025</span><span class="tag tag--g">KH 605 tỷ</span></div>
+        </div>
+        <table class="tbl ac-reveal" style="--i:1">
+          <thead><tr><th>Chỉ tiêu (tỷ)</th><th style="text-align:center">Q1</th><th style="text-align:center">Q2</th><th style="text-align:center">Q3</th><th style="text-align:center">Q4</th></tr></thead>
+          <tbody>
+            <tr><td>Kế hoạch lũy kế</td><td style="text-align:center">150</td><td style="text-align:center">300</td><td style="text-align:center">450</td><td style="text-align:center">605</td></tr>
+            <tr><td>Thực hiện lũy kế</td><td style="text-align:center">210</td><td style="text-align:center">450</td><td style="text-align:center">680</td><td style="text-align:center">947,1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card card--ok ac-reveal" style="--i:4">
+        <h4><span class="card__ic">★</span> Điểm nổi bật</h4>
+        <p>Đạt <b>156,6% KH 2025</b>. Đột phá nhờ dịch vụ nhận TBH fronting quốc tế (EuroAsia / BMC / WTW) chiếm <b>66,6%</b> tổng doanh thu của Phòng. DT Nhận TBH 631,3 tỷ &gt; DT Gốc 315,8 tỷ.</p>
+        <div class="donut-wrap" style="margin-top:.9rem">
+          <svg class="donut" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="48" fill="none" stroke="var(--ac-track)" stroke-width="16"/>
+            <circle class="ac-ring-val" cx="60" cy="60" r="48" fill="none" stroke="var(--pvi-cyan)" stroke-width="16" stroke-linecap="round" style="--circ:301.6;--p:.666;--i:5"/>
+          </svg>
+          <div class="donut-leg"><div><i style="background:var(--pvi-cyan)"></i>Nhận TBH 66,6% (631,3 tỷ)</div><div><i style="background:var(--ac-track)"></i>DT Gốc 33,4% (315,8 tỷ)</div></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S7 HKKG 2025 ===== -->
+<section class="slide" data-title="Phòng HKKG 2025">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">02 · Kết quả từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng Hàng không Không gian — Kết quả 2025</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: triệu VND</span></div>
+    <div class="grid2" style="align-items:start">
+      <div>
+        <div class="kpis kpis--2" style="gap:.8rem;margin-bottom:1rem">
+          <div class="kpi ac-pop" style="--i:0"><span class="kpi__v">477,6 tỷ</span><span class="kpi__l">Tổng DT</span><span class="tag tag--g">117,9% KH</span></div>
+          <div class="kpi kpi--cyan ac-pop" style="--i:1"><span class="kpi__v">337,8 tỷ</span><span class="kpi__l">DT Gốc (BH HK)</span><span class="tag tag--b">70,7% tổng</span></div>
+          <div class="kpi kpi--cyan ac-pop" style="--i:2"><span class="kpi__v">139,7 tỷ</span><span class="kpi__l">DT Nhận TBH</span><span class="tag tag--b">29,3% tổng</span></div>
+          <div class="kpi kpi--green ac-pop" style="--i:3"><span class="kpi__v">+73 tỷ</span><span class="kpi__l">Vượt KH 2025</span><span class="tag tag--g">KH 405 tỷ</span></div>
+        </div>
+        <table class="tbl ac-reveal" style="--i:4">
+          <thead><tr><th>Chỉ tiêu (tỷ)</th><th style="text-align:center">Q1</th><th style="text-align:center">Q2</th><th style="text-align:center">Q3</th><th style="text-align:center">Q4</th></tr></thead>
+          <tbody>
+            <tr><td>Kế hoạch lũy kế</td><td style="text-align:center">100</td><td style="text-align:center">200</td><td style="text-align:center">300</td><td style="text-align:center">405</td></tr>
+            <tr><td>Thực hiện lũy kế</td><td style="text-align:center">120</td><td style="text-align:center">250</td><td style="text-align:center">360</td><td style="text-align:center">477,6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart ac-reveal" style="--i:5">
+        <div class="s-sub" style="margin-bottom:.7rem;font-weight:600;color:var(--pvi-blue)">Các dịch vụ có doanh thu lớn nhất (triệu VND)</div>
+        <div class="hbars">
+          <div class="hbar ac-reveal" style="--i:6"><span class="hbar__l">Vietnam Airlines</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:100%"></div></div><span class="hbar__v">201.928</span></div>
+          <div class="hbar ac-reveal" style="--i:7"><span class="hbar__l">Nhận TBH quốc tế</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:45%"></div></div><span class="hbar__v">90.097</span></div>
+          <div class="hbar ac-reveal" style="--i:8"><span class="hbar__l">Vietjet Air</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:26%"></div></div><span class="hbar__v">52.298</span></div>
+          <div class="hbar ac-reveal" style="--i:9"><span class="hbar__l">VNH</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:18%"></div></div><span class="hbar__v">36.769</span></div>
+          <div class="hbar ac-reveal" style="--i:10"><span class="hbar__l">Bamboo Airways</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:13%"></div></div><span class="hbar__v">25.846</span></div>
+          <div class="hbar ac-reveal" style="--i:11"><span class="hbar__l">Hải Âu</span><div class="hbar__track"><div class="hbar__fill ac-fill-x" style="--w:8%"></div></div><span class="hbar__v">16.539</span></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S8 TMĐT 2025 ===== -->
+<section class="slide" data-title="Phòng TMĐT 2025">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">02 · Kết quả từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng TMĐT — Kết quả 2025</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: VND</span></div>
+    <div class="grid2">
+      <div class="kpis kpis--2" style="gap:.8rem">
+        <div class="kpi kpi--red ac-pop" style="--i:0"><span class="kpi__v">45,1 tỷ</span><span class="kpi__l">Tổng DT TMĐT</span><span class="tag tag--r">64,4% KH</span></div>
+        <div class="kpi kpi--cyan ac-pop" style="--i:1"><span class="kpi__v">100%</span><span class="kpi__l">BH Gốc</span><span class="tag tag--b">Không nhận TBH</span></div>
+        <div class="kpi kpi--red ac-pop" style="--i:2"><span class="kpi__v">−24,9 tỷ</span><span class="kpi__l">Thiếu vs KH</span><span class="tag tag--r">KH 70 tỷ</span></div>
+        <div class="kpi kpi--gold ac-pop" style="--i:3"><span class="kpi__v">70 tỷ</span><span class="kpi__l">KH 2025</span><span class="tag tag--o">TL 64,4%</span></div>
+      </div>
+      <div class="card card--bad ac-reveal" style="--i:4">
+        <h4><span class="card__ic">!</span> Nguyên nhân</h4>
+        <p>Các kênh hiện hữu giảm giao dịch trong nửa cuối năm; trong khi các dự án TMĐT mới cần đầu tư dài hạn, chưa có doanh thu ngay, dẫn đến kết quả 2025 chỉ đạt 64,4% kế hoạch năm.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== DIVIDER 3 ===== -->
+<section class="slide" data-title="Phần 3">
+  <div class="slide-content"><div class="wrap divider">
+    <div class="divider__no ac-reveal">03</div>
+    <div class="divider__bar ac-reveal" style="--i:1"></div>
+    <div class="divider__t ac-reveal" style="--i:2">KẾ HOẠCH 2026 CỦA TỪNG PHÒNG</div>
+  </div></div>
+</section>
+
+<!-- ===== S9 KH 2026 toàn Ban ===== -->
+<section class="slide" data-title="Kế hoạch DT 2026">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">03 · Kế hoạch doanh thu 2026</div><h2 class="s-title ac-reveal" style="--i:1">Kế hoạch doanh thu năm 2026 — Toàn Ban</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="kpis kpis--3" style="margin-bottom:var(--content-gap)">
+      <div class="kpi ac-pop" style="--i:0"><span class="kpi__v">1.582 tỷ</span><span class="kpi__l">KH 2026 — Toàn Ban</span><span class="tag tag--g">+7.6% tăng trưởng vs TH 2025</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:1"><span class="kpi__v">805,0 tỷ</span><span class="kpi__l">DT Gốc</span><span class="tag tag--b">50,9%</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:2"><span class="kpi__v">777,0 tỷ</span><span class="kpi__l">Nhận TBH</span><span class="tag tag--b">49,1%</span></div>
+    </div>
+    <table class="tbl ac-reveal" style="--i:3">
+      <thead><tr><th>Phòng</th><th>KH 2025</th><th>TH 2025</th><th>HT 2025</th><th>KH 2026</th><th>TT vs TH'25</th><th>TT vs KH'25</th></tr></thead>
+      <tbody>
+        <tr><td>HKKG</td><td>405,0</td><td>477,6</td><td class="pos">117,9%</td><td>552,0</td><td class="pos">+15,6%</td><td class="pos">+36,3%</td></tr>
+        <tr><td>PTKD</td><td>605,0</td><td>947,1</td><td class="pos">156,6%</td><td>960,0</td><td class="pos">+1,4%</td><td class="pos">+58,7%</td></tr>
+        <tr><td>TMĐT</td><td>70,0</td><td>45,1</td><td class="neg">64,4%</td><td>70,0</td><td class="pos">+55,2%</td><td>+0,0%</td></tr>
+        <tr class="total"><td>Toàn Ban</td><td>1.080,0</td><td>1.469,8</td><td class="pos">136,1%</td><td>1.582,0</td><td class="pos">+7,6%</td><td class="pos">+46,5%</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ===== S10 KH 2026 từng phòng ===== -->
+<section class="slide" data-title="Kế hoạch 2026 từng Phòng">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">03 · Kế hoạch 2026 của từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Kế hoạch 2026 theo từng Phòng (12 tháng)</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND · cột = KH'26 theo tháng</span></div>
+    <div class="cards cards--3">
+      <div class="card ac-reveal" style="--i:3">
+        <h4>Phòng PTKD</h4>
+        <div style="display:flex;gap:.9rem;align-items:baseline;margin:.2rem 0 .6rem"><span style="font-family:var(--font-display);font-weight:800;color:var(--pvi-blue);font-size:1.6rem">960,0 tỷ</span><span class="tag tag--g">+1,4% vs TH'25</span></div>
+        <div class="bars" data-mini="ptkd" style="height:90px"></div>
+      </div>
+      <div class="card ac-reveal" style="--i:4">
+        <h4>Phòng HKKG</h4>
+        <div style="display:flex;gap:.9rem;align-items:baseline;margin:.2rem 0 .6rem"><span style="font-family:var(--font-display);font-weight:800;color:var(--pvi-blue);font-size:1.6rem">552,0 tỷ</span><span class="tag tag--g">+15,6% vs TH'25</span></div>
+        <div class="bars" data-mini="hkkg" style="height:90px"></div>
+      </div>
+      <div class="card ac-reveal" style="--i:5">
+        <h4>Phòng TMĐT</h4>
+        <div style="display:flex;gap:.9rem;align-items:baseline;margin:.2rem 0 .6rem"><span style="font-family:var(--font-display);font-weight:800;color:var(--pvi-blue);font-size:1.6rem">70,0 tỷ</span><span class="tag tag--g">+55,2% vs TH'25</span></div>
+        <div class="bars" data-mini="tmdt" style="height:90px"></div>
+      </div>
+    </div>
+    <div class="note ac-reveal" style="--i:6;margin-top:var(--content-gap)">Tổng KH 2026 toàn Ban <b>1.582 tỷ VND</b> = Gốc 805 tỷ + Nhận TBH 777 tỷ. PTKD &amp; HKKG giữ đà tăng; TMĐT đặt mục tiêu phục hồi mạnh +55,2% với doanh thu dồn về quý cuối năm.</div>
+  </div></div>
+</section>
+
+<!-- ===== S10A KH 2026 PTKD ===== -->
+<section class="slide" data-title="Kế hoạch 2026 PTKD">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">03 · Kế hoạch 2026 của từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng PTKD — Kế hoạch 2026 theo tháng</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="chart ac-reveal" style="--i:3">
+      <div class="bars" data-mini="ptkd" style="height:160px;gap:1.5rem"></div>
+      <table class="tbl" style="margin-top:1.2rem">
+        <thead>
+          <tr><th style="text-align:left">Chỉ tiêu</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th><th style="text-align:center">T7</th><th style="text-align:center">T8</th><th style="text-align:center">T9</th><th style="text-align:center">T10</th><th style="text-align:center">T11</th><th style="text-align:center">T12</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>KH 2026</td><td style="text-align:center">119.2</td><td style="text-align:center">34.3</td><td style="text-align:center">72.8</td><td style="text-align:center">118.6</td><td style="text-align:center">78.5</td><td style="text-align:center">64.6</td><td style="text-align:center">71.5</td><td style="text-align:center">77.0</td><td style="text-align:center">56.1</td><td style="text-align:center">93.9</td><td style="text-align:center">81.4</td><td style="text-align:center">92.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S10B KH 2026 HKKG ===== -->
+<section class="slide" data-title="Kế hoạch 2026 HKKG">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">03 · Kế hoạch 2026 của từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng HKKG — Kế hoạch 2026 theo tháng</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="chart ac-reveal" style="--i:3">
+      <div class="bars" data-mini="hkkg" style="height:160px;gap:1.5rem"></div>
+      <table class="tbl" style="margin-top:1.2rem">
+        <thead>
+          <tr><th style="text-align:left">Chỉ tiêu</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th><th style="text-align:center">T7</th><th style="text-align:center">T8</th><th style="text-align:center">T9</th><th style="text-align:center">T10</th><th style="text-align:center">T11</th><th style="text-align:center">T12</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>KH 2026</td><td style="text-align:center">16.0</td><td style="text-align:center">19.5</td><td style="text-align:center">35.5</td><td style="text-align:center">67.9</td><td style="text-align:center">36.7</td><td style="text-align:center">46.2</td><td style="text-align:center">61.3</td><td style="text-align:center">43.4</td><td style="text-align:center">45.0</td><td style="text-align:center">52.4</td><td style="text-align:center">54.8</td><td style="text-align:center">73.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S10C KH 2026 TMĐT ===== -->
+<section class="slide" data-title="Kế hoạch 2026 TMĐT">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">03 · Kế hoạch 2026 của từng Phòng</div><h2 class="s-title ac-reveal" style="--i:1">Phòng TMĐT — Kế hoạch 2026 theo tháng</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="chart ac-reveal" style="--i:3">
+      <div class="bars" data-mini="tmdt" style="height:160px;gap:1.5rem"></div>
+      <table class="tbl" style="margin-top:1.2rem">
+        <thead>
+          <tr><th style="text-align:left">Chỉ tiêu</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th><th style="text-align:center">T7</th><th style="text-align:center">T8</th><th style="text-align:center">T9</th><th style="text-align:center">T10</th><th style="text-align:center">T11</th><th style="text-align:center">T12</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>KH 2026</td><td style="text-align:center">3.3</td><td style="text-align:center">3.3</td><td style="text-align:center">3.7</td><td style="text-align:center">3.8</td><td style="text-align:center">4.2</td><td style="text-align:center">4.3</td><td style="text-align:center">5.4</td><td style="text-align:center">5.5</td><td style="text-align:center">6.4</td><td style="text-align:center">6.7</td><td style="text-align:center">9.9</td><td style="text-align:center">13.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== DIVIDER 4 ===== -->
+<section class="slide" data-title="Phần 4">
+  <div class="slide-content"><div class="wrap divider">
+    <div class="divider__no ac-reveal">04</div>
+    <div class="divider__bar ac-reveal" style="--i:1"></div>
+    <div class="divider__t ac-reveal" style="--i:2">THỰC HIỆN 6 THÁNG 2026 VÀ SO SÁNH KẾ HOẠCH NĂM 2026</div>
+  </div></div>
+</section>
+
+<!-- ===== S11 TH 6T 2026 tổng quan ===== -->
+<section class="slide" data-title="Thực hiện 6T 2026">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">04 · Thực hiện 6 tháng 2026</div><h2 class="s-title ac-reveal" style="--i:1">Thực hiện 6 tháng đầu năm 2026 — Ban HK&amp;KHDN</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: tỷ VND</span></div>
+    <div class="kpis kpis--4" style="margin-bottom:var(--content-gap)">
+      <div class="kpi ac-pop" style="--i:0"><span class="kpi__v">823,7 tỷ</span><span class="kpi__l">Toàn Ban — 6T</span><span class="tag tag--g">112,4% KH 6T</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:1"><span class="kpi__v">227,2 tỷ</span><span class="kpi__l">Phòng HKKG</span><span class="tag tag--g">102,4% KH 6T</span></div>
+      <div class="kpi kpi--cyan ac-pop" style="--i:2"><span class="kpi__v">570,2 tỷ</span><span class="kpi__l">Phòng PTKD</span><span class="tag tag--g">116,8% KH 6T</span></div>
+      <div class="kpi kpi--green ac-pop" style="--i:3"><span class="kpi__v">26,2 tỷ</span><span class="kpi__l">Phòng TMĐT</span><span class="tag tag--g">115,7% KH 6T</span></div>
+    </div>
+    <table class="tbl ac-reveal" style="--i:4">
+      <thead><tr><th>Phòng</th><th>KH 6T</th><th>TH 6T</th><th>%TH/KH 6T</th><th>KH Năm</th><th>%TH/KH năm</th></tr></thead>
+      <tbody>
+        <tr><td>HKKG</td><td>221,9</td><td>227,2</td><td class="pos">102,4%</td><td>552</td><td>41,2%</td></tr>
+        <tr><td>PTKD</td><td>488,1</td><td>570,2</td><td class="pos">116,8%</td><td>960</td><td>59,4%</td></tr>
+        <tr><td>TMĐT</td><td>22,7</td><td>26,2</td><td class="pos">115,7%</td><td>70</td><td>37,5%</td></tr>
+        <tr class="total"><td>Toàn Ban</td><td>732,7</td><td>823,7</td><td class="pos">112,4%</td><td>1.582</td><td>52,1%</td></tr>
+      </tbody>
+    </table>
+    <table class="tbl ac-reveal" style="--i:5;margin-top:1.2rem">
+      <thead><tr><th style="text-align:left">Chỉ tiêu toàn Ban (tỷ)</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th></tr></thead>
+      <tbody>
+        <tr><td>Kế hoạch lũy kế 2026</td><td style="text-align:center">138.6</td><td style="text-align:center">195.7</td><td style="text-align:center">307.7</td><td style="text-align:center">498.0</td><td style="text-align:center">617.4</td><td style="text-align:center">732.7</td></tr>
+        <tr><td>Thực hiện lũy kế 2026</td><td style="text-align:center">140.0</td><td style="text-align:center">210.5</td><td style="text-align:center">330.2</td><td style="text-align:center">520.4</td><td style="text-align:center">670.0</td><td style="text-align:center">823.7</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ===== S12 TH 6T theo tháng/phòng ===== -->
+<section class="slide" data-title="TH 6T theo Phòng">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">04 · Thực hiện 6 tháng 2026</div><h2 class="s-title ac-reveal" style="--i:1">Thực hiện 6T 2026 — theo Phòng &amp; cơ cấu Gốc / Tái</h2><span class="unit ac-reveal" style="--i:2">Đơn vị: triệu VND</span></div>
+    <table class="tbl ac-reveal" style="--i:3">
+      <thead><tr><th>Phòng</th><th>BH Gốc</th><th>Nhận TBH</th><th>Tổng</th></tr></thead>
+      <tbody>
+        <tr><td>PTKD</td><td>262.183</td><td>308.083</td><td>570.265</td></tr>
+        <tr><td>HKKG</td><td>154.915</td><td>72.306</td><td>227.221</td></tr>
+        <tr><td>TMĐT</td><td>26.221</td><td>0</td><td>26.221</td></tr>
+        <tr class="total"><td>Tổng</td><td>443.319</td><td>380.388</td><td>823.707</td></tr>
+      </tbody>
+    </table>
+    <div class="cards cards--3" style="margin-top:var(--content-gap)">
+      <div class="card card--ok ac-reveal" style="--i:4"><h4>HKKG</h4><p>TH <b>227,2 tỷ</b> · KH 221,9 tỷ → <b class="pos">102,4%</b></p></div>
+      <div class="card card--ok ac-reveal" style="--i:5"><h4>PTKD</h4><p>TH <b>570,2 tỷ</b> · KH 488,1 tỷ → <b class="pos">116,8%</b></p></div>
+      <div class="card card--ok ac-reveal" style="--i:6"><h4>TMĐT</h4><p>TH <b>26,2 tỷ</b> · KH 22,7 tỷ → <b class="pos">115,7%</b></p></div>
+    </div>
+    <table class="tbl ac-reveal" style="--i:7;margin-top:1.2rem">
+      <thead><tr><th style="text-align:left">Thực hiện (tỷ)</th><th style="text-align:center">T1</th><th style="text-align:center">T2</th><th style="text-align:center">T3</th><th style="text-align:center">T4</th><th style="text-align:center">T5</th><th style="text-align:center">T6</th></tr></thead>
+      <tbody>
+        <tr><td>PTKD</td><td style="text-align:center">120.0</td><td style="text-align:center">45.5</td><td style="text-align:center">80.0</td><td style="text-align:center">125.0</td><td style="text-align:center">110.0</td><td style="text-align:center">89.7</td></tr>
+        <tr><td>HKKG</td><td style="text-align:center">18.5</td><td style="text-align:center">25.0</td><td style="text-align:center">30.0</td><td style="text-align:center">65.0</td><td style="text-align:center">40.5</td><td style="text-align:center">48.2</td></tr>
+        <tr><td>TMĐT</td><td style="text-align:center">3.5</td><td style="text-align:center">3.8</td><td style="text-align:center">4.0</td><td style="text-align:center">4.2</td><td style="text-align:center">5.0</td><td style="text-align:center">5.7</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ===== S13 Divider HKKG ===== -->
+<section class="slide" data-title="Khó khăn & Giải pháp">
+  <div class="slide-content"><div class="wrap divider">
+    <div class="divider__no ac-reveal">05</div>
+    <div class="divider__bar ac-reveal" style="--i:1"></div>
+    <div class="divider__t ac-reveal" style="--i:2">Khó khăn, Thách thức<br>&amp; Giải pháp của từng Phòng</div>
+    <div class="s-sub ac-reveal" style="--i:3" style="line-height:1.6">
+      5.1. Phòng Hàng không Không gian<br>
+      5.2. Phòng Thương mại điện tử<br>
+      5.3. Phòng Phát triển kinh doanh
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S14 Khó khăn HKKG ===== -->
+<section class="slide" data-title="Khó khăn HKKG">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">5.1 · Phòng Hàng không Không gian</div><h2 class="s-title ac-reveal" style="--i:1">Khó khăn &amp; Thách thức — HKKG</h2></div>
+    <div class="cards cards--3">
+      <div class="card card--bad ac-reveal" style="--i:2"><h4><span class="card__ic">⚡</span> BH hàng không trong nước</h4><p>Nhiều Công ty bảo hiểm trong nước tham gia vào thị trường BHHK. Đối thủ của BH PVI hiện không chỉ là Bảo Việt mà còn bao gồm các Công ty bảo hiểm thuộc hệ sinh thái ngân hàng như MIC, BIC, VBI… với lợi thế lớn về quan hệ tài chính và nguồn vốn. Áp lực cạnh tranh khiến doanh thu và lợi nhuận giảm do giảm phí bảo hiểm và tỷ lệ tham gia của BHPVI trong các dịch vụ giảm đi.</p></div>
+      <div class="card card--warn ac-reveal" style="--i:3"><h4><span class="card__ic">✈</span> Nhận tái Major Risk</h4><p>Chính sách khai thác thắt chặt ảnh hưởng quy mô doanh thu 2025/2026. Phòng chịu áp lực giảm quy mô nhận tái trong khi vẫn phải đảm bảo chỉ tiêu được giao.</p></div>
+      <div class="card card--warn ac-reveal" style="--i:4"><h4><span class="card__ic">⚖</span> Nhận TBH qua MGA ALIF</h4><p>Thị trường còn nhầm lẫn giữa fronting của BHPVI và MGA ALIF. Tiềm năng APAC lớn nhưng năng lực nhận tái của Hợp đồng QS còn hạn chế nên chưa khai thác hết.</p></div>
+      <div class="card card--bad ac-reveal" style="--i:5"><h4><span class="card__ic">🌏</span> Doanh thu &amp; công nợ</h4><p>Dịch vụ nhận TBH HK có nhiều kỳ thu phí (4–8 kỳ); đối soát với ALIF theo Quý gây khó khăn trong việc vừa đảm bảo doanh thu vừa đạt chỉ tiêu công nợ phí.</p></div>
+      <div class="card card--warn ac-reveal" style="--i:6"><h4><span class="card__ic">⚡</span> Chính sách khai thác TCT</h4><p>Phòng nhận nhiều đề xuất hợp tác nhận TBH fronting từ các MGA, nhưng do hạn chế chính sách khai thác của TCT nên nhiều dự án không được thực hiện.</p></div>
+      <div class="card card--bad ac-reveal" style="--i:7"><h4><span class="card__ic">📋</span> Dự án mới trong nước</h4><p>Thị trường hàng không khá hẹp; các dự án mới thường thuộc khách hàng tư nhân, cạnh tranh về phí khốc liệt. Cơ hội dẫn đầu VNA Group năm 2026/2027 còn thấp do chính sách chưa thay đổi.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S15 Giải pháp HKKG ===== -->
+<section class="slide" data-title="Giải pháp HKKG">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">5.1 · Phòng Hàng không Không gian</div><h2 class="s-title ac-reveal" style="--i:1">Giải pháp &amp; Đề xuất — HKKG</h2></div>
+    <div class="steps">
+      <div class="step ac-reveal" style="--i:2"><div class="step__n">1</div><div><h4>BH hàng không trong nước</h4><p>P.HKKG luôn bám sát khách hàng nhằm tăng tỷ lệ đồng bảo hiểm và để cơ hội trở thành công ty bảo hiểm đứng đầu hoặc tăng tỷ lệ ĐBH. Theo đó, Phòng HKKG đề xuất TCT có những hỗ trợ trong chính sách hỗ trợ đối tác như ưu tiên sử dụng các dịch vụ hàng không, ưu tiên tiền gửi lại các ngân hàng liên kết với đối tác như HDBank của Vietjet, NCB của Sun Group,…</p></div></div>
+      <div class="step ac-reveal" style="--i:3"><div class="step__n">2</div><div><h4>Nhận tái Major Risk</h4><p>Với một số rủi ro ABC có tỷ lệ tổn thất thấp, đề xuất LĐTCT xem xét mở rộng khai thác trên cơ sở đánh giá nghiệp vụ và trao đổi thông tin với HDI Aviation.</p></div></div>
+      <div class="step ac-reveal" style="--i:4"><div class="step__n">3</div><div><h4>Doanh thu &amp; công nợ</h4><p>Đề xuất LĐTCT cơ chế ghi nhận công nợ / doanh thu từ kênh ALIF cho phép giới hạn công nợ cao hơn, đảm bảo cùng lúc kế hoạch khai thác và chỉ tiêu công nợ.</p></div></div>
+      <div class="step ac-reveal" style="--i:5"><div class="step__n">4</div><div><h4>Sản phẩm &amp; khách hàng mới</h4><p>Nghiên cứu sản phẩm BH UAV thương mại (10.000–50.000 USD/chiếc); khai thác sản phẩm mới (Cyber Risk, D&amp;O); mở rộng nhận TBH fronting với nhà tái rating tối thiểu B++ (AM Best).</p></div></div>
+      <div class="step ac-reveal" style="--i:6"><div class="step__n">5</div><div><h4>Tái tục Treaty 1/10/2026</h4><p>Hợp đồng XOL: giữ nguyên cơ cấu hiện tại. Hợp đồng QS: tăng năng lực nhận tái lên <b>55 triệu USD</b> để khai thác tiềm năng qua ALIF và gia tăng doanh thu nhận TBH.</p></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S16 Khó khăn & Giải pháp TMĐT ===== -->
+<section class="slide" data-title="Khó khăn TMĐT">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">5.2 · Phòng Thương mại điện tử</div><h2 class="s-title ac-reveal" style="--i:1">Khó khăn &amp; Thách thức — TMĐT</h2></div>
+    <div class="grid2" style="align-items:stretch">
+      <div class="cards" style="gap:.7rem">
+        <div class="card card--bad ac-reveal" style="--i:2"><h4>Thị trường HK &amp; du lịch sụt giảm</h4><p>Lưu lượng hành khách của các hãng hàng không Vietnam Airlines, Bamboo Airways giảm mạnh T4–T5/2026 (giảm 20–30% so cùng kỳ 2025) do giá vé tăng, sản lượng vé giảm. Doanh thu BH du lịch hãng bay bị ảnh hưởng trực tiếp.</p></div>
+        <div class="card card--warn ac-reveal" style="--i:3"><h4>Cạnh tranh phí &amp; hoa hồng</h4><p>Đối tác TMĐT yêu cầu phí cạnh tranh hơn, hoa hồng cao hơn. Nhà tái (Chubb) chưa điều chỉnh tỷ lệ hoa hồng tái theo đề xuất → áp lực biên lợi nhuận.</p></div>
+        <div class="card card--warn ac-reveal" style="--i:4"><h4>Một số kênh tăng chậm</h4><p>TripCARE đạt 34% KPI năm sau 5 tháng. Bán lẻ qua telesales/digital (APUV/Asahi, MobiFone A08) chưa đủ quy mô bù đắp thiếu hụt.</p></div>
+        <div class="card card--bad ac-reveal" style="--i:5"><h4>Phụ thuộc phê duyệt &amp; đối tác</h4><p>Nhiều dự án đang đàm phán/ký kết (SPA, 7-Eleven, Sun Group…) chưa phát sinh doanh thu; tiến độ go-live phụ thuộc phê duyệt nội bộ và hành động phía đối tác.</p></div>
+      </div>
+      <div class="kpis" style="grid-template-columns:1fr;gap:.8rem;align-content:center">
+        <div class="kpi kpi--green ac-pop" style="--i:2"><span class="kpi__v">26,2 tỷ</span><span class="kpi__l">Doanh thu 6T/2026</span><span class="tag tag--g">115,7% KH 6 tháng</span></div>
+        <div class="kpi kpi--gold ac-pop" style="--i:3"><span class="kpi__v">13+ dự án</span><span class="kpi__l">Đang triển khai</span><span class="tag tag--o">Nhiều dự án chờ go-live</span></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S17 Giải pháp TMĐT ===== -->
+<section class="slide" data-title="Giải pháp TMĐT">
+  <div class="slide-content"><div class="wrap">
+    <div class="head"><div class="eyebrow ac-reveal">5.2 · Phòng Thương mại điện tử</div><h2 class="s-title ac-reveal" style="--i:1">Giải pháp &amp; Định hướng — TMĐT</h2></div>
+    <div class="note ac-reveal" style="--i:2;margin-bottom:var(--content-gap)">Bối cảnh: Trước khó khăn của mảng BH truyền thống, mở rộng mạng lưới TMĐT là định hướng phát triển chiến lược của Ban — cần đầu tư dài hạn và chưa có kết quả ngay.</div>
+    <div class="cards cards--3">
+      <div class="card card--ok ac-reveal" style="--i:3"><h4><span class="card__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Tối ưu doanh thu ngắn hạn</h4>
+        <ul style="padding-left:1.2rem;font-size:var(--small-size);color:var(--ink-600);margin-top:.4rem">
+          <li>Đẩy mạnh push sale TripCARE.</li>
+          <li>Mở rộng kênh đại lý và tính năng UI/UX AI trên website VNA.</li>
+          <li>Ra mắt bản điều chỉnh sản phẩm APUV.</li>
+          <li>Khai thác kênh MobiFone: BHDL tích hợp eSIM roaming, bán BH trong quy trình thi bằng lái.</li>
+        </ul>
+      </div>
+      <div class="card card--ok ac-reveal" style="--i:4"><h4><span class="card__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span> Đẩy nhanh go-live chiến lược</h4>
+        <ul style="padding-left:1.2rem;font-size:var(--small-size);color:var(--ink-600);margin-top:.4rem">
+          <li>SPA, 7-Eleven, Sun Group: hoàn thiện ký kết &amp; kết nối kỹ thuật — mục tiêu go-live Q3/2026.</li>
+          <li>NNX/Flight Delay sẵn sàng khi có Quy tắc BH.</li>
+          <li>Phối hợp liên ban rút ngắn thời gian phê duyệt.</li>
+        </ul>
+      </div>
+      <div class="card card--ok ac-reveal" style="--i:5"><h4><span class="card__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></span> Phát triển sản phẩm mới</h4>
+        <ul style="padding-left:1.2rem;font-size:var(--small-size);color:var(--ink-600);margin-top:.4rem">
+          <li>Tập trung mô hình bảo hiểm nhúng (embedded insurance).</li>
+          <li>Mở rộng đa kênh: chuỗi bán lẻ, golf, eSIM, fintech.</li>
+          <li>Đàm phán đối tác tiềm năng mới (Igloo, Livwell, FPT Long Châu, AIG/Meituan).</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===== S18 THANK YOU ===== -->
+<section class="slide" data-title="Cảm ơn">
+  <div class="slide-content"><div class="wrap hero">
+    <div class="hero__logo ac-reveal"><img class="pvi-logo" src="PVI%20Logo%20(cropped).png" alt="Bảo hiểm PVI" /></div>
+    <div class="hero__kicker ac-reveal" style="--i:1;color:var(--pvi-cyan)">Ban Hàng không &amp; Khách hàng Doanh nghiệp</div>
+    <div class="end__big">XIN TRÂN TRỌNG CẢM ƠN</div>
+    <div class="hero__org ac-reveal" style="--i:3">Tổng công ty Bảo hiểm PVI</div>
+    <div class="hero__pills">
+      <span class="pill ac-pop" style="--i:4">Phòng HKKG</span>
+      <span class="pill ac-pop" style="--i:5">Phòng PTKD</span>
+      <span class="pill ac-pop" style="--i:6">Phòng TMĐT</span>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<script>
+/* ===== SLIDE 1 — hero motion background (motes + digital rain) ===== */
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* glowing data-motes drifting up the staircase, biased toward the centre */
+  const motes=document.getElementById('heroMotes');
+  if(motes && !reduce){
+    const N=24;
+    for(let i=0;i<N;i++){
+      const m=document.createElement('span'); m.className='mote';
+      const centre=50, spread=(Math.random()-0.5)*60;     // cluster around the stairs
+      m.style.left=(centre+spread).toFixed(1)+'%';
+      m.style.setProperty('--md',(8+Math.random()*9).toFixed(1)+'s');
+      m.style.setProperty('--mdel',(-Math.random()*12).toFixed(1)+'s');
+      const s=(3+Math.random()*5).toFixed(1); m.style.width=s+'px'; m.style.height=s+'px';
+      motes.appendChild(m);
+    }
+  }
+
+  /* matrix-style digital rain over the sky */
+  const cv=document.querySelector('.hero-rain');
+  if(cv && !reduce){
+    const ctx=cv.getContext('2d');
+    const glyphs='01PVIBAOHIEM01';
+    let cols, drops, fontSize, raf, w, h, dpr;
+    function size(){
+      dpr=Math.min(window.devicePixelRatio||1,2);
+      w=cv.clientWidth; h=cv.clientHeight;
+      cv.width=w*dpr; cv.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      fontSize=Math.max(13,Math.round(w/95));
+      cols=Math.ceil(w/fontSize);
+      drops=new Array(cols).fill(0).map(()=>Math.random()*-40);
+    }
+    function frame(){
+      ctx.fillStyle='rgba(4,18,38,0.18)'; ctx.fillRect(0,0,w,h);
+      ctx.font=fontSize+'px monospace';
+      for(let i=0;i<cols;i++){
+        const ch=glyphs[(Math.random()*glyphs.length)|0];
+        const x=i*fontSize, y=drops[i]*fontSize;
+        ctx.fillStyle = Math.random()<0.06 ? 'rgba(190,238,255,0.9)' : 'rgba(45,183,230,0.55)';
+        ctx.fillText(ch,x,y);
+        if(y>h && Math.random()>0.975) drops[i]=Math.random()*-20;
+        drops[i]+=0.5;
+      }
+      raf=requestAnimationFrame(frame);
+    }
+    size(); frame();
+    let t; window.addEventListener('resize',()=>{ clearTimeout(t); t=setTimeout(size,180); });
+  }
+})();
+
+/* ===== build monthly 2025 stacked chart ===== */
+(function(){
+  const goc=[92.4,58.8,61.3,58.5,37.8,72.7,86.4,34,57.4,53.3,49.3,37.4];
+  const tai=[155,104.1,79,30.4,40.2,97.1,114,7.3,49.4,34.6,48.9,10.5];
+  const max=247.4;
+  const host=document.getElementById('bars2025'); if(!host) return;
+  goc.forEach((g,idx)=>{
+    const tot=(g+tai[idx]);
+    const col=document.createElement('div'); col.className='barcol';
+    col.innerHTML=`<span class="barval">${tot.toFixed(0)}</span>
+      <div class="barstack">
+        <div class="seg seg--goc ac-bar" style="--h:${(g/max*100).toFixed(1)}%;--i:${idx}"></div>
+        <div class="seg seg--tai ac-bar" style="--h:${(tai[idx]/max*100).toFixed(1)}%;--i:${idx}"></div>
+      </div>
+      <small>T${idx+1}</small>`;
+    host.appendChild(col);
+  });
+})();
+
+/* ===== mini KH2026 monthly charts (single-series) ===== */
+(function(){
+  const data={
+    ptkd:[119.243,34.278,72.781,118.635,78.535,64.626,71.459,77.027,56.071,93.894,81.413,92.038],
+    hkkg:[16.027,19.540,35.520,67.925,36.660,46.220,61.333,43.350,45.020,52.415,54.760,73.230],
+    tmdt:[3.320,3.340,3.650,3.770,4.240,4.340,5.440,5.540,6.440,6.740,9.940,13.240]
+  };
+  document.querySelectorAll('[data-mini]').forEach(host=>{
+    const arr=data[host.dataset.mini]; const max=Math.max(...arr);
+    arr.forEach((v,idx)=>{
+      const col=document.createElement('div'); col.className='barcol';
+      col.innerHTML=`<div class="barstack" style="max-width:14px"><div class="seg ac-bar" style="--h:${(v/max*100).toFixed(1)}%;--i:${idx};background:linear-gradient(180deg,var(--pvi-cyan),var(--pvi-blue))"></div></div><small style="font-size:.5rem">T${idx+1}</small>`;
+      host.appendChild(col);
+    });
+  });
+})();
+
+/* ===== rail nav, counter, progress, observer, keyboard ===== */
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const rail=document.getElementById('rail');
+  const prog=document.getElementById('prog');
+  const cur=document.getElementById('cur'); const tot=document.getElementById('tot');
+  tot.textContent=String(slides.length).padStart(2,'0');
+
+  // brand head
+  const brand=document.createElement('div'); brand.className='rail__brand';
+  brand.innerHTML=`<img class='pvi-logo' src='PVI%20Logo%20(cropped).png' alt='Bảo hiểm PVI' />`;
+  rail.appendChild(brand);
+  const sub=document.createElement('div'); sub.className='rail__sub'; sub.textContent='Ban HK & KHDN · 2025–2026'; rail.appendChild(sub);
+
+  slides.forEach((s,idx)=>{
+    const it=document.createElement('div'); it.className='rail__item'; it.dataset.idx=idx;
+    it.innerHTML=`<span class="dot"></span><span class="rail__num">${String(idx+1).padStart(2,'0')}</span><span>${s.dataset.title||''}</span>`;
+    it.addEventListener('click',()=>s.scrollIntoView({behavior:'smooth'}));
+    rail.appendChild(it);
+  });
+  const items=[...rail.querySelectorAll('.rail__item')];
+
+  // toc jump
+  document.querySelectorAll('[data-go]').forEach(el=>{
+    el.addEventListener('click',()=>{ const t=slides[+el.dataset.go]; if(t) t.scrollIntoView({behavior:'smooth'}); });
+  });
+
+  let current=0;
+  const prev=document.getElementById('navPrev');
+  const next=document.getElementById('navNext');
+  function updateNav(){ if(prev) prev.disabled=current<=0; if(next) next.disabled=current>=slides.length-1; }
+
+  const io=new IntersectionObserver((ents)=>{
+    ents.forEach(e=>{
+      const idx=slides.indexOf(e.target);
+      if(e.isIntersecting && e.intersectionRatio>0.55){
+        current=idx;
+        e.target.classList.add('ac-on');
+        items.forEach(i=>i.classList.toggle('is-active',+i.dataset.idx===idx));
+        cur.textContent=String(idx+1).padStart(2,'0');
+        prog.style.width=((idx+1)/slides.length*100)+'%';
+        updateNav();
+      } else {
+        e.target.classList.remove('ac-on'); // replay on re-entry
+      }
+    });
+  },{threshold:[0,.55,1]});
+  slides.forEach(s=>io.observe(s));
+
+  // navigation
+  let busy=false;
+  function goTo(n){ n=Math.min(slides.length-1,Math.max(0,n)); current=n; busy=true; slides[n].scrollIntoView({behavior:'smooth'}); updateNav(); setTimeout(()=>busy=false,600); }
+  function go(d){ if(busy) return; goTo(current+d); }
+  if(prev) prev.addEventListener('click',()=>go(-1));
+  if(next) next.addEventListener('click',()=>go(1));
+  updateNav();
+
+  window.addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){ e.preventDefault(); go(1); }
+    else if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){ e.preventDefault(); go(-1); }
+    else if(e.key==='Home'){ e.preventDefault(); goTo(0); }
+    else if(e.key==='End'){ e.preventDefault(); goTo(slides.length-1); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,1469 +1,755 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hệ thống KPI &amp; CV 165 — PVEP · Ban KSNB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVEP — Tra cứu Nhiệm vụ KTGS/KTNB BMĐH 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --green:#006838;--green-light:#00843d;--green-pale:#e8f5e9;--green-bg:#f0f9f1;
+            --blue:#3f51b5;--blue-bg:#e8eaf6;
+            --orange:#e65100;--orange-bg:#fff3e0;
+            --red:#e53935;--red-bg:#ffeaea;
+            --bg:#f5f6f8;--white:#fff;
+            --border:#e0e3e8;--border-light:#eef0f3;
+            --text:#1a1a2e;--text2:#4a5568;--text3:#94a3b8;
+            --shadow:0 1px 3px rgba(0,0,0,0.06);
+            --shadow-lg:0 4px 16px rgba(0,0,0,0.08);
+            --radius:10px;--radius-sm:6px;
+        }
+        body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
 
-<!-- Fonts: Sora (display) + Be Vietnam Pro (body) — both ship a Vietnamese subset -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+        /* LOGIN */
+        .login-overlay{position:fixed;inset:0;background:linear-gradient(135deg,#006838 0%,#00843d 50%,#2e7d32 100%);display:flex;align-items:center;justify-content:center;z-index:9999}
+        .login-box{background:var(--white);border-radius:16px;padding:40px;width:380px;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center}
+        .login-box img{height:60px;margin-bottom:12px}
+        .login-box h2{font-size:18px;font-weight:800;color:var(--green);margin-bottom:4px}
+        .login-box p{font-size:12px;color:var(--text3);margin-bottom:24px}
+        .login-field{margin-bottom:14px;text-align:left}
+        .login-field label{font-size:11px;font-weight:600;color:var(--text2);display:block;margin-bottom:4px}
+        .login-field input{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:14px;outline:none;transition:border .2s}
+        .login-field input:focus{border-color:var(--green)}
+        .login-btn{width:100%;padding:12px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:8px}
+        .login-btn:hover{background:var(--green-light)}
+        .login-error{color:var(--red);font-size:12px;margin-top:8px;display:none}
+        .login-hidden{display:none!important}
 
-<style>
-/* ============================================================
-   THEME TOKENS  (PVEP brand · Light Executive)
-   Change these to re-skin the whole deck.
-   ============================================================ */
-:root{
-  /* PVEP brand */
-  --pvep-blue:#0083C7; --pvep-green:#00B050; --pvep-navy:#0A2A4A;
-  --ink-900:#1E293B; --ink-700:#334155; --ink-600:#475569; --ink-500:#64748B;
-  --bg-100:#F1F5F9; --white:#FFFFFF;
-  --danger:#DC2626; --warning:#EA580C; --caution:#D97706; --success:#15803D; --info:#1D4ED8;
+        /* HEADER */
+        .header{background:var(--green);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;flex-shrink:0}
+        .header-logo{height:38px;border-radius:4px}
+        .header-title{display:flex;flex-direction:column}
+        .header-title h1{font-size:15px;font-weight:700;letter-spacing:.3px;line-height:1.2}
+        .header-title span{font-size:11px;opacity:.75;font-weight:400}
+        .header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+        .header-badge{font-size:11px;background:rgba(255,255,255,.15);padding:5px 12px;border-radius:16px;font-weight:500;display:flex;align-items:center;gap:5px}
+        .btn-upload{display:flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .15s}
+        .btn-upload:hover{background:rgba(255,255,255,.3)}
+        .btn-logout{padding:7px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;font-size:11px;font-weight:500;font-family:inherit;cursor:pointer;transition:all .15s}
+        .btn-logout:hover{background:rgba(255,0,0,.3)}
+        .user-info{display:flex;align-items:center;gap:8px;font-size:12px}
+        .user-info select{padding:4px 8px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.15);color:#fff;font-family:inherit;font-size:11px;outline:none;cursor:pointer}
+        .user-info select option{color:#333;background:#fff}
+        #fileInput{display:none}
 
-  /* Fonts */
-  --font-display:"Sora", system-ui, sans-serif;
-  --font-body:"Be Vietnam Pro", system-ui, sans-serif;
+        /* LAYOUT */
+        .layout{display:flex;flex:1;overflow:hidden}
+        .sidebar{width:300px;min-width:300px;background:var(--white);border-right:1px solid var(--border);display:flex;flex-direction:column}
+        .search-wrap{padding:14px 14px 10px;border-bottom:1px solid var(--border-light)}
+        .search-wrap input{width:100%;padding:9px 12px 9px 36px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);font-family:inherit;font-size:13px;color:var(--text);outline:none;transition:border .2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:10px center}
+        .search-wrap input:focus{border-color:var(--green-light)}
+        .search-wrap input::placeholder{color:var(--text3)}
+        .sidebar-list{flex:1;overflow-y:auto;padding:6px}
+        .sidebar-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;transition:background .12s;margin-bottom:1px}
+        .sidebar-item:hover{background:var(--green-pale)}
+        .sidebar-item.active{background:var(--green);color:#fff}
+        .sidebar-item.active .s-num{background:rgba(255,255,255,.2);color:#fff;border-color:transparent}
+        .sidebar-item.active .s-name{color:#fff}
+        .sidebar-item.active .s-sub{color:rgba(255,255,255,.7)}
+        .sidebar-item.active .s-badge{background:rgba(255,255,255,.2);color:#fff}
+        .s-num{width:26px;height:26px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0}
+        .s-info{flex:1;min-width:0}
+        .s-name{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .s-sub{font-size:11px;color:var(--text3);margin-top:1px}
+        .s-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;flex-shrink:0;text-transform:uppercase;letter-spacing:.3px}
+        .badge-ktnb{background:var(--blue-bg);color:var(--blue)}
+        .badge-ktgs{background:var(--green-pale);color:var(--green)}
+        .badge-mixed{background:var(--orange-bg);color:var(--orange)}
+        .sidebar-footer{padding:10px 14px;border-top:1px solid var(--border-light);font-size:10px;color:var(--text3);text-align:center}
 
-  /* animated-components theme hooks → mapped to PVEP (LIGHT deck) */
-  --ac-accent:#0083C7; --ac-accent-2:#00B050; --ac-accent-3:#0A2A4A; --ac-accent-4:#1D4ED8;
-  --ac-fg:#1E293B; --ac-muted:#64748B;
-  --ac-track:rgba(10,42,74,.10); --ac-line:rgba(10,42,74,.14);
-  --ac-ease:cubic-bezier(.22,.8,.18,1); --ac-ease-bounce:cubic-bezier(.34,1.56,.64,1);
-  --ac-dur:.8s; --ac-stagger:80ms;
+        /* MAIN */
+        .main{flex:1;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
+        .detail-tabs{display:flex;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:0 28px;flex-shrink:0}
+        .detail-tab{padding:14px 20px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2.5px solid transparent;transition:all .15s;user-select:none}
+        .detail-tab:hover{color:var(--text2)}
+        .detail-tab.active{color:var(--green);border-bottom-color:var(--green)}
+        .detail-body{flex:1;overflow-y:auto;padding:24px 28px 40px}
 
-  /* layout */
-  --rail:260px;
-}
+        .welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:var(--text3)}
+        .welcome-icon{font-size:44px;margin-bottom:12px;opacity:.4}
+        .welcome h2{font-size:16px;font-weight:600;color:var(--text2);margin-bottom:4px}
+        .welcome p{font-size:13px}
 
-*{margin:0;padding:0;box-sizing:border-box}
+        .d-header{margin-bottom:24px}
+        .d-header .top{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+        .d-header h2{font-size:20px;font-weight:800;color:var(--text)}
+        .d-header .docs{font-size:12px;color:var(--text2);line-height:1.6;margin-top:4px}
 
-/* ============================================================
-   viewport-base.css  (frontend-slides — MANDATORY, included in full)
-   ============================================================ */
-html, body{ height:100%; overflow-x:hidden; }
-html{ scroll-snap-type:y mandatory; scroll-behavior:smooth; }
-.slide{
-  width:100vw; height:100vh; height:100dvh; overflow:hidden;
-  scroll-snap-align:start; display:flex; flex-direction:column; position:relative;
-}
-.slide-content{
-  flex:1; display:flex; flex-direction:column; justify-content:center;
-  max-height:100%; overflow:hidden; padding:var(--slide-padding);
-}
-:root{
-  --title-size:clamp(1.8rem, 6vh, 4rem);
-  --h2-size:clamp(1.5rem, 4.5vh, 3rem);
-  --h3-size:clamp(1.2rem, 3.5vh, 2.25rem);
-  --body-size:clamp(1.05rem, 2.8vh, 1.875rem);
-  --small-size:clamp(0.85rem, 2.2vh, 1.5rem);
-  --slide-padding:clamp(1.2rem, 4.5vh, 4.5rem);
-  --content-gap:clamp(0.8rem, 2.5vh, 2.5rem);
-  --element-gap:clamp(0.4rem, 1.5vh, 1.5rem);
-}
-.card,.container,.content-box{ max-width:min(95vw,1400px); max-height:min(88vh,850px); }
-.feature-list,.bullet-list{ gap:clamp(0.4rem,1vh,1rem); }
-.feature-list li,.bullet-list li{ font-size:var(--body-size); line-height:1.4; }
-.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:clamp(0.5rem,1.5vw,1rem); }
-img,.image-container{ max-width:100%; max-height:min(50vh,400px); object-fit:contain; }
-@media (max-height:700px){ :root{ --slide-padding:clamp(0.75rem,3vw,2rem); --content-gap:clamp(0.4rem,1.5vw,1rem); --title-size:clamp(1.25rem,4.5vw,2.5rem); --h2-size:clamp(1rem,3vw,1.75rem); } }
-@media (max-height:600px){ :root{ --slide-padding:clamp(0.5rem,2.5vw,1.5rem); --content-gap:clamp(0.3rem,1vw,0.75rem); --title-size:clamp(1.1rem,4vw,2rem); --body-size:clamp(0.7rem,1.2vw,0.95rem); } .nav-dots,.keyboard-hint,.decorative{ display:none; } }
-@media (max-height:500px){ :root{ --slide-padding:clamp(0.4rem,2vw,1rem); --title-size:clamp(1rem,3.5vw,1.5rem); --h2-size:clamp(0.9rem,2.5vw,1.25rem); --body-size:clamp(0.65rem,1vw,0.85rem); } }
-@media (max-width:600px){ :root{ --title-size:clamp(1.25rem,7vw,2.5rem); } .grid{ grid-template-columns:1fr; } }
-@media (prefers-reduced-motion:reduce){ *,*::before,*::after{ animation-duration:0.01ms!important; transition-duration:0.2s!important; } html{ scroll-behavior:auto; } }
+        .nv-label{font-size:12px;font-weight:700;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:6px;padding-bottom:6px;border-bottom:1px solid var(--border-light)}
+        .nv-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+        .t-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow);transition:border-color .15s}
+        .t-card:hover{border-color:var(--green-light)}
+        .t-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
+        .t-title{font-size:14px;font-weight:600;color:var(--text)}
+        .t-output{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+        .t-people{display:flex;flex-wrap:wrap;gap:14px}
+        .t-person{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px}
+        .t-person .nm{color:var(--text2);font-weight:500}
+        .sub-list{margin:8px 0 12px;list-style:none}
+        .sub-list li{font-size:12px;color:var(--text2);padding:6px 0 6px 14px;border-left:2px solid var(--border);line-height:1.5}
+        .sub-list li:hover{border-left-color:var(--green)}
+        .task-section{margin-bottom:22px}
 
-/* ============================================================
-   animation-core.css  (animated-components engine — included in full)
-   Animations are GATED on slide entry (.ac-on) so they replay.
-   ============================================================ */
-.ac-reveal{ opacity:0; }
-.ac-reveal--up{ transform:translateY(28px); }
-.ac-reveal--down{ transform:translateY(-28px); }
-.ac-reveal--left{ transform:translateX(-32px); }
-.ac-reveal--right{ transform:translateX(32px); }
-.ac-reveal--zoom{ transform:scale(.86); }
-.ac-on .ac-reveal{ animation:ac-fade-up var(--ac-dur) var(--ac-ease) both; animation-delay:calc(var(--i,0)*var(--ac-stagger) + var(--ac-delay,0ms)); }
-.ac-on .ac-reveal--left,.ac-on .ac-reveal--right{ animation-name:ac-fade-x; }
-.ac-on .ac-reveal--down{ animation-name:ac-fade-down; }
-.ac-on .ac-reveal--zoom{ animation-name:ac-zoom-in; animation-timing-function:var(--ac-ease-bounce); }
-@keyframes ac-fade-up{ from{opacity:0;transform:translateY(28px);} to{opacity:1;transform:none;} }
-@keyframes ac-fade-down{ from{opacity:0;transform:translateY(-28px);} to{opacity:1;transform:none;} }
-@keyframes ac-fade-x{ from{opacity:0;} to{opacity:1;transform:none;} }
-@keyframes ac-zoom-in{ from{opacity:0;transform:scale(.86);} to{opacity:1;transform:scale(1);} }
-.ac-pop{ opacity:0; transform:scale(.4); }
-.ac-on .ac-pop{ animation:ac-pop var(--ac-dur) var(--ac-ease-bounce) both; animation-delay:calc(var(--i,0)*var(--ac-stagger) + var(--ac-delay,0ms)); }
-@keyframes ac-pop{ from{opacity:0;transform:scale(.4);} to{opacity:1;transform:scale(1);} }
-.ac-bar{ height:0; transition:height .9s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
-.ac-on .ac-bar{ height:var(--h); }
-.ac-fill-x{ width:0; transition:width .9s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
-.ac-on .ac-fill-x{ width:var(--w); }
-.ac-ring-val{ stroke-dasharray:var(--circ); stroke-dashoffset:var(--circ); transition:stroke-dashoffset 1.1s var(--ac-ease); transition-delay:calc(var(--i,0)*var(--ac-stagger)); }
-.ac-on .ac-ring-val{ stroke-dashoffset:calc(var(--circ)*(1 - var(--p))); }
-.ac-draw{ stroke-dasharray:var(--len); stroke-dashoffset:var(--len); }
-.ac-on .ac-draw{ animation:ac-draw 1.1s var(--ac-ease) forwards; animation-delay:calc(var(--i,0)*var(--ac-stagger)); }
-@keyframes ac-draw{ to{ stroke-dashoffset:0; } }
-.ac-area{ opacity:0; }
-.ac-on .ac-area{ animation:ac-fade .7s var(--ac-ease) forwards; animation-delay:calc(.5s + var(--i,0)*var(--ac-stagger)); }
-@keyframes ac-fade{ to{ opacity:1; } }
-.ac-float{ animation:ac-float 6s ease-in-out infinite; }
-@keyframes ac-float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
-.ac-spin{ animation:ac-spin 18s linear infinite; transform-origin:center; }
-@keyframes ac-spin{ to{ transform:rotate(360deg); } }
-.ac-drift{ animation:ac-drift 22s ease-in-out infinite alternate; }
-@keyframes ac-drift{ 0%{transform:translate(0,0) scale(1);} 100%{transform:translate(4%,-3%) scale(1.08);} }
-.ac-shimmer{ background-size:200% 100%; animation:ac-shimmer 3.5s linear infinite; }
-@keyframes ac-shimmer{ to{ background-position:-200% 0; } }
-.ac-caret{ border-right:.08em solid var(--ac-accent); animation:ac-blink 1s steps(1) infinite; }
-@keyframes ac-blink{ 50%{ border-color:transparent; } }
-@media (prefers-reduced-motion:reduce){
-  .ac-reveal,.ac-pop,.ac-area{ opacity:1!important; transform:none!important; }
-  .ac-bar{ height:var(--h)!important; } .ac-fill-x{ width:var(--w)!important; }
-  .ac-ring-val{ stroke-dashoffset:calc(var(--circ)*(1 - var(--p)))!important; }
-  .ac-draw{ stroke-dashoffset:0!important; }
-  .ac-float,.ac-spin,.ac-drift,.ac-shimmer,.ac-caret{ animation:none!important; }
-  *{ transition-duration:.001s!important; }
-}
+        /* CHECKLIST */
+        .cl-empty{text-align:center;padding:60px 20px;color:var(--text3);font-size:13px}
+        .cl-group{margin-bottom:28px}
+        .cl-group-title{font-size:13px;font-weight:700;color:var(--green);padding:10px 16px;background:var(--green-pale);border-radius:8px;margin-bottom:12px;display:flex;align-items:center;gap:8px;border-left:4px solid var(--green)}
+        .cl-group-count{margin-left:auto;font-size:11px;font-weight:500;color:var(--text3);background:var(--white);padding:2px 8px;border-radius:10px}
+        .cl-step{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:8px;box-shadow:var(--shadow);overflow:hidden}
+        .cl-step-header{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background .1s;user-select:none}
+        .cl-step-header:hover{background:var(--green-pale)}
+        .cl-step-header.open{background:var(--green-pale);border-bottom:1px solid var(--border-light)}
+        .cl-num{width:28px;height:28px;border-radius:8px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+        .cl-step-name{font-size:13px;font-weight:600;color:var(--text);flex:1;line-height:1.4}
+        .cl-arrow{font-size:10px;color:var(--text3);transition:transform .2s;flex-shrink:0}
+        .cl-arrow.open{transform:rotate(180deg)}
+        .cl-step-body{display:none;padding:16px 18px 18px}
+        .cl-step-body.open{display:block}
+        .cl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        @media(max-width:900px){.cl-grid{grid-template-columns:1fr}}
+        .cl-field{padding:10px 14px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
+        .cl-field-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+        .cl-field-value{font-size:12px;color:var(--text2);line-height:1.6;white-space:pre-wrap}
+        .cl-field.full{grid-column:1/-1}
+        .cl-pic-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--green);background:var(--green-pale);padding:3px 10px;border-radius:12px;margin-top:8px}
 
-/* ============================================================
-   GLOBAL LOOK  (light executive surface)
-   ============================================================ */
-body{
-  font-family:var(--font-body); color:var(--ink-600);
-  background:
-    radial-gradient(1100px 760px at 82% -12%, rgba(0,131,199,.10), transparent 60%),
-    radial-gradient(940px 680px at -8% 112%, rgba(0,176,80,.09), transparent 55%),
-    linear-gradient(135deg,#FFFFFF 0%, #EEF3F8 100%);
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-}
-.wrap{ width:min(95%, 1650px); margin-inline:auto; position:relative; z-index:2; }
-.wrap--wide{ width:min(98%, 1850px); }
-@media (min-width:1000px){ .slide-content{ padding-left:calc(var(--slide-padding) + var(--rail)); } }
+        /* RESULT FIELDS */
+        .result-section{margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+        .result-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
+        .result-row label{font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.4px;min-width:100px;padding-top:6px}
+        .result-row select,.result-row textarea{flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:12px;color:var(--text);outline:none;transition:border .2s}
+        .result-row select:focus,.result-row textarea:focus{border-color:var(--green)}
+        .result-row textarea{resize:vertical;min-height:50px}
+        .result-row .saved-info{font-size:10px;color:var(--text3);margin-top:2px}
+        .btn-save-result{padding:6px 16px;background:var(--green);color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:background .15s}
+        .btn-save-result:hover{background:var(--green-light)}
 
-.head-center{ text-align:center; display:flex; flex-direction:column; gap:.45rem; align-items:center; margin-bottom:clamp(.6rem,2.2vh,1.4rem); }
-.eyebrow{ font-family:var(--font-display); font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--pvep-blue); font-size:clamp(.62rem,1vw,.82rem); }
-.s-title{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(1.4rem,3.6vw,2.7rem); line-height:1.08; letter-spacing:-.01em; }
-.s-title--sm{ font-size:clamp(1.2rem,2.8vw,2rem); }
-.neo{ color:var(--pvep-blue); } .neo-g{ color:var(--pvep-green); }
+        /* COMMENTS */
+        .comments-section{margin-top:16px;padding-top:14px;border-top:1px dashed var(--border)}
+        .comments-title{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+        .comment-item{padding:10px 14px;background:var(--bg);border-radius:8px;margin-bottom:6px;border-left:3px solid var(--blue)}
+        .comment-item.leader{border-left-color:var(--orange)}
+        .comment-meta{font-size:10px;color:var(--text3);margin-bottom:4px;display:flex;align-items:center;gap:6px}
+        .comment-meta .c-role{font-weight:700;text-transform:uppercase;font-size:9px;padding:1px 5px;border-radius:3px}
+        .comment-meta .c-role.leader{background:var(--orange-bg);color:var(--orange)}
+        .comment-meta .c-role.pic{background:var(--green-pale);color:var(--green)}
+        .comment-text{font-size:12px;color:var(--text2);line-height:1.5}
+        .comment-form{display:flex;gap:8px;margin-top:8px}
+        .comment-form textarea{flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:12px;resize:none;height:36px;outline:none}
+        .comment-form textarea:focus{border-color:var(--green)}
+        .comment-form button{padding:0 16px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer}
+        .comment-form button:hover{background:#303f9f}
 
-/* ----- Left chapter rail ----- */
-.rail{
-  position:fixed; inset:0 auto 0 0; width:var(--rail); height:100vh; height:100dvh; z-index:50;
-  display:flex; flex-direction:column; justify-content:center; gap:.15rem; padding:1.4rem 1rem;
-  background:linear-gradient(180deg, rgba(255,255,255,.90), rgba(238,243,248,.86));
-  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-  border-right:1px solid rgba(10,42,74,.10);
-}
-.rail__brand{ display:flex; align-items:center; gap:.55rem; margin-bottom:.2rem; }
-.rail__logo{ width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); display:grid; place-content:center; color:#fff; font-family:var(--font-display); font-weight:800; font-size:.8rem; box-shadow:0 6px 16px rgba(0,131,199,.3); }
-.rail__title{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:.92rem; line-height:1; }
-.rail__sub{ font-size:.58rem; color:var(--ink-500); text-transform:uppercase; letter-spacing:.16em; margin:.15rem 0 1.1rem; }
-.rail__item{ display:flex; gap:.55rem; align-items:center; padding:.5rem .55rem; border-radius:10px; cursor:pointer; color:var(--ink-500); font-size:.74rem; font-weight:600; line-height:1.2; transition:color .25s, background .25s; }
-.rail__item .dot{ width:7px; height:7px; border-radius:50%; background:var(--ac-track); flex:none; transition:background .25s, box-shadow .25s; }
-.rail__num{ font-family:var(--font-display); font-weight:700; opacity:.45; font-size:.7rem; min-width:1.1em; }
-.rail__item:hover{ color:var(--ink-700); background:rgba(0,131,199,.06); }
-.rail__item.is-active{ color:var(--pvep-blue); background:rgba(0,131,199,.10); }
-.rail__item.is-active .dot{ background:var(--pvep-blue); box-shadow:0 0 0 4px rgba(0,131,199,.16); }
-.rail__item.is-active .rail__num{ opacity:1; color:var(--pvep-blue); }
-@media (max-width:999px){ .rail{ display:none; } }
-/* Slide 1 (hero): rail kính mờ để video xuyên qua; slide 2+ giữ rail trắng đặc. Toggle qua body.hero-active. */
-body.hero-active .rail{
-  background:linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.07));
-  backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
-  border-right-color:rgba(255,255,255,.40);
-  transition:background .5s var(--ac-ease), border-color .5s var(--ac-ease);
-}
-body.hero-active .rail__title,
-body.hero-active .rail__sub,
-body.hero-active .rail__item{ text-shadow:0 1px 7px rgba(255,255,255,.65); }
-body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
+        /* Toast */
+        .toast{position:fixed;top:20px;right:20px;background:var(--green);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow-lg);z-index:1000;opacity:0;transform:translateY(-10px);transition:all .3s;pointer-events:none}
+        .toast.show{opacity:1;transform:translateY(0)}
 
-/* ----- Slide counter (top-right) + progress + hint ----- */
-.counter{ position:fixed; top:1.05rem; right:1.4rem; z-index:60; font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:.95rem; letter-spacing:.03em; background:rgba(255,255,255,.72); padding:.32rem .8rem; border-radius:999px; border:1px solid rgba(10,42,74,.12); backdrop-filter:blur(6px); }
-.counter #cur{ color:var(--pvep-blue); } .counter .sep{ opacity:.4; margin:0 .18rem; }
-.progress{ position:fixed; top:0; left:0; height:3px; width:100%; z-index:61; background:transparent; }
-.progress__fill{ height:100%; width:0; background:linear-gradient(90deg,var(--pvep-blue),var(--pvep-green)); transition:width .45s var(--ac-ease); }
-.hint{ position:fixed; bottom:.9rem; right:1.4rem; z-index:55; font-size:.66rem; color:var(--ink-500); letter-spacing:.04em; }
-@media (max-width:999px){ .hint{ display:none; } }
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);border-radius:3px}
+        .fade-in{animation:fadeIn .25s ease}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:768px){.sidebar{width:100%;min-width:100%;position:absolute;z-index:10;height:100%}}
 
-/* ----- Ambient background layer ----- */
-.ambient{ position:absolute; inset:0; overflow:hidden; z-index:0; pointer-events:none; }
-.ambient>*{ position:absolute; }
-.orb{ width:46vmax; height:46vmax; border-radius:50%; filter:blur(70px); opacity:.5; }
-.orb--1{ top:-16vmax; left:-8vmax; background:radial-gradient(circle,rgba(0,131,199,.34),transparent 70%); }
-.orb--2{ bottom:-18vmax; right:-12vmax; background:radial-gradient(circle,rgba(0,176,80,.30),transparent 70%); animation-delay:-8s; }
-.grid-glow{ inset:0; background-image:linear-gradient(var(--ac-line) 1px,transparent 1px),linear-gradient(90deg,var(--ac-line) 1px,transparent 1px); background-size:46px 46px; mask-image:radial-gradient(circle at 50% 42%,#000,transparent 72%); -webkit-mask-image:radial-gradient(circle at 50% 42%,#000,transparent 72%); opacity:.55; }
-
-/* ============================================================
-   SLIDE 1 — HERO
-   ============================================================ */
-.hero-particles{ position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }
-.hero__word{ font-family:var(--font-display); font-weight:800; line-height:.95; letter-spacing:-.02em; position:relative;
-  font-size:clamp(2.4rem,7.5vw,5.6rem);
-  background:linear-gradient(120deg,var(--pvep-navy) 0%,var(--pvep-blue) 45%,var(--pvep-green) 65%,var(--pvep-blue) 100%);
-  background-size:220% 100%;
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-.ac-on .hero__word{ animation:heroIn 1.3s var(--ac-ease-bounce) .08s both, textShine 5s linear 1.4s infinite; }
-@keyframes heroIn{ 0%{opacity:0;transform:scale(.5);filter:blur(26px)} 55%{opacity:1;filter:blur(0)} 80%{transform:scale(1.08)} 100%{opacity:1;transform:scale(1);filter:blur(0)} }
-.hero__amp{ font-family:var(--font-display); font-weight:700; color:var(--ink-700); font-size:clamp(1rem,3.4vw,2.2rem); letter-spacing:.04em; margin-top:.1rem; }
-.hero__tag{ color:var(--ink-600); font-size:clamp(.9rem,2vw,1.32rem); margin:1.3rem auto 0; max-width:44ch; min-height:1.7em; line-height:1.45; }
-.hero__by{ margin-top:1.5rem; color:var(--ink-500); font-size:clamp(.8rem,1.4vw,1rem); font-weight:600; }
-
-/* ============================================================
-   SLIDE 2 — Two viewpoints
-   ============================================================ */
-.two-view{ display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(.6rem,2vw,1.6rem); align-items:stretch; margin-top:clamp(.6rem,2.4vh,1.6rem); }
-.tv-col{ background:#fff; border:1px solid var(--ac-line); border-radius:18px; padding:clamp(1rem,2.4vw,1.8rem); box-shadow:0 12px 40px rgba(10,42,74,.06); }
-.tv-col--gov{ border-color:rgba(0,131,199,.35); box-shadow:0 16px 48px rgba(0,131,199,.12); }
-.tv-col__head{ display:flex; flex-direction:column; gap:.15rem; margin-bottom:1rem; padding-bottom:.8rem; border-bottom:1px dashed var(--ac-line); }
-.tv-tag{ font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-500); font-weight:700; }
-.tv-tag--g{ color:var(--pvep-blue); }
-.tv-col__head h3{ font-family:var(--font-display); font-size:clamp(1.1rem,2.6vw,1.85rem); color:var(--pvep-navy); font-weight:800; letter-spacing:.02em; }
-.tv-col--gov .tv-col__head h3{ color:var(--pvep-blue); }
-.tv-list{ list-style:none; display:flex; flex-direction:column; gap:.6rem; }
-.tv-list li{ font-size:var(--body-size); color:var(--ink-600); padding-left:1.4rem; position:relative; }
-.tv-list li::before{ content:""; position:absolute; left:0; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--ink-500); }
-.tv-list--g li{ color:var(--ink-700); font-weight:500; }
-.tv-list--g li::before{ background:var(--pvep-green); border-radius:50%; }
-.tv-mid{ display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:clamp(1.6rem,4vw,3rem); color:var(--pvep-blue); font-weight:800; }
-
-/* ============================================================
-   SLIDE 3 — Why RACI matters  (legal chips + 3 blocks)
-   ============================================================ */
-.legal-chips{ display:flex; gap:.8rem; justify-content:center; margin:clamp(.7rem,2.4vh,1.5rem) 0; flex-wrap:wrap; }
-.chip{ font-family:var(--font-display); font-weight:700; font-size:clamp(.8rem,1.6vw,1.05rem); color:#fff; background:linear-gradient(135deg,var(--pvep-blue),var(--info)); padding:.5rem 1.1rem; border-radius:999px; box-shadow:0 8px 22px rgba(0,131,199,.28); }
-.tri{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.8rem,2vw,1.4rem); }
-.tri__card{ background:#fff; border:1px solid var(--ac-line); border-top:4px solid var(--pvep-blue); border-radius:16px; padding:clamp(1rem,2.4vw,1.6rem); box-shadow:0 12px 36px rgba(10,42,74,.06); }
-.tri__card:nth-child(2){ border-top-color:var(--caution); }
-.tri__card:nth-child(3){ border-top-color:var(--pvep-green); }
-.tri__k{ display:block; font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(1rem,2vw,1.35rem); margin-bottom:.5rem; }
-.tri__card p{ color:var(--ink-600); font-size:var(--body-size); line-height:1.45; }
-
-/* ============================================================
-   SLIDE 4A — OECD: approve → SUPERVISE
-   ============================================================ */
-.swap{ font-family:var(--font-display); font-weight:700; color:var(--ink-700); font-size:clamp(1.1rem,2.6vw,1.8rem); }
-.swap__old{ color:var(--ink-500); text-decoration-color:var(--danger); text-decoration-thickness:3px; opacity:.75; }
-.swap__new{ font-family:var(--font-display); font-weight:800; color:var(--pvep-blue); font-size:clamp(3rem,9vw,6.4rem); line-height:1; letter-spacing:.02em; margin:1rem 0 1.3rem; text-shadow:0 16px 42px rgba(0,131,199,.22); position:relative; }
-.ac-on .swap__new{ animation:boomIn 1.1s var(--ac-ease-bounce) .15s both, glowPulse 2.6s ease-in-out 1.2s infinite; }
-.quad4a{ display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem; max-width:780px; margin-inline:auto; }
-.mini{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvep-green); border-radius:12px; padding:.85rem 1.1rem; color:var(--ink-700); font-weight:500; font-size:var(--body-size); text-align:left; box-shadow:0 8px 24px rgba(10,42,74,.05); }
-
-/* ============================================================
-   SLIDE 4B / 12A — Icon cards
-   ============================================================ */
-.big4{ font-family:var(--font-display); font-weight:900; color:var(--pvep-blue); font-size:1.25em; }
-.cards{ display:grid; gap:clamp(.7rem,1.6vw,1.1rem); }
-.cards--4{ grid-template-columns:repeat(4,1fr); }
-.cards--3{ grid-template-columns:repeat(3,1fr); }
-.card4{ background:#fff; border:1px solid var(--ac-line); border-radius:16px; padding:clamp(1rem,2vw,1.4rem); box-shadow:0 12px 34px rgba(10,42,74,.06); transition:transform .3s, box-shadow .3s, border-color .3s; display:flex; flex-direction:column; gap:.5rem; }
-.card4:hover{ transform:translateY(-6px); border-color:var(--pvep-blue); box-shadow:0 22px 50px rgba(0,131,199,.18); }
-.card4__ic{ width:46px; height:46px; border-radius:12px; display:grid; place-content:center; background:linear-gradient(135deg,rgba(0,131,199,.13),rgba(0,176,80,.13)); color:var(--pvep-blue); transition:background 0.4s var(--ac-ease), color 0.4s var(--ac-ease), transform 0.4s var(--ac-ease-bounce), box-shadow 0.4s var(--ac-ease); }
-
-/* Global hover highlight cho các box */
-.tri__card, .dom, .mini, .duo__card, .kpis__item, .kpi, .card3, .step, .chip {
-  transition: transform .3s, box-shadow .3s, border-color .3s;
-}
-.tri__card:hover, .dom:hover, .mini:hover, .duo__card:hover, .kpis__item:hover, .kpi:hover, .card3:hover, .step:hover, .chip:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(0,131,199,.18) !important;
-  border-color: var(--pvep-blue) !important;
-  z-index: 10;
-}
-.card4__ic svg{ width:26px; height:26px; transition:transform 0.4s var(--ac-ease-bounce); }
-.card4:hover .card4__ic{ background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); color:#fff; transform:scale(1.08); box-shadow:0 6px 16px rgba(0,131,199,.25); }
-.card4:hover .card4__ic svg{ transform:rotate(12deg) scale(1.15); }
-.card4 h4{ font-family:var(--font-display); color:var(--pvep-navy); font-weight:800; font-size:clamp(.95rem,1.8vw,1.2rem); }
-.card4 p{ color:var(--ink-600); font-size:var(--small-size); line-height:1.4; }
-@media (max-width:780px){ .cards--4{ grid-template-columns:repeat(2,1fr); } }
-
-/* ============================================================
-   SLIDE 5 — KSNB as supervisory arm
-   ============================================================ */
-.ksnb{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.4rem,4vw,3rem); align-items:center; margin-top:1rem; }
-.ksnb__diagram{ display:flex; flex-direction:column; align-items:center; }
-.ks-node{ font-family:var(--font-display); font-weight:800; border-radius:14px; padding:.9rem 1.6rem; font-size:clamp(1rem,2.2vw,1.5rem); }
-.ks-node--top{ background:var(--pvep-navy); color:#fff; box-shadow:0 12px 30px rgba(10,42,74,.25); }
-.ks-node--bot{ background:#fff; color:var(--pvep-blue); border:2px solid var(--pvep-blue); box-shadow:0 12px 30px rgba(0,131,199,.18); }
-.ks-link{ width:40px; height:clamp(54px,11vh,110px); }
-.ks-list{ list-style:none; display:flex; flex-direction:column; gap:.7rem; }
-.ks-list li{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvep-blue); border-radius:12px; padding:.8rem 1.1rem; color:var(--ink-700); font-weight:500; font-size:var(--body-size); box-shadow:0 8px 22px rgba(10,42,74,.05); }
-
-/* ============================================================
-   SLIDE 6 — Challenges (domino) + punchline
-   ============================================================ */
-.domino{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:clamp(.4rem,1.2vw,.9rem); align-items:stretch; margin:clamp(.6rem,2vh,1.2rem) 0; }
-.domino:hover .dom{ transform:scale(0.92); opacity:0.5; filter:grayscale(80%); }
-.dom{ background:#fff; border:1px solid var(--ac-line); border-radius:14px; padding:clamp(.9rem,2vw,1.4rem); box-shadow:0 10px 30px rgba(10,42,74,.06); transition:transform .4s ease, opacity .4s ease, filter .4s ease, box-shadow .4s ease; }
-.domino .dom:hover{ transform:scale(1.08) translateY(-8px) !important; opacity:1 !important; filter:grayscale(0%) !important; z-index:20; box-shadow:0 25px 60px rgba(0,131,199,.25) !important; }
-.dom--bad{ border-color:rgba(220,38,38,.4); }
-.dom__k{ display:block; font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.95rem,1.9vw,1.3rem); margin-bottom:.4rem; }
-.dom--bad .dom__k{ color:var(--danger); }
-.dom p{ color:var(--ink-600); font-size:var(--small-size); line-height:1.4; }
-.dom__arr{ display:flex; align-items:center; color:var(--ink-500); font-size:clamp(1.2rem,3vw,2rem); font-family:var(--font-display); }
-.punch{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); text-align:center; font-size:clamp(1.2rem,3.4vw,2.4rem); line-height:1.3; max-width:24ch; margin:clamp(.8rem,3vh,1.8rem) auto 0; font-style:italic; }
-.punch::before{ content:""; display:block; width:62px; height:4px; border-radius:99px; background:linear-gradient(90deg,var(--pvep-blue),var(--pvep-green)); margin:0 auto .9rem; }
-
-/* ============================================================
-   SLIDE 7 — Static → Dashboard (keystone)
-   ============================================================ */
-.ba{ display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(.8rem,2vw,1.6rem); align-items:center; margin-top:clamp(.5rem,2vh,1.1rem); }
-.ba__side{ background:#fff; border:1px solid var(--ac-line); border-radius:18px; padding:clamp(1rem,2.4vw,1.6rem); box-shadow:0 14px 40px rgba(10,42,74,.07); position:relative; min-height:clamp(280px,45vh,450px); display:flex; flex-direction:column; gap:.8rem; }
-.ba__before{ filter:saturate(.7); }
-.ba__after{ border-color:rgba(0,131,199,.35); box-shadow:0 18px 50px rgba(0,131,199,.14); }
-.ba__lbl{ font-family:var(--font-display); font-weight:800; letter-spacing:.14em; font-size:.72rem; text-transform:uppercase; }
-.ba__lbl--old{ color:var(--ink-500); } .ba__lbl--new{ color:var(--pvep-blue); }
-.doc-stack{ display:flex; gap:.5rem; align-items:flex-end; justify-content:center; flex:1; }
-.doc{ width:46px; height:62px; background:repeating-linear-gradient(0deg,#e2e8f0,#e2e8f0 2px,#fff 2px,#fff 8px); border:1px solid #cbd5e1; border-radius:4px; transform:rotate(-4deg); box-shadow:0 6px 14px rgba(10,42,74,.1); }
-.doc:nth-child(2){ transform:rotate(3deg) translateY(-4px); } .doc:nth-child(3){ transform:rotate(-1deg); }
-.ba__pts{ list-style:none; display:flex; flex-direction:column; gap:.35rem; }
-.ba__pts li{ font-size:var(--body-size); color:var(--ink-600); padding-left:1.2rem; position:relative; }
-.ba__pts li::before{ content:"–"; position:absolute; left:0; color:var(--ink-500); }
-.ba__pts--g li{ color:var(--ink-700); } .ba__pts--g li::before{ content:"✓"; color:var(--pvep-green); font-weight:700; }
-.ba__mid{ display:flex; align-items:center; justify-content:center; }
-.ba__arrow{ position:relative; width:clamp(72px,8vw,124px); height:46px; border-radius:999px; background:linear-gradient(90deg,var(--pvep-blue),var(--pvep-green)); display:grid; place-content:center; color:#fff; font-family:var(--font-display); font-weight:800; font-size:.68rem; letter-spacing:.1em; box-shadow:0 10px 26px rgba(0,131,199,.3); overflow:hidden; }
-.ba__arrow::after{ content:""; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent); transform:translateX(-120%); }
-.ac-on .ba__arrow::after{ animation:sweepX 2.2s var(--ac-ease) infinite; animation-delay:.6s; }
-@keyframes sweepX{ to{ transform:translateX(120%); } }
-.mini-dash{ flex:1; display:flex; align-items:center; gap:1rem; justify-content:center; background:linear-gradient(135deg,rgba(0,131,199,.06),rgba(0,176,80,.05)); border-radius:12px; padding:1rem; }
-.md-bars{ display:flex; align-items:flex-end; gap:.4rem; height:clamp(100px,20vh,180px); }
-.md-bar{ width:14px; align-self:flex-end; border-radius:5px 5px 0 0; background:linear-gradient(180deg,var(--pvep-blue),#005f91); }
-.md-ring{ width:clamp(90px,12vw,150px); height:auto; transform:rotate(-90deg); }
-.md-track{ fill:none; stroke:var(--ac-track); stroke-width:12; }
-.md-val{ fill:none; stroke:var(--pvep-green); stroke-width:12; stroke-linecap:round; }
-
-/* ============================================================
-   SLIDE 8 — Power BI embed
-   ============================================================ */
-.pb-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:.7rem; flex-wrap:wrap; }
-.pb-filters{ display:flex; gap:.5rem; flex-wrap:wrap; }
-.fchip{ font-size:.74rem; font-weight:600; color:var(--pvep-blue); background:rgba(0,131,199,.10); border:1px solid rgba(0,131,199,.25); padding:.35rem .8rem; border-radius:999px; }
-.pb-frame{ background:#fff; border:1px solid var(--ac-line); border-radius:14px; overflow:hidden; box-shadow:0 22px 60px rgba(10,42,74,.16); height:clamp(350px,70vh,850px); display:flex; flex-direction:column; }
-.pb-frame__bar{ display:flex; align-items:center; gap:.5rem; padding:.5rem .9rem; background:#f1f5f9; border-bottom:1px solid var(--ac-line); }
-.pbdot{ width:11px; height:11px; border-radius:50%; }
-.pbdot:nth-child(1){ background:#f87171; } .pbdot:nth-child(2){ background:#fbbf24; } .pbdot:nth-child(3){ background:#34d399; }
-.pb-frame__url{ margin-left:.6rem; font-size:.74rem; color:var(--ink-500); }
-.pb-frame iframe{ flex:1; width:100%; border:0; background:#fff; }
-
-/* ============================================================
-   SLIDE 9 — Work breakdown tree
-   ============================================================ */
-.org{ text-align:center; margin-top:.6rem; }
-.org__node{ display:inline-block; padding:.7rem 1.2rem; border-radius:12px; color:var(--ink-700); background:#fff; border:1px solid var(--ac-line); font-weight:700; font-family:var(--font-display); box-shadow:0 8px 22px rgba(10,42,74,.06); font-size:clamp(.82rem,1.6vw,1.05rem); }
-.org__root{ background:var(--pvep-navy); color:#fff; border-color:var(--pvep-navy); }
-.org__children{ display:flex; justify-content:center; gap:clamp(.6rem,3vw,1.8rem); margin-top:2.4rem; position:relative; flex-wrap:wrap; }
-.org__children::before{ content:""; position:absolute; top:-1.2rem; left:12%; right:12%; height:2px; background:var(--ac-line); }
-.org__children .org__node{ position:relative; }
-.org__children .org__node::before{ content:""; position:absolute; top:-1.2rem; left:50%; width:2px; height:1.2rem; background:var(--ac-line); }
-.org__root::after{ content:""; display:block; width:2px; height:1.2rem; background:var(--ac-line); margin:.4rem auto -.4rem; }
-.map-row{ display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap; margin-top:clamp(1rem,3vh,1.8rem); }
-.map-chip{ font-size:.74rem; font-weight:600; padding:.4rem .9rem; border-radius:8px; }
-.map-chip--a{ color:var(--info); background:rgba(29,78,216,.1); }
-.map-chip--b{ color:var(--pvep-blue); background:rgba(0,131,199,.1); }
-.map-chip--c{ color:var(--success); background:rgba(21,128,61,.1); }
-.wb-flags{ display:flex; gap:.7rem; justify-content:center; margin-top:1rem; flex-wrap:wrap; }
-.flag{ font-family:var(--font-display); font-weight:700; font-size:clamp(.75rem,1.4vw,.95rem); padding:.5rem 1rem; border-radius:10px; }
-.flag--warn{ color:var(--warning); background:rgba(234,88,12,.10); border:1px solid rgba(234,88,12,.4); }
-.flag--over{ color:var(--danger); background:rgba(220,38,38,.10); border:1px solid rgba(220,38,38,.4); }
-.ac-on .ac-pulse{ animation:pulseWarn 1.4s ease-in-out infinite; }
-@keyframes pulseWarn{ 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.55; transform:scale(1.04); } }
-
-/* ============================================================
-   SLIDE 10 — 5 steps
-   ============================================================ */
-.steps5{ position:relative; padding:1.6rem .5rem 1rem; margin-top:.6rem; }
-.s5-track{ position:absolute; top:calc(1.6rem + 30px); left:9%; right:9%; height:5px; border-radius:99px; background:var(--ac-track); }
-.s5-fill{ display:block; height:100%; border-radius:999px; background:linear-gradient(90deg,var(--pvep-blue),var(--pvep-green)); }
-.s5{ position:relative; display:flex; justify-content:space-between; gap:.4rem; }
-.s5__step{ display:flex; flex-direction:column; align-items:center; gap:.55rem; flex:1; z-index:1; }
-.s5__step b{ width:clamp(46px,6vw,62px); height:clamp(46px,6vw,62px); border-radius:50%; display:grid; place-content:center; background:#fff; color:var(--pvep-blue); font-family:var(--font-display); font-weight:800; font-size:clamp(1.05rem,2.2vw,1.5rem); border:4px solid var(--pvep-blue); box-shadow:0 8px 22px rgba(0,131,199,.18); }
-.s5__step span{ color:var(--ink-700); font-size:clamp(.72rem,1.4vw,.95rem); font-weight:600; max-width:15ch; text-align:center; line-height:1.3; }
-.s5__step--hot b{ background:var(--pvep-green); border-color:var(--pvep-green); color:#fff; transform:scale(1.12); box-shadow:0 12px 30px rgba(0,176,80,.35); }
-.s5__step--hot span{ color:var(--success); }
-.note{ text-align:center; margin-top:clamp(.9rem,3vh,1.8rem); font-size:clamp(.74rem,1.3vw,.92rem); color:var(--caution); background:rgba(217,119,6,.08); border:1px dashed rgba(217,119,6,.4); border-radius:10px; padding:.7rem 1rem; max-width:74ch; margin-inline:auto; }
-.note--info{ color:var(--info); background:rgba(29,78,216,.07); border-color:rgba(29,78,216,.35); }
-
-/* ============================================================
-   SLIDE 11 / 12B — Two-block duo
-   ============================================================ */
-.duo{ display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(.8rem,2vw,1.6rem); align-items:center; margin:clamp(.7rem,2vh,1.4rem) 0; }
-.duo--2{ grid-template-columns:1fr 1fr; }
-.duo__card{ background:#fff; border:1px solid var(--ac-line); border-radius:18px; padding:clamp(1.1rem,2.6vw,2rem); box-shadow:0 14px 40px rgba(10,42,74,.07); }
-.duo__card--g{ border-color:rgba(0,176,80,.35); }
-.duo__no{ font-family:var(--font-display); font-size:clamp(1.6rem,3.4vw,2.4rem); color:var(--pvep-blue); font-weight:800; }
-.duo__card--g .duo__no{ color:var(--pvep-green); }
-.duo__card h3{ font-family:var(--font-display); color:var(--pvep-navy); font-weight:800; font-size:clamp(1.05rem,2.2vw,1.5rem); margin:.3rem 0 .5rem; }
-.duo__card p{ color:var(--ink-600); font-size:var(--body-size); line-height:1.45; }
-.duo__plus{ display:flex; flex-direction:column; align-items:center; gap:.35rem; font-family:var(--font-display); font-weight:700; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--pvep-blue); }
-.rt-dot{ width:14px; height:14px; border-radius:50%; background:var(--pvep-green); }
-.ac-on .rt-dot{ animation:ping 1.6s ease-out infinite; }
-@keyframes ping{ 0%{ box-shadow:0 0 0 0 rgba(0,176,80,.5); } 100%{ box-shadow:0 0 0 16px rgba(0,176,80,0); } }
-.benefits{ display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top:clamp(.9rem,3vh,1.8rem); }
-.ben{ font-family:var(--font-display); font-weight:700; font-size:clamp(.78rem,1.5vw,1rem); color:#fff; background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); padding:.5rem 1.1rem; border-radius:999px; box-shadow:0 8px 22px rgba(0,131,199,.2); }
-
-/* ============================================================
-   SLIDE 13 — Conclusion
-   ============================================================ */
-.end__lead{ font-size:var(--h3-size); color:var(--ink-700); line-height:1.4; }
-.end__lead b{ color:var(--pvep-navy); }
-.end__lead--2{ margin-top:.4rem; }
-.end__big{ font-family:var(--font-display); font-weight:800; font-size:clamp(1.8rem,6vw,4.4rem); line-height:1.28; padding:0.15em 0.1rem; letter-spacing:-.01em; margin:clamp(1.1rem,4vh,2.4rem) 0; position:relative;
-  background:linear-gradient(120deg,var(--pvep-navy),var(--pvep-blue) 45%,var(--pvep-green) 68%,var(--pvep-blue));
-  background-size:220% 100%;
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-.ac-on .end__big{ animation:boomIn 1.25s var(--ac-ease-bounce) .2s both, textShine 5s linear 1.5s infinite; }
-.end__thanks{ color:var(--ink-500); font-weight:600; font-size:clamp(.85rem,1.5vw,1.05rem); letter-spacing:.04em; }
-
-/* ============================================================
-   v2 ENHANCEMENTS — animated oil&gas bg · explosive FX · OECD · Claude
-   ============================================================ */
-
-/* ---- Global animated oil & gas background ---- */
-.oilbg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
-  background:#eef3f8 url("assets/offshore-still.jpg") center center / cover no-repeat; }
-/* Slide 2 trở đi: nền ẢNH TĨNH offshore — bỏ toàn bộ motion. Slide 1 giữ video full nằm trên lớp này. */
-.oilbg::after{ content:""; position:absolute; inset:0;
-  background:linear-gradient(120deg, rgba(255,255,255,.80) 0%, rgba(255,255,255,.70) 42%, rgba(238,243,248,.74) 74%, rgba(0,131,199,.10) 100%); }
-.oilbg .oil-scene,
-.oilbg .oil-particles,
-.oilbg .bubbles,
-.oilbg .aurora,
-.oilbg .blueprint,
-.oilbg .oil-veil{ display:none !important; }
-.oil-scene{ position:absolute; inset:0; width:100%; height:100%; opacity:.5; }
-.oil-pipe{ fill:none; stroke:rgba(0,131,199,.22); stroke-width:3; stroke-dasharray:10 16; }
-.oil-pipe--g{ stroke:rgba(0,176,80,.24); }
-.oil-line{ fill:none; stroke:rgba(10,42,74,.16); stroke-width:2; }
-.oil-line--b{ stroke:rgba(0,131,199,.24); }
-.oil-fill{ fill:rgba(0,131,199,.06); }
-.oil-fill--b{ fill:rgba(0,176,80,.18); }
-.oil-waves{ opacity:.85; }
-.bubbles{ position:absolute; inset:0; }
-.bub{ position:absolute; bottom:-24px; border-radius:50%; border:1.5px solid rgba(0,131,199,.30); background:radial-gradient(circle at 35% 30%,rgba(0,176,80,.18),transparent 70%); animation:bubRise linear infinite; }
-@keyframes bubRise{ 0%{transform:translateY(0) scale(.6);opacity:0} 12%{opacity:.85} 100%{transform:translateY(-98vh) scale(1.15);opacity:0} }
-.mol{ position:absolute; opacity:.5; color:rgba(0,131,199,.5); animation:molDrift 24s ease-in-out infinite alternate; }
-.mol--2{ animation-duration:30s; animation-delay:-6s; color:rgba(0,176,80,.5); }
-@keyframes molDrift{ 0%{transform:translate(0,0) rotate(0)} 100%{transform:translate(46px,-34px) rotate(50deg)} }
-.aurora{ position:absolute; border-radius:50%; filter:blur(85px); }
-.aurora--1{ width:56vmax; height:56vmax; top:-20vmax; left:-12vmax; opacity:.42; background:radial-gradient(circle, rgba(0,131,199,.28), transparent 66%); }
-.aurora--2{ width:50vmax; height:50vmax; bottom:-18vmax; right:-10vmax; opacity:.36; background:radial-gradient(circle, rgba(0,176,80,.26), transparent 66%); }
-.blueprint{ position:absolute; inset:0; opacity:.5; background-image:radial-gradient(rgba(10,42,74,.13) 1px, transparent 1.5px); background-size:34px 34px; -webkit-mask-image:radial-gradient(ellipse at 50% 45%, #000 28%, transparent 78%); mask-image:radial-gradient(ellipse at 50% 45%, #000 28%, transparent 78%); }
-.oil-particles{ position:absolute; inset:0; width:100%; height:100%; opacity:.85; }
-.platform{ stroke-width:2.4; }
-.flare-flame{ transform-box:fill-box; transform-origin:center bottom; }
-.flare-glow{ transform-box:fill-box; transform-origin:center; opacity:.4; }
-@media (prefers-reduced-motion:reduce){ .oil-pipe,.oil-waves,.bub,.aurora,.flare-flame,.flare-glow{ animation:none!important; } }
-
-/* ---- Explosive emphasis utilities ---- */
-.s-title{ position:relative; }
-.s-title::before{ content:""; position:absolute; left:50%; top:50%; width:140%; height:200%; transform:translate(-50%,-50%) scale(.25); border-radius:50%; background:radial-gradient(ellipse,rgba(0,131,199,.16),rgba(0,176,80,.06) 45%,transparent 72%); opacity:0; z-index:-1; pointer-events:none; }
-.ac-on .s-title::before{ animation:flashBurst 1.1s var(--ac-ease) .12s forwards; }
-.flash{ position:relative; }
-.flash::before{ content:""; position:absolute; left:50%; top:50%; width:130%; height:170%; transform:translate(-50%,-50%) scale(.2); border-radius:50%; background:radial-gradient(circle,rgba(0,131,199,.34),rgba(0,176,80,.12) 45%,transparent 70%); opacity:0; z-index:-1; pointer-events:none; }
-.ac-on .flash::before{ animation:flashBurst 1.25s var(--ac-ease) forwards; animation-delay:calc(var(--i,0)*var(--ac-stagger)); }
-@keyframes flashBurst{ 0%{opacity:0;transform:translate(-50%,-50%) scale(.2)} 35%{opacity:1} 100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)} }
-@keyframes textShine{ to{ background-position:220% 0; } }
-@keyframes boomIn{ 0%{opacity:0;transform:scale(.5);filter:blur(20px)} 55%{opacity:1;filter:blur(0)} 80%{transform:scale(1.07)} 100%{opacity:1;transform:scale(1)} }
-@keyframes glowPulse{ 0%,100%{text-shadow:0 0 0 rgba(0,131,199,0)} 50%{text-shadow:0 0 28px rgba(0,131,199,.55)} }
-.ac-on .glow{ animation:glowPulse 2.6s ease-in-out infinite; }
-
-/* shockwave + sparks (conclusion) */
-.shock{ position:absolute; left:50%; top:50%; width:46px; height:46px; border-radius:50%; border:3px solid var(--pvep-blue); transform:translate(-50%,-50%) scale(0); opacity:0; z-index:0; pointer-events:none; }
-.ac-on .shock{ animation:shockwave 2.8s var(--ac-ease) .3s infinite; }
-.shock--2{ border-color:var(--pvep-green); }
-.ac-on .shock--2{ animation:shockwave 2.8s var(--ac-ease) 1.2s infinite; }
-@keyframes shockwave{ 0%{transform:translate(-50%,-50%) scale(0);opacity:.6} 70%{opacity:.1} 100%{transform:translate(-50%,-50%) scale(24);opacity:0} }
-.sparks{ position:absolute; left:50%; top:44%; width:0; height:0; z-index:0; pointer-events:none; }
-.spark{ position:absolute; width:8px; height:8px; border-radius:50%; background:var(--pvep-green); opacity:0; }
-.spark:nth-child(even){ background:var(--pvep-blue); }
-.ac-on .spark{ animation:sparkFly 1.5s var(--ac-ease) .5s forwards; }
-@keyframes sparkFly{ 0%{opacity:0;transform:translate(0,0) scale(1.2)} 18%{opacity:1} 100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)} }
-
-/* ---- OECD watermark · reference · governance graph ---- */
-.oecd-wm{ position:absolute; right:clamp(.5rem,3vw,3rem); top:50%; transform:translateY(-50%); z-index:0; text-align:right; pointer-events:none; user-select:none; }
-.oecd-wm__txt{ display:block; font-family:var(--font-display); font-weight:800; font-size:clamp(4.5rem,15vw,12rem); line-height:.78; letter-spacing:.05em; color:rgba(0,131,199,.08); }
-.oecd-wm__sub{ display:block; font-family:var(--font-display); font-weight:700; letter-spacing:.34em; font-size:clamp(.55rem,1.3vw,.95rem); color:rgba(10,42,74,.16); margin-top:.4rem; }
-.oecd-ref{ display:inline-flex; align-items:center; gap:.4rem; margin-top:.7rem; font-size:clamp(.68rem,1.3vw,.85rem); font-weight:600; color:var(--pvep-blue); text-decoration:none; border:1px solid rgba(0,131,199,.3); background:rgba(0,131,199,.06); padding:.4rem .9rem; border-radius:999px; transition:background .2s, transform .2s; }
-.oecd-ref:hover{ background:rgba(0,131,199,.12); transform:translateY(-1px); }
-.govgraph{ position:absolute; left:clamp(.4rem,3vw,2.6rem); bottom:clamp(1rem,5vh,3rem); display:flex; align-items:flex-end; gap:6px; height:clamp(50px,9vh,88px); z-index:0; opacity:.9; pointer-events:none; }
-.gg-bar{ width:12px; align-self:flex-end; border-radius:4px 4px 0 0; background:linear-gradient(180deg,var(--pvep-blue),var(--pvep-green)); box-shadow:0 6px 16px rgba(0,131,199,.2); }
-@media (min-width:1000px){ .govgraph{ left:calc(var(--rail) + 1.4rem); } }
-/* card sparkline (slide 4B impressive graph icons) */
-.cardspark{ width:100%; height:22px; margin-top:auto; }
-/* ECG monitoring line (slide 5) */
-.ecg{ width:100%; height:clamp(40px,7vh,64px); margin-top:1rem; }
-
-/* ---- Claude (slide 11 AI card) ---- */
-.claude-row{ display:flex; align-items:center; gap:.7rem; margin-top:.9rem; }
-.claude-ic{ width:32px; height:32px; color:#D97757; display:grid; place-content:center; }
-.claude-ic svg{ width:28px; height:28px; }
-.ac-on .claude-ic{ animation:ac-spin 7s linear infinite; }
-.claude-btn{ font-family:var(--font-display); font-weight:700; font-size:.82rem; text-decoration:none; color:#fff; background:linear-gradient(135deg,#D97757,#BE5A38); padding:.45rem .95rem; border-radius:999px; box-shadow:0 8px 20px rgba(217,119,87,.38); transition:transform .2s, box-shadow .2s; }
-.claude-btn:hover{ transform:translateY(-2px); box-shadow:0 12px 26px rgba(217,119,87,.5); }
-.ai-note{ display:flex; align-items:center; gap:.7rem; flex-wrap:wrap; justify-content:center; margin-top:clamp(.9rem,3vh,1.8rem); max-width:82ch; margin-inline:auto; padding:.7rem 1.1rem; border-radius:12px; background:rgba(217,119,6,.08); border:1px dashed rgba(217,119,6,.4); font-size:var(--small-size); }
-.ai-note__txt{ color:var(--ink-600); }
-.ai-note__txt b{ color:#BE5A38; font-weight:800; }
-.claude-ic--sm{ width:24px; height:24px; }
-.claude-ic--sm svg{ width:22px; height:22px; }
-.claude-btn--sm{ font-size:.74rem; padding:.35rem .8rem; }
-
-/* ---- detailed bullet lists for content-rich slides ---- */
-.dlist{ list-style:none; display:flex; flex-direction:column; gap:.3rem; margin-top:.5rem; text-align:left; }
-.dlist li{ position:relative; padding-left:.95rem; font-size:var(--small-size); line-height:1.32; color:var(--ink-600); }
-.dlist li::before{ content:""; position:absolute; left:0; top:.52em; width:5px; height:5px; border-radius:50%; background:var(--pvep-blue); }
-.dlist--g li::before{ background:var(--pvep-green); }
-.dlist--bad li::before{ background:var(--danger); }
-/* Slide 3 tri-cards: denser, left-aligned to fit bullets */
-.tri__card{ padding:clamp(.8rem,1.8vw,1.2rem); display:flex; flex-direction:column; text-align:left; }
-.tri__k{ margin-bottom:.15rem; }
-/* Slide 5 four-up cards: tighten to fit detailed bullets */
-.cards--4 .card4{ padding:clamp(.8rem,1.5vw,1.1rem); gap:.35rem; }
-.cards--4 .card4__ic{ width:38px; height:38px; }
-.cards--4 .card4__ic svg{ width:22px; height:22px; }
-.cards--4 .card4 h4{ font-size:clamp(.82rem,1.5vw,1.05rem); }
-.cards--3 .card4 h4{ font-size:clamp(.92rem,1.7vw,1.18rem); }
-/* Slide 7 domino cards: stack header + bullets */
-.dom{ display:flex; flex-direction:column; }
-
-/* ============================================================
-   SLIDE 1 — Minimalist Technical Wind Power Background
-   ============================================================ */
-.hero-motion-bg {
-  position: absolute;
-  left: calc(var(--rail) + 3rem);
-  bottom: 3rem;
-  width: 240px;
-  height: 200px;
-  z-index: 2;
-  pointer-events: none;
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-}
-@media (max-width: 999px) {
-  .hero-motion-bg {
-    left: 2rem;
-  }
-}
-.tech-blueprint-scene {
-  width: 100%;
-  height: 100%;
-}
-
-.rotor-blades-tech {
-  animation: spinRotorSlow 30s linear infinite;
-}
-.rotor-blades-tech--slow {
-  animation: spinRotorSlow 40s linear infinite;
-  animation-delay: -15s;
-}
-@keyframes spinRotorSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.cable-flow-line {
-  animation: flowCable 2.5s linear infinite;
-}
-@keyframes flowCable {
-  to { stroke-dashoffset: -20; }
-}
-
-.beacon-light {
-  animation: beaconBlink 2s ease-in-out infinite;
-}
-@keyframes beaconBlink {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
-}
-</style>
+        /* FLOW SWIMLANE HORIZONTAL */
+        .flow-group-label{font-size:13px;font-weight:700;color:var(--green);margin:20px 0 10px;padding:8px 14px;background:var(--green-pale);border-radius:8px;border-left:4px solid var(--green)}
+        .swim-container{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:20px;border:1px solid var(--border); overflow:hidden;}
+        .swim-title{font-size:14px;font-weight:700;color:var(--white);background:var(--green);padding:10px 18px;text-align:center}
+        .swim-body{position:relative;width:100%;display:flex;flex-direction:column;}
+        .swim-lane{display:flex;align-items:stretch;border-bottom:1px solid var(--border-light);min-height:80px;resize:vertical;overflow:hidden;}
+        .swim-lane:last-child{border-bottom:none;}
+        .swim-lane:nth-child(even){background:#fafbfc;}
+        .swim-label{width:140px;min-width:80px;padding:10px 12px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:700;color:var(--green);background:var(--green-pale);border-right:2px solid var(--green);flex-shrink:0;line-height:1.3;resize:horizontal;overflow:hidden;z-index:3;}
+        .swim-cells{display:grid;grid-template-columns:repeat(var(--total-cols), minmax(0,1fr));gap:6px;flex:1;padding:12px 10px;align-items:center;position:relative;}
+        .swim-node{padding:6px 4px;border-radius:6px;font-size:9.5px;font-weight:600;line-height:1.2;text-align:center;border:2px solid var(--border);background:var(--white);color:var(--text);cursor:default;position:relative;z-index:2;transition:box-shadow .15s, transform .15s;word-wrap:break-word;max-height:80px;overflow:hidden;}
+        .swim-node:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);z-index:4;max-height:none;height:auto;}
+        .swim-node.done{background:#c8e6c9;border-color:#2e7d32;color:#1b5e20}
+        .swim-node.partial{background:#fff9c4;border-color:#f9a825;color:#e65100}
+        .swim-node.fail{background:#ffcdd2;border-color:#c62828;color:#b71c1c}
+        .swim-node.control {
+            border: 2px solid var(--orange);
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            color: #e65100;
+            box-shadow: 0 0 0 rgba(245, 124, 0, 0.4);
+            animation: controlPulse 2s infinite;
+        }
+        .swim-node.control .sn-num {
+            color: #d84315;
+            font-size: 10px;
+            font-weight: 900;
+        }
+        @keyframes controlPulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0.5); }
+            70% { box-shadow: 0 0 0 6px rgba(245, 124, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0); }
+        }
+        .swim-node .sn-num{font-size:9px;font-weight:800;color:var(--green);display:block;margin-bottom:2px}
+        .swim-legend{display:flex;gap:16px;padding:12px 16px;background:var(--green-pale);border-radius:8px;font-size:11px;color:var(--text2);margin-top:12px;flex-wrap:wrap;align-items:center}
+        .swim-legend-item{display:flex;align-items:center;gap:4px}
+        .swim-legend-box{width:14px;height:14px;border-radius:3px;border:2px solid}
+        .flow-fallback{background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);overflow-x:auto}
+        .flow-fallback .mermaid{min-width:600px}
+    </style>
 </head>
 <body>
-
-<!-- ============ STATIC OFFSHORE BACKGROUND (content slides · guide §3) ============ -->
-<div class="oilbg" aria-hidden="true">
-  <!-- soft static depth orbs -->
-  <span class="aurora aurora--1"></span>
-  <span class="aurora aurora--2"></span>
-  <!-- engineering blueprint grid -->
-  <span class="blueprint"></span>
-  <!-- refined offshore scene (static) -->
-  <svg class="oil-scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
-    <!-- flowing pipelines -->
-    <path class="oil-pipe" d="M-60,212 H470 a18,18 0 0 1 18,18 V300 a18,18 0 0 0 18,18 H780"/>
-    <path class="oil-pipe oil-pipe--g" d="M1500,150 H1060 a18,18 0 0 0 -18,18 V300"/>
-    <!-- sea shimmer (slow drift) -->
-    <g class="oil-waves">
-      <path class="oil-line oil-line--b" d="M-80,734 q120,-22 240,0 t240,0 t240,0 t240,0 t240,0 t240,0 t240,0"/>
-      <path class="oil-line" d="M-80,764 q120,22 240,0 t240,0 t240,0 t240,0 t240,0 t240,0 t240,0" opacity=".5"/>
-    </g>
-    <!-- refined offshore platform (bottom-right) -->
-    <g class="platform oil-line oil-line--b" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <!-- jacket legs -->
-      <path d="M1020,584 L1002,748 M1104,584 L1098,748 M1196,584 L1206,748 M1280,584 L1300,748"/>
-      <!-- cross bracing -->
-      <path d="M1020,584 L1098,748 M1104,584 L1002,748 M1104,584 L1206,748 M1196,584 L1098,748 M1196,584 L1300,748 M1280,584 L1206,748" opacity=".45"/>
-      <!-- deck -->
-      <path d="M996,560 H1306 V584 H996 Z" stroke-width="3"/>
-      <!-- derrick tower -->
-      <path d="M1040,560 L1062,432 L1090,432 L1112,560 M1052,500 H1100 M1046,468 H1106"/>
-      <line x1="1076" y1="432" x2="1076" y2="402" stroke-width="2"/>
-      <!-- crane -->
-      <path d="M1240,560 L1240,512 L1330,498"/>
-      <line x1="1330" y1="498" x2="1330" y2="520" stroke-width="2"/>
-      <!-- helideck -->
-      <ellipse cx="1010" cy="556" rx="34" ry="9" opacity=".7"/>
-      <!-- flare boom -->
-      <line x1="1300" y1="566" x2="1392" y2="500" stroke-width="3"/>
-    </g>
-    <!-- gas flare flame (flickers + glow) -->
-    <g class="flare">
-      <circle class="flare-glow" cx="1395" cy="486" r="30" fill="rgba(234,88,12,.32)"/>
-      <path class="flare-flame" d="M1392,466 c10,9 14,20 7,31 c-4,7 -16,7 -20,-1 c-6,-11 5,-21 13,-30 z" fill="rgba(234,88,12,.62)"/>
-      <path class="flare-flame" style="animation-delay:.25s" d="M1392,478 c5,5 7,12 3,18 c-3,5 -10,5 -12,-1 c-3,-7 3,-12 9,-17 z" fill="rgba(250,204,21,.8)"/>
-    </g>
-  </svg>
-  <!-- light white veil so white cards read clearly -->
-  <span class="oil-veil"></span>
-</div>
-
-<!-- progress bar -->
-<div class="progress"><div class="progress__fill" id="progressFill"></div></div>
-
-<!-- chapter rail -->
-<nav class="rail" aria-label="Chương">
-  <div class="rail__brand"><img src="PVEP.png" style="height: 32px; width: auto; object-fit: contain;" alt="PVEP Logo" /><span class="rail__title">PVEP · Ban KSNB</span></div>
-  <div class="rail__sub">Hệ thống KPI · CV 165</div>
-  <div class="rail__item" data-chapter="0" data-target="0"><span class="dot"></span><span class="rail__num">01</span>Hiện trạng KPI</div>
-  <div class="rail__item" data-chapter="1" data-target="3"><span class="dot"></span><span class="rail__num">02</span>KPI theo CV 165</div>
-  <div class="rail__item" data-chapter="2" data-target="6"><span class="dot"></span><span class="rail__num">03</span>Cấu trúc quản lý</div>
-  <div class="rail__item" data-chapter="3" data-target="8"><span class="dot"></span><span class="rail__num">04</span>Quy định &amp; Tiêu chí</div>
-  <div class="rail__item" data-chapter="4" data-target="12"><span class="dot"></span><span class="rail__num">05</span>Chấm điểm DADK</div>
-  <div class="rail__item" data-chapter="5" data-target="14"><span class="dot"></span><span class="rail__num">06</span>Kết luận &amp; Kiến nghị</div>
-</nav>
-
-<!-- slide counter -->
-<div class="counter"><span id="cur">1</span><span class="sep">/</span><span id="tot">15</span></div>
-<div class="hint">← → chuyển slide · Home/End đầu/cuối</div>
-
-<!-- mobile-only swipe hint (auto-hides after first swipe) -->
-<div class="mhint" id="mhint" aria-hidden="true">
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  <span>Vuốt để chuyển slide</span>
-</div>
-
-<style>
-/* ====== KPI DECK — shared content styles ====== */
-.lead-note{ text-align:center; color:var(--ink-600); font-size:var(--body-size); max-width:64ch; margin:.2rem auto 0; line-height:1.45; }
-.rlist{ list-style:none; display:flex; flex-direction:column; gap:.4rem; }
-.rlist li{ position:relative; padding-left:1.2rem; font-size:var(--body-size); color:var(--ink-600); line-height:1.34; }
-.rlist li::before{ content:""; position:absolute; left:0; top:.5em; width:7px; height:7px; border-radius:2px; background:var(--pvep-blue); }
-.rlist--g li::before{ background:var(--pvep-green); border-radius:50%; }
-.rlist--warn li::before{ background:var(--warning); }
-.rlist b{ color:var(--ink-900); font-weight:700; }
-
-/* 4-tier tower */
-.ktower{ display:flex; flex-direction:column; gap:.45rem; max-width:1020px; margin:.3rem auto 0; }
-.ktier{ background:#fff; border:1px solid var(--ac-line); border-left:5px solid var(--pvep-blue); border-radius:14px; padding:.62rem 1rem; box-shadow:0 10px 28px rgba(10,42,74,.06); display:flex; align-items:center; gap:.85rem; }
-.ktier__num{ width:30px;height:30px;border-radius:50%;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;display:grid;place-content:center;flex:none; }
-.ktier__main{ flex:1; min-width:0; }
-.ktier__name{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.9rem,1.7vw,1.18rem); line-height:1.1; }
-.ktier__desc{ color:var(--ink-600); font-size:var(--small-size); line-height:1.28; margin-top:.08rem; }
-.ktier__by{ font-family:var(--font-display); font-weight:700; font-size:.7rem; white-space:nowrap; color:var(--pvep-blue); background:rgba(0,131,199,.1); padding:.25rem .6rem; border-radius:99px; }
-.ktier--in{ border-left-color:var(--caution); }
-.ktier--in .ktier__by{ color:var(--caution); background:rgba(217,119,6,.12); }
-
-/* infographic kmap */
-.kmap{ display:grid; grid-template-columns:1fr .82fr 1fr; gap:clamp(.5rem,1.4vw,1.05rem); align-items:start; margin-top:clamp(.3rem,1.4vh,.9rem); }
-.kmap__ch{ display:flex; align-items:baseline; gap:.45rem; margin-bottom:.5rem; }
-.kmap__ix{ font-family:var(--font-display); font-weight:800; color:var(--caution); font-size:1rem; }
-.kmap__tt{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.8rem,1.4vw,1.05rem); }
-.kmap__io{ margin-left:auto; font-size:.55rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:.12rem .5rem; border-radius:99px; white-space:nowrap; }
-.io-in{ background:rgba(217,119,6,.15); color:var(--caution); }
-.io-out{ background:rgba(0,131,199,.13); color:var(--pvep-blue); }
-.kmcol{ display:flex; flex-direction:column; gap:.4rem; }
-.kcard{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvep-blue); border-radius:12px; padding:.5rem .7rem; box-shadow:0 6px 18px rgba(10,42,74,.05); }
-.kcard__top{ display:flex; align-items:center; gap:.45rem; }
-.kcard__num{ width:19px;height:19px;border-radius:50%;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.66rem;display:grid;place-content:center;flex:none; }
-.kcard__name{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.66rem,1.15vw,.9rem); line-height:1.06; }
-.kcard__by{ margin-left:auto; font-size:.55rem; font-weight:700; color:var(--ink-500); white-space:nowrap; }
-.kchips{ display:flex; flex-wrap:wrap; gap:.22rem; margin-top:.3rem; }
-.kchip{ font-size:.55rem; font-weight:600; background:var(--bg-100); border:1px solid var(--ac-line); border-radius:99px; padding:.08rem .42rem; color:var(--ink-700); }
-.kcard--in{ border-left-color:var(--caution); background:linear-gradient(180deg,#FFFBF3,#fff); }
-.kcard--in .kcard__num{ background:var(--caution); }
-.ksub{ display:flex; gap:.32rem; margin-top:.3rem; }
-.ksub>div{ flex:1; background:var(--bg-100); border:1px dashed var(--ac-line); border-radius:8px; padding:.3rem .42rem; }
-.ksub h6{ font-size:.55rem; font-weight:800; color:var(--pvep-blue); margin-bottom:.1rem; }
-.ksub p{ font-size:.53rem; color:var(--ink-700); line-height:1.18; }
-.kgt{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.66rem,1.15vw,.88rem); display:flex; align-items:center; gap:.4rem; }
-.kgt .kd{ width:7px;height:7px;border-radius:50%;background:var(--pvep-blue);flex:none; }
-.kcard--in .kgt .kd{ background:var(--caution); }
-.kflow{ display:flex; flex-direction:column; align-items:center; }
-.kstep{ width:100%; background:#fff; border:1px solid var(--ac-line); border-radius:10px; padding:.32rem .55rem; text-align:center; font-size:clamp(.58rem,.95vw,.78rem); font-weight:600; color:var(--ink-700); line-height:1.14; }
-.kstep .kl{ display:block; font-size:.5rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-500); margin-bottom:.02rem; }
-.kstep--in{ border-color:var(--caution); background:#FFFBF3; }
-.kstep--impact{ border-color:var(--pvep-blue); background:rgba(0,131,199,.05); }
-.karrow{ color:var(--caution); font-size:.72rem; line-height:1; margin:.06rem 0; }
-.ksem{ width:100%; display:grid; grid-template-columns:repeat(3,1fr); border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(10,42,74,.08); }
-.ksem>span{ padding:.3rem .2rem; text-align:center; color:#fff; font-weight:800; font-size:.54rem; line-height:1.08; }
-.ksem .g{ background:var(--success);} .ksem .y{ background:var(--caution);} .ksem .r{ background:var(--danger);}
-
-/* nexus cause -> impact */
-.nexus{ display:flex; flex-direction:column; gap:.45rem; max-width:1020px; margin:.4rem auto 0; }
-.nxrow{ display:grid; grid-template-columns:1fr auto 1.25fr; align-items:center; gap:.8rem; background:#fff; border:1px solid var(--ac-line); border-radius:14px; padding:.55rem 1rem; box-shadow:0 8px 22px rgba(10,42,74,.05); }
-.nxc{ font-family:var(--font-display); font-weight:800; color:var(--danger); font-size:clamp(.82rem,1.5vw,1.08rem); }
-.nxa{ width:clamp(38px,5vw,68px); height:30px; border-radius:99px; background:linear-gradient(90deg,var(--caution),var(--pvep-blue)); display:grid; place-content:center; color:#fff; font-weight:800; }
-.nxi{ color:var(--pvep-blue); font-weight:700; font-size:clamp(.78rem,1.4vw,1rem); }
-
-/* 4-layer model */
-.model{ display:flex; flex-direction:column; gap:.4rem; max-width:1060px; margin:.3rem auto 0; }
-.mlayer{ background:#fff; border:1px solid var(--ac-line); border-radius:16px; padding:.62rem 1.1rem; box-shadow:0 10px 28px rgba(10,42,74,.06); display:flex; align-items:center; gap:1rem; border-left:5px solid var(--pvep-blue); }
-.mlayer__k{ font-family:var(--font-display); font-weight:800; color:#fff; background:var(--pvep-blue); border-radius:10px; padding:.4rem .7rem; font-size:.68rem; letter-spacing:.05em; white-space:nowrap; flex:none; text-align:center; }
-.mlayer__main{ flex:1; }
-.mlayer__t{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.88rem,1.6vw,1.16rem); }
-.mlayer__d{ color:var(--ink-600); font-size:var(--small-size); line-height:1.28; }
-.mlayer--base{ border-left-color:var(--pvep-navy);} .mlayer--base .mlayer__k{ background:var(--pvep-navy);}
-.mlayer--in{ border-left-color:var(--caution);} .mlayer--in .mlayer__k{ background:var(--caution);}
-.mlayer--out{ border-left-color:var(--pvep-green);} .mlayer--out .mlayer__k{ background:var(--pvep-green);}
-.mconn{ text-align:center; color:var(--pvep-blue); font-size:1rem; line-height:.25; opacity:.6; }
-
-/* score bars */
-.score{ max-width:940px; margin:.5rem auto 0; display:flex; flex-direction:column; gap:.55rem; }
-.srow{ display:grid; grid-template-columns:clamp(8rem,17vw,15rem) 1fr auto; align-items:center; gap:.9rem; }
-.slbl{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:var(--small-size); }
-.strack{ height:clamp(20px,3vh,30px); background:var(--bg-100); border-radius:99px; overflow:hidden; border:1px solid var(--ac-line); }
-.sbar{ height:100%; border-radius:99px; background:linear-gradient(90deg,var(--pvep-blue),#005f91); }
-.sbar--g{ background:linear-gradient(90deg,var(--pvep-green),#0a7d3a);} .sbar--n{ background:linear-gradient(90deg,var(--pvep-navy),#13314f);} .sbar--c{ background:linear-gradient(90deg,var(--caution),#b45309);}
-.sval{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(1rem,2vw,1.4rem); min-width:2.4em; text-align:right; }
-
-/* completion ladder */
-.ladder{ display:flex; flex-direction:column; gap:.45rem; max-width:720px; margin:.3rem auto 0; }
-.lrow{ display:flex; align-items:center; gap:1rem; background:#fff; border:1px solid var(--ac-line); border-radius:12px; padding:.55rem 1rem; box-shadow:0 8px 22px rgba(10,42,74,.05); }
-.lrow__b{ font-family:var(--font-display); font-weight:800; font-size:clamp(1rem,2vw,1.5rem); min-width:4.2em; }
-.lrow__t{ font-weight:600; color:var(--ink-700); font-size:var(--body-size); }
-.lrow--1{ border-left:5px solid var(--pvep-green);} .lrow--1 .lrow__b{ color:var(--pvep-green);}
-.lrow--2{ border-left:5px solid var(--pvep-blue);} .lrow--2 .lrow__b{ color:var(--pvep-blue);}
-.lrow--3{ border-left:5px solid var(--caution);} .lrow--3 .lrow__b{ color:var(--caution);}
-.lrow--4{ border-left:5px solid var(--danger);} .lrow--4 .lrow__b{ color:var(--danger);}
-
-/* weight cards */
-.wgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.7rem; }
-.wcard{ background:#fff; border:1px solid var(--ac-line); border-top:4px solid var(--pvep-blue); border-radius:14px; padding:.7rem .9rem; box-shadow:0 10px 28px rgba(10,42,74,.06); }
-.wcard h4{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.85rem,1.5vw,1.08rem); margin-bottom:.35rem; }
-.wlist{ list-style:none; display:flex; flex-direction:column; gap:.18rem; }
-.wlist li{ display:flex; justify-content:space-between; gap:.5rem; font-size:var(--small-size); color:var(--ink-700); border-bottom:1px dashed var(--ac-line); padding-bottom:.16rem; }
-.wlist li b{ color:var(--pvep-blue); font-family:var(--font-display); white-space:nowrap; }
-
-/* stat duo */
-.duo{ display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; max-width:560px; margin:.4rem auto 0; }
-.duostat{ background:#fff; border:1px solid var(--ac-line); border-radius:18px; padding:1rem; text-align:center; box-shadow:0 12px 32px rgba(10,42,74,.06); }
-.duostat__n{ font-family:var(--font-display); font-weight:900; font-size:clamp(2.2rem,7vw,4rem); line-height:1; color:var(--pvep-blue); }
-.duostat--g .duostat__n{ color:var(--pvep-green); }
-.duostat__l{ color:var(--ink-600); font-size:var(--small-size); margin-top:.3rem; font-weight:600; }
-
-/* reco list */
-.reco{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem 1.4rem; max-width:1100px; margin:.3rem auto 0; }
-.ritem{ display:flex; gap:.7rem; align-items:flex-start; }
-.ritem__n{ font-family:var(--font-display); font-weight:800; color:#fff; background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); width:26px;height:26px;border-radius:8px; display:grid; place-content:center; font-size:.8rem; flex:none; box-shadow:0 6px 14px rgba(0,131,199,.25); }
-.ritem__t{ font-size:var(--small-size); color:var(--ink-700); line-height:1.32; }
-.ritem__t b{ color:var(--pvep-navy); font-weight:700; }
-
-/* BCG chips */
-.bcg{ display:grid; grid-template-columns:repeat(2,1fr); gap:.45rem; margin-top:.5rem; }
-.bchip{ border-radius:10px; padding:.4rem .6rem; font-size:.7rem; font-weight:600; line-height:1.2; }
-.bchip b{ font-family:var(--font-display); }
-.bchip--s{ background:rgba(21,128,61,.1); color:var(--success);} .bchip--c{ background:rgba(0,131,199,.1); color:var(--pvep-blue);}
-.bchip--q{ background:rgba(217,119,6,.1); color:var(--caution);} .bchip--d{ background:rgba(220,38,38,.1); color:var(--danger);}
-
-.end__lead{ font-family:var(--font-body); color:var(--ink-700); font-size:clamp(1.1rem,3vh,2rem); line-height:1.4; }
-.end__big{ font-family:var(--font-display); font-weight:900; color:var(--pvep-navy); font-size:clamp(1.6rem,5vw,3.4rem); line-height:1.12; margin:1rem auto; max-width:20ch; }
-.end__thanks{ margin-top:1.4rem; color:var(--ink-500); font-weight:600; font-size:var(--small-size); }
-</style>
-
-<!-- ========================= SLIDE 1 — HERO ========================= -->
-<section class="slide" data-chapter="0" data-hero="1" style="background-color: #f8fafc;">
-  <!-- VIDEO BACKGROUND (full-screen) -->
-  <div class="video-bg-wrap" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 0; overflow: hidden; background: #f8fafc; pointer-events:none;">
-    <video id="heroVideo" autoplay muted loop playsinline="true" webkit-playsinline="true" x5-playsinline="true" disablePictureInPicture disableRemotePlayback preload="auto" src="assets/offshore-motion.mp4" style="display:block; position:absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 1; filter: contrast(1.05) brightness(1.08) saturate(1.04); pointer-events: none; transform:translateZ(0); z-index:1;"></video>
-    <!-- Overlay blend từ trắng (trái) sang trong suốt/xanh biển (phải) — nhẹ để video hiện full -->
-    <div class="video-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(90deg, rgba(255,255,255,0.68) 0%, rgba(255,255,255,0.42) 28%, rgba(241,245,249,0.28) 58%, rgba(0,131,199,0.1) 100%); z-index:2; pointer-events:none;"></div>
-  </div>
-
-  <div class="slide-content" style="position: relative; z-index: 2;"><div class="wrap" style="text-align:center">
-    <img src="PVEP.png" style="height: 72px; width: auto; object-fit: contain; margin-bottom: 1.2rem; --i:0;" alt="PVEP Logo" class="ac-reveal" />
-    <div class="eyebrow ac-reveal" style="--i:1">Báo cáo · Ban Kiểm soát Nội bộ PVEP</div>
-    <h1 class="hero__word ac-reveal" style="--i:2">Hệ thống KPI</h1>
-    <div class="hero__amp ac-reveal" style="--i:3">CẤU TRÚC QUẢN LÝ HOẠT ĐỘNG PVEP</div>
-    <p class="hero__tag jtype" data-text="Hiện trạng · cơ chế liên kết · giám sát hiệu quả sử dụng vốn theo CV 165 của Tổng Giám đốc">&nbsp;</p>
-    <div class="hero__by ac-reveal" style="--i:5">Ban Kiểm soát Nội bộ — Tổng Công ty Thăm dò Khai thác Dầu khí (PVEP)</div>
-    <div class="badge-row ac-reveal" style="--i:6; margin-top:1.2rem">
-      <span class="chip">CV 165/TGĐ</span><span class="chip">QĐ 1894</span><span class="chip">QĐ 1200 · 1347</span>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 2 — 4 tầng chỉ tiêu ========================= -->
-<section class="slide" data-chapter="0">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Nhận định chung</div>
-      <h2 class="s-title ac-reveal" style="--i:1">PVEP đã có hệ thống chỉ tiêu <span class="neo">4 tầng</span></h2>
-    </div>
-    <div class="ktower">
-      <div class="ktier ac-reveal ac-reveal--up" style="--i:2"><span class="ktier__num">1</span><div class="ktier__main"><div class="ktier__name">Chiến lược &amp; Kế hoạch 5 năm</div><div class="ktier__desc">Mục tiêu tổng thể: sản lượng, gia tăng trữ lượng, tài chính, đầu tư, nguồn vốn, giải ngân.</div></div><span class="ktier__by">Petrovietnam</span></div>
-      <div class="ktier ac-reveal ac-reveal--up" style="--i:3"><span class="ktier__num">2</span><div class="ktier__main"><div class="ktier__name">Kế hoạch hàng năm PVEP</div><div class="ktier__desc">Chuyển hóa mục tiêu trung hạn thành kế hoạch điều hành năm; phân kỳ theo quý.</div></div><span class="ktier__by">HĐTV PVEP</span></div>
-      <div class="ktier ac-reveal ac-reveal--up" style="--i:4"><span class="ktier__num">3</span><div class="ktier__main"><div class="ktier__name">Cấp Dự án — Baseline vòng đời</div><div class="ktier__desc">KHCV dài hạn (CTTKTD, ODP, FDP, AP) &amp; phê duyệt sử dụng vốn: CAPEX/OPEX/ABEX, vốn góp, giả định hiệu quả.</div></div><span class="ktier__by">BCT · PVN</span></div>
-      <div class="ktier ktier--in ac-reveal ac-reveal--up" style="--i:5"><span class="ktier__num">4</span><div class="ktier__main"><div class="ktier__name">KPI điều hành hàng năm</div><div class="ktier__desc">Nhiệm vụ trọng tâm &amp; chỉ tiêu giao cho từng Đơn vị/Dự án, Người đại diện, UBQL/UBĐH.</div></div><span class="ktier__by">TGĐ giao</span></div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:6; margin-top:1rem"><b>PVEP không thiếu hệ thống chỉ tiêu.</b> Vấn đề trọng tâm là hoàn thiện cơ chế liên kết giữa các tầng để phục vụ một mục tiêu quản trị thống nhất.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 3 — Điểm hạn chế ========================= -->
-<section class="slide" data-chapter="0">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Điểm hạn chế</div>
-      <h2 class="s-title ac-reveal" style="--i:1">Bốn khoảng trống trong <span class="neo-g">liên kết chỉ tiêu</span></h2>
-    </div>
-    <div class="cards cards--4">
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:2"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg></div><h4>Chưa gắn vòng đời</h4><p>KPI năm chưa thể hiện đóng góp vào mục tiêu cả vòng đời theo BCSDV/phê duyệt SDV và mức độ triển khai, giải ngân so với phê duyệt.</p></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:3"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4>Thiếu chỉ tiêu tài chính</h4><p>Chưa đủ để đánh giá hiệu quả tài chính, dòng tiền tự do, dòng tiền trả nợ và khả năng tự chi trả nợ vay.</p></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:4"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div><h4>Chưa lượng hóa tác động</h4><p>Khi KPI sai lệch, chưa rõ tác động đến NPV, IRR, NCF, FCF, CFADS, DSCR và đến kế hoạch năm/5 năm, danh mục đầu tư.</p></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:5"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><h4>Chưa tích hợp danh mục</h4><p>KPI cấp Dự án chưa được tổng hợp, so sánh để quản trị danh mục, cảnh báo sớm dự án rủi ro và cập nhật kế hoạch.</p></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 4 — CV165: nguyên nhân vs tác động ========================= -->
-<section class="slide" data-chapter="1">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Mục đích KPI theo CV 165</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">KPI TGĐ giao = <span style="color:var(--caution)">nguyên nhân</span> · KPI CV 165 = <span class="neo">tác động</span></h2>
-    </div>
-    <div class="two-view">
-      <div class="tv-col ac-reveal ac-reveal--left" style="--i:2; border-left:4px solid var(--caution)">
-        <div class="tv-col__head"><span class="tv-tag" style="color:var(--caution)">Đầu vào · nguyên nhân</span><h3 style="color:var(--caution)">KPI TGĐ GIAO</h3></div>
-        <ul class="rlist rlist--warn"><li>Dự án/Đơn vị thực hiện đúng <b>nhiệm vụ, tiến độ, chi phí, sản lượng</b> và kế hoạch năm hay không?</li><li>Là chỉ số <b>điều hành trực tiếp</b>, gắn trách nhiệm hàng năm.</li></ul>
-      </div>
-      <div class="tv-mid ac-pop" style="--i:3">→</div>
-      <div class="tv-col tv-col--gov ac-reveal ac-reveal--right" style="--i:4">
-        <div class="tv-col__head"><span class="tv-tag tv-tag--g">Đầu ra · tác động</span><h3>KPI THEO CV 165</h3></div>
-        <ul class="rlist rlist--g"><li>Việc triển khai ảnh hưởng thế nào đến <b>hiệu quả tài chính, dòng tiền, khả năng tự trả nợ</b>?</li><li>Là công cụ <b>đo tác động &amp; cảnh báo sớm</b> — không phải bộ chỉ tiêu giao năm.</li></ul>
-      </div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:5; margin-top:1rem">Baseline BCSDV → kết quả KPI năm &amp; dự báo → so sánh chênh lệch → đánh giá tác động tài chính/dòng tiền/trả nợ → cảnh báo sớm → đề xuất điều chỉnh.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 5 — 4 nhóm KPI CV165 ========================= -->
-<section class="slide" data-chapter="1">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Cấu phần CV 165</div>
-      <h2 class="s-title ac-reveal" style="--i:1">Bốn nhóm KPI theo CV 165</h2>
-    </div>
-    <div class="cards cards--4">
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:2"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 12 4-4 4 4 5-5"/></svg></div><h4>Hiệu quả tài chính</h4><div class="kchips"><span class="kchip">NPV</span><span class="kchip">IRR</span><span class="kchip">PI</span><span class="kchip">Payback</span></div></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:3"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg></div><h4>Khả năng tạo dòng tiền</h4><div class="kchips"><span class="kchip">NCF</span><span class="kchip">OCF</span><span class="kchip">FCF</span><span class="kchip">DT lũy kế</span></div></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:4"><div class="card4__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Khả năng tự trả nợ</h4><div class="kchips"><span class="kchip">CFADS</span><span class="kchip">Debt Service</span><span class="kchip">DSCR</span><span class="kchip">DT sau nợ</span></div></div>
-      <div class="card4 ac-reveal ac-reveal--up" style="--i:5; border:1px solid rgba(217,119,6,.4)"><div class="card4__ic" style="background:linear-gradient(135deg,rgba(217,119,6,.16),rgba(217,119,6,.08)); color:var(--caution)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><h4>KPI nguyên nhân</h4><div class="kchips"><span class="kchip">CAPEX·OPEX</span><span class="kchip">Cost Overrun</span><span class="kchip">Prod. Attainment</span><span class="kchip">Decline Rate</span><span class="kchip">Lifting Cost</span><span class="kchip">Giá dầu khí</span></div></div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:6; margin-top:.9rem">Nhóm <b>nguyên nhân</b> chính là các tiêu chí thuộc KPI mà Tổng Giám đốc giao hàng năm — đầu vào tạo nên tác động tài chính.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 6 — INFOGRAPHIC bản đồ KPI & CV165 ========================= -->
-<section class="slide" data-chapter="1">
-  <div class="slide-content"><div class="wrap wrap--wide">
-    <div class="head-center" style="margin-bottom:.35rem">
-      <div class="eyebrow ac-reveal" style="--i:0">Bản đồ tổng thể</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Hệ thống KPI hiện có &amp; liên kết với <span class="neo">KPI theo CV 165</span></h2>
-    </div>
-    <div class="kmap">
-      <div class="ac-reveal ac-reveal--left" style="--i:2">
-        <div class="kmap__ch"><span class="kmap__ix">A.</span><span class="kmap__tt">Hệ thống KPI hiện có</span><span class="kmap__io io-in">Đầu vào</span></div>
-        <div class="kmcol">
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">1</span><span class="kcard__name">Chiến lược &amp; Kế hoạch 5 năm</span><span class="kcard__by">Petrovietnam</span></div><div class="kchips"><span class="kchip">Sản lượng</span><span class="kchip">GTTL</span><span class="kchip">Tài chính</span><span class="kchip">Đầu tư · Vốn</span></div></div>
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">2</span><span class="kcard__name">Kế hoạch hàng năm PVEP</span><span class="kcard__by">HĐTV</span></div><div class="kchips"><span class="kchip">SLKT</span><span class="kchip">Tài chính HN</span><span class="kchip">Vốn ĐT</span><span class="kchip">Phân kỳ quý</span></div></div>
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">3</span><span class="kcard__name">Cấp Dự án — Baseline vòng đời</span><span class="kcard__by">BCT · PVN</span></div><div class="ksub"><div><h6>KHCV dài hạn</h6><p>CTTKTD · ODP · FDP · AP</p></div><div><h6>Phê duyệt SDV</h6><p>CAPEX·OPEX·ABEX · giả định hiệu quả</p></div></div></div>
-          <div class="kcard kcard--in"><div class="kcard__top"><span class="kcard__num">4</span><span class="kcard__name">KPI điều hành hàng năm</span><span class="kcard__by">TGĐ giao</span></div><div class="kchips"><span class="kchip">GTTL</span><span class="kchip">SLKT</span><span class="kchip">CAPEX·OPEX</span><span class="kchip">UPC</span><span class="kchip">Dòng tiền</span><span class="kchip">Uptime</span><span class="kchip">TRIF</span></div></div>
+    <!-- LOGIN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <img src="PVEP.png" alt="PVEP" onerror="this.style.display='none'">
+            <h2>PVEP — Ban KSNB</h2>
+            <p>Hệ thống Theo dõi Kiểm tra BMĐH 2026</p>
+            <div class="login-field">
+                <label>Tài khoản</label>
+                <input type="text" id="loginUser" value="KSNB" placeholder="Username">
+            </div>
+            <div class="login-field">
+                <label>Mật khẩu</label>
+                <input type="password" id="loginPass" placeholder="Mật khẩu">
+            </div>
+            <button class="login-btn" onclick="doLogin()">Đăng nhập</button>
+            <div class="login-error" id="loginError">Sai tài khoản hoặc mật khẩu</div>
         </div>
-      </div>
-      <div class="ac-reveal" style="--i:3">
-        <div class="kmap__ch" style="justify-content:center"><span class="kmap__ix">B.</span><span class="kmap__tt">Cơ chế liên kết</span></div>
-        <div class="kflow">
-          <div class="kstep"><span class="kl">Mốc chuẩn</span>Baseline BCSDV / Phê duyệt SDV</div>
-          <div class="karrow">▼</div>
-          <div class="kstep kstep--in"><span class="kl">Thực hiện</span>KPI năm (TGĐ giao) + forecast</div>
-          <div class="karrow">▼</div>
-          <div class="kstep">So sánh chênh lệch lũy kế</div>
-          <div class="karrow">▼</div>
-          <div class="kstep kstep--impact"><span class="kl">CV 165</span>Tác động: tài chính · dòng tiền · trả nợ</div>
-          <div class="karrow">▼</div>
-          <div class="ksem ac-pulse"><span class="g">XANH<br>Trong tầm</span><span class="y">VÀNG<br>Giải trình</span><span class="r">ĐỎ<br>Ngoại lệ</span></div>
-          <div class="karrow">▼</div>
-          <div class="kstep">Đề xuất giải pháp điều chỉnh</div>
+    </div>
+
+    <!-- APP -->
+    <div id="appWrap" style="display:none;flex-direction:column;height:100vh">
+    <header class="header">
+        <img src="PVEP.png" alt="PVEP" class="header-logo" onerror="this.style.display='none'">
+        <div class="header-title">
+            <h1>THEO DÕI KIỂM TRA BMĐH</h1>
+            <span>Ban Kiểm soát Nội bộ — PVEP · 2026</span>
         </div>
-      </div>
-      <div class="ac-reveal ac-reveal--right" style="--i:4">
-        <div class="kmap__ch"><span class="kmap__ix">C.</span><span class="kmap__tt">KPI theo CV 165</span><span class="kmap__io io-out">Đầu ra</span></div>
-        <div class="kmcol">
-          <div class="kcard"><div class="kgt"><span class="kd"></span>Hiệu quả tài chính</div><div class="kchips"><span class="kchip">NPV</span><span class="kchip">IRR</span><span class="kchip">PI</span><span class="kchip">Payback</span></div></div>
-          <div class="kcard"><div class="kgt"><span class="kd"></span>Khả năng tạo dòng tiền</div><div class="kchips"><span class="kchip">NCF</span><span class="kchip">OCF</span><span class="kchip">FCF</span><span class="kchip">DT lũy kế</span></div></div>
-          <div class="kcard"><div class="kgt"><span class="kd"></span>Khả năng tự trả nợ</div><div class="kchips"><span class="kchip">CFADS</span><span class="kchip">Debt Service</span><span class="kchip">DSCR</span><span class="kchip">DT sau nợ</span></div></div>
-          <div class="kcard kcard--in"><div class="kgt"><span class="kd"></span>KPI nguyên nhân (tác động TC)</div><div class="kchips"><span class="kchip">CAPEX·OPEX</span><span class="kchip">Cost Overrun</span><span class="kchip">Prod. Attainment</span><span class="kchip">Decline Rate</span><span class="kchip">Lifting Cost</span></div></div>
+        <div class="header-right">
+            <div class="user-info">
+                <span>👤</span>
+                <select id="currentUser"></select>
+            </div>
+            <label class="btn-upload" for="fileInput">📤 Upload Excel</label>
+            <input type="file" id="fileInput" accept=".xlsx,.xls">
+            <button class="btn-logout" onclick="doLogout()">Đăng xuất</button>
         </div>
-      </div>
-    </div>
-  </div></div>
-</section>
+    </header>
 
-<!-- ========================= SLIDE 7 — Mô hình 4 lớp quản lý ========================= -->
-<section class="slide" data-chapter="2">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Cấu trúc quản lý hoạt động · Tổng quan</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Mô hình quản lý <span class="neo">4 lớp</span> của PVEP</h2>
-    </div>
-    <div class="model">
-      <div class="mlayer mlayer--base ac-reveal ac-reveal--up" style="--i:2"><span class="mlayer__k">LỚP 1<br>CHIẾN LƯỢC</span><div class="mlayer__main"><div class="mlayer__t">Chiến lược &amp; Kế hoạch</div><div class="mlayer__d">Mục tiêu tổng thể: sản lượng, trữ lượng, tài chính, dòng tiền, đầu tư, giải ngân, nguồn vốn, hiệu quả.</div></div></div>
-      <div class="mconn ac-reveal" style="--i:3">▼</div>
-      <div class="mlayer mlayer--base ac-reveal ac-reveal--up" style="--i:3"><span class="mlayer__k">LỚP 2<br>DỰ ÁN</span><div class="mlayer__main"><div class="mlayer__t">Baseline vòng đời Dự án</div><div class="mlayer__d">KHCV dài hạn &amp; phê duyệt SDV: phạm vi, tiến độ, sản lượng, CAPEX/OPEX/ABEX, nguồn vốn, hiệu quả &amp; giả định trọng yếu.</div></div></div>
-      <div class="mconn ac-reveal" style="--i:4">▼</div>
-      <div class="mlayer mlayer--in ac-reveal ac-reveal--up" style="--i:4"><span class="mlayer__k">LỚP 3<br>ĐIỀU HÀNH</span><div class="mlayer__main"><div class="mlayer__t">KPI do TGĐ giao — giao thoa KH năm &amp; CTCTNS</div><div class="mlayer__d">Lớp chỉ tiêu điều hành trực tiếp: tiến độ, chi phí, sản lượng, vận hành, an toàn, pháp lý, dòng tiền năm.</div></div></div>
-      <div class="mconn ac-reveal" style="--i:5">▼</div>
-      <div class="mlayer mlayer--out ac-reveal ac-reveal--up" style="--i:5"><span class="mlayer__k">LỚP 4<br>CV 165</span><div class="mlayer__main"><div class="mlayer__t">Đo lường tác động tài chính</div><div class="mlayer__d">Tác động của KPI năm đến hiệu quả tài chính, dòng tiền, khả năng tự trả nợ &amp; nhu cầu vốn — lớp cảnh báo sớm.</div></div></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 8 — Nexus nhân–quả ========================= -->
-<section class="slide" data-chapter="2">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Liên kết nhân–quả</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Mỗi KPI năm trọng yếu → <span class="neo">KPI CV 165 bị ảnh hưởng</span></h2>
-    </div>
-    <div class="nexus">
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:2"><div class="nxc">CAPEX vượt kế hoạch</div><div class="nxa">→</div><div class="nxi">NPV · FCF · DSCR</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:3"><div class="nxc">OPEX / UPC tăng</div><div class="nxa">→</div><div class="nxi">OCF · NCF · CFADS · Break-even</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:4"><div class="nxc">Sản lượng không đạt</div><div class="nxa">→</div><div class="nxi">Doanh thu · NCF · CFADS · DSCR</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:5"><div class="nxc">Chậm First Oil / First Gas</div><div class="nxa">→</div><div class="nxi">NPV · IRR · Payback · dòng tiền lũy kế</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:6"><div class="nxc">Dòng tiền PVEP âm hơn KH</div><div class="nxa">→</div><div class="nxi">FCF · funding gap · nhu cầu hỗ trợ vốn</div></div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:7; margin-top:.8rem">Tránh tình trạng đạt KPI năm nhưng không rõ ảnh hưởng đến mục tiêu theo phê duyệt SDV; tăng khả năng cảnh báo sớm và điều chỉnh chủ động.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 9 — Chiến lược & Kế hoạch ========================= -->
-<section class="slide" data-chapter="3">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Chi tiết các quy định · Chiến lược &amp; Kế hoạch</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Ba cấp xác lập chỉ tiêu</h2>
-    </div>
-    <div class="cards cards--3">
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:2"><span class="tri__k">Chiến lược Phát triển</span><span class="chip" style="margin-bottom:.6rem; display:inline-block">Petrovietnam</span><ul class="rlist"><li>Mục tiêu tổng quát: tài chính (DT, LNTT, NSNN, ROA); an ninh &amp; hạ tầng chiến lược.</li><li>Chỉ tiêu sản lượng: GTTL, khai thác.</li><li>Định hướng phát triển theo lĩnh vực; kế hoạch đầu tư; nhiệm vụ &amp; giải pháp.</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:3"><span class="tri__k">Kế hoạch 5 năm</span><span class="chip" style="margin-bottom:.6rem; display:inline-block">Petrovietnam</span><ul class="rlist"><li>GTTL bảo đảm hệ số bù trữ lượng &gt; 1 (trong &amp; ngoài nước); PTM; SLKT.</li><li>Tài chính: DT, LNTT, LNST, NSNN, ROA, tỷ lệ cổ tức.</li><li>Đầu tư: nhu cầu đầu tư &amp; giá trị giải ngân.</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:4"><span class="tri__k">Kế hoạch hàng năm</span><span class="chip" style="margin-bottom:.6rem; display:inline-block; background:linear-gradient(135deg,var(--pvep-green),#0a7d3a)">HĐTV PVEP</span><ul class="rlist rlist--g"><li>Sản lượng (GTTL, SLKT dầu/khí, trong/ngoài nước).</li><li>Tài chính hợp nhất &amp; Công ty Mẹ; KH vốn đầu tư (nhu cầu + giá trị thực hiện).</li><li>Chi phí khai thác; phụ lục phân kỳ theo từng quý.</li></ul></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 10 — Cấp Dự án ========================= -->
-<section class="slide" data-chapter="3">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Chi tiết các quy định · Dự án</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Baseline vòng đời &amp; ngân sách Dự án</h2>
-    </div>
-    <div class="cards cards--3">
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:2"><span class="tri__k">KHCV dài hạn</span><span class="chip" style="margin-bottom:.6rem; display:inline-block">BCT · Petrovietnam</span><ul class="rlist"><li>CTTKTD/TDDKBS: khối lượng chắc chắn &amp; dự phòng, dự toán, thời gian.</li><li>ODP/FDP: khối lượng XD/cải hoán, khoan PT, đường ống; CAPEX/OPEX/ABEX; trữ lượng thu hồi; First Oil/Gas.</li><li>AP: thu dọn mỏ, trích lập Quỹ TDM.</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:3"><span class="tri__k">CTCT &amp; NS hàng năm</span><span class="chip" style="margin-bottom:.6rem; display:inline-block">Petrovietnam</span><ul class="rlist"><li>Tổng ngân sách: chắc chắn &amp; dự phòng (cover letter).</li><li>Phụ lục: khối lượng công việc theo giai đoạn.</li><li>Bảng ngân sách chi tiết (thường đến cấp độ 3).</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:4; border-top-color:var(--caution)"><span class="tri__k">Phê duyệt sử dụng vốn</span><span class="chip" style="margin-bottom:.6rem; display:inline-block; background:linear-gradient(135deg,var(--caution),#b45309)">HĐTV PVEP</span><ul class="rlist rlist--warn"><li>Tỷ lệ tham gia; First Oil/Gas; quy mô (khối lượng, CAPEX/OPEX/ABEX); vốn góp; nguồn vốn.</li><li><b>Rủi ro kiểm soát:</b> giả định hiệu quả nằm tại BCSDV, không ghi trong QĐ phê duyệt → cần theo dõi đồng thời.</li></ul></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 11 — Tiêu chí đầu tư QĐ 1894 ========================= -->
-<section class="slide" data-chapter="3">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Tiêu chí lĩnh vực đầu tư · QĐ 1894</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Khung tiêu chí quyết định sử dụng vốn</h2>
-    </div>
-    <div class="cards cards--3">
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:2"><span class="tri__k">Bộ tiêu chí chung (6)</span><ul class="rlist"><li>Phù hợp chiến lược/kế hoạch PVEP–PVN.</li><li>Môi trường đầu tư (an ninh – chính trị).</li><li>Kỹ thuật theo giai đoạn DA.</li><li>Tính khả thi phương án; phương án tài chính; pháp lý hợp đồng.</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:3; border-top-color:var(--pvep-green)"><span class="tri__k">Tiêu chí hiệu quả</span><ul class="rlist rlist--g"><li>TKTD/TDDKBS có khoan chắc chắn: <b>EMV@IRRminLF ≥ 0</b>.</li><li>Phát triển mỏ: <b>NPV@IRRminLF ≥ 0</b>.</li><li>Tìm kiếm / không có khoan chắc chắn: không đánh giá hiệu quả.</li></ul></div>
-      <div class="tri__card ac-reveal ac-reveal--up" style="--i:4; border-top-color:var(--caution)"><span class="tri__k">Giả định kinh tế</span><ul class="rlist rlist--warn"><li>Giá dầu: Brent/WTI/Dubai theo dự báo (WM…).</li><li>Giá khí: HOA/GSPA; chưa có → giả định tại IRRmin.</li><li>IRRmin = Ke (≈10%) + rủi ro hoạt động (theo giai đoạn) + rủi ro môi trường đầu tư (theo khu vực).</li></ul></div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 12 — Quản trị danh mục QĐ 1200/1347 ========================= -->
-<section class="slide" data-chapter="3">
-  <div class="slide-content"><div class="wrap wrap--wide">
-    <div class="head-center" style="margin-bottom:.4rem">
-      <div class="eyebrow ac-reveal" style="--i:0">Quản trị danh mục · QĐ 1200 · 1347</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Trọng số chấm điểm &amp; cảnh báo danh mục</h2>
-    </div>
-    <div class="wgrid">
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:2"><h4>DA Tìm kiếm – Thăm dò</h4><ul class="wlist"><li>Tiềm năng dầu khí thu hồi <b>35%</b></li><li>Hệ số thành công POS <b>15%</b></li><li>Thị trường tiêu thụ <b>15%</b></li><li>Chiến lược &amp; khả năng triển khai <b>15%</b></li><li>Chi phí / Khác <b>20%</b></li></ul></div>
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:3; border-top-color:var(--pvep-green)"><h4>DA Phát triển</h4><ul class="wlist"><li>NPV@IRRmin <b>30%</b></li><li>Trữ lượng thu hồi KT <b>20%</b></li><li>Rủi ro <b>20%</b></li><li>Capex/thùng <b>12,5%</b></li><li>Opex/thùng · P/I <b>17,5%</b></li></ul></div>
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:4; border-top-color:var(--pvep-navy)"><h4>DA Khai thác</h4><ul class="wlist"><li>Dòng tiền chiết khấu tiếp theo <b>30%</b></li><li>Trữ lượng còn lại <b>20%</b></li><li>Đơn giá khai thác UPC <b>20%</b></li><li>Sản lượng TB năm còn lại <b>20%</b></li><li>NCF/Tổng chi phí LF <b>10%</b></li></ul></div>
-    </div>
-    <div class="m-stack" style="display:grid; grid-template-columns:1.1fr 1fr; gap:1rem; margin-top:.7rem; align-items:center">
-      <div class="ksem ac-pulse ac-reveal" style="--i:5; box-shadow:0 8px 22px rgba(10,42,74,.08)"><span class="g" style="font-size:.72rem; padding:.5rem">AN TOÀN</span><span class="y" style="font-size:.72rem; padding:.5rem">CẢNH BÁO</span><span class="r" style="font-size:.72rem; padding:.5rem">NGUY HIỂM</span></div>
-      <div class="bcg ac-reveal" style="--i:6">
-        <div class="bchip bchip--s"><b>Star</b> — tiềm năng tăng trưởng</div>
-        <div class="bchip bchip--c"><b>Cows</b> — trụ cột dòng tiền</div>
-        <div class="bchip bchip--q"><b>Question</b> — chưa rõ ràng</div>
-        <div class="bchip bchip--d"><b>Dogs</b> — dòng tiền âm, ít tiềm năng</div>
-      </div>
-    </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 13 — Cơ cấu 100 điểm ========================= -->
-<section class="slide" data-chapter="4">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Nguyên tắc chấm điểm DADK</div>
-      <h2 class="s-title ac-reveal" style="--i:1">Cơ cấu điểm đánh giá <span class="neo">100 điểm</span></h2>
-    </div>
-    <div class="score">
-      <div class="srow ac-reveal" style="--i:2"><span class="slbl">Chỉ tiêu KPI</span><div class="strack"><div class="sbar ac-fill-x" style="--w:100%; --i:0"></div></div><span class="sval" data-count-to="30">0</span></div>
-      <div class="srow ac-reveal" style="--i:3"><span class="slbl">Nhiệm vụ trọng tâm</span><div class="strack"><div class="sbar ac-fill-x" style="--w:100%; --i:1"></div></div><span class="sval" data-count-to="30">0</span></div>
-      <div class="srow ac-reveal" style="--i:4"><span class="slbl">Mức đóng góp KQ SXKD</span><div class="strack"><div class="sbar sbar--n ac-fill-x" style="--w:66%; --i:2"></div></div><span class="sval" data-count-to="20">0</span></div>
-      <div class="srow ac-reveal" style="--i:5"><span class="slbl">Tuân thủ &amp; phối hợp</span><div class="strack"><div class="sbar sbar--c ac-fill-x" style="--w:33%; --i:3"></div></div><span class="sval" data-count-to="10">0</span></div>
-      <div class="srow ac-reveal" style="--i:6"><span class="slbl">Sự trưởng thành Dự án</span><div class="strack"><div class="sbar sbar--g ac-fill-x" style="--w:33%; --i:4"></div></div><span class="sval" data-count-to="10">0</span></div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:7; margin-top:1rem">Thang 0–100. Có <b>điểm cộng</b> cho thành tích nổi bật (vượt KHQT, đạt tiến độ FO, sáng kiến, chuyển đổi số…) nhưng tổng không vượt 100.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 14 — Xếp loại & tỷ trọng ========================= -->
-<section class="slide" data-chapter="4">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Xếp loại &amp; tổng hợp điểm</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Mức độ hoàn thành nhiệm vụ Dự án</h2>
-    </div>
-    <div class="m-stack" style="display:grid; grid-template-columns:1.3fr 1fr; gap:1.6rem; align-items:center">
-      <div class="ladder">
-        <div class="lrow lrow--1 ac-reveal ac-reveal--right" style="--i:2"><span class="lrow__b" data-count-to="95" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành xuất sắc</span></div>
-        <div class="lrow lrow--2 ac-reveal ac-reveal--right" style="--i:3"><span class="lrow__b" data-count-to="80" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành tốt</span></div>
-        <div class="lrow lrow--3 ac-reveal ac-reveal--right" style="--i:4"><span class="lrow__b" data-count-to="50" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành</span></div>
-        <div class="lrow lrow--4 ac-reveal ac-reveal--right" style="--i:5"><span class="lrow__b" data-count-to="50" data-count-prefix="&lt; ">&lt; 0</span><span class="lrow__t">Không hoàn thành</span></div>
-      </div>
-      <div>
-        <p class="slbl ac-reveal" style="--i:5; text-align:center; margin-bottom:.5rem">Tỷ trọng tổng hợp điểm cuối cùng</p>
-        <div class="duo">
-          <div class="duostat ac-pop" style="--i:6"><div class="duostat__n" data-count-to="70" data-count-suffix="%">0%</div><div class="duostat__l">Tổng Giám đốc</div></div>
-          <div class="duostat duostat--g ac-pop" style="--i:7"><div class="duostat__n" data-count-to="30" data-count-suffix="%">0%</div><div class="duostat__l">PTGĐ phụ trách DA</div></div>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Tìm lĩnh vực, người thực hiện...">
+            </div>
+            <div class="sidebar-list" id="sidebarList"></div>
+            <div class="sidebar-footer">15 lĩnh vực · 76 bước · PVEP 2026</div>
+        </aside>
+        <div class="main">
+            <div class="detail-tabs" id="detailTabs" style="display:none">
+                <div class="detail-tab active" data-tab="tasks">📋 Nhiệm vụ</div>
+                <div class="detail-tab" data-tab="checklist">✅ Checklist kiểm tra</div>
+                <div class="detail-tab" data-tab="flow">🔄 Quy trình (Flow)</div>
+            </div>
+            <div class="detail-body" id="detailBody">
+                <div class="welcome"><div class="welcome-icon">📋</div><h2>Chọn lĩnh vực bên trái</h2><p>để xem nhiệm vụ và checklist kiểm tra</p></div>
+            </div>
         </div>
-      </div>
     </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 15 — Hai phương án ========================= -->
-<section class="slide" data-chapter="5">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Đánh giá phương án</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Có nên giao thêm bộ KPI hiệu quả sử dụng vốn?</h2>
     </div>
-    <div class="two-view">
-      <div class="tv-col ac-reveal ac-reveal--left" style="--i:2; border-left:4px solid var(--danger)">
-        <div class="tv-col__head"><span class="tv-tag" style="color:var(--danger)">Phương án 1</span><h3 style="color:var(--ink-700)">Giao bộ KPI vốn riêng — gắn cá nhân</h3></div>
-        <ul class="rlist"><li><b>Ưu điểm:</b> tạo áp lực bám mục tiêu vòng đời; minh bạch trách nhiệm; cơ sở thi đua, khen thưởng.</li><li><b>Rủi ro:</b> NPV/IRR/dòng tiền phụ thuộc yếu tố ngoài tầm kiểm soát cá nhân (giá dầu, địa chất, tỷ giá…) → đánh giá thiếu công bằng, chồng chéo KPI hiện hành.</li></ul>
-      </div>
-      <div class="tv-mid ac-pop" style="--i:3; font-size:clamp(1rem,2.4vw,1.6rem); color:var(--ink-500)">VS</div>
-      <div class="tv-col tv-col--gov ac-reveal ac-reveal--right" style="--i:4; position:relative">
-        <span style="position:absolute; top:-12px; right:14px; background:var(--pvep-green); color:#fff; font-family:var(--font-display); font-weight:800; font-size:.62rem; letter-spacing:.08em; padding:.2rem .7rem; border-radius:99px; box-shadow:0 6px 16px rgba(0,176,80,.3)">KIẾN NGHỊ</span>
-        <div class="tv-col__head"><span class="tv-tag tv-tag--g">Phương án 2</span><h3>Tích hợp vào KPI hiện hành</h3></div>
-        <ul class="rlist rlist--g"><li>Bổ sung <b>baseline theo BCSDV/phê duyệt SDV</b> &amp; lớp đánh giá tác động CV 165 ở cấp dự án/danh mục.</li><li>Tránh chồng chéo &amp; áp lực bất hợp lý lên cá nhân; tận dụng bộ KPI điều hành sẵn có.</li></ul>
-      </div>
-    </div>
-  </div></div>
-</section>
 
-<!-- ========================= SLIDE 16 — Kiến nghị ========================= -->
-<section class="slide" data-chapter="5">
-  <div class="slide-content"><div class="wrap wrap--wide">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Kiến nghị của Ban KSNB</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Năm nhóm kiến nghị trọng tâm</h2>
-    </div>
-    <div class="reco">
-      <div class="ritem ac-reveal ac-reveal--up" style="--i:2"><span class="ritem__n">1</span><div class="ritem__t"><b>Không giao thêm bộ KPI riêng theo CV 165;</b> duy trì cơ chế giao KPI năm của Tổng Giám đốc làm công cụ điều hành.</div></div>
-      <div class="ritem ac-reveal ac-reveal--up" style="--i:3"><span class="ritem__n">2</span><div class="ritem__t"><b>Bổ sung cột quản trị trong biểu KPI năm:</b> mốc chuẩn BCSDV/SDV, chênh lệch lũy kế, KPI CV 165 bị ảnh hưởng, mức cảnh báo, hành động khắc phục.</div></div>
-      <div class="ritem ac-reveal ac-reveal--up" style="--i:4"><span class="ritem__n">3</span><div class="ritem__t"><b>Bổ sung quy định quản lý rủi ro &amp; thay đổi:</b> nhận diện → cảnh báo sớm bằng văn bản (≤ 5 ngày làm việc) → đánh giá tác động → đề xuất xử lý.</div></div>
-      <div class="ritem ac-reveal ac-reveal--up" style="--i:5"><span class="ritem__n">4</span><div class="ritem__t"><b>Ban hành ngưỡng cảnh báo định lượng theo nhóm DADK</b> (chậm tiến độ, vượt AFE, biến động chi phí, ảnh hưởng NPV/IRR); DADK suy giảm lập kế hoạch khắc phục.</div></div>
-      <div class="ritem ac-reveal ac-reveal--up" style="--i:6"><span class="ritem__n">5</span><div class="ritem__t"><b>Dùng KPI CV 165 để cảnh báo Xanh/Vàng/Đỏ</b> và tích hợp kết quả đánh giá vào tiêu chí quản trị danh mục đầu tư.</div></div>
-    </div>
-  </div></div>
-</section>
+    <div class="toast" id="toast"></div>
 
-<!-- ========================= SLIDE 17 — Kết luận ========================= -->
-<section class="slide" data-chapter="5">
-  <div class="slide-content"><div class="wrap" style="text-align:center">
-    <p class="end__lead ac-reveal" style="--i:0">PVEP không thiếu chỉ tiêu — cần một <b>cơ chế liên kết</b>.</p>
-    <h2 class="end__big ac-reveal" style="--i:1">KPI năm là thực thi · Baseline BCSDV là mốc chuẩn · CV 165 là cảnh báo</h2>
-    <p class="lead-note ac-reveal" style="--i:2">Một bộ chỉ tiêu — ba vai trò, đo được việc thực hiện KPI năm đang làm Dự án tốt lên hay xấu đi so với mục tiêu đã phê duyệt.</p>
-    <div class="end__thanks ac-reveal" style="--i:3">Trân trọng — Ban Kiểm soát Nội bộ · PVEP</div>
-  </div></div>
-</section>
-
-
-<style>
-/* ============================================================
-   MOBILE PORTRAIT MODE  (điện thoại — màn hình dọc · vuốt chuyển slide)
-   Đặt cuối nguồn để override các layout nhiều cột ở trên.
-   ============================================================ */
-@media (max-width: 768px){
-  /* — thu nhỏ token chữ/khoảng cách cho màn hình dọc — */
-  :root{
-    --title-size:clamp(1.25rem,5.4vw,1.9rem);
-    --h2-size:clamp(1.1rem,4.6vw,1.6rem);
-    --h3-size:clamp(1rem,4vw,1.4rem);
-    --body-size:clamp(.9rem,3.6vw,1.05rem);
-    --small-size:clamp(.78rem,3.1vw,.95rem);
-    --slide-padding:clamp(1rem,5vw,1.6rem);
-    --content-gap:clamp(.7rem,3vw,1.2rem);
-  }
-
-  /* — snap MỀM + để cả trang cuộn tự nhiên: tránh "kẹt" do cuộn lồng (nested scroll)
-       khi nội dung dài hơn màn hình. Slide tự cao theo nội dung. — */
-  html{ scroll-snap-type:y proximity; }
-  .slide{ height:auto; min-height:100vh; min-height:100svh; overflow:visible; }
-  .slide-content{
-    justify-content:center;
-    overflow:visible; max-height:none;
-    min-height:100vh; min-height:100svh;
-    padding-top:clamp(3rem,11vh,4.5rem);   /* chừa chỗ cho bộ đếm góc trên */
-    padding-bottom:clamp(2.4rem,9vh,3.6rem);
-  }
-  .slide-content > .wrap{ margin-block:auto; }   /* căn giữa dọc khi slide đủ ngắn */
-  .wrap, .wrap--wide{ width:92%; }
-
-  /* — tiêu đề căn giữa gọn hơn — */
-  .s-title{ font-size:var(--title-size); }
-  .hero__word{ font-size:clamp(1.9rem,10vw,3.2rem); }
-
-  /* — XẾP MỌI LAYOUT NHIỀU CỘT THÀNH 1 CỘT (dọc) — */
-  .two-view, .tri, .cards--4, .cards--3, .quad4a,
-  .ksnb, .ba, .duo, .duo--2, .kmap, .model, .wgrid,
-  .reco, .bcg, .domino, .org__children, .m-stack{
-    display:flex !important;
-    flex-direction:column;
-    gap:.7rem;
-  }
-  .duostat, .wgrid, .bcg, .reco{ max-width:none; }
-  .duo{ max-width:none; }
-
-  /* — xoay các mũi tên/nối ngang thành dọc — */
-  .tv-mid{ transform:rotate(90deg); font-size:2rem; margin:.1rem auto; }
-  .ba__mid .ba__arrow{ transform:rotate(90deg); }
-  .duo__plus{ flex-direction:row; }
-  .dom__arr{ justify-content:center; transform:rotate(90deg); }
-  .mconn{ transform:rotate(90deg); }
-
-  /* — domino & các side card chiếm full chiều ngang — */
-  .ba__side{ min-height:0; }
-  .domino .dom{ width:100%; }
-  .domino:hover .dom{ transform:none; opacity:1; filter:none; }  /* tắt hiệu ứng hover trên cảm ứng */
-
-  /* — sơ đồ KSNB dọc — */
-  .ksnb__diagram{ flex-direction:row; gap:.6rem; align-items:center; justify-content:center; }
-  .ks-link{ transform:rotate(-90deg); width:36px; height:36px; }
-
-  /* — 5 bước: chuyển từ hàng ngang sang cột dọc — */
-  .s5{ flex-direction:column; align-items:flex-start; gap:.7rem; }
-  .s5__step{ flex-direction:row; align-items:center; gap:.8rem; width:100%; }
-  .s5__step span{ max-width:none; text-align:left; }
-  .s5-track, .s5-fill{ display:none; }
-  .steps5{ padding:.6rem 0; }
-
-  /* — cây phân rã: bỏ đường nối ngang — */
-  .org__children::before{ display:none; }
-  .org__children .org__node::before{ display:none; }
-  .org__node{ display:block; width:100%; text-align:center; }
-
-  /* — score bars: gọn lại — */
-  .srow{ grid-template-columns:1fr auto; grid-template-areas:"lbl val" "bar bar"; gap:.3rem .6rem; }
-  .slbl{ grid-area:lbl; } .sval{ grid-area:val; } .strack{ grid-area:bar; }
-
-  /* — nexus cause→impact: xếp dọc, mũi tên xoay — */
-  .nxrow{ grid-template-columns:1fr; gap:.4rem; text-align:center; }
-  .nxa{ transform:rotate(90deg); margin:0 auto; }
-
-  /* — bảng KPI 4 nhóm / kchips bám nội dung — */
-  .kchips{ justify-content:flex-start; }
-
-  /* — chip hàng tiêu đề hero — */
-  .legal-chips, .benefits, .wb-flags, .map-row{ gap:.5rem; }
-
-  /* — ẩn bớt watermark/đồ hoạ trang trí cồng kềnh trên màn nhỏ — */
-  .oecd-wm, .govgraph, .hero-motion-bg{ display:none; }
-
-  /* — gợi ý vuốt — */
-  .mhint{ display:flex; }
-}
-
-/* swipe hint pill — chỉ hiện trên điện thoại, tự ẩn sau lần vuốt đầu */
-.mhint{
-  display:none;
-  position:fixed; left:50%; bottom:1rem; transform:translateX(-50%);
-  z-index:62; align-items:center; gap:.4rem;
-  font-family:var(--font-display); font-weight:700;
-  font-size:.72rem; color:var(--pvep-blue);
-  background:rgba(255,255,255,.82); border:1px solid rgba(0,131,199,.28);
-  padding:.4rem .9rem; border-radius:999px;
-  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-  box-shadow:0 6px 18px rgba(10,42,74,.12);
-  animation:mhintBob 1.8s ease-in-out infinite;
-  transition:opacity .4s ease;
-}
-.mhint svg{ animation:mhintBob 1.8s ease-in-out infinite; }
-.mhint.is-hidden{ opacity:0; pointer-events:none; }
-@keyframes mhintBob{ 0%,100%{ transform:translateX(-50%) translateY(0); } 50%{ transform:translateX(-50%) translateY(-5px); } }
-@media (prefers-reduced-motion:reduce){ .mhint, .mhint svg{ animation:none!important; } }
-
-/* ============================================================
-   PRINT / EXPORT PDF  — mỗi slide = 1 trang A4 ngang
-   Ctrl/Cmd+P → "Save as PDF". Chọn khổ A4, hướng Ngang (Landscape),
-   bật "Background graphics" để in màu nền/biểu đồ.
-   ============================================================ */
-@media print{
-  @page{ size:A4 landscape; margin:8mm; }
-  html{ scroll-snap-type:none !important; scroll-behavior:auto; }
-  html, body{ height:auto !important; overflow:visible !important; }
-  body{
-    background:#fff !important;
-    -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important;
-  }
-  /* ẩn các lớp điều hướng / nền cố định / video */
-  .oilbg, .progress, .rail, .counter, .hint, .mhint, .m-hint, .video-bg-wrap{ display:none !important; }
-
-  /* mỗi slide là một trang in riêng */
-  .slide{
-    width:100% !important; height:auto !important; min-height:auto !important;
-    overflow:visible !important; box-shadow:none !important;
-    page-break-after:always; break-after:page;
-    page-break-inside:avoid; break-inside:avoid;
-    padding:6mm 0;
-  }
-  .slide:last-child{ page-break-after:auto; break-after:auto; }
-  .slide-content{
-    height:auto !important; max-height:none !important; overflow:visible !important;
-    justify-content:flex-start !important;
-    padding-left:var(--slide-padding) !important;   /* bỏ chừa lề rail */
-  }
-  .wrap, .wrap--wide{ width:96% !important; }
-
-  /* buộc mọi nội dung reveal/animation về trạng thái cuối (đang hiển thị) */
-  .ac-reveal, .ac-pop, .ac-area{ opacity:1 !important; transform:none !important; }
-  .ac-bar{ height:var(--h) !important; }
-  .ac-fill-x{ width:var(--w) !important; }
-  .ac-ring-val{ stroke-dashoffset:calc(var(--circ)*(1 - var(--p))) !important; }
-  .ac-draw{ stroke-dashoffset:0 !important; }
-  *, *::before, *::after{ animation:none !important; transition:none !important; }
-
-  /* tránh cắt ngang các thẻ giữa hai trang */
-  .card4, .tri__card, .kcard, .ktier, .mlayer, .nxrow, .wcard, .duostat,
-  .lrow, .duo__card, .tv-col, .ritem, .srow{ break-inside:avoid; page-break-inside:avoid; }
-}
-</style>
-
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:false,theme:'base',themeVariables:{primaryColor:'#e8f5e9',primaryBorderColor:'#006838',primaryTextColor:'#1a1a2e',lineColor:'#006838',secondaryColor:'#e8eaf6',tertiaryColor:'#fff3e0'},flowchart:{curve:'basis',padding:12}})</script>
 <script>
-/* =====================================================================
-   activate.js  (animated-components — included in full)
-   Adds .ac-on when a slide is visible; runs count-up; replays on entry.
-   ===================================================================== */
-(function () {
-  "use strict";
-  var SLIDE_SELECTOR = ".slide";
-  var VISIBLE_RATIO  = 0.55;
-  var reduceMotion   = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
-  function formatNum(v, decimals){ return Number(v).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals }); }
-  function runCount(el){
-    var to = parseFloat(el.getAttribute("data-count-to")); if (isNaN(to)) return;
-    var from = parseFloat(el.getAttribute("data-count-from")) || 0;
-    var dur = parseFloat(el.getAttribute("data-count-dur")) || 1400;
-    var decimals = parseInt(el.getAttribute("data-count-decimals") || "0", 10);
-    var prefix = el.getAttribute("data-count-prefix") || "";
-    var suffix = el.getAttribute("data-count-suffix") || "";
-    if (reduceMotion){ el.textContent = prefix + formatNum(to, decimals) + suffix; return; }
-    var start = null; if (el._raf) cancelAnimationFrame(el._raf);
-    function step(ts){ if (start === null) start = ts; var p = Math.min((ts - start) / dur, 1);
-      var v = from + (to - from) * easeOutCubic(p); el.textContent = prefix + formatNum(v, decimals) + suffix;
-      if (p < 1) el._raf = requestAnimationFrame(step); }
-    el._raf = requestAnimationFrame(step);
-  }
-  function resetCount(el){
-    if (el._raf) cancelAnimationFrame(el._raf);
-    var from = parseFloat(el.getAttribute("data-count-from")) || 0;
-    var decimals = parseInt(el.getAttribute("data-count-decimals") || "0", 10);
-    var prefix = el.getAttribute("data-count-prefix") || "";
-    var suffix = el.getAttribute("data-count-suffix") || "";
-    el.textContent = prefix + formatNum(from, decimals) + suffix;
-  }
-  function activate(slide){ if (slide.hasAttribute("data-hero")) document.body.classList.add("hero-active");
-    if (slide.classList.contains("ac-on")) return; slide.classList.add("ac-on");
-    var nums = slide.querySelectorAll("[data-count-to]"); for (var i=0;i<nums.length;i++) runCount(nums[i]); }
-  function deactivate(slide){ if (slide.hasAttribute("data-hero")) document.body.classList.remove("hero-active");
-    slide.classList.remove("ac-on");
-    var nums = slide.querySelectorAll("[data-count-to]"); for (var i=0;i<nums.length;i++) resetCount(nums[i]); }
-  function init(){
-    var slides = document.querySelectorAll(SLIDE_SELECTOR); if (!slides.length) return;
-    var allNums = document.querySelectorAll("[data-count-to]"); for (var n=0;n<allNums.length;n++) resetCount(allNums[n]);
-    if (!("IntersectionObserver" in window)){ for (var k=0;k<slides.length;k++) activate(slides[k]); return; }
-    var io = new IntersectionObserver(function (entries){
-      entries.forEach(function (e){ if (e.isIntersecting && e.intersectionRatio >= VISIBLE_RATIO) activate(e.target); else deactivate(e.target); });
-    }, { threshold: [0, VISIBLE_RATIO, 1] });
-    for (var s=0;s<slides.length;s++) io.observe(slides[s]);
-  }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
-})();
+// ===== GLOBALS =====
+let staffList = [];
+let currentUserName = '';
+let currentUserRole = 'pic';
+let allResults = {};
+let allComments = [];
+let checklistCache = null;
+let activeIdx = -1, activeTab = 'tasks';
 
-/* =====================================================================
-   Deck controller — chapter rail, slide counter, progress, keyboard nav
-   ===================================================================== */
-(function(){
-  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
-  var total  = slides.length;
-  var railItems = Array.prototype.slice.call(document.querySelectorAll(".rail__item"));
-  var curEl = document.getElementById("cur");
-  var totEl = document.getElementById("tot");
-  var fill  = document.getElementById("progressFill");
-  var current = 0;
-  totEl.textContent = total;
+function showToast(msg, dur=3000){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
+function badgeCls(t){return t==='KTNB'?'badge-ktnb':t==='KTGS'?'badge-ktgs':'badge-mixed'}
+function teamLbl(t){return t==='mixed'?'Cả hai':t}
+function getCurrentUser(){
+  const sel=document.getElementById('currentUser');
+  const opt=sel.options[sel.selectedIndex];
+  currentUserName=opt?opt.text:'';
+  currentUserRole=opt?opt.dataset.role:'pic';
+}
 
-  function setCurrent(i){
-    current = Math.max(0, Math.min(total - 1, i));
-    curEl.textContent = current + 1;
-    fill.style.width = ((current + 1) / total * 100) + "%";
-    var ch = slides[current].getAttribute("data-chapter");
-    railItems.forEach(function(el){ el.classList.toggle("is-active", el.getAttribute("data-chapter") === ch); });
+// ===== LOGIN =====
+async function doLogin(){
+  const u=document.getElementById('loginUser').value.trim();
+  const p=document.getElementById('loginPass').value;
+  try{
+    const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u,password:p})});
+    const d=await r.json();
+    if(d.ok){
+      staffList=d.staff;
+      sessionStorage.setItem('loggedIn','1');
+      showApp();
+    } else {
+      document.getElementById('loginError').style.display='block';
+    }
+  }catch(e){document.getElementById('loginError').style.display='block'}
+}
+document.getElementById('loginPass').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});
+
+function doLogout(){
+  sessionStorage.removeItem('loggedIn');
+  document.getElementById('loginOverlay').classList.remove('login-hidden');
+  document.getElementById('appWrap').style.display='none';
+}
+
+async function showApp(){
+  document.getElementById('loginOverlay').classList.add('login-hidden');
+  document.getElementById('appWrap').style.display='flex';
+
+  // Populate user selector
+  if(!staffList.length){
+    try{const r=await fetch('/api/staff');staffList=await r.json()}catch(e){staffList=[{id:1,name:'User',role:'pic'}]}
   }
-  function goTo(i){
-    var t = Math.max(0, Math.min(total - 1, i));
-    slides[t].scrollIntoView({ behavior: "smooth", block: "start" });
-    setCurrent(t);
-  }
-  // Track the slide currently in view (covers manual scroll / swipe)
-  var io2 = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting && e.intersectionRatio >= 0.55){
-        var idx = slides.indexOf(e.target); if (idx >= 0) setCurrent(idx);
+  const sel=document.getElementById('currentUser');
+  sel.innerHTML=staffList.map(s=>`<option value="${s.id}" data-role="${s.role}">${s.name}</option>`).join('');
+  sel.addEventListener('change',getCurrentUser);
+  getCurrentUser();
+
+  // Load data
+  await Promise.all([loadResults(), loadComments()]);
+  renderSidebar();
+}
+
+// Auto-login bypassed for static GitHub Pages version
+setTimeout(() => { showApp(); }, 50);
+
+// ===== DATA LOADING =====
+async function loadResults(){try{const r=await fetch('/api/results');allResults=await r.json()}catch(e){allResults={}}}
+async function loadComments(){try{const r=await fetch('/api/comments');allComments=await r.json()}catch(e){allComments=[]}}
+
+// ===== LINH VUC DATA (same as before) =====
+const DATA=[
+{stt:1,name:"Chiến lược, Kế hoạch SXKD",code:"KH",team:"KTNB",docs:"QĐ Quản lý KH PVEP (5.10)",clSheet:"KH_KeHoach",tasks:[
+{nv:"N1",title:"Rà soát VBQLNB vs pháp luật/PVN",output:"Đối chiếu QĐ QL KH PVEP",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N2",title:"Liệt kê hệ thống con",output:"(i) KH 5 năm; (ii) KH năm; (iii) KH quý/tháng; (iv) Điều chỉnh; (v) BC",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N3",title:"Vẽ mô hình swimlane",output:"BĐH / Ban KH / Đơn vị / PVN",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"Sheet KH_KeHoach",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},
+]},
+{stt:2,name:"Chi phí Hoạt động",code:"CP",team:"KTGS",docs:"Định mức QLCP",clSheet:"KH_CPHĐ",tasks:[{nv:"N1",title:"Đánh giá thực hiện KH chi phí HĐ 2025",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Đánh giá quy trình xây dựng giám sát",output:"",pic:"Nguyễn Thị Hải Yến",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Chọn mẫu và xây dựng template",output:"",pic:"Trần Phương Anh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Kiểm tra theo checklist",output:"",pic:"Theo phân công",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:3,name:"Quản lý Đầu tư",code:"DT",team:"KTNB",docs:"QĐ ĐT DADK; QC QL Vốn ĐT; QC Phân cấp & GS ĐT",clSheet:"KH_DauTuDADK",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật Dầu khí 12/2022, NĐ 45/2023",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"Portfolio, Thủ tục ĐT, GS ĐT, ĐT ngoài DK",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"HĐTV/BĐH/Ban ĐT/Ban TC/PVN",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% AFE >5M; 30% <5M; 100% FDP/ODP",pic:"Nguyễn Văn Điều",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:4,name:"Đấu thầu / TM Mua sắm TX",code:"DTH-MSTX",team:"KTGS",docs:"QĐ Phân cấp đấu thầu không DADK",clSheet:"KH_DauThau_MSTX",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật Đấu thầu 22/2023",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"KH LCNT; HSMT; HSDT; Thương thảo; QL HĐ; Hậu kiểm",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% gói >10 tỷ; 50% gói 1-10 tỷ",pic:"Vũ Thúy Quỳnh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:5,name:"Đấu thầu / TM DADK",code:"DTH-DADK",team:"KTNB",docs:"QĐ QL đấu thầu DADK",clSheet:"KH_DauThau_DADK",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"KH LCNT; HSMT; HSDT; Thương thảo; QL HĐ; Hậu kiểm",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Trần Bảo Châu",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:6,name:"Tài chính — Kế toán",code:"TC",team:"KTGS",docs:"QC tài chính; CS kế toán; QC QL dòng tiền",clSheet:"KH_TaiChinh",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"TT 200/2014, Luật KT 88/2015",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"BC quản trị; BCTC, PPLN; Công bố TT",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"P2P, O2C, R2R",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% bút toán >5 tỷ; 25 mẫu/tháng",pic:"Lê Thùy Dương",doan:"KTGS",reviewer:"",lead:"Đặng Ngọc Khánh"}]},
+{stt:7,name:"Quản trị Rủi ro",code:"RR",team:"KTGS",docs:"QC QTRR; QC QL BH; Khung QTRR PVN",clSheet:"KH_QTRR",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"COSO ERM 2017, NĐ 47/2021",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"Nhận diện; Đánh giá; Ứng phó; GS-BC; QL BH; Văn hóa RR",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"6 swimlane",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% RR Cao; 30% RR TB; 100% HĐ BH",pic:"Chu Nhật Anh",doan:"KTGS",reviewer:"Lê Thùy Dương",lead:"Vũ Anh Quân"}]},
+{stt:8,name:"CNTT — Chuyển đổi số",code:"IT",team:"KTNB",docs:"QĐ CNTT; KH CĐS; QC ATTT",clSheet:"KH_CNTT_CDS",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật ATTT, Luật ANM, NĐ 13/2023",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N2",title:"Liệt kê hệ thống con",output:"IT Governance; ATTT; QL DL; DLCN; DA CĐS; MS CNTT",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"ITIL change/incident",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% sự cố ATTT; 30% user core; 100% DA CĐS >2 tỷ",pic:"Chu Nhật Anh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Đặng Ngọc Khánh"}]},
+{stt:9,name:"Quản lý Dự án",code:"QLDA",team:"mixed",docs:"QC QL dự án",clSheet:"KH_QLDA",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Liệt kê hệ thống con",output:"CTHĐ&NS; AFE; CTTKTD; ODP/FDP; QLDA",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:""},{nv:"N3",title:"Vẽ mô hình swimlane",output:"7 swimlane",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% HĐ >5 tỷ; 30% 1-5 tỷ",pic:"Trần Ngọc Ánh",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:10,name:"Văn bản QL Nội bộ",code:"VB",team:"KTNB",docs:"QC Soạn thảo-Ban hành VBQLNB",clSheet:"KH_VBQLNB",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"Luật VBQPPL 80/2015",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Liệt kê hệ thống con",output:"8 hệ thống",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"8 swimlane",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% VBQLNB mới; 30% cũ >3 năm",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:11,name:"KHCN",code:"KHCN",team:"KTGS",docs:"",clSheet:"KH_KHCN",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:12,name:"ASXH",code:"ASXH",team:"KTGS",docs:"",clSheet:"KH_ASXH",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Trần Ngọc Ánh",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]},
+{stt:13,name:"Hệ thống Giám sát",code:"GS",team:"mixed",docs:"Các quy định giám sát",clSheet:"KH_GIÁM SÁT",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"",pic:"Vũ Ái Ngọc Bình",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N2",title:"Kiểm tra 11 hệ thống con",output:"11 quy chế",pic:"Nhiều PIC",doan:"mixed",reviewer:"",lead:""},{nv:"N3",title:"Vẽ mô hình swimlane",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"",pic:"Theo phân công",doan:"KTNB",reviewer:"Đoàn Thái Việt",lead:"Nguyễn Thị Cẩm Tú"}]},
+{stt:14,name:"Nhân sự",code:"NS",team:"KTGS",docs:"QC QL LĐ-TL; QC Đào tạo; QC Đánh giá",clSheet:"KH_NhanSu",tasks:[{nv:"N1",title:"Rà soát VBQLNB",output:"BLLĐ 45/2019, NĐ 145/2020",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N2",title:"Liệt kê hệ thống con",output:"8 hệ thống",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N3",title:"Vẽ mô hình swimlane",output:"9 swimlane",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"},{nv:"N4",title:"Chọn mẫu + kiểm tra",output:"100% NS tuyển/nghỉ; 30 mẫu lương",pic:"Nguyễn Thị Cẩm Hà",doan:"KTGS",reviewer:"Nguyễn Thị Hải Yến",lead:"Vũ Anh Quân"}]}
+];
+const EXTRA_CL_MAP={9:["KH_QLDA","KH_CTHD&NS","KH-AFE","KH_G&A","KH_HopDong"],2:["KH_CPHĐ"],6:["KH_TaiChinh"],7:["KH_QTRR","KH_Bảo hiểm"],13:["KH_GIÁM SÁT"]};
+const NV_LABELS={N1:"🔍 N1 — Rà soát VBQLNB",N2:"📋 N2 — Liệt kê hệ thống con",N3:"🏊 N3 — Vẽ mô hình Swimlane",N4:"✅ N4 — Chọn mẫu & Kiểm tra"};
+
+// ===== SIDEBAR =====
+function renderSidebar(q=''){
+  const list=document.getElementById('sidebarList');
+  const s=q.toLowerCase().trim();
+  const filtered=s?DATA.filter(lv=>lv.name.toLowerCase().includes(s)||lv.code.toLowerCase().includes(s)||lv.tasks.some(t=>t.pic.toLowerCase().includes(s)||t.title.toLowerCase().includes(s))):DATA;
+  if(!filtered.length){list.innerHTML='<div style="padding:30px;text-align:center;color:var(--text3);font-size:13px">Không tìm thấy</div>';return}
+  list.innerHTML=filtered.map(lv=>`<div class="sidebar-item ${activeIdx===lv.stt?'active':''}" onclick="selectLV(${lv.stt})">
+    <div class="s-num">${lv.stt}</div><div class="s-info"><div class="s-name">${lv.name}</div><div class="s-sub">${lv.tasks.length} NV</div></div>
+    <span class="s-badge ${badgeCls(lv.team)}">${teamLbl(lv.team)}</span></div>`).join('');
+}
+
+document.getElementById('detailTabs').addEventListener('click',e=>{const tab=e.target.closest('.detail-tab');if(!tab)return;document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');activeTab=tab.dataset.tab;renderDetail()});
+function selectLV(stt){activeIdx=stt;activeTab='tasks';document.querySelectorAll('.detail-tab').forEach(t=>t.classList.remove('active'));document.querySelector('.detail-tab[data-tab="tasks"]').classList.add('active');renderSidebar(document.getElementById('search').value);document.getElementById('detailTabs').style.display='flex';renderDetail()}
+function renderDetail(){const lv=DATA.find(d=>d.stt===activeIdx);if(!lv)return;if(activeTab==='tasks')renderTasks(lv);else if(activeTab==='flow')renderFlow(lv);else renderChecklist(lv)}
+
+// ===== TASKS =====
+function renderTasks(lv){
+  const body=document.getElementById('detailBody');
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">LV #${lv.stt} · ${lv.code}</span></div><h2>${lv.name}</h2>${lv.docs?`<div class="docs">${lv.docs}</div>`:''}</div>`;
+  lv.tasks.forEach(t=>{h+=`<div class="task-section"><div class="nv-label"><span class="nv-dot"></span>${NV_LABELS[t.nv]||t.nv}</div><div class="t-card"><div class="t-card-top"><div class="t-title">${t.title}</div>${t.doan&&t.doan!=='mixed'?`<span class="s-badge ${badgeCls(t.doan)}">${t.doan}</span>`:''}</div>${t.output?`<div class="t-output">${t.output}</div>`:''}<div class="t-people"><div class="t-person">👤 PIC: <span class="nm">${t.pic}</span></div>${t.reviewer?`<div class="t-person">👁 Rà soát: <span class="nm">${t.reviewer}</span></div>`:''}${t.lead?`<div class="t-person">🛡 LĐ: <span class="nm">${t.lead}</span></div>`:''}</div></div></div>`});
+  h+='</div>';body.innerHTML=h;
+}
+
+// ===== CHECKLIST =====
+async function renderChecklist(lv){
+  const body=document.getElementById('detailBody');
+  if(!lv.clSheet){body.innerHTML='<div class="cl-empty">Lĩnh vực này chưa có checklist.</div>';return}
+  if(!checklistCache){body.innerHTML='<div class="cl-empty">⏳ Đang tải...</div>';try{const r=await fetch('checklists.json');checklistCache=await r.json()}catch(e){body.innerHTML='<div class="cl-empty">❌ Không tải được</div>';return}}
+  
+  let allSheets=[lv.clSheet];if(EXTRA_CL_MAP[lv.stt])allSheets=EXTRA_CL_MAP[lv.stt];
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">Checklist kiểm tra</span></div><h2>${lv.name}</h2></div>`;
+  let hasData=false;
+
+  allSheets.forEach(sheetName=>{
+    const clData=checklistCache[sheetName];if(!clData)return;
+    const stepKey=clData.headers.find(h2=>h2.includes('Bước')||h2.includes('Hạng mục')||h2.includes('Hệ thống'))||clData.headers[1];
+    let groups;
+    if(clData.groups&&clData.groups.length>0){groups=clData.groups}
+    else if(clData.items&&clData.items.length>0){groups=[{name:'',items:clData.items}]}
+    else return;
+    hasData=true;
+    groups.forEach((g,gi)=>{if(!g.items||!g.items.length)return;const gName=g.name||sheetName.replace('KH_','').replace(/_/g,' ');h+=renderGroupBlock(gName,sheetName,g.items,stepKey,clData.headers,gi)});
+  });
+  if(!hasData)h+='<div class="cl-empty">Chưa có dữ liệu checklist.</div>';
+  h+='</div>';body.innerHTML=h;
+}
+
+function renderGroupBlock(groupName,sheetName,items,stepKey,headers,groupIdx){
+  const fieldMap=[{key:'Mục tiêu/Nội dung công việc',label:'Nội dung công việc',full:true},{key:'Hồ sơ/Bằng chứng cần thu thập',label:'Hồ sơ / Bằng chứng'},{key:'Sai sót/rủi ro tiềm tàng',label:'Sai sót / Rủi ro'},{key:'Tham chiếu Điều/khoản',label:'Tham chiếu'},{key:'Phương pháp kiểm tra',label:'Phương pháp'},{key:'Tiêu chí đánh giá',label:'Tiêu chí đánh giá'}];
+  let h=`<div class="cl-group"><div class="cl-group-title">📂 ${groupName}<span class="cl-group-count">${items.length} bước</span></div>`;
+
+  items.forEach((item,i)=>{
+    const num=item.STT||(i+1);
+    const stepName=item[stepKey]||'';
+    const pic=item.PIC||'';
+    const resultKey=`${sheetName}|${num}`;
+    const result=allResults[resultKey]||{};
+    const stepComments=allComments.filter(c=>c.sheet===sheetName&&c.stepSTT===String(num));
+
+    h+=`<div class="cl-step" data-sheet="${sheetName.replace(/"/g,'&quot;')}" data-step="${num}"><div class="cl-step-header" onclick="toggleStep(this)"><div class="cl-num">${num}</div><div class="cl-step-name">${stepName}</div><div class="cl-arrow">▼</div></div><div class="cl-step-body"><div class="cl-grid">`;
+    fieldMap.forEach(f=>{const val=item[f.key];if(val)h+=`<div class="cl-field ${f.full?'full':''}"><div class="cl-field-label">${f.label}</div><div class="cl-field-value">${val}</div></div>`});
+    h+=`</div>`;
+    if(pic)h+=`<div class="cl-pic-badge">👤 PIC: ${pic}</div>`;
+
+    // Result fields
+    h+=`<div class="result-section">
+      <div class="result-row"><label>Kết quả KT:</label>
+        <select id="res-kq-${resultKey}" onchange="saveResult('${resultKey}')">
+          <option value="">— Chưa đánh giá —</option>
+          <option value="Đạt" ${result.ketQua==='Đạt'?'selected':''}>✅ Đạt</option>
+          <option value="Đạt một phần" ${result.ketQua==='Đạt một phần'?'selected':''}>🟡 Đạt một phần</option>
+          <option value="Không đạt" ${result.ketQua==='Không đạt'?'selected':''}>❌ Không đạt</option>
+          <option value="N/A" ${result.ketQua==='N/A'?'selected':''}>⬜ N/A</option>
+        </select>
+      </div>
+      <div class="result-row"><label>Kiến nghị:</label>
+        <div style="flex:1"><textarea id="res-kn-${resultKey}" placeholder="Nhập kiến nghị..." onblur="saveResult('${resultKey}')">${result.kienNghi||''}</textarea>
+        ${result.updatedBy?`<div class="saved-info">💾 ${result.updatedBy} · ${new Date(result.updatedAt).toLocaleDateString('vi')}</div>`:''}</div>
+      </div>
+    </div>`;
+
+    // Comments
+    h+=`<div class="comments-section"><div class="comments-title">💬 Nhận xét / Comment (${stepComments.length})</div>`;
+    stepComments.forEach(c=>{
+      h+=`<div class="comment-item ${c.role}"><div class="comment-meta"><span class="c-role ${c.role}">${c.role==='leader'?'🛡 Lãnh đạo':'👤 PIC'}</span><strong>${c.user}</strong> · ${new Date(c.timestamp).toLocaleString('vi')}</div><div class="comment-text">${c.text}</div></div>`;
+    });
+    h+=`<div class="comment-form"><textarea id="cmt-${resultKey}" placeholder="Viết nhận xét..."></textarea><button onclick="postComment('${sheetName}','${num}','cmt-${resultKey}')">Gửi</button></div></div>`;
+
+    h+=`</div></div>`;
+  });
+  h+=`</div>`;return h;
+}
+
+function toggleStep(el){el.classList.toggle('open');el.querySelector('.cl-arrow').classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+
+// ===== JUMP TO CHECKLIST =====
+async function jumpToChecklist(sheetName, stepNum) {
+    activeTab = 'checklist';
+    document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.detail-tab[data-tab="checklist"]').classList.add('active');
+    
+    const lv = DATA.find(d => d.stt === activeIdx);
+    if (!lv) return;
+    await renderChecklist(lv);
+    
+    setTimeout(() => {
+        const selector = `.cl-step[data-sheet="${sheetName.replace(/"/g,'\\\"')}"][data-step="${stepNum}"]`;
+        const el = document.querySelector(selector);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const header = el.querySelector('.cl-step-header');
+            if (header && !header.classList.contains('open')) {
+                toggleStep(header);
+            }
+            el.style.transition = 'box-shadow 0.3s, transform 0.3s';
+            el.style.boxShadow = '0 0 0 4px var(--orange)';
+            el.style.transform = 'scale(1.02)';
+            setTimeout(() => { 
+                el.style.boxShadow = ''; 
+                el.style.transform = '';
+            }, 2000);
+        }
+    }, 100);
+}
+
+// ===== SAVE RESULT =====
+async function saveResult(key){
+  getCurrentUser();
+  const kq=document.getElementById('res-kq-'+key);
+  const kn=document.getElementById('res-kn-'+key);
+  if(!kq||!kn)return;
+  const data={ketQua:kq.value,kienNghi:kn.value,updatedBy:currentUserName};
+  try{
+    await fetch('/api/results/'+encodeURIComponent(key),{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    allResults[key]={...data,updatedAt:new Date().toISOString()};
+    showToast('💾 Đã lưu');
+  }catch(e){showToast('❌ Lỗi lưu')}
+}
+
+// ===== POST COMMENT =====
+async function postComment(sheet,stepSTT,textareaId){
+  getCurrentUser();
+  const ta=document.getElementById(textareaId);
+  if(!ta||!ta.value.trim())return;
+  try{
+    const r=await fetch('/api/comments',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sheet,stepSTT:String(stepSTT),user:currentUserName,role:currentUserRole,text:ta.value.trim()})});
+    const c=await r.json();
+    allComments.push(c);
+    ta.value='';
+    renderDetail();
+    showToast('💬 Đã gửi comment');
+  }catch(e){showToast('❌ Lỗi gửi comment')}
+}
+
+// ===== EXCEL UPLOAD =====
+document.getElementById('fileInput').addEventListener('change',async function(e){
+  const file=e.target.files[0];if(!file)return;
+  showToast('⏳ Đang upload...');
+  const fd=new FormData();fd.append('file',file);
+  try{
+    const r=await fetch('/api/upload-excel',{method:'POST',body:fd});
+    const d=await r.json();
+    if(d.ok){checklistCache=null;showToast(`✅ Cập nhật! ${d.sheets} sheet · ${d.groups} nhóm · ${d.items} bước`);if(activeTab==='checklist')renderDetail()}
+    else showToast('❌ '+d.error);
+  }catch(e){showToast('❌ Lỗi upload')}
+  e.target.value='';
+});
+
+document.getElementById('search').addEventListener('input',e=>renderSidebar(e.target.value));
+
+// ===== FLOW DIAGRAM (SWIMLANE) =====
+const ARROW_SVG='<svg viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6h16M13 1l5 5-5 5" stroke="#006838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+async function renderFlow(lv){
+  const body=document.getElementById('detailBody');
+  if(!lv.clSheet){body.innerHTML='<div class="cl-empty">Lĩnh vực này chưa có checklist để vẽ flow.</div>';return}
+  if(!checklistCache){body.innerHTML='<div class="cl-empty">⏳ Đang tải...</div>';try{const r=await fetch('checklists.json');checklistCache=await r.json()}catch(e){body.innerHTML='<div class="cl-empty">❌ Không tải được</div>';return}}
+
+  let allSheets=[lv.clSheet];if(EXTRA_CL_MAP[lv.stt])allSheets=EXTRA_CL_MAP[lv.stt];
+
+  let h=`<div class="fade-in"><div class="d-header"><div class="top"><span class="s-badge ${badgeCls(lv.team)}" style="font-size:11px;padding:3px 10px">${teamLbl(lv.team)}</span><span style="font-size:12px;color:var(--text3)">Quy trình kiểm tra (Swimlane)</span></div><h2>${lv.name}</h2></div>`;
+  let hasData=false;
+  let chartIdx=0;
+
+  allSheets.forEach(sheetName=>{
+    const clData=checklistCache[sheetName];if(!clData)return;
+    const stepKey=clData.headers.find(h2=>h2.includes('Bước')||h2.includes('Hạng mục')||h2.includes('Hệ thống'))||clData.headers[1];
+    const hasActor=clData.headers.includes('Actor');
+    let groups;
+    if(clData.groups&&clData.groups.length>0){groups=clData.groups}
+    else if(clData.items&&clData.items.length>0){groups=[{name:'',items:clData.items}]}
+    else return;
+    hasData=true;
+
+    groups.forEach((g,gi)=>{
+      if(!g.items||!g.items.length)return;
+      const gName=g.name||sheetName.replace('KH_','').replace(/_/g,' ');
+      h+=`<div class="flow-group-label">📂 ${gName} (${g.items.length} bước)</div>`;
+
+      if(hasActor){
+        // ===== SWIMLANE MODE =====
+        // Collect unique actors in order
+        const actorOrder=[];
+        g.items.forEach(item=>{
+          const a=(item.Actor||'Khác').trim();
+          if(!actorOrder.includes(a))actorOrder.push(a);
+        });
+
+        // Assign each step a column index (sequential)
+        const totalCols=g.items.length;
+
+        // Build lane data: for each actor, which columns have nodes
+        const laneData={};
+        actorOrder.forEach(a=>{laneData[a]=[]});
+        g.items.forEach((item,i)=>{
+          const a=(item.Actor||'Khác').trim();
+          const num=item.STT||(i+1);
+          const name=(item[stepKey]||'').replace(/^B\d+\.\s*/,'').substring(0,40);
+          const rk=`${sheetName}|${num}`;
+          const res=allResults[rk];
+          let cls='';
+          if(res){
+            if(res.ketQua==='Đạt')cls='done';
+            else if(res.ketQua==='Đạt một phần')cls='partial';
+            else if(res.ketQua==='Không đạt')cls='fail';
+          }
+          const fullText = (item[stepKey]||'').toLowerCase();
+          const isControl = fullText.includes('control point') || fullText.includes('ksnb');
+          laneData[a].push({col:i,num,name,cls,isControl});
+        });
+
+        h+=`<div class="swim-container"><div class="swim-title">${gName}</div><div class="swim-body">`;
+
+        actorOrder.forEach(actor=>{
+          const nodes=laneData[actor];
+          h+=`<div class="swim-lane"><div class="swim-label">${actor}</div><div class="swim-cells" style="--total-cols:${totalCols}">`;
+
+          nodes.forEach((nd,ni)=>{
+            const ctrlCls=nd.isControl?' control':'';
+            const safeSheet = sheetName.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+            h+=`<div class="swim-node ${nd.cls}${ctrlCls}" data-stt="${nd.num}" style="grid-column:${nd.col + 1}; cursor:pointer;" title="Nhấn để xem checklist bước này" onclick="jumpToChecklist('${safeSheet}', '${nd.num}')"><span class="sn-num">${nd.num}</span>${nd.name||'Bước '+nd.num}</div>`;
+          });
+
+          h+=`</div></div>`;
+        });
+
+        h+=`</div></div>`;
+        chartIdx++;
+      } else {
+        // ===== FALLBACK: Mermaid sequential flow =====
+        let mmd='flowchart TD\n';
+        const ids=[];
+        g.items.forEach((item,i)=>{
+          const num=item.STT||(i+1);
+          const name=(item[stepKey]||'Bước '+(i+1)).replace(/"/g,"'").substring(0,60);
+          const id='s'+chartIdx+'_'+i;
+          ids.push(id);
+          const rk=`${sheetName}|${num}`;
+          const res=allResults[rk];
+          
+          let classes = [];
+          if(res){
+            if(res.ketQua==='Đạt') classes.push('done');
+            else if(res.ketQua==='Đạt một phần') classes.push('partial');
+            else if(res.ketQua==='Không đạt') classes.push('fail');
+          }
+          const fullText = (item[stepKey]||'').toLowerCase();
+          const isControl = fullText.includes('control point') || fullText.includes('ksnb');
+          if (isControl) classes.push('control');
+          
+          mmd+=`  ${id}["${num}. ${name}"]\n`;
+          if (classes.length > 0) {
+              mmd+= `  class ${id} ${classes.join(',')}\n`;
+          }
+          const safeSheet = sheetName.replace(/'/g,"\\'");
+          mmd+=`  click ${id} href "javascript:jumpToChecklist('${safeSheet}', '${num}')" "Xem checklist bước này"\n`;
+        });
+        for(let i=0;i<ids.length-1;i++){mmd+=`  ${ids[i]} --> ${ids[i+1]}\n`}
+        mmd+=`  classDef done fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20\n`;
+        mmd+=`  classDef partial fill:#fff9c4,stroke:#f9a825,color:#e65100\n`;
+        mmd+=`  classDef fail fill:#ffcdd2,stroke:#c62828,color:#b71c1c\n`;
+        mmd+=`  classDef control fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#e65100\n`;
+        h+=`<div class="flow-fallback"><div class="mermaid" id="mmd-${chartIdx}">${mmd}</div></div>`;
+        chartIdx++;
       }
     });
-  }, { threshold: [0.55] });
-  slides.forEach(function(s){ io2.observe(s); });
-
-  document.addEventListener("keydown", function(e){
-    if (["ArrowRight","ArrowDown","PageDown"," "].indexOf(e.key) !== -1){ e.preventDefault(); goTo(current + 1); }
-    else if (["ArrowLeft","ArrowUp","PageUp"].indexOf(e.key) !== -1){ e.preventDefault(); goTo(current - 1); }
-    else if (e.key === "Home"){ e.preventDefault(); goTo(0); }
-    else if (e.key === "End"){ e.preventDefault(); goTo(total - 1); }
   });
-  railItems.forEach(function(el){
-    el.addEventListener("click", function(){ goTo(parseInt(el.getAttribute("data-target"), 10)); });
-  });
-  setCurrent(0);
-})();
 
-/* =====================================================================
-   Typewriter for the hero tagline (proportional-font safe)
-   ===================================================================== */
-(function(){
-  function type(el){
-    var full = el.getAttribute("data-text"), i = 0; el.textContent = "";
-    el.classList.add("ac-caret");
-    (function tick(){ if (i <= full.length){ el.textContent = full.slice(0, i++); setTimeout(tick, 34); }
-      else { setTimeout(function(){ el.classList.remove("ac-caret"); }, 1200); } })();
-  }
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ type(e.target); } else { e.target.textContent = ""; } });
-  }, { threshold: .6 });
-  document.querySelectorAll(".jtype").forEach(function(el){ io.observe(el); });
-})();
+  if(!hasData)h+='<div class="cl-empty">Chưa có dữ liệu.</div>';
+  h+=`<div class="swim-legend"><strong>Chú giải:</strong>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#c8e6c9;border-color:#2e7d32"></span> Đạt</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff9c4;border-color:#f9a825"></span> Đạt một phần</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#ffcdd2;border-color:#c62828"></span> Không đạt</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff;border-color:#ccc"></span> Chưa đánh giá</span>
+    <span class="swim-legend-item"><span class="swim-legend-box" style="background:#fff;border-color:var(--orange);border-style:dashed"></span> Control Point</span>
+  </div>`;
+  h+='</div>';
+  body.innerHTML=h;
 
-/* =====================================================================
-   Mobile swipe hint — tự ẩn sau lần vuốt/cuộn đầu tiên
-   (Việc chuyển slide khi vuốt do CSS scroll-snap đảm nhiệm sẵn)
-   ===================================================================== */
-(function(){
-  var hint = document.getElementById("mhint"); if (!hint) return;
-  var hide = function(){ hint.classList.add("is-hidden"); cleanup(); };
-  function cleanup(){
-    window.removeEventListener("touchmove", hide, { passive:true });
-    window.removeEventListener("scroll", hide, true);
-  }
-  window.addEventListener("touchmove", hide, { passive:true });
-  window.addEventListener("scroll", hide, true);
-  setTimeout(hide, 6000); // ẩn sau 6s kể cả khi chưa vuốt
-})();
+  // Render mermaid fallback charts if any
+  const mmdEls=document.querySelectorAll('.mermaid');
+  if(mmdEls.length>0){try{await mermaid.run({querySelector:'.mermaid'})}catch(e){console.warn('Mermaid:',e)}}
 
-/* =====================================================================
-   Hero video — ép phát trên mobile (autoplay hay bị chặn dù muted+playsinline:
-   Low-Power Mode, Data Saver, chính sách lần tải đầu). Thử lại khi chạm/khi
-   slide bìa vào khung nhìn.
-   ===================================================================== */
-(function(){
-  var v = document.getElementById("heroVideo");
-  if (!v) return;
-  v.muted = true; v.defaultMuted = true; v.playsInline = true;
-  function tryPlay(){
-    var p = v.play();
-    if (p && typeof p.catch === "function") p.catch(function(){ /* bị chặn — chờ chạm */ });
-  }
-  tryPlay();
-  if ("IntersectionObserver" in window){
-    var heroSlide = v.closest(".slide");
-    if (heroSlide){
-      new IntersectionObserver(function(es){
-        es.forEach(function(e){ if (e.isIntersecting) tryPlay(); });
-      }, { threshold:[0.4] }).observe(heroSlide);
+  // Draw SVG flow arrows
+  setTimeout(() => {
+    drawFlowArrows();
+    if(window.flowObserver) { window.flowObserver.disconnect(); }
+    else { window.flowObserver = new ResizeObserver(() => { drawFlowArrows(); }); }
+    document.querySelectorAll('.swim-lane, .swim-body').forEach(el => window.flowObserver.observe(el));
+  }, 150);
+}
+
+function drawFlowArrows() {
+  document.querySelectorAll('.swim-body').forEach(body => {
+    let svg = body.querySelector('.arrows-overlay');
+    if(!svg) {
+      svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('class', 'arrows-overlay');
+      svg.style.position = 'absolute';
+      svg.style.top = '0';
+      svg.style.left = '0';
+      svg.style.width = '100%';
+      svg.style.height = '100%';
+      svg.style.pointerEvents = 'none';
+      svg.style.zIndex = '1';
+      svg.innerHTML = '<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#006838"/></marker></defs>';
+      body.insertBefore(svg, body.firstChild);
     }
-  }
-  function kick(){ tryPlay(); }
-  ["touchstart","click","pointerdown"].forEach(function(ev){
-    document.addEventListener(ev, kick, { once:true, passive:true });
-  });
-})();
+    
+    // Clean old paths
+    Array.from(svg.children).forEach(c => { if(c.tagName === 'path') c.remove(); });
 
-/* =====================================================================
-   Print / Export PDF — bật mọi slide & chốt số liệu trước khi in
-   (slide chưa cuộn tới vẫn in đủ nội dung, không còn số 0 / thanh rỗng)
-   ===================================================================== */
-(function(){
-  function finalizeCounts(){
-    document.querySelectorAll("[data-count-to]").forEach(function(el){
-      var to = parseFloat(el.getAttribute("data-count-to")); if (isNaN(to)) return;
-      var dec = parseInt(el.getAttribute("data-count-decimals") || "0", 10);
-      var pre = el.getAttribute("data-count-prefix") || "";
-      var suf = el.getAttribute("data-count-suffix") || "";
-      el.textContent = pre + Number(to).toLocaleString(undefined,
-        { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf;
+    const nodes = Array.from(body.querySelectorAll('.swim-node'));
+    nodes.sort((a,b) => {
+      const v1 = parseInt(String(a.dataset.stt).replace(/\D/g, '')) || 0;
+      const v2 = parseInt(String(b.dataset.stt).replace(/\D/g, '')) || 0;
+      return v1 - v2;
     });
-  }
-  function prep(){
-    document.querySelectorAll(".slide").forEach(function(s){ s.classList.add("ac-on"); });
-    finalizeCounts();
-  }
-  window.addEventListener("beforeprint", prep);
-  // Safari/iOS dùng matchMedia thay cho beforeprint
-  if (window.matchMedia){
-    var mq = window.matchMedia("print");
-    (mq.addEventListener ? mq.addEventListener.bind(mq,"change") : mq.addListener.bind(mq))(function(e){ if (e.matches) prep(); });
-  }
-})();
+
+    const bodyRect = body.getBoundingClientRect();
+    
+    for(let i=0; i<nodes.length-1; i++){
+      const n1 = nodes[i];
+      const n2 = nodes[i+1];
+      const r1 = n1.getBoundingClientRect();
+      const r2 = n2.getBoundingClientRect();
+      
+      const x1 = r1.right - bodyRect.left;
+      const y1 = r1.top + r1.height/2 - bodyRect.top;
+      const x2 = r2.left - bodyRect.left;
+      const y2 = r2.top + r2.height/2 - bodyRect.top;
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      
+      if (Math.abs(y1 - y2) < 10) {
+        // Same lane: Straight line right
+        path.setAttribute('d', `M ${x1} ${y1} L ${x2 - 2} ${y2}`);
+      } else {
+        // Different lane: Orthogonal (vuông góc xuống/lên đầu ô tiếp theo)
+        const targetX = r2.left + r2.width/2 - bodyRect.left;
+        let targetY;
+        if (y2 > y1) {
+            targetY = r2.top - bodyRect.top - 2;
+        } else {
+            targetY = r2.bottom - bodyRect.top + 2;
+        }
+        path.setAttribute('d', `M ${x1} ${y1} L ${targetX} ${y1} L ${targetX} ${targetY}`);
+      }
+      
+      path.setAttribute('stroke', '#006838');
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('stroke-linejoin', 'round');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('marker-end', 'url(#arrowhead)');
+      svg.appendChild(path);
+    }
+  });
+}
+window.addEventListener('resize', drawFlowArrows);
 </script>
 </body>
 </html>
